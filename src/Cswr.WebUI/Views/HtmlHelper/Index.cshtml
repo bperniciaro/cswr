@@ -1,0 +1,100 @@
+﻿@*@model Cswr.DAL.Models.SheetsCheatSheet*@
+@{
+    ViewData["Title"] = "Practicing HTML" +
+                "Controls";
+    //ViewBag["test"] = "my bag contents";
+}
+
+<h1>Html Helpers</h1>
+
+ViewBag.Test = @ViewBag.Test
+
+ ID: @Model.CheatSheetId
+
+
+
+<br />
+
+<p>
+    ActionLink with an Area
+</p>
+@*@Html.ActionLink("Link to Manage Sheets", "Manage", "CheatSheet", new { Area = "FantasyFootball" })*@
+
+
+
+
+<div class="row">
+
+    <div class="col-md-6">
+
+
+        <br />
+        <br />
+        <h3>Label</h3>
+
+        @*@Html.LabelFor(m => m.CheatSheetId)*@
+
+
+
+        <br />
+        <br />
+        <h3>TextBox</h3>
+
+        @*@Html.TextBoxFor(m => m.SheetName, new { @class = "form-control" })*@
+
+
+
+        <br />
+        <br />
+        <h3>TextArea</h3>
+
+        @*@Html.TextAreaFor(m => m.SheetName, 5, 10, new { @class = "form-control" })*@
+
+
+        <br />
+        <br />
+        <h3>CheckBox</h3>
+
+        @*@Html.LabelFor(m => m.Pprleague):
+        @Html.CheckBoxFor(m => (bool)m.Pprleague)*@
+
+
+    </div>
+    <div class="col-md-6">
+
+        <br />
+        <br />
+        <h3>Radio Button</h3>
+
+        @*@Html.RadioButtonFor(m => m.SheetName, "Name1", new { id = "rbName1" }) @Html.Label("rbName1", "Name1")
+        @Html.RadioButtonFor(m => m.SheetName, "Name2", new { id = "rbName2" }) @Html.Label("rbName2", "Name2")*@
+
+
+        <br />
+        <br />
+        <h3>DropDown List</h3>
+        @*@Html.DropDownListFor(m => m.SportCode,
+                                new SelectList(Enum.GetValues(typeof(Cswr.Web.Areas.FantasyFootball.Models.CheatSheet.SportCodes))),
+                                "Select Sport",
+                                new { @class = "form-control" })*@
+
+        <br />
+        <br />
+        <h3>Hidden Field</h3>
+
+
+        <br />
+        <br />
+        <h3>Password</h3>
+
+        <br />
+        <br />
+        <h3>Display</h3>
+
+        <br />
+        <br />
+        <h3>Editor</h3>
+
+    </div>
+</div>
+

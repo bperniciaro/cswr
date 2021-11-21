@@ -1,0 +1,9 @@
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\bin\Release\ActiveCampaign.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\bin\Release\ActiveCampaign.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\bin\Release\Newtonsoft.Json.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\bin\Release\Newtonsoft.Json.xml
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\obj\Release\ActiveCampaign.csproj.CoreCompileInputs.cache
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\obj\Release\ActiveCampaign.csproj.CopyComplete
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\obj\Release\ActiveCampaign.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\obj\Release\ActiveCampaign.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\ActiveCampaign\ActiveCampaign\obj\Release\ActiveCampaign.csprojAssemblyReference.cache

@@ -1,0 +1,17 @@
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\bin\Debug\ActiveCampaign.dll
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\bin\Debug\ActiveCampaign.pdb
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\obj\Debug\ActiveCampaign.csprojAssemblyReference.cache
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\obj\Debug\ActiveCampaign.csproj.CoreCompileInputs.cache
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\obj\Debug\ActiveCampaign.csproj.CopyComplete
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\obj\Debug\ActiveCampaign.dll
+C:\Users\Darkstar\Documents\Visual Studio 2017\Projects\ActiveCampaign\ActiveCampaign\obj\Debug\ActiveCampaign.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\bin\Debug\ActiveCampaign.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\bin\Debug\ActiveCampaign.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\bin\Debug\Newtonsoft.Json.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\bin\Debug\Newtonsoft.Json.xml
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\obj\Debug\ActiveCampaign.csproj.CoreCompileInputs.cache
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\obj\Debug\ActiveCampaign.csproj.CopyComplete
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\obj\Debug\ActiveCampaign.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\ActiveCampaign\obj\Debug\ActiveCampaign.pdb

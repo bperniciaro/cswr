@@ -1,0 +1,31 @@
+﻿@model List<CheatSheet>
+@{
+    ViewData["Title"] = "Manage";
+    ViewData["PageName"] = "cheatsheets_manage";
+    ViewData["Category1"] = "Cheat Sheets";
+    ViewData["Heading"] = "<i class='subheader-icon fal fa-chart-area'></i><span class='fw-300'>Manage Cheat Sheets</span>";
+}
+
+@*@{ Layout = null; }*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routing</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>CheatSheetId</th>
+            <th>Name</th>
+        </tr>
+        @foreach (var cheatSheet in Model)
+        {
+            <tr>
+                <td>@cheatSheet.CheatSheetId</td>
+                <td>@cheatSheet.SheetName</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
