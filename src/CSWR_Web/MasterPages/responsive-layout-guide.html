@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <!-- header section start -->
+    <header id="main-headre">
+      <!-- ======= top bar ======= -->
+      <div class="container">
+        <div class="row headerRow">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12 main-logo-section">
+            <!-- Logo -->
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12 mobile-screen-none text-right">
+            <!-- Navigation Links -->
+          </div>
+          <div class="three menu-icon">
+            <div class="hamburger" id="hamburger-1">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- primary navigation -->
+      <div class="container menu-block">
+        <div class="row">
+          <!-- tabed navigation -->
+        </div>
+      </div>  
+    </header>
+
+    <!-- new menu end -->
+    <!-- inner section start -->
+    <section class="inner-section-one">
+      <div class="container">
+        <div class="row">
+
+          <!----------------------->
+          <!-- One-Column Layout -->
+          <!----------------------->
+          <div class="col-xs-12">
+            <div id="wrapper">
+              <!-- Content Placeholder -->
+            </div>
+          </div>
+
+          <!----------------------->
+          <!-- Two-Column Layout -->
+          <!----------------------->
+          <%--Left Column--%>
+          <div class="col-xs-12 col-lg-9 col-md-9 col-sm-9 Change-we-one">
+
+            <div class="bg-white">
+              <div class="container-fluid menu-block new-menu" id="new-menu">
+                <nav class="navbar navbar-default main-nav secondary">
+                  <div class="navbar-header mobile-menu-icon">
+                  </div>
+                  <div class="collapse navbar-collapse my-menu-section" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                      <li runat="server" id="liSecondaryNav_Sheets"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/create/custom-sheet.aspx">MY SHEETS</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Rankings"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/rankings/player-rankings.aspx">RANKINGS</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Sleepers"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/sleepers.aspx">SLEEPERS</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Busts"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/busts.aspx">BUSTS</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Adp"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/rankings/adp/quarterbacks.aspx">ADP</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Printable"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/create/printable/single-position/configureprint.aspx">PRINTABLE</asp:HyperLink></li>
+                      <li runat="server" id="liSecondaryNav_Links"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/links.aspx">LINKS</asp:HyperLink></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+            <!-- Left Column Placeholder -->
+
+            <div class="container-fluid" style="background-color:orange;">
+              <div class="thirdLevelNav">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="text-center">
+
+                      <%--Navigation--%>
+                      <cswr:SheetCreationManageLevelNavigation runat="server" ID="scmlnNavigation" CurrentStage="CUSTOMSHEET" SportCode="FOO" />
+
+                      <%--Visitor Buttons--%>
+                      <cswr:SheetVisitorNavigation runat="server" ID="svnNavigation" SportCode="FOO" />
+
+                      <%--No Sheets Configured--%>
+                      <cswr:MessageBox runat="server" id="mbNoSheets" WidthPercentage="50" />
+
+                      <%--Dropdown--%>
+                      <asp:DropDownList runat="server" ID="ddlAvailableSheets" DataTextField="SheetName" DataValueField="CheatSheetID" Width="250" CssClass="form-control"
+                                        OnSelectedIndexChanged="ddlAvailableSheets_SelectedIndexChanged" AutoPostBack="True" OnDataBound="ddlAvailableSheets_DataBound" style="margin:auto;"></asp:DropDownList>
+                      <asp:Label runat="server" ID="labPPRLeague" Text="(PPR)" CssClass="ppr" Visible="false"></asp:Label>
+
+                      <%--Buttons--%>
+                      <asp:Panel runat="server" ID="panSheetButtons">
+                        <cswr:SheetCreationSheetLevelNavigation runat="server" ID="scplnPageLevelNavigation" SportCode="FOO" />
+                      </asp:Panel>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <%--Right Column--%>
+          <div class="col-xs-12 col-lg-3 col-md-3 col-sm-3 Change-we-two">
+            <div class="advertisement">
+              <asp:Image runat="server" ImageUrl="~/Images/Layout/responsive/mediavine-ad.gif" style="width:auto;height:auto;" CssClass="img-fluid" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- inner section end -->
+
+    <!-- Footer -->
+    <footer id="newFooter">
+      <div class="container" id="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="column">
+              <div class="title">
+                Miscellaneous
+              </div>
+              <ul>
+                <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
+                </li>
+                <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/about.aspx">About Us</asp:HyperLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="column">
+              <div class="title">
+                Social Sites
+              </div>
+              <ul>
+                <li>
+                  <i class="fa fa-twitter"></i>
+                  <a href="https://twitter.com/CSWarRoom">Twitter</a>
+                </li>
+                <li>
+                  <i class="fa fa-facebook"></i>
+                  <a href="https://www.facebook.com/CheatSheetWarRoom">Facebook</a>
+                </li>
+                <li>
+                  <i class="fa fa-pinterest"></i>
+                  <a href="https://www.pinterest.com/cheatsheetwarrm">Pinterest</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="column">
+              <div class="title">
+                Legal
+              </div>
+              <ul>
+                <li>
+                  <i class="fa fa-copyright"></i>
+                  <asp:Literal runat="server" ID="litCurrentYear" /> Cheat Sheet War Room
+                </li>
+                <li>
+                  Software Release <asp:Label runat="server" CssClass="version" ID="labSoftwareVersion" />
+                </li>
+                <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/termsofservice.aspx" Text="Terms of Service"></asp:HyperLink>
+                </li>
+                <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/privacypolicy.aspx" Text="Privacy Policy"></asp:HyperLink>
+                </li>
+                <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/disclaimer.aspx" Text="Disclaimer"></asp:HyperLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cAlign text-center">
+              <p>
+                We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+    <!-- Here we initialize tooltips for the entire application -->
+    <script type="text/javascript">
+    // Create the tooltips only on document load
+    $(document).ready(function () {
+      // delay all tooltips so that they arne't shown when quickly moving the
+      // mouse over a particular part of the page
+      $('[title]').qtip({
+        show: {
+          delay: 550
+        }
+      });
+    });
+    </script>
+
+    <!-- Menu Toogle -->
+    <script>
+	  $("#hamburger-1").click(function(){
+        $(this).toggleClass("is-active");
+        $("#bs-example-navbar-collapse-1").toggleClass("is-active");
+        $('#bs-example-navbar-collapse-1').slideToggle("400");
+      });
+      $("#hamburger-2").click(function(){
+        $(this).toggleClass("is-active");
+        $("#bs-example-navbar-collapse-2").toggleClass("is-active");
+        $('#bs-example-navbar-collapse-2').slideToggle("400");
+      });
+    </script>
+
+    <!-- This should make tooltips appear in UpdatePanels, even after a callback,
+         but it does not address AJAX triggered on QTip hovers, which still don't work -->
+    <script type="text/javascript">
+    function pageLoad(sender, args) {
+      if (args.get_isPartialLoad()) {
+        $('[title]').qtip({
+          overwrite: false,
+          show: {
+            delay: 550
+          }
+        });
+      }
+    }
+    </script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <asp:Panel runat="server" ID="panAddThis" CssClass="addThisContainer">
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=bperniciaro"></script>
+    </asp:Panel>
+
+  </form>
+
+</body>
+</html>

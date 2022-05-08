@@ -1,0 +1,726 @@
+﻿.byeWeeksPage p {margin:15px 0px;padding:0px;font-size:18px;}
+.byeWeeksPage p.intro {font-size:20px;}
+
+.byeWeeksPage .imgTitle {font-size:16px;;font-weight:bold;margin:0px;padding:15px 0px 0px 0px;}
+.byeWeeksPage .addImgInstructions {font-size:12px;margin:0px;padding:5px 0px;}
+.byeWeeksPage textarea {width:100%;}
+.byeWeeksPage ol li {font-size:16px;}
+.byeWeeksPage ul li {font-size:16px;}
+
+.byeWeeksPage .articleHeader {border-bottom:1px solid #eee;margin-bottom:20px;}
+.byeWeeksPage .articleHeader table {width:100%;}
+.byeWeeksPage .articleHeader table td.bustCell {width:60px;}
+.byeWeeksPage .articleHeader table p {margin: 0px;padding: 0px;font-size: 12px;}
+.byeWeeksPage .articleHeader table td.rightColumn {vertical-align:top;padding-left:10px;}
+.byeWeeksPage .articleHeader h1 {margin:0px;padding:0px;width:600px;font-size:24px;}
+.byeWeeksPage .articleHeader span.tagline {font-size:12px;}
+
+.byeWeeksPage .headerImage {text-align:center;}
+.byeWeeksPage .headerImage img {border:2px solid #116d14;}
+
+.byeWeeksPage h2 {margin:0px;padding:20px 0px 0px 0px;font-size: 24px;font-weight: bold;}
+.byeWeeksPage h3 {margin:0px;padding:20px 0px 0px 0px;font-size: 20px;font-weight: bold;}
+.byeWeeksPage h4 {margin:0px;padding:20px 0px;font-size: 14px;font-weight: bold;}
+
+.byeWeeksPage ol.graphicsList {margin:0px;padding:0px;}
+
+.byeWeeksPage a.imageLink { font-size: 18px;font-weight: bold;text-decoration: underline;}
+.byeWeeksPage a.imageLink:hover { text-decoration: none;}
+
+
+.byeWeeksPage .toc {border: 1px solid #d62307;margin: 40px auto 30px auto;width: 90%;}
+.byeWeeksPage .toc h2 {background-color:#d62307; color: white; text-align: center; margin: 0px; padding: 5px 0px; font-size: 24px; font-weight: bold;}
+.byeWeeksPage .toc table { width: 100%;border-collapse: collapse;}
+.byeWeeksPage .toc table a { text-decoration: underline;font-weight: bold;}
+.byeWeeksPage .toc table a:hover { text-decoration: none;}
+.byeWeeksPage .toc table td { width: 50%; vertical-align: top;}
+.byeWeeksPage .toc table td p.header { font-weight: bold; text-align: center; font-size: 20px;margin-bottom: 5px;}
+.byeWeeksPage .toc table td p { font-size: 16px;margin: 0px;padding: 5px 0px 5px 10px;}
+
+
+
+
+.byeWeeksPage table.byWeek {background-color:#ccc;font-size:14px;margin-top:15px;border-spacing: 3px;border-collapse: separate;width:100%}
+.byeWeeksPage table.byWeek th {padding:3px;background-color:white;font-size:16px;text-align: center;}
+.byeWeeksPage table.byWeek tr.byes {line-height:30px;}
+.byeWeeksPage table.byWeek td {padding:3px;background-color:white;}
+.byeWeeksPage table.byWeek td.byeTeams {color: #848496;font-weight:bold;font-size:16px;}
+
+.byeWeeksPage table.byWeek td.byeTeams table {width:100%}
+.byeWeeksPage table.byWeek td.byeTeams table td {width:33%;}
+.byeWeeksPage table.byWeek td.byeTeams {color: #848496;font-weight:bold;font-size:16px;}
+.byeWeeksPage table.byWeek td.byeTeams a { color: #848496; }
+
+.byeWeeksPage table.byWeek td.leftCol {width:75px;padding-left:5px;font-size:18px;}
+.byeWeeksPage table.byWeek td.inactiveWeek {color: #909094;font-weight:bold;font-size:16px;
+  background: repeating-linear-gradient(135deg, #e2e2e2, #e2e2e2 10px, #dbdbdb 10px, #dbdbdb 20px);}
+
+
+.byeWeeksPage .winPercentage {width:90%;margin:auto;font-size:32px;color:white;text-align:center;border:2px solid black;}
+.byeWeeksPage .winPercentage table {width:100%;height:100px;border-collapse:collapse;}
+.byeWeeksPage .winPercentage table td.wins {width:51.9%;background-color:green;}
+.byeWeeksPage .winPercentage table td.losses {width:48.1%;background-color:red;}
+.byeWeeksPage .winPercentage table td.ties {width:.7%;background-color:yellow;}
+.byeWeeksPage .winPercentage table span {font-size:16px;}
+
+
+.byeWeeksPage .byDivision {border:2px solid black;width:700px;overflow:hidden;margin:0px auto 0px auto;} /* overflow allow the border to be seen */
+
+.byeWeeksPage .byDivision #afcConference {float:left;width:50%;}
+.byeWeeksPage .byDivision #afcConference .division {border:1px solid #ffa8a8;}
+
+.byeWeeksPage .byDivision #nfcConference {float:left;width:50%;}
+.byeWeeksPage .byDivision #nfcConference .division {border:1px solid #a8a8ff;}
+
+.byeWeeksPage .byDivision .confHeader {text-align:center;}
+.byeWeeksPage .byDivision .confHeader h3 {margin:0px auto;padding:5px 0px;width:225px;}
+.byeWeeksPage .byDivision .divisions {padding:10px;}
+.byeWeeksPage .byDivision .division {margin:3px;}
+.byeWeeksPage .byDivision .division td {width:100px;}
+.byeWeeksPage .byDivision .division h4 {font-size:24px;margin:0px;padding:5px 5px 10px 15px;}
+.byeWeeksPage .byDivision .division .WkNumberRow {font:1.6em bold;}
+.byeWeeksPage .byDivision .division .WkNumberRow span {font-size:.7em;color:#777;}
+.byeWeeksPage .byDivision .division .WkNumberRow table {width:100%;border-collapse:collapse;}
+      
+.byeWeeksPage .byDivision .dCol1 {width:20%;font-size:12px;text-align:center;color:#969595;}
+.byeWeeksPage .byDivision .dCol2 {width:60%;font-size:26px;font-weight:bold;text-align:center;}
+.byeWeeksPage .byDivision .dCol3 {width:20%;}
+      
+.byeWeeksPage .byDivision a {display:block;width:75px;height:38px;background-image:url(../cssimages/logos/nfl-team-logos.gif);}
+
+
+.byeWeeksPage .teamPerformance h4 {font-size:18px;}
+.byeWeeksPage .teamPerformance .recordsFollowingByeWeek div {float:left;width:50%;}
+
+.byeWeeksPage .teamPerformance table {width:100%}
+.byeWeeksPage .teamPerformance table td {width:50%;vertical-align:top;}
+.byeWeeksPage .teamPerformance table td ol {margin-left:30px;}
+.byeWeeksPage .teamPerformance table td ol li {font-size:18px;}
+
+
+
+.byeWeeksPage a.ravens {background-position:0px 0px;} 
+.byeWeeksPage a.bengals {background-position:0px -38px;} 
+.byeWeeksPage a.browns {background-position:0px -76px;} 
+.byeWeeksPage a.steelers {background-position:0px -114px;} 
+
+.byeWeeksPage a.bills {background-position:0px -152px;} 
+.byeWeeksPage a.dolphins {background-position:0px -190px;} 
+.byeWeeksPage a.patriots {background-position:0px -228px;} 
+.byeWeeksPage a.jets {background-position:0px -266px;} 
+
+.byeWeeksPage a.texans {background-position:0px -304px;} 
+.byeWeeksPage a.colts {background-position:0px -342px;} 
+.byeWeeksPage a.jaguars {background-position:0px -380px;} 
+.byeWeeksPage a.titans {background-position:0px -418px;} 
+
+.byeWeeksPage a.broncos {background-position:0px -456px;} 
+.byeWeeksPage a.chiefs {background-position:0px -494px;} 
+.byeWeeksPage a.raiders {background-position:0px -532px;} 
+.byeWeeksPage a.chargers {background-position:0px -570px;} 
+
+.byeWeeksPage a.bears {background-position:0px -608px;} 
+.byeWeeksPage a.lions {background-position:0px -646px;} 
+.byeWeeksPage a.packers {background-position:0px -684px;} 
+.byeWeeksPage a.vikings {background-position:0px -722px;} 
+
+.byeWeeksPage a.cowboys {background-position:0px -760px;} 
+.byeWeeksPage a.giants {background-position:0px -798px;} 
+.byeWeeksPage a.eagles {background-position:0px -836px;} 
+.byeWeeksPage a.redskins {background-position:0px -874px;} 
+
+.byeWeeksPage a.falcons {background-position:0px -912px;} 
+.byeWeeksPage a.panthers {background-position:0px -950px;} 
+.byeWeeksPage a.saints {background-position:0px -988px;} 
+.byeWeeksPage a.bucs {background-position:0px -1026px;} 
+
+.byeWeeksPage a.cardinals {background-position:0px -1064px;} 
+.byeWeeksPage a.rams {background-position:0px -1102px;} 
+.byeWeeksPage a.fortyNiners {background-position:0px -1140px;} 
+.byeWeeksPage a.seahawks {background-position:0px -1178px;} 
+
+
+.byeWeeksPage .bestWeeksContainer h4 {text-align:center;font-size:18px;} 
+
+.byeWeeksPage .bestWeeksContainer table.outer {width:100%;} 
+.byeWeeksPage .bestWeeksContainer table.outer tr td.leftCell {width:40%;vertical-align:top} 
+.byeWeeksPage .bestWeeksContainer table.outer tr td.rightCell {width:60%;vertical-align:top} 
+
+.byeWeeksPage .bestWeeksContainer table.inner {background-color:#3a6487;font-size:12px;margin: auto;} 
+.byeWeeksPage .bestWeeksContainer table.inner th {padding:4px;color:white;background-color:#5c9bd5;} 
+.byeWeeksPage .bestWeeksContainer table.inner td {padding:3px;background-color:white;} 
+.byeWeeksPage .bestWeeksContainer table.inner tr.alt td { padding: 3px;background-color: #eee;} 
+
+
+
+.byeWeeksPage .teamHistoricRecordsRow  {width:900px;font-size:13px;margin:30px auto;}
+.byeWeeksPage .teamHistoricRecordsRow a {display:block;width:75px;height:38px;background-image:url(../cssimages/logos/nfl-team-logos.gif);}
+.byeWeeksPage .teamHistoricRecordsRow .column {float:left;width:215px;padding:0px 5px;}
+.byeWeeksPage .teamHistoricRecordsRow .column table {width:100%;border-collapse:collapse;margin-bottom:30px;}
+.byeWeeksPage .teamHistoricRecordsRow .column table td {padding:5px;}
+.byeWeeksPage .teamHistoricRecordsRow .column table tr.win {background-color:#cff8df;}
+.byeWeeksPage .teamHistoricRecordsRow .column table tr.tie {background-color:#f5efc0;}
+.byeWeeksPage .teamHistoricRecordsRow .column table tr.loss {background-color:#fde6f6;}
+.byeWeeksPage .teamHistoricRecordsRow .column table th.teamTitle {padding:5px 0px;font-size:18px;text-align: center;}
+.byeWeeksPage .teamHistoricRecordsRow .column table th.teamLogo {text-align:center;padding:5px 0px;}
+
+.byeWeeksPage .teamHistoricRecordsRow h4.division {text-align:center;padding:5px 0px;margin:15px 10px 0px 0px;clear:both;font-size:20px;}
+.byeWeeksPage .teamHistoricRecordsRow h4.afc {background-color:#cf202c;color:white;}
+.byeWeeksPage .teamHistoricRecordsRow h4.nfc {background-color:#003b66;color:white;}
+
+
+.byeWeeksPage .byefooter  {clear:both;padding:10px 0px 0px 0px;height:100px;text-align:center;background-color:white;}
+
+
+.byeWeeksPage .byeWeekInfographics {margin-bottom:30px;}
+.byeWeeksPage .byeWeekInfographics table {width:100%;}
+.byeWeeksPage .byeWeekInfographics table td {width:50%;vertical-align: top;}
+.byeWeeksPage .byeWeekInfographics table td h3 {text-align:center;}
+.byeWeeksPage .byeWeekInfographics table td img {display:block;margin:auto;padding-bottom:30px;}
+.byeWeeksPage .byeWeekInfographics table tr {padding-bottom:20px;}
+
+.byeWeeksPage table.simpleTable {color: #333;font-family: Helvetica, Arial, sans-serif;width: 840px;border-collapse:collapse; border-spacing: 0;}
+.byeWeeksPage table.simpleTable td, th {border: 1px solid transparent;height: 30px;transition: all 0.3s;}
+.byeWeeksPage table.simpleTable th {background: #DFDFDF;font-weight: bold;text-align: center;}
+.byeWeeksPage table.simpleTable td {background: #FAFAFA;text-align: left;}
+
+.byeWeeksPage table.simpleTable td:nth-child(2), th:nth-child(2) { padding-left: 20px;}
+
+.byeWeeksPage table.simpleTable tr:nth-child(even) td { background: #F1F1F1; }   
+.byeWeeksPage table.simpleTable  tr:nth-child(odd) td { background: #FEFEFE; }  
+
+.byeWeeksPage table.simpleTable tr td a { color: black; }  
+
+.byeWeeksPage table.simpleTable tr td:hover { background: #888; color: #FFF; }  
+.byeWeeksPage table.simpleTable tr td:hover a { color: #FFF; }  
+.byeWeeksPage table.simpleTable ul { padding-bottom: 20px;}
+.byeWeeksPage table.simpleTable ul li { font-size: 16px;}
+
+
+/* Configure Football Print */
+.configPrintPage {}
+.configPrintPage h2 {font-size:16px;}
+.configPrintPage .instructions p {font-size:12px;}
+
+.configPrintPage .posTable {margin:20px auto;background-color:#f2d9af;width:60%;}
+.configPrintPage .posTable tr {background-color:#fdf7ed;}
+.configPrintPage .posTable tr.alternatingRow {background-color:#fdf7ed;}
+.configPrintPage .posTable td {padding:3px;white-space:nowrap;}
+.configPrintPage .posTable td.position {font-weight:bold;font-size:14px;}
+.configPrintPage .posTable td.sheetName {font-size:13px;padding-left:5px;}
+.configPrintPage .posTable .suppInfo {color:#666;font-size:11px;padding-left:5px;}
+
+.configPrintPage .option {border:1px dashed black;margin:6px 5px;}
+.configPrintPage .option .printCategory {font-weight:bold;font-size:16px;}
+
+.configPrintPage .option table {width:100%;}
+.configPrintPage .option table td.halfWidth {width:50%;}
+.configPrintPage .option table td.leftSideSheetCell {width:130px;}
+.configPrintPage .option table td.rightSideSheetCell {width:130px;}
+
+.configPrintPage .option td {vertical-align:top;}
+.configPrintPage .option ul {margin:5px 0px 0px 20px;padding:0px;}
+.configPrintPage .option ul li {font-size:12px;list-style-type:disc;padding:2px 0px;}
+.configPrintPage .option h3 {font-size:16px;margin:0px;}
+.configPrintPage .option p {margin:0px;padding:5px 0px 3px 0px;font-size:12px;}
+
+.configPrintPage .option p.formatDescription {font-style:italic;font-size:13px;padding:5px}
+
+.configPrintPage .generateButton {font-size:18px;}
+
+.configPrintPage .buttonContainer {text-align:center;padding:10px 0px 20px 0px;font-size:1.3em;}
+.configPrintPage .buttonContainer a {text-decoration:underline;}
+.configPrintPage .buttonContainer a:hover {text-decoration:none;}
+
+
+/* Contact */
+.contactPage {font-size:12px;font-family:verdana;}
+.contactPage table textarea {overflow:auto;width:400px;height:200px;}
+.contactPage .required {font-size:.8em;}
+
+
+/* Create Sheet */
+/*.createSheetPage {padding-top:10px;width:550px;margin:auto;}
+.createSheetPage .buttonContainer {text-align:center;padding:5px 0px;}
+.createSheetPage .required {font-size:.8em;}
+
+.createSheetPage table td {padding:3px;}
+.createSheetPage table td.leftCol {text-align:right;width:225px;padding:5px 5px 0px 0px;font-size:14px;vertical-align:top;font-weight:bold;}
+.createSheetPage table td.rightCol {text-align:left;width:375px;}
+.createSheetPage table input.sheetName {width:300px;font-size:16px;}
+.createSheetPage table .positionList {font-size:16px;}
+
+
+.createSheetPage .fooForm .main {width:100%;font-size:12px;background-color:#f2d9af;}
+.createSheetPage .fooForm .main th {background-color:#ddbd7f;color:#604733;font-size:14px;padding:4px 0px;}
+.createSheetPage .fooForm .main tr {background-color:#ffeccb;}
+.createSheetPage .fooForm .main tr.alternatingRow {background-color:#ffeccb;}
+
+.createSheetPage .racForm .main {width:100%;font-size:12px;background-color:#c4938b;}
+.createSheetPage .racForm .main th {background-color:#c4938b;color:white;font-size:14px;padding:4px 0px;}
+.createSheetPage .racForm .main tr {background-color:white;}
+.createSheetPage .racForm .main tr.alternatingRow {background-color:#fbf1f0;}*/
+
+
+
+/* Sheet Editor Control */
+.editSheetPage {padding:10px;}
+.editSheetPage .form-horizontal {padding:10px;}
+.editSheetPage .sheetForm {margin:auto;max-width:550px;}
+.editSheetPage .sheetForm .required {font-size:10px;}
+.editSheetPage .sheetForm input {font-size:16px;}
+
+/* football */
+.editSheetPage .fooForm .sheetProperties {width:550px;margin-top:15px;border:1px solid #ddbd7f;}
+.editSheetPage .fooForm .sheetProperties table td.leftCol {font-weight:bold;font-size:14px;vertical-align:middle;}
+.editSheetPage .fooForm .sheetProperties input.sheetName {width:300px;font-size:16px;padding:2px;}
+
+
+.editSheetPage .fooForm .sheetPlayers {width:550px;margin-top:15px;border:1px solid #ddbd7f;}
+
+.editSheetPage .fooForm .main {background-color:#f2d9af;width:100%;}
+.editSheetPage .fooForm .main th {background-color:#ddbd7f;font-size:14px;padding:2px;color:#604733;}
+.editSheetPage .fooForm .main td {padding:1px 1px 1px 3px;font-size:15px;background-color:#ffeccb;}
+.editSheetPage .fooForm .main td.leftCol {text-align:right;vertical-align:top;padding:5px;font-weight:bold;font-size:12px;}
+.editSheetPage .fooForm .main tr {background-color:white}
+.editSheetPage .fooForm .main tr.alternatingRow {background-color:#faf1e1;}
+
+/* racing */
+.editSheetPage .racForm .sheetProperties {width:475px;margin-top:15px;border:1px solid #c4938b;}
+.editSheetPage .racForm .sheetPlayers {width:475px;margin-top:15px;border:1px solid #c4938b;}
+
+.editSheetPage .racForm .sortPlayers {width:475px;margin:15px 0px;border:1px solid #ddbd7f;}
+.editSheetPage .racForm .sortPlayers table td.leftCol {width:200px;font-weight:bold;font-size:12px;}
+
+.editSheetPage .racForm .main {border-collapse:collapse;width:100%;}
+.editSheetPage .racForm .main th {background-color:#c4938b;font-size:13px;padding:2px;color:White;}
+.editSheetPage .racForm .main td {padding:1px;font-size:11px;}
+.editSheetPage .racForm .main td.leftCol {text-align:right;vertical-align:top;padding:5px;}
+.editSheetPage .racForm .main tr {background-color:white}
+.editSheetPage .racForm .main tr.alternatingRow {background-color:#faf1e1;}
+
+
+/* Edit User Profile */
+.profilePage h2 {margin:5px 0px 15px 0px;padding:0px;font-size:20px;}
+.profilePage .required {font-size:.9em;}
+
+.profilePage .profileSec {width:400px;margin-bottom:30px;}
+.profilePage .profileSec .profileContainer {background-color:#C4F3AF;padding-right:5px;padding-bottom:5px;}
+.profilePage .profileSec .profileContainer .buttonContainer {padding:5px 0px;text-align:center;}
+.profilePage .profileSec .profileContainer .button {font-size:16px;}
+
+.profilePage .passwordSec {margin-bottom:20px;padding:5px;width:340px;background-color:#C4F3AF;}
+.profilePage .passwordSec .required {font-size:12px;}
+.profilePage .passwordSec .label {font-size:12px;}
+.profilePage .passwordSec .button {font-size:16px;}
+.profilePage .passwordSec td input.textbox {height:22px;width:150px;}
+
+.profilePage .changePasswordFailed {color:Red;font-size:.8em;}
+.profilePage .changePasswordSuccess {color:Green;font-size:.8em;}
+
+
+/* Edit Supplemental Sheet */
+.editSuppSheetPage {padding-top:10px;}
+.editSuppSheetPage .activeSheet {font-size:1.1em;font-weight:bold;}
+
+
+/* Edit User */
+.editUserPage .section {font-size:.9em;border:1px solid black;margin-bottom:5px;}
+.editUserPage h2 {font-size:1.1em;margin:3px 0px;padding:0px 2px;}
+
+
+/* Login */
+.loginPage a {text-decoration:underline;color:black;} 
+.loginPage a:hover {text-decoration:none;} 
+.loginPage a.forgot {margin-left:13px;font-size:11px;} 
+.loginPage p {margin:20px 0px;} 
+.loginPage table.login {width:300px;background-color:#C4F3AF;border-collapse:collapse;}
+.loginPage table.login .loginLabel {font-size:12px;}
+.loginPage table.login input.textBox {height:28px;width:150px;}
+
+.loginPage table.login td {padding:6px;}
+.loginPage table.login td.labelCell {text-align:right;padding-right:5px;}
+.loginPage table.login td.rememberMeAndPassword {font-size:11px;padding-left:7px;}
+.loginPage table.login td.buttonCell {font-size:10px;padding-left:7px;}
+.loginPage table.login td.buttonCell input {font-size:18px;}
+
+
+.fakeFOOPrintablePage h2 {padding:15px 0px 0px 0px;}
+.fakeFOOPrintablePage .groupSize {font-size:22px;color:red;font-weight:bold;}
+.fakeFOOPrintablePage .leftGuage {float:left;width:50%;text-align:left;color:#fc7878;font-size:18px;font-weight:bold;}
+.fakeFOOPrintablePage .rightGuage {float:left;width:50%;text-align:right;color:red;font-size:18px;font-weight:bold;}
+
+
+.fakeFOOPrintablePage .byeWeekRandomizeStep input { margin-right:5px;}
+
+.fakeFOOPrintablePage .buttonContainer {text-align:center;font-size:18px;}
+.fakeFOOPrintablePage .buttonContainer input {font-size:18px;}
+
+
+.fakeFOOPrintablePage #slider {width:300px;font-size:10px;}
+.fakeFOOPrintablePage .ui-slider-range { background:red; }  
+.fakeFOOPrintablePage .ui-slider-handle { border-color: #ef2929;background-color: #ef2929; }  
+
+
+
+/* FAQ */
+.faqPage {font-size:14px;line-height:21px;}
+.faqPage h2 {margin:5px 0px;padding:0px;font-size:1.2em;}
+.faqPage .questions {margin:9px 0px 20px 0px;padding:0px;line-height:18px;}
+.faqPage .questions li {margin:3px 0px 3px 43px;padding:0px;}
+.faqPage .answers {margin-top:3px;}
+.faqPage .answers p {margin:0px 0px 9px 0px;padding:0px;}
+.faqPage .answers p.reQuestion {font-weight:bold;margin:0px;padding:0px;}
+.faqPage .answers p.reQuestion a {color:Black;}
+
+
+/* Free Printable Cheat Sheets */
+.freeFOOPrintablesPage .arrowCell { text-align: center;}
+.freeFOOPrintablesPage a {text-decoration:none;font-size:1em;}
+.freeFOOPrintablesPage a:hover {text-decoration:none;}
+.freeFOOPrintablesPage h2 {margin:0px 0px 5px 0px;padding-top:20px;}
+.freeFOOPrintablesPage h3 {margin:0px;padding:10px 0px;text-align:center;}
+
+.freeFOOPrintablesPage .multiPositionSheetsContainer {}
+.freeFOOPrintablesPage .multiPositionSheetsContainer table {text-align:center;width:100%;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer table td {width:50%;vertical-align:top;text-align:left;padding:10px;background-color:#fef1da;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer table.nested td {width:60%;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer table.nested td.sampleCell {text-align:center;width:40%;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer p {font-style:italic;font-size:13px;text-align:left;text-indent:10px;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer p a {font-size:13px;}
+.freeFOOPrintablesPage .multiPositionSheetsContainer a {font-size:16px;}
+
+.freeFOOPrintablesPage a.rankpagelink {text-decoration:none;}
+.freeFOOPrintablesPage a.rankpagelink:hover {text-decoration:underline;}
+
+
+.freeFOOPrintablesPage .singlePositionSheetsContainer div.position {background-color:#fef1da;padding:10px;margin:10px 0px;}
+.freeFOOPrintablesPage .singlePositionSheetsContainer div.position p {padding:10px 0px;}
+.freeFOOPrintablesPage .singlePositionSheetsContainer div.position .buttonContainer {padding:10px 5px 5px 5px;text-align:center;}
+
+
+
+
+/* Link to Us */
+/*.linkToUsPage h2 {padding:20px 0px 0px 0px;margin:0px;font-size:17px;}
+.linkToUsPage p.intro {font-size:13px;}
+.linkToUsPage p {padding:5px 0px 5px 0px;margin:0px;font-size:13px;}*/
+
+
+/* Manage Players */
+.manageFootballPlayersPage {padding:3px 0px 100px 0px;}
+
+
+/* Manage Player Season Stats */
+.managePlayerSeasonStatsPage {padding:3px;}
+.managePlayerSeasonStatsPage p {margin:0px;padding:0px;}
+.managePlayerSeasonStatsPage ul {display:inline;margin-left:0px;padding-left:10px;}
+.managePlayerSeasonStatsPage li {display:inline;margin-right:5px;}
+
+
+/* Manage Supplemental Sheets */
+.manageSupplementalSheetsPage  {margin:10px auto;}
+
+
+/* Manage Supplemental Sources */
+.manageSupplementalSourcesPage  {margin:10px auto;}
+.manageSupplementalSourcesPage .sourceDetails {width:100%;margin:5px 0px;background-color:Orange;}
+
+
+/* Manage Users */
+.manageUsersPage .stats {padding:7px 0px;}
+.manageUsersPage .stats p {margin:0px;padding:0px;}
+.manageUsersPage .linkLetter {font-size:1em;margin-right:4px;}
+.manageUsersPage .manageUsersGrid {font-size:11px;}
+
+
+/* Map Player IDs */
+.mapPlayerIDsPage a:hover {text-decoration:none;}
+.mapPlayerIDsPage ul {margin:0px;padding:0px;}
+.mapPlayerIDsPage ul li {display:inline;padding:0px;margin:0px 15px 0px 0px;}
+
+
+/* Rank Supplemental Players */
+.rankSuppPlayersPage .sheetTitleContainer {text-align:center;padding:10px 0px 4px 10px;}
+.rankSuppPlayersPage .sheetTitleContainer .sheetTitle {font-size:1.4em;}
+.rankSuppPlayersPage .positionContainer {text-align:center;padding-bottom:10px;}
+
+
+/* Register */
+.registerPage p {margin:10px 0px;}
+.registerPage table.tableForm {width:450px;border-collapse:collapse;}
+.registerPage table.tableForm td {background-color:#c4f3af;padding:6px;}
+.registerPage table.tableForm .button {font-size:20px;}
+.registerPage table.tableForm input.textBox {height:27px;width:140px;}
+.registerPage table.tableForm td.labelCell {text-align:right;padding-right:5px;font-size:13px;}
+
+.registerPage .wizard .required {font-size:10px;}
+
+
+/* Registration Confirmation  */
+.registrationConfirmationPage {font-size:16px;}
+.registrationConfirmationPage a {text-decoration:underline;}
+.registrationConfirmationPage h4 {font-family:Serif;padding:5px 0px;margin:0px;}
+
+
+/****************************/
+/* Fantasy Football Cheat Sheet Creation
+/****************************/
+.sheetHelpContainer {padding-right:10px;}
+.sheetHelpContainer h2 {font-size:1.2em;font-weight: bold;margin:0px;padding:15px 0px 0px 0px;}
+.sheetHelpContainer h3 {font-size:1.0em;font-weight: bold;margin:15px 0px 0px 0px;padding:0px;}
+.sheetHelpContainer h4 {font-size:1em;font-weight: bold;margin:15px 0px 0px 0px;padding:0px;}
+.sheetHelpContainer p {margin:0px;padding:15px 0px;}
+
+.sheetHelpContainer .subSection {margin:0px;padding:0px 0px 30px 0px;}
+.sheetHelpContainer .intro {margin:0px;padding:0px;}
+
+.sheetHelpContainer .imageContainer {text-align:center;margin:30px 0 20px 0;}
+.sheetHelpContainer .indent {margin-left:20px;}
+
+.sheetHelpContainer .printed {padding:5px 0px;}
+.sheetHelpContainer .printed table {border-collapse:collapse;margin:auto;background-color:#DFF6FF;}
+.sheetHelpContainer .printed th {border-collapse:collapse;background-color:#0795dd;white-space:nowrap;color:White;}
+.sheetHelpContainer .printed td {text-align:center;}
+
+
+/* About */
+.aboutPage {font-size:14px;line-height:21px;}
+.aboutPage a {color:#0798d6;text-decoration:none;}
+.aboutPage a:hover {text-decoration:underline;}
+.aboutPage p.intro {margin:20px 0px 10px 0px;padding:0px;}
+
+/* Legal */
+.termsOfServicePage h2 {margin:8px 0px;text-align:center;}
+.termsOfServicePage p {margin-left:20px;}
+.privacyPolicyPage h2 {margin:8px 0px;text-align:center;}
+.disclaimerPage h2 {margin:8px 0px;text-align:center;}
+.disclaimerPage h3 {margin:4px 0px;text-align:center;}
+
+
+/* Password Recovery */
+.passwordRecoveryPage {width:550px;padding:30px;}
+.passwordRecoveryPage p {margin:10px 0px;}
+.passwordRecoveryPage .controlsContainer {background-color:#c4f3af;padding:20px;}
+.passwordRecoveryPage input {margin:5px 0px;height:27px;width:160px;}
+
+
+/* Username Recovery */
+.usernameRecoveryPage {width:550px;padding:30px;}
+.usernameRecoveryPage p {margin:10px 0px;}
+.usernameRecoveryPage .controlsContainer {background-color:#c4f3af;padding:20px;}
+.usernameRecoveryPage input {margin:5px 0px;height:27px;width:160px;}
+
+
+
+/* Access Denied */
+.accessDeniedPage {padding-bottom:200px;}	
+	
+	
+/* Ranking NFL Players */
+.rankingNFLPlayersPage ul {font-size:14px;}
+.rankingNFLPlayersPage ul li {padding:2px 0px;}
+.rankingNFLPlayersPage p.intro {margin:0px 0px 10px 0px;padding-top:10px;}
+.rankingNFLPlayersPage .topPlayersContainer {width: 580px;padding-bottom: 40px; margin: auto;}
+.rankingNFLPlayersPage .topPlayersContainer h2 {margin: 0px 5px 0px 0px; padding: 5px 0px;}
+
+
+/* Fantasy Football Links */
+.linksPage h1 {margin:0px 0px 14px 0px;padding:0px;}
+.linksPage h2 {background-color:#dbe3fd;color:#8a8a8a;padding:2px 0px 2px 4px;cursor:pointer;border:1px solid #a3b5ef;margin-bottom:4px;}
+.linksPage .ui-accordion-header.ui-state-active { color:#575656;background-color:#afc1fa;font-weight:bold;padding:2px 0px 2px 4px;cursor:pointer;border:1px solid #4366d7; } 
+
+.linksPage .linkContainer {margin-bottom:10px;}
+.linksPage .description {margin:0px;padding:0px;font-size:11px;}
+.linksPage .content {background-color:#d8e0fb;padding:5px;border-right:1px solid #4366d7;border-left:1px solid #4366d7;border-bottom:1px solid #4366d7;margin-bottom:4px;}
+.linksPage .groupContainer {padding:10px;}
+
+
+
+/****************************/
+/* Admin Summary Page
+/****************************/
+.adminSummaryPage {font-size:12px;}
+
+.adminSummaryPage .leftSide {float:left;width:50%;}
+.adminSummaryPage .rightSide {float:left;width:50%;}
+
+
+.adminSummaryPage h1 {padding-bottom:19px;}
+.adminSummaryPage h2 {font-size:17px;}
+.adminSummaryPage hr {margin-bottom:20px;color:#ccc;}
+
+.adminSummaryPage .sheets table {width:200px;}
+.adminSummaryPage .sheets table th {background-color:#64DC29;padding:4px;}
+.adminSummaryPage .sheets table th.football {background-color:#ddbd7f;padding:4px;}
+.adminSummaryPage .sheets table th.racing {background-color:#c4938b;padding:4px;}
+.adminSummaryPage .sheets table td {padding:3px;}
+
+.adminSummaryPage .misc table {width:200px;}
+.adminSummaryPage .misc table th {background-color:#D62307;padding:4px;color:White;}
+.adminSummaryPage .misc table td {padding:3px;}
+
+
+/* Football Sheets Settings */
+.sheetSettingsPage {font-size:12px;}
+.sheetSettingsPage h1 {padding-bottom:19px;}
+.sheetSettingsPage h2 {font-size:17px;}
+.sheetSettingsPage hr {margin-bottom:20px;color:#ccc;}
+
+.sheetSettingsPage table {width:330px;}
+.sheetSettingsPage table th {background-color:#ddbd7f;padding:4px;}
+.sheetSettingsPage table td {padding:3px;}
+
+
+/* Sitemap Page */
+.siteMapPage {}
+.siteMapPage a {color:#0798d6;text-decoration:none;} 
+.siteMapPage a:hover {text-decoration:underline;} 
+
+
+/* Styles for QTip football popups */
+
+/* styles for outside of the qtip popup */
+.ui-tooltip-football {background-color:white;text-align:left;max-width:350px;font-size:12px;padding:0px;}
+.ui-tooltip-football .ui-tooltip-titlebar {font-size:13px;padding:4px 4px 2px 4px;text-align:center;}
+.ui-tooltip-football .ui-tooltip-content {padding:0px;margin:0px;}
+/* highlights the targeted player when hovering over a particular player */
+.ui-tooltip-football tr.targetPlayerRow td {background-color:#d4f6da;} 
+
+
+/* styles for supp ranking popups */
+.qtipFOOSuppPopup {width:145px;margin:0px;padding-left:4px;}
+.qtipFOOSuppPopup table {width:100%;height:50px;border-collapse:collapse;}
+.qtipFOOSuppPopup td.leftCol {text-align:right;padding-right:5px;}
+.qtipFOOSuppPopup a {color:#4e321c;text-decoration:underline;font-size:11px;}
+.qtipFOOSuppPopup a:hover {text-decoration:none;}
+
+
+/* styles for player stat popups */
+.qtipFOOStatPopup {font-size:12px;color:black;}
+.qtipFOOStatPopup table.outerTable {width:100%;border-collapse:collapse;}
+.qtipFOOStatPopup .subTitle {padding:3px 0px 2px 3px;height:15px;font-weight:bold;font-family:Sans-Serif;text-align:left;}
+.qtipFOOStatPopup .summaryStatRow {height:36px;text-align:center;}
+.qtipFOOStatPopup .summaryStatCell .rankContainer {font-weight:bold;}
+.qtipFOOStatPopup .summaryStatCell .rankContainer .rank {font-size:16px;}
+.qtipFOOStatPopup .summaryStatCell .categoryContainer .stat {font-weight:bold;}
+
+.qtipFOOStatPopup td.individual {height:20px;vertical-align:top;margin:0px;padding:0px;}
+.qtipFOOStatPopup td.individual table.statTable {width:100%;}
+.qtipFOOStatPopup td.individual table.statTable th {text-align:center;padding: 3px;height: 15px;}
+.qtipFOOStatPopup td.individual table.statTable td {text-align:left;margin:1px;padding: 3px;}
+
+
+/* styles for team ranking popups */
+.qtipFOOTeamRankPopup table {border-collapse:collapse;width:100%;}
+.qtipFOOTeamRankPopup table th {font-size:12px;padding:3px;font-weight:bold;font-family:Sans-Serif;}
+.qtipFOOTeamRankPopup table tr.subTitle th { height: 10px;}
+.qtipFOOTeamRankPopup table td {padding:5px;}
+/* .qtipFOOTeamRankPopup table tr.alternatingRow td {background-color:#eee5d3;} */
+.qtipFOOTeamRankPopup table td a {text-decoration:underline;color:Black;}
+.qtipFOOTeamRankPopup table td a:hover {text-decoration:none;}
+.qtipFOOTeamRankPopup .notRanked {color:#a09f9f;}
+
+
+/* Styles for QTip racing popups */
+
+.ui-tooltip-racing {color:Black;text-align:left;font-size:12px;max-width:550px;border:4px solid #b8cde7;padding:0px;background-color:#e6eef8;} /* max-width:550px;*/
+.ui-tooltip-racing .ui-tooltip-titlebar {background-color:#b8cde7;color:black;padding:4px 4px 2px 4px;text-align:center;}
+.ui-tooltip-racing .ui-tooltip-content {padding:0px 0px 0px 0px;}
+
+.qtipRACStatPopup {font-size:12px;width:260px;height:86px;}
+.qtipRACStatPopup .body {padding:2px;background-color:#e6eef8;}
+.qtipRACStatPopup .body table td {color:#1a4274;}
+.qtipRACStatPopup .body table td.leftCol {font-weight:bold;text-align:right;padding-right:2px;color:Black;width:60px;}
+
+.qtipRACSuppPopup {font-size:12px;width:170px;height:45px;}
+.qtipRACSuppPopup .body {padding:5px 5px 5px 5px;background-color:#e6eef8;}
+.qtipRACSuppPopup .body p {margin:0px;padding:3px 0px 4px 0px;}
+.qtipRACSuppPopup .body .decimal {font-size:11px;}
+
+
+/* Styles for instructional popups */
+.ui-tooltip-instructional {background-color:#ffffa3;color:Black;text-align:left;max-width:550px;
+                      font-size:12px;border:3px solid #f1d031;padding:0px;line-height:15px;}
+.ui-tooltip-instructional .ui-tooltip-titlebar {background-color:#efef70;padding:4px 4px 2px 4px;font-weight:bold;}
+
+
+
+/* Summary Stats Page */
+.summaryStatsPage table.archived {background-color:gray;}
+.summaryStatsPage table.archived th {text-align:center;font-weight:bold;background-color:yellow;padding:2px;}
+.summaryStatsPage table.archived td {padding:2px;background-color:yellow;}
+
+
+
+/****************************/
+/* Validate Sheet
+/****************************/
+.validateSheetPage h3 {margin:30px 2px 2px 2px;padding:0px;}
+.validateSheetPage input {font-size:11px;}
+
+/*.validateSheetPage .layoutTable {width:100%;border-collapse:collapse;}
+.validateSheetPage .layoutTable td.headerCell {padding:10px 0px 10px 0px;}
+
+.validateSheetPage .layoutTable td.headerCell .validatingContainer {}
+.validateSheetPage .layoutTable td.headerCell .isolatedContainer {padding:3px 0px;border-bottom:1px solid #dddddd;}
+
+.validateSheetPage .layoutTable .leftColumn {width:500px;vertical-align:top;}
+
+.validateSheetPage .layoutTable .leftColumn h3.firstHeader {margin:0px 2px 2px 2px;padding:0px;}
+.validateSheetPage .layoutTable .leftColumn .teamAbbreviation {font-size:10px;color:#4e4d4d;}
+.validateSheetPage .layoutTable .leftColumn .count {font-size:16px;padding-bottom:3px;color:#212121;}
+
+.validateSheetPage .layoutTable .leftColumn  input.buttonLength {width:90px;}
+
+.validateSheetPage .layoutTable .leftColumn  .nameHeader {width:190px;}
+.validateSheetPage .layoutTable .leftColumn  .rankHeader {width:30px;}
+.validateSheetPage .layoutTable .leftColumn  .researchHeader {width:20px;}*/
+
+
+.validateSheetPage .rColumn {vertical-align:top;}
+.validateSheetPage .rColumn h5 {font-size:14px;margin:0px;padding:0px 0px 8px 0px;}
+
+.validateSheetPage .rankings .team {font-size:10px;color:#555;}
+.validateSheetPage .rankings .playerContainer {font-size:12px;margin:1px 0px;padding:1px 3px 0px 3px;}
+
+.validateSheetPage .rankings .playerRankedTooHigh {background-color:#fadee2;}
+.validateSheetPage .rankings .playerRankedTooLow {background-color:#dfdefa;}
+.validateSheetPage .rankings .playerToRemove {background-color:#fcdabf;}
+
+.validateSheetPage .rankings .playerContainer .highDiff {color:#463a3c;float:right;}
+.validateSheetPage .rankings .playerContainer .lowDiff {color:#3c3c46;float:right;}
+
+
+
+.validateSheetPage a.googleNews {display:block;width:17px;height:14px;background:url("../cssimages/Social/googlenews4.gif") no-repeat 0 0;}
+.validateSheetPage a.googleNews:hover {background-position: 0 -14px;}
+
+
+/* Validate Supplemental Sheet */
+.validateSuppSheetPage {padding-top:30px;}
+.validateSuppSheetPage input {font-size:11px;}
+
+.validateSuppSheetPage .lContainer {float:left;width:600px;}
+.validateSuppSheetPage .rContainer {float:left;width:235px;padding-left:15px;}
+
+.validateSuppSheetPage .rContainer .playerContainer {font-size:12px;margin:1px 0px;}
+
+.validateSuppSheetPage .rContainer .playerRankedTooHigh {background-color:#fadee2;padding:1px;}
+.validateSuppSheetPage .rContainer .playerRankedTooLow {background-color:#dfdefa;padding:1px;}
+.validateSuppSheetPage .rContainer .playerToRemove {background-color:#fae1cd;padding:1px;}
+
+.validateSuppSheetPage .rContainer .playerContainer .highDiff {color:#463a3c;}
+.validateSuppSheetPage .rContainer .playerContainer .lowDiff {color:#3c3c46;}
+
+.validateSuppSheetPage .shortHeaderWidth {width:40px;}
+
+.validateSuppSheetPage a.googleNews {display:block;width:22px;height:13px;background:url("../cssimages/Social/googlenews3.gif") no-repeat 0 0;float:left;}
+.validateSuppSheetPage a.googleNews:hover {background-position: 0 -13px;}
+
+
+/* Tweet Page Container */
+.tweetPage {background-color:#CDF2FD;height:1800px;}
+.tweetPage .twitterPageHeader {background-color:#009ac9;padding:3px;color:White;font-family:Sans-Serif;font-weight:bold;text-align:center;font-size:13px;}
+.tweetPage .twitterPageHeader a {color:White;text-decoration:underline;}
+.tweetPage .twitterPageHeader a:hover {color:White;text-decoration:none;}

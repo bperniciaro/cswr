@@ -1,0 +1,206 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NewTweetViewer.ascx.cs" Inherits="BP.CheatSheetWarRoom.UI.UserControls.NewTweetViewer" %>
+
+
+
+
+<%--This script block defies the animation that will run when the UpdatePanel on this page
+is updating or has updated--%>
+<script type="text/javascript" language="javascript">
+  function onUpdating(section) {
+
+    // get the update progress div
+    var updateProgressDiv = $get('updateProgressDiv');
+    //window.alert("updateProgressDiv:" + updateProgressDiv);
+    // make it visible
+    updateProgressDiv.style.display = '';
+
+    //  get the updatePanel element
+    var updatePanel = $get('<%= this.upSection1.ClientID %>');
+
+    // get the bounds of both the gridview and the progress div
+    var updatePanelBounds = Sys.UI.DomElement.getBounds(updatePanel);
+    var updateProgressDivBounds = Sys.UI.DomElement.getBounds(updateProgressDiv);
+
+    //    do the math to figure out where to position the element (the center of the gridview)
+    var x = updatePanelBounds.x + Math.round(updatePanelBounds.width / 2) - Math.round(updateProgressDivBounds.width / 2);
+    var y = updatePanelBounds.y + Math.round(updatePanelBounds.height / 2) - Math.round(updateProgressDivBounds.height / 2);
+    var z = updatePanelBounds.y + 100;
+
+    //    set the progress element to this position
+    Sys.UI.DomElement.setLocation(updateProgressDiv, x, z);
+  }
+
+  function onUpdated() {
+    // get the update progress div
+    var updateProgressDiv = $get('updateProgressDiv');
+    // make it invisible
+    updateProgressDiv.style.display = 'none';
+  }
+</script>
+
+<ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" />
+
+
+    <%--Update Panel--%>
+    <asp:UpdatePanel runat="server" ID="upSection1">
+      <ContentTemplate>
+
+        <%--Main Container--%>
+        <asp:Panel runat="server" ID="panNewTweetViewerControl" CssClass="newTweetViewerControl">
+
+
+         <%-- <h1>NFL Player News Twitter Search</h1>
+          <p>
+            Use this page to research the latest tweets about any NFL player.  This information can be useful in researching
+            player news for your fantasy football draft or any other type of football research.  You can select a player using the
+            dropdowns provided, or type your own custom search phrase into the search box.
+          </p>--%>
+
+          <!-- Ad Container -->
+          <div class="adContainer">
+            Ad
+          </div>
+
+
+
+          <div class="banner">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Layout/printlogo.jpg" style="float:left;" />
+            
+            <div style="float:left;">
+
+              <%--Search Options--%>
+              <div class="searchOption">
+                <strong>Select Player</strong>
+                <%--Player--%>
+                <ajaxToolkit:ComboBox ID="ComboBox1" runat="server" AutoPostBack="true" DropDownStyle="DropDownList" AutoCompleteMode="Suggest" CaseSensitive="false" Font-Size="Smaller" Width="230">
+                  <asp:ListItem Text="Brady, Tom (QB) NE Patriots" Value="0" />
+                  <asp:ListItem Text="Brees" Value="3" />
+                  <asp:ListItem Text="Brock" Value="4" />
+                  <asp:ListItem Text="Moss, Randy (WR) NE Patriots" Value="1" />
+                </ajaxToolkit:ComboBox>
+                -or-
+                <strong>Type Search Term:</strong>
+                <asp:TextBox runat="server" ID="tbSearchPhrase" Width="200" style="color:#ccc;" /> 
+                <ajaxToolkit:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" TargetControlID="tbSearchPhrase" WatermarkText="e.g. Tom Brady" />
+              </div>
+
+            </div>
+
+            <div style="clear:both;"></div>
+          </div>
+
+
+
+
+          <!-- Tweets Container -->
+          <div class="tweetsContainer">
+
+            <!-- Right Side -->
+            <div class="tweetsRightSide">
+
+              <asp:Repeater runat="server" ID="repTweetsRightSide" onitemdatabound="repTweets_ItemDataBound">
+                <ItemTemplate>
+
+                  <!-- Tweet Container -->
+                  <asp:Panel runat="server" ID="panTweetContainer" CssClass="tweetContainer">
+                    <!-- Twitter Picture -->
+                    <div class="picContainer"></div>
+                    <!-- Twitter Text -->
+                    <div>
+                      <asp:Label runat="server" ID="labTweet"></asp:Label>
+                    </div>
+                    <!-- Tweet Date -->
+                    <p class="tweetDate">
+                      11 Days Ago
+                    </p>
+                  </asp:Panel>
+        
+                </ItemTemplate>
+              </asp:Repeater>
+
+            </div>  <!-- close tweetsRightSide -->
+
+            <!-- Left Side -->
+            <div class="tweetsLeftSide">
+
+              <asp:Repeater runat="server" ID="repTweetsLeftSide" onitemdatabound="repTweets_ItemDataBound">
+                <ItemTemplate>
+
+                  <!-- Tweet Container -->
+                  <asp:Panel runat="server" ID="panTweetContainer" CssClass="tweetContainer">
+                    <!-- Twitter Picture -->
+                    <div class="picContainer"></div>
+                    <!-- Twitter Text -->
+                    <div>
+                      <asp:Label runat="server" ID="labTweet"></asp:Label>
+                    </div>
+                    <!-- Tweet Date -->
+                    <p class="tweetDate">
+                      11 Days Ago
+                    </p>
+                  </asp:Panel>
+        
+                </ItemTemplate>
+              </asp:Repeater>
+
+            </div>  <!-- close tweetsLeftSide -->
+          </div>  <!-- close tweetsContainer -->
+
+          <!-- Pager Container -->
+          <div class="pagerContainer">
+            <table>
+              <td class="leftCol">
+                <asp:ImageButton runat="server" ID="ibLeft" ImageUrl="~/Images/UserControls/TweetViewer/leftarrow.gif" CommandName="Left" onclick="ibLeft_Click" Visible="false" />
+              </td>
+              <td class="centerCol">
+                <asp:Label runat="server" ID="labPageNumber" />
+              </td>
+              <td class="rightCol">
+                <asp:ImageButton runat="server" ID="ibRight" ImageUrl="~/Images/UserControls/TweetViewer/rightarrow.gif" CommandName="Right" onclick="ibRight_Click" Visible="false" />
+              </td>
+            </table>
+          </div>
+
+          <div class="textualInformation" style="font-size:13px;">
+            This page lists the latest tweets about Tom Brady of the New England Patriots.  You can review these tweets to aid in creating your fantasy football cheat sheets at 
+            cheatsheetwarroom.com.  These tweets were pulled from the users followed by CheatSheetWarRm.
+          </div>
+
+
+        </asp:Panel>
+
+              
+     </ContentTemplate>
+    </asp:UpdatePanel>
+
+
+<%--This is what causes the 'updating' animination to run when the specified Update Panel is updating or has updated
+The javascript functions that are called are at the top of this page--%>
+<ajaxToolkit:UpdatePanelAnimationExtender ID="upaeAnimationExtender" BehaviorID="animation" runat="server" TargetControlID="upSection1">
+  <Animations>
+    <OnUpdating>
+      <Parallel duration="0">
+        <ScriptAction Script="onUpdating();" />  
+        <FadeOut minimumOpacity=".5" />
+      </Parallel>
+    </OnUpdating>
+    <OnUpdated>
+      <Parallel duration="0">
+        <FadeIn minimumOpacity=".5" />
+        <ScriptAction Script="onUpdated();" /> 
+      </Parallel> 
+    </OnUpdated>
+  </Animations>
+</ajaxToolkit:UpdatePanelAnimationExtender>
+
+
+
+
+
+
+
+
+<%--This control is shown during AJAX requests to the server--%>      
+<div id="updateProgressDiv" style="display:none;width:40px;padding-top:150px;">
+  <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Animations/googlerotate.gif" />
+</div>

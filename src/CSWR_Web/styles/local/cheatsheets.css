@@ -1,0 +1,198 @@
+﻿/* Header Styles for Cheat Sheets */
+
+.customSheetOuterContainer {}
+
+.customSheetContainer {width:760px;padding:30px 0px 300px 0px;}
+
+.customSheetContainer .topControlsContainer {margin:20px 0px 25px 0px;}
+.customSheetContainer .topControlsContainer table.layoutContainer {border-collapse:collapse;width:100%;height:132px;}
+
+.customSheetContainer .topControlsContainer a {text-decoration:underline;}
+
+.customSheetContainer .topControlsContainer .sheetControls {padding-left:250px;}
+.customSheetContainer .topControlsContainer .personalAd {margin-bottom:40px;}
+.customSheetContainer .topControlsContainer .amazonAd {padding-bottom:30px;}
+
+
+/* Football Reorderlist Styles */
+
+/* Football Sheet Background Styles */
+.customSheetContainer .footballList ul {margin:0px;padding:2px;background-color:#ddbd7f;border:1px solid #123202;list-style-type:none;overflow-x:visible}
+.customSheetContainer .footballList li {margin:0px 0px 3px 0px;padding:0px;}
+.footballList .ui-state-highlight {height:40px;background-color:#4bd362;border:2px dashed #37be4e;}
+
+
+/* Football Item Template */
+
+.fOOCheatSheetItemTemplateControl {font-family:sans-serif;margin-right:2px;height:42px;background-color:white;border:1px solid #88570F;}
+
+
+.container .row .fOOCheatSheetItemTemplateControl,
+.container .row .fOOCheatSheetItemTemplateControl *,
+.container .row .fOOCheatSheetItemTemplateControl *:before,
+.container .row .fOOCheatSheetItemTemplateControl *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+
+/* rankContainer */
+.fOOCheatSheetItemTemplateControl .rankContainer {float:left;text-align:center;height:33px;width:41px;padding-top:9px;background-color:white;}
+.fOOCheatSheetItemTemplateControl .rankContainer .seqNo {font-size:22px;font-weight:bold;}
+
+/* dragContainer */
+.fOOCheatSheetItemTemplateControl .dragContainer div {float:left;height:42px;cursor:move;}
+.fOOCheatSheetItemTemplateControl .dragContainer div.handle1 {width:15px}
+.fOOCheatSheetItemTemplateControl .dragContainer div.handle2 {width:4px;}
+
+
+/* supplemental ranking container */
+.fOOCheatSheetItemTemplateControl .suppRankingContainer {float:left;width:33px;height:42px;}
+
+.fOOCheatSheetItemTemplateControl .suppRankingContainer table {border-collapse:collapse;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection {font-size:11px;width:33px;text-align:center;padding:0px;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection .suppData {display:block;color:#8f6058;height:13px;width:28px;text-align:left;padding-left:3px;padding-top:1px;font-weight:bold;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection .oneDigit {padding-left:15px;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection .twoDigits {padding-left:9px;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection .supp3Container {width:25px;height:13px;float:left;color:#8f6058;font-weight:bold;padding-top:1px;}
+.fOOCheatSheetItemTemplateControl .suppRankingContainer .supplementalRankSection .magGlassContainer {width:8px;height:9px;float:left;padding-top:0px;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer {float:left;font-size:.7em;height:42px;}
+
+.fOOCheatSheetItemTemplateControl .playerWithSupps {width:225px;padding:0px 1px 0px 3px;}
+.fOOCheatSheetItemTemplateControl .playerWithoutSupps {width:258px;padding:0px 1px 0px 3px;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable  {border-collapse:collapse;margin-right:2px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable  tr.playerInfoRow {height:13px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable  tr.teamInfoRow {height:12px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable  td {padding:0px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .helmetCell  {padding:0px 3px 0px 3px;width:1%;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .playerCell  {padding:1px 0px 0px 0px;font-size:12px;font-weight:bold;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .playerCell .playerName {float:left;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .playerCell .playerPosition {float:left;font-size:8px;padding:3px 0px 0px 3px;color:#969595;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .teamCell {height:9px;font-size:9px;font-family:sans-serif;white-space:nowrap;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .teamCell .byeWeek {color:black;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .teamCell a.byeWeek:hover {text-decoration:underline;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell table {border-collapse:collapse;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell table td.sleeperCell {width:42px;padding:0px 1px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell table td.bustCell {width:31px;padding:0px 1px;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell table td.injuredCell {width:31px;padding:0px 1px;}
+
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell a.tagInactive img {filter:alpha(opacity=20);-moz-opacity:.20;opacity:.20;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell a.tagActive {cursor:pointer;}
+.fOOCheatSheetItemTemplateControl .playerContainer .playerTable .tagsCell a.tagInactive {cursor:pointer;}
+
+.fOOCheatSheetItemTemplateControl .featureIconsContainer {float:left;width:64px;height:42px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer .columnContainer1 {width:17px;float:left;margin-right:8px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer .columnContainer2 {width:17px;float:left;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.topFeature {margin-top:2px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.bottomFeature {margin-top:4px}
+
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a {display:block;width:17px;height:17px;background-image:url(../cssimages/social/featuresprites2.gif);}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.googleNews {background-position:-17px 0px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.googleNews:hover {background-position:-17px -17px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.twitter {background-position:0px 0px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.twitter:hover {background-position:0px -17px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.depth {background-position:-34px 0px;}
+.fOOCheatSheetItemTemplateControl .featureIconsContainer a.depth:hover {background-position:-34px -17px;}
+
+.fOOCheatSheetItemTemplateControl .statsContainer {float:left;color:#604631;width:150px;height:42px;}
+.fOOCheatSheetItemTemplateControl .statsContainer .noStatsContainer {float:left;width:150px;font-size:24px;text-align:center;padding-top:7px;color:#ada08a;}
+
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer {height:24px;margin:0px 0px 0px 0px;width:150px;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .rank {width:40px;font-size:24px;float:left;text-align:right;font-weight:bold;line-height:22px;padding-top:3px;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .rank img {display:block;float:right;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .rank .rankValue {float:right;color:#76402c;} 
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .rank .threeDigits {font-size:18px;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .title {float:left;margin-top:2px;margin-left:2px;color:#836a50;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .rankBlock .title span {font-family:Arial;font-size:8px;margin:0px;padding:0px;display:block;padding-bottom:1px;}
+
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .tfpContainer {width:65px;float:left;}
+.fOOCheatSheetItemTemplateControl .statsContainer .playerRankContainer .fppgContainer {width:65px;float:left;}
+
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer {height:16px;padding-top:2px;font-size:11px;width:150px;text-align:left;}
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer .leftSide {float:left;width:59px;padding-right:6px;text-align:right;}
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer .rightSide {float:left;width:70px;text-align:right;}
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer .rightSide img {vertical-align:bottom;padding-left:2px;padding-bottom:2px;}
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer .stat {font-weight:bold;}
+.fOOCheatSheetItemTemplateControl .statsContainer .summaryContainer span.rightTotals {}
+
+.fOOCheatSheetItemTemplateControl .statusIconContainer {float:left;height:36px;padding-top:6px;width:54px;padding-left:6px;}
+.fOOCheatSheetItemTemplateControl .statusIconContainer .statusIcon {display:block;height:30px;width:30px;}
+.fOOCheatSheetItemTemplateControl .statusIconContainer .switchedTeams {background-position:0px -60px;background-image:url(../cssimages/icons/statusiconsprites.gif);}
+.fOOCheatSheetItemTemplateControl .statusIconContainer .threeYrWR {background-position:0px -30px;background-image:url(../cssimages/icons/statusiconsprites.gif);}
+.fOOCheatSheetItemTemplateControl .statusIconContainer .retired {background-position:0px 0px;background-image:url(../cssimages/icons/statusiconsprites.gif);}
+
+
+.fOOCheatSheetItemTemplateControl .noteContainer  {float:left;width:149px;height:38px;padding:2px 0px 2px 4px;} 
+.fOOCheatSheetItemTemplateControl a.helmetLink {display:block;width:31px;height:24px;background-image:url(../cssimages/Helmets/nflhelmets.png);}
+
+/* Helmet Sprites */
+
+.arizonaCardinals2 a.helmetLink {background-position:-217px 0px;} 
+.atlantaFalcons2 a.helmetLink {background-position:-434px 0px;} 
+.baltimoreRavens2 a.helmetLink {background-position:-744px 0px;} 
+.buffaloBills2 a.helmetLink {background-position:-93px 0px;} 
+.carolinaPanthers2 a.helmetLink {background-position:-620px 0px;} 
+.chicagoBears2 a.helmetLink {background-position:-31px 0px;} 
+.cincinnatiBengals2 a.helmetLink {background-position:-62px 0px;} 
+.clevelandBrowns2 a.helmetLink {background-position:-155px 0px;} 
+.dallasCowboys2 a.helmetLink {background-position:-341px 0px;} 
+.denverBroncos2 a.helmetLink {background-position:-124px 0px;} 
+.detroitLions2 a.helmetLink {background-position:-558px 0px;} 
+.greenBayPackers2 a.helmetLink {background-position:-589px 0px;} 
+.houstonTexans2 a.helmetLink {background-position:-899px 0px;} 
+.indianapolisColts2 a.helmetLink {background-position:-310px 0px;} 
+.jacksonvilleJaguars2 a.helmetLink {background-position:-496px 0px;} 
+.kansasCityChiefs2 a.helmetLink {background-position:-279px 0px;} 
+.miamiDolphins2 a.helmetLink {background-position:-372px 0px;} 
+.minnesotaVikings2 a.helmetLink {background-position:-961px 0px;} 
+.newEnglandPatriots2 a.helmetLink {background-position:-651px 0px;} 
+.newOrleansSaints2 a.helmetLink {background-position:-806px 0px;} 
+.newYorkGiants2 a.helmetLink {background-position:-465px 0px;} 
+.newYorkJets2 a.helmetLink {background-position:-527px 0px;} 
+.lasVegasRaiders2 a.helmetLink {background-position:-682px 0px;} 
+.philadelphiaEagles2 a.helmetLink {background-position:-403px 0px;} 
+.pittsburghSteelers2 a.helmetLink {background-position:-868px 0px;} 
+.saintLouisRams2 a.helmetLink {background-position:-713px 0px;} 
+.losAngelesRams2 a.helmetLink {background-position:-713px 0px;} 
+/*.sanDiegoChargers2 a.helmetLink {background-position:-248px 0px;}*/ 
+.losAngelesChargers2 a.helmetLink {background-position:-248px 0px;} 
+.sanFrancisco49ers2 a.helmetLink {background-position:0px 0px;} 
+.seattleSeahawks2 a.helmetLink {background-position:-837px 0px;} 
+.tampaBayBuccaneers2 a.helmetLink {background-position:-186px 0px;} 
+.tennesseeTitans2 a.helmetLink {background-position:-930px 0px;} 
+.washingtonRedskins2 a.helmetLink {background-position:-775px 0px;} 
+
+
+
+@media only screen and (max-width: 621px) {
+  .fOOCheatSheetItemTemplateControl2 .suppRankingContainer {display:none;}
+  /*.fOOCheatSheetItemTemplateControl2 .playerWithSupps {width:200px;}*/
+  .fOOCheatSheetItemTemplateControl2 .featureIconsContainer {display:none;background-color:orange;}
+  .fOOCheatSheetItemTemplateControl2 .statsContainer {display:none;}
+  .fOOCheatSheetItemTemplateControl2 .statusIconContainer {display:none;}
+  .fOOCheatSheetItemTemplateControl2 .noteContainer {display:none;}
+  .customSheetContainer  {width:380px;}
+  .customSheetContainer .footballList ul {width:380px;}
+  .customSheetOuterContainer {width:380px;}
+}
+
+@media only screen and (min-width:622px) and (max-width: 1019px) {
+  .fOOCheatSheetItemTemplateControl2 .featureIconsContainer {display:none;}
+  .fOOCheatSheetItemTemplateControl2 .statsContainer {display:none;}
+  .customSheetContainer .footballList ul {width:546px;}
+  .customSheetOuterContainer {width:546px;}
+}
+
+
+@media only screen and (min-width:1020px) and (max-width: 1200px) {
+  .fOOCheatSheetItemTemplateControl2 .statsContainer {display:none;}
+  .customSheetContainer .footballList ul {width:610px;}
+  .customSheetOuterContainer {width:610px;}
+}
+

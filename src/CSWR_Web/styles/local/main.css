@@ -1,0 +1,575 @@
+﻿* {margin: 0;}
+
+html, body {height: 100%;}
+
+form {height: 100%;}
+
+body {
+  /* height:100%;*/
+  margin:0;
+  padding:0;
+  font-family:Helvetica, Arial, sans-serif;
+	background: url("../cssimages/layout/topnavbackground2.gif") repeat-x scroll center top #FFF; 
+  line-height: 1.231; /* specifically to override Bootstrap's line-height rule '*/
+}
+
+
+h1, h2, .heading {font-family:'Arvo',serif;}
+h1 {font-size:24px;margin:0px;padding:0px 0px 10px 0;}
+h2 {font-size:20px;}
+
+a {color:#0798d6;text-decoration:none;} 
+a:hover {text-decoration:underline;} 
+img {border:none;}
+
+/* override Bootstrap default of padding to 0 */
+td, th {padding: 1px;}
+
+/* Container for everything */
+#maincontainer {width:1150px;margin: 0 auto -255px;min-height: 100%;height: auto !important;height: 100%;}
+
+/*#newFooter, .push {height:255px;clear: both;}
+
+#newFooter {margin-top:100px;width:100%;box-shadow: 0 -3px 25px 2px rgba(0, 0, 0, 0.4), 0 1px 1px #fff inset; background:#454545;color:white;}
+#newFooter #container {width:1110px;margin:auto;padding:20px;}
+#newFooter #container .column {float:left;width:33%;}
+#newFooter #container .column .title {border-bottom:1px solid white;padding:5px 5px 5px 12px;margin-right:15px;font-weight:bold;}
+#newFooter #container .column ul {list-style-type:none;margin:0px;padding:0px;font-size:14px;}
+#newFooter #container .column ul li {margin:5px 15px 5px 5px;padding:5px 5px 5px 10px;border-bottom:1px dotted white;}
+#newFooter #container .column ul li a {color:white;}
+#newFooter #container .version { font-size: 12px;}*/
+
+
+
+
+
+#banner {height:75px;}
+#banner .logoContainer {float:left;margin-left:0px;margin-top:12px;}
+
+#banner #secondaryNav {padding-top:17px;padding-right:0px;}
+#banner #secondaryNav ul {text-align:right;margin:0px;padding:0px;}
+#banner #secondaryNav ul li {display:inline;margin-left:3px;background-repeat:no-repeat;background-position:100% 5px;padding:0px 7px;}
+#banner #secondaryNav ul li.last {padding-left:7px;background:none;}
+#banner #secondaryNav ul li img {margin-left:3px;}
+#banner #secondaryNav ul li a {color:White;text-decoration:none;font-size:13px;font-weight:bold;font-family:Sans-Serif;}
+#banner #secondaryNav ul li a:hover {text-decoration:underline;}
+#banner #secondaryNav {color:white;}
+
+/*.addThisContainer {float:right;width:290px;height:40px;margin-top:-15px;}*/
+
+
+/* Primary Links */
+.newPrimaryNav { background: orange;}
+.newPrimaryNav ul {position:relative;margin:0;padding-left:0px;list-style:none}
+.newPrimaryNav ul li {float:left;display:inline-block;position:relative;*display:inline;    
+    padding:22px 22px 22px 22px;border-bottom:4px solid;background:black;color:#e9e9e9;
+    border-left: 1px solid #1a1a1a;
+}
+.newPrimaryNav ul li.last {border-right: 1px solid #1a1a1a; }
+.newPrimaryNav ul li a {color:white;font-size:14px;font-family: 'Lato', sans-serif}
+.newPrimaryNav ul li.active a { font-weight: bold;font-size: 14px;}
+.newPrimaryNav ul li a:hover {text-decoration:none;}
+
+/* tab-specific colors */
+.newPrimaryNav ul li.home {border-bottom:3px solid #0448f4;}
+.newPrimaryNav ul li.footballSheets {border-bottom:3px solid #17a341;}
+.newPrimaryNav ul li.coupons {border-bottom:3px solid #f47b04;}
+
+.newPrimaryNav ul li.mocks {border-bottom:3px solid #D72D14;}
+
+.newPrimaryNav ul li.reviews {border-bottom:3px solid #04dbf4;}
+.newPrimaryNav ul li.racingSheets {border-bottom:3px solid #B81800;}
+.newPrimaryNav ul li.blog {border-bottom:3px solid #9418b1;}
+
+
+
+ul.topNavTabList {position:relative;font-weight:bold;margin:0;padding-left:0px;list-style:none;z-index:1;
+                  font-family: Tahoma, Geneva, sans-serif;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.85);}
+
+/* tab styles, selected & non-selected */
+ul.topNavTabList li {float:left;display:inline-block;position:relative;cursor:pointer !important;zoom:1;*display:inline;    
+		                  padding:6px 15px 7px 25px;border-top:4px solid;background:#444;color:#e9e9e9;font-size:12px;font-weight:bold;}
+ul.topNavTabList li.selected {background: none repeat scroll 0 0 #FFFFFF; color: #000; text-shadow: none;}
+
+/* tab icon styles, selected & non-selected */
+ul.topNavTabList li .ui-icon {position:relative;display:inline-block !important;vertical-align:text-top;zoom:1;*display:inline;
+                        background-image: url("../cssimages/jqueryui/ui-icons_ffffff_256x240.png");}
+ul.topNavTabList li.selected .ui-icon {background-image: url("../cssimages/jqueryui/ui-icons_454545_256x240.png");}
+
+/* tab-specific colors */
+ul.topNavTabList li.home {border-color:#B81800;}
+ul.topNavTabList li.sheets {border-color:#17a341;}
+ul.topNavTabList li.blog {border-color:#009bff;}
+ul.topNavTabList li.forums {border-color:#9418b1;}
+
+/* tab hyperlinks, for those without dropdowns */
+ul.topNavTabList li a {color:white;font-size:12px;}
+ul.topNavTabList li a:hover {text-decoration:none;}
+
+ /* controls the color of the sliding bar */
+.lavalamp-object {background: black;border-bottom: 5px solid #aaa;}
+
+  /* Styles for instructional popups */
+
+.ui-tooltip-navdrop-sheets {text-align: left;max-width:550px;font-size:15px;background-color:white;
+                        border:2px solid #aaaaaa;border-radius:5px;margin:0px;padding:0px;}
+
+.ui-tooltip-navdrop-sheets p {padding:8px 0px 0px 5px;margin:5px 0px 0px 0px;height:20px;border-bottom:1px dotted #444444;}
+.ui-tooltip-navdrop-sheets p.last {border:none;}
+
+.ui-tooltip-navdrop-sheets a {color:black;font-size:14px;color:#444444;}
+.ui-tooltip-navdrop-sheets a:hover {color:black;text-decoration:underline}
+
+.ui-tooltip-navdrop-sheets i {margin-right:4px;}
+
+
+
+
+
+/* DYNAMIC DROPDOWN */
+/*.mySheetsDD  {position:absolute;visibility:hidden;margin-top:-70px;width:164px;height:77px;padding-top:68px;background-image:url(../cssimages/layout/primarynavdropdownbackground2.gif);}
+.mySheetsDD p {text-align:center;margin:0px;}
+.mySheetsDD p.football {padding:12px;}
+.mySheetsDD p.racing {padding:8px;}
+.mySheetsDD a {font-size:14px;font-family:Helvetica, Arial, sans-serif;color:white;font-weight:bold;text-decoration:none;}
+.mySheetsDD a:hover {text-decoration:underline;}*/
+
+
+/* Various Containers  */
+
+/* keep an eye on this */
+#wrapper {float:left;width:1150px;padding-bottom:30px;padding-top:20px;}
+
+
+/*  Homage Page */
+.homePage {width:100%}
+.homePage h1 {text-align:center;font-size:40px;padding-bottom:50px;margin:20px 0px;}
+.homePage h2 {text-align:center;font-size:35px;padding-bottom:20px;margin:20px 0px;}
+.homePage h3 {color:black;font-size:16px;font-weight:bold;padding:0px 0px 3px 0px;margin:0px;}  
+.homePage .blogPostsContainer {width:90%;margin:auto;}
+.homePage .blogPostsContainer .articleContainer {border:3px solid #ccc;padding-bottom:10px;margin-bottom:50px;text-align:center;}
+.homePage .blogPostsContainer .articleContainer img {width:100%;display:block;}
+.homePage .blogPostsContainer .articleContainer a {font-size:22px;text-decoration:underline;}
+.homePage .blogPostsContainer .articleContainer a:hover {text-decoration:none;cursor:pointer;}
+
+
+.homePage .stepContainer {color:Black;font-size:30px;padding:3px 0px;text-shadow: 3px 3px 3px #aaa;}  
+
+.homePage .bullet {height:9px;width:9px;position:relative;top:0px;display:inline-block;overflow:hidden;}  
+
+.homePage ul {font-size:12px;margin:10px 0px 20px 17px;padding:0px;list-style:none;}  
+.homePage ul li {padding:1px 0px 3px 0px;}  
+.homePage .bullet {background:url(../cssimages/layout/home/starbullets.gif) no-repeat 0 -18px;}  
+
+
+
+/*.homePage .callToAction {background-image:url(../cssimages/layout/home/calltoaction.png);background-repeat:no-repeat;width:960px;height:98px;text-align:center;}  
+.homePage .callToAction h1 {font-family:'Arvo',serif;font-size:37px;font-style:normal;font-weight:bold;color:#E4E5E0;*/
+
+
+
+/* Left Layout Column  */
+.lcolumn {margin-right:189px;border-bottom:1px solid #0799D5;}
+.lcolumn .topBannerAd {height:90px;margin:0px 13px 10px 14px;}
+
+.lcolumn .contentContainer {width:960px;margin:auto;background-color:White;}
+.lcolumn .sportAgnostic {border-right:1px solid #39adde;border-top:1px solid #39adde;border-left:1px solid #39adde;
+                                             padding:20px 30px;min-height:700px;}
+.lcolumn .noAdContainer {width:1150px;margin:auto;border-right:1px solid #39adde;}
+.lcolumn .landingContainer {width:960px;margin:auto;border-right:1px solid #39adde;}
+.lcolumn .footballLanding {background-image:url(../cssimages/layout/football/footballlandingbackgroundcolumns.gif);background-repeat:repeat-y;}
+.lcolumn .racingLanding {background-image:url(../cssimages/layout/racing/racinglandingbackgroundcolumns.gif);background-repeat:repeat-y;}
+
+.lcolumn .lowerContent {border-left:1px solid #0799D5;padding:30px 50px;background-color:White;}  
+.lcolumn .lowerContent h4 {font-size:24px;font-family:Serif;padding:5px 0px;margin:0px;}  
+
+
+/*   Steps  */
+
+.lcolumn .steps {padding:20px;}  
+.lcolumn .steps table {width:854px;border-collapse:collapse;font-weight:bold;}  
+.lcolumn .steps a {text-decoration:none;color:#0798d6;}  
+.lcolumn .steps a:hover {text-decoration:underline;}  
+
+.lcolumn .steps table img {float:left;}  
+.lcolumn .steps table .stepContainer {color:Black;font-size:30px;padding:3px 0px;text-shadow: 3px 3px 3px #aaa;}  
+
+.lcolumn .steps table .leftColumn {width:377px;}  
+.lcolumn .steps table .leftColumn h3 {color:black;font-size:16px;font-weight:bold;padding:0px 0px 3px 0px;margin:0px;width:300px;}  
+
+.lcolumn .steps table .bullet {height:9px;width:9px;position:relative;top:0px;display:inline-block;overflow:hidden;}  
+
+.lcolumn .steps table .leftColumn ul {font-size:12px;margin:10px 0px 0px 87px;padding:0px;width:250px;list-style:none;}  
+.lcolumn .steps table .leftColumn ul li {padding:1px 0px 3px 0px;}  
+.lcolumn .steps table .leftColumn .bullet {background:url(../cssimages/layout/home/starbullets.gif) no-repeat 0 -18px;}  
+
+.lcolumn .steps table .middleColumn {width:100px;text-align:center;}  
+
+.lcolumn .steps table .rightColumn {width:377px;}  
+.lcolumn .steps table .rightColumn h3 {color:black;font-size:16px;font-weight:bold;padding:0px 0px 3px 0px;margin:0px;width:370px;}  
+.lcolumn .steps table .rightColumn ul {font-size:12px;margin:10px 0px 0px 143px;padding:0px;width:250px;list-style:none;}  
+.lcolumn .steps table .rightColumn ul li {padding:1px 0px 3px 13px;}  
+.lcolumn .steps table .rightColumn .bullet {background:url(../cssimages/layout/home/starbullets.gif) no-repeat 0 -18px;}  
+
+/*   Banners   */
+.lcolumn .sportBanner {width:681px;height:119px;padding-top:45px;padding-left:145px;margin:0px auto 20px auto;}  
+.lcolumn .sportBanner .leftSide {float:left;height:100px;width:330px;}  
+.lcolumn .sportBanner .leftSide h2 {margin:0px;padding:0px;text-align:center;font-size:20px;}  
+.lcolumn .sportBanner .leftSide a {font-size:14px;font-weight:bold;width:319px;height:36px;display:block;color:Black;text-decoration:none;
+                                                                                          text-align:center;cursor:pointer;padding-top:18px;margin:auto;margin-top:18px;}  
+.lcolumn .sportBanner .leftSide a:hover {text-decoration:underline;}
+
+.lcolumn .sportBanner .rightSide {float:right;height:100px;width:330px;}  
+.lcolumn .sportBanner .rightSide ul {font-size:13px;font-weight:bold;list-style-position:inside;margin:0px 0px 0px 0px;padding-left:1em;list-style:none;} 
+.lcolumn .sportBanner .rightSide li {padding:2px 0px 2px 0px;background-repeat:no-repeat;background-position: 0 4px;}  
+.lcolumn .sportBanner .rightSide .learnMore {font-size:13px;font-weight:bold;padding:11px 0px 0px 13px;}  
+.lcolumn .sportBanner .rightSide a {color:Black;text-decoration:underline;}  
+.lcolumn .sportBanner .rightSide a:hover {text-decoration:none;}  
+
+.lcolumn .sportBanner .rightSide .bullet {height:9px;width:9px;position:relative;top:0px;display:inline-block;overflow:hidden;}  
+
+/*  Football Banner  */
+.lcolumn .footballBanner {background:url(../cssimages/layout/home/sportbannerbackgrounds.png) no-repeat 0 0;}  
+.lcolumn .footballBanner .leftSide a {background:url(../cssimages/layout/home/sportbuttonbackgrounds.gif) no-repeat 0 0;}  
+.lcolumn .footballBanner .rightSide .bullet {background:url(../cssimages/layout/home/starbullets.gif) no-repeat 0 0;}  
+
+/*  Racing Banner  */
+.lcolumn .racingBanner {background:url(../cssimages/layout/home/sportbannerbackgrounds.png) no-repeat 0 -164px;}  
+.lcolumn .racingBanner .leftSide a {background:url(../cssimages/layout/home/sportbuttonbackgrounds.gif) no-repeat 0 -54px;color:White;}  
+.lcolumn .racingBanner .rightSide .bullet {background:url(../cssimages/layout/home/starbullets.gif) no-repeat 0 -9px;}  
+
+/* Tertiary Navigation */
+.lcolumn .tertiaryNav {width:150px;float:left;margin-top:-1px;text-align:center;padding-top:40px;}
+.lcolumn .tertiaryNav .adContainer {padding-top:20px;}
+
+.lcolumn .tertiaryNav ul {list-style-type:none;margin:0px;padding:0px 20px;}
+.lcolumn .tertiaryNav ul li {margin:0px;padding:7px 0px;background-repeat:no-repeat;background-position:bottom;}
+.lcolumn .tertiaryNav ul li a {font-size:12px;font-weight:bold;line-height:15px;text-decoration:none;}
+.lcolumn .tertiaryNav ul li a:hover {text-decoration:underline;}
+.lcolumn .tertiaryNav .iconContainer {margin-bottom:18px;}
+
+/* football navigation */
+.lcolumn .footballLanding .tertiaryNav ul li a {color:#5f4632;}  
+.lcolumn .footballLanding .tertiaryNav ul li {background-image:url(../cssimages/layout/football/footballtertiarynavseparater.gif);}
+.lcolumn .footballLanding .tertiaryNav ul li.last {margin:0px;padding:7px 0px;background:none;}
+.lcolumn .footballLanding .tertiaryNav .iconContainer a {display:block;background-image:url(../cssimages/layout/football/footballsheeticon.gif);
+                                                                   background-repeat:no-repeat;height:80px;background-position:center;}
+/* racing navigation */
+.lcolumn .racingLanding .tertiaryNav ul li a {color:white;}
+.lcolumn .racingLanding .tertiaryNav ul li {background-image:url(../cssimages/layout/racing/racingtertiarynavseparater.gif);}
+.lcolumn .racingLanding .tertiaryNav ul li.last {margin:0px;padding:7px 0px;background:none;}
+.lcolumn .racingLanding .tertiaryNav .iconContainer a {display:block;background-image:url(../cssimages/layout/racing/racingsheeticon.gif);
+                                                                   background-repeat:no-repeat;height:80px;background-position:center;}
+
+/*  Introduction */
+.lcolumn .centerContent {margin-left:150px;padding:35px 25px;border-top:1px solid #39adde;min-height:700px;}
+.lcolumn .centerContent p.introArticle {padding-bottom:30px;font-size:14px;line-height:21px;margin-bottom:0px;}
+
+/*  Create    */
+
+/*  Features   */
+.lcolumn .centerContent .features ul {margin:0px;padding:0px;list-style-type:none;}
+.lcolumn .centerContent .features p {margin:0px;padding:0px;font-size:12px;}
+.lcolumn .centerContent .features h3 {margin:0px;padding:0px;}
+.lcolumn .centerContent .features table {border-collapse:collapse;width:100%;}
+.lcolumn .centerContent .features table td {width:50%;padding-right:10px;vertical-align:top;}
+.lcolumn .centerContent .features ul li {padding:0px 0px 8px 15px;background-repeat:no-repeat;background-position:0 3px;list-style-type:none;}
+.lcolumn .centerContent .features ul li h3 {font-size:12px;font-weight:bold;}
+.lcolumn .centerContent .features ul li a {text-decoration:none;color:#0798d6;}
+.lcolumn .centerContent .features ul li a:hover {text-decoration:underline;}
+
+/* football features */
+.lcolumn .footballLanding .centerContent .features ul li {background-image:url(../cssimages/layout/football/footballlandingbullet.gif);}
+.lcolumn .footballLanding .centerContent .features ul li h2 {color:#5f4632;}
+
+/* racing features */
+.lcolumn .racingLanding .centerContent .features ul li {background-image:url(../cssimages/layout/racing/racinglandingbullet.gif);}
+.lcolumn .racingLanding .centerContent .features ul li h2 {color:#d4391e;}
+
+/* call to action */
+.lcolumn .centerContent .c2a {padding:0px 0px 20px 0px;border-bottom:3px dashed #4ad605;margin-bottom:20px;}
+.lcolumn .centerContent .c2a table {border-collapse:collapse;width:100%;}
+.lcolumn .centerContent .c2a table td {width:50%;padding-right:10px;}
+.lcolumn .centerContent .c2a table td.arrowCell {padding-left:17px;}
+.lcolumn .centerContent .c2a a.createButton {width:298px;height:36px;font-size:14px;display:block;text-decoration:none;padding-top:20px;color:Black;font-weight:bold;text-align:center;}
+.lcolumn .centerContent .c2a a.createButton:hover {text-decoration:underline;}
+
+.lcolumn .footballLanding .centerContent .c2a a.createButton {background-image:url(../cssimages/layout/football/footballlandingbuttonbackground.gif);}
+.lcolumn .racingLanding .centerContent .c2a a.createButton {background-image:url(../cssimages/layout/racing/racinglandingbuttonbackground.gif);color:White;}
+
+.lcolumn .centerContent .c2a .noThanks {text-align:right;padding:4px 20px 0px 0px;}
+.lcolumn .centerContent .c2a .noThanks a {font-size:12px;text-decoration:underline;}
+.lcolumn .centerContent .c2a .noThanks a:hover {text-decoration:none;}
+
+
+/* Right Layout Column  */
+.rcolumn {
+    float: left;
+    width: 190px;
+    margin-left: -190px;
+    text-align: center;
+    margin-top: 20px;
+    -
+}
+.rcolumn .commercialLink {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    padding-left:5px;
+}
+.rcolumn .skyAuth {width:160px;margin:auto;}
+.rcolumn .skyUnAuth {width:160px;margin:auto;}
+.rcolumn .googleAdContainer {}
+.rcolumn a {display:block;padding-bottom:10px}
+
+/* Footer */
+.footer {background-color:Black;height:40px;padding:30px 50px;font-size:12px;}  
+.footer ul {margin:0px;padding:0px;}  
+.footer ul li {display:inline;padding:0px 6px;background-image:url(../cssimages/layout/navlinkseparater.gif);background-repeat:no-repeat;background-position:100% 1px;}  
+.footer ul li.last {padding:0px 0px 0px 6px;background:none;}  
+.footer ul li.first {padding:0px 6px 0px 0px;}  
+.footer ul li a {color:White;text-decoration:none;font-weight:bold}  
+.footer ul li a:hover {text-decoration:underline;}  
+
+/* Footer Left Side */
+.footer .leftSide {height:40px;text-align:left;}  
+.footer .leftSide .legalLinks {}  
+.footer .leftSide .loginOrRegister {padding-top:10px;}  
+.footer .leftSide .loginOrRegister a {color:#0997d7;text-decoration:none;font-weight:bold;}  
+.footer .leftSide .loginOrRegister a:hover {text-decoration:underline;}  
+
+/* Footer Right Side */
+.footer .rightSide {float:right;width:50%;height:40px;text-align:right;}  
+.footer .rightSide .legalLinks {}  
+.footer .rightSide .copyright {padding-top:10px;color:#0997d7;}  
+
+
+/*  Admin Master Page */
+.adminMasterPage  {padding:5px 5px 0px 0px;background-color:White;}
+.adminMasterPage h1 {padding:15px 0px;}
+.adminMasterPage .contentContainer {padding:5px;}
+
+/* Admin Navigation */
+.adminMasterPage .adminNavigation .leftSide {float:left;width:550px;}
+.adminMasterPage .adminNavigation .rightSide {float:left;width:450px;}
+.adminMasterPage .adminNavigation .adminNavBar {font-size:14px;font-family:Verdana;width:90%;}
+.adminMasterPage .adminNavigation .adminNavBar ul {margin:0;padding:0px 0px 6px 0px;float:left;width:100%;border-width:1px 0;}
+.adminMasterPage .adminNavigation .adminNavBar ul li {display:inline;line-height:20px;width:100px;}
+.adminMasterPage .adminNavigation .adminNavBar ul li a {float:left;color:#9c92db;padding:0px 11px;text-decoration:none;}
+.adminMasterPage .adminNavigation .adminNavBar ul li a:hover, .adminNavBar ul li a.current {color:#0e025b;}
+
+
+/* Generics */
+.clear {clear:both;}
+
+.floatLeft {float:left;}
+
+.bold {font-weight:bold;}
+.smaller {font-size:.9em;}
+.blockElement {display:block;}
+
+.cAlign {text-align:center;}
+
+.required {color:#ed6e6b;}
+.nowrap {white-space:nowrap;}
+
+/* AJAX animation, need to be replaced with other solution */
+.updateProgressBox {width:120px;height:20px;background-color:#77e9a5;border:2px solid black;padding:5px;position:absolute;font-size:14px;}
+.updateProgressBox img {margin-right:5px;}
+
+
+/* Player Rankings Container, encompasses all 'ranking' pages */
+.playerRankingContainer a {text-decoration:none;color:#0798d6;}
+.playerRankingContainer a:hover {text-decoration:underline;}
+.playerRankingContainer p {margin:0px 0px 10px 0px;padding:0px;font-size:14px;line-height:21px;}
+.playerRankingContainer .printable {font-size:14px;padding-bottom:3px;}
+.playerRankingContainer .printable a {text-decoration:underline;}
+.playerRankingContainer .printable a:hover {text-decoration:none;}
+.playerRankingContainer .printable .printSheetIcon {height:15px;width:12px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -29px;}
+.playerRankingContainer .printable .addSheetIcon {height:13px;width:13px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 0px;}
+
+
+
+/* Information Boxes */
+.instructions  {background-color:#fbfb79;border:2px solid #c5d102;padding:3px;color:#474700;font:11px verdana, Sans-Serif;margin:8px 5px;line-height:16px;}
+.instructions a {color:#184301;text-decoration:underline;}
+.instructions a:hover {text-decoration:none;}
+/* Success Boxes */
+.success {background-color:#8AFF4F;border:1px solid #286F00;padding:3px;margin:8px 5px;color:#205F00;font:12px verdana, Sans-Serif;line-height:16px;}
+
+/* Additional Gridview Styles */
+.standardGrid td {padding-left:3px;padding-right:3px;height:21px;}
+.standardGrid th {padding:4px 6px;border:1px solid black;}
+
+
+
+
+
+/* Printable Football Sheets with Roster */
+.fooPrint1SheetWithRoster  {font-size:6pt;width:6.9in;height:9.5in;border:1px solid black;margin-bottom:15px;background-color:White;}
+.fooPrint1SheetWithRoster h1 {font-size:6pt;}
+
+.fooPrint1SheetWithRoster table {border-collapse:collapse;}
+.fooPrint1SheetWithRoster table.topContainer td {vertical-align:top}
+
+.fooPrint1SheetWithRoster table.position {width:1.7in;}
+.fooPrint1SheetWithRoster table.position td {vertical-align:top;padding:1px 2px 0px 1px;}
+.fooPrint1SheetWithRoster table.position th {font-weight:bold;font-size:8pt;background-color:#E1F8EE;text-align: center;height: 15px;} 
+.fooPrint1SheetWithRoster table.position img {vertical-align:middle;}
+
+.fooPrint1SheetWithRoster .byeWeek {font-size:5pt;color:#555;}
+.fooPrint1SheetWithRoster .team {font-size:5pt;color:#555;}
+
+.fooPrint1SheetWithRoster table td.numbers {text-align:right;}
+.fooPrint1SheetWithRoster table td input.boxes {width:10px;height:10px;}
+.fooPrint1SheetWithRoster .logo {height:63px;text-align:center;}
+.fooPrint1SheetWithRoster .logo img {border:none;}
+
+
+.fooPrint1SheetWithRoster .legend {border:1px solid black;}
+.fooPrint1SheetWithRoster .legend p {margin:0px;padding:1px 1px 1px 2px;background-color:#fef2f0;}
+.fooPrint1SheetWithRoster .legend img {vertical-align:bottom;}
+.fooPrint1SheetWithRoster .legend img.imagePad {padding-left:5px;vertical-align:bottom;}
+.fooPrint1SheetWithRoster .legend .header {background-color:#ffdad5;border-bottom:1px solid black;padding:2px;color:Black;font:bold 7pt verdana, sans-serif;text-align:center;}
+.fooPrint1SheetWithRoster .legend .player {font-weight:bold;font-size:7pt;margin-right:2px;}
+.fooPrint1SheetWithRoster .legend .tags {font-weight:bold;font-size:7pt;margin-left:14px;}
+
+.fooPrint1SheetWithRoster table.position td.numbers {text-align:right;}
+
+.fooPrint1SheetWithRoster .centerTable {width:100%;}
+.fooPrint1SheetWithRoster .centerTable .c2A {text-align:center;width:90%;margin:3px auto 1px auto;font-size:11px;}
+.fooPrint1SheetWithRoster .centerTable .c2A a {text-decoration:underline;}
+.fooPrint1SheetWithRoster .centerTable .c2A a:hover {text-decoration:none;}
+
+.fooRosterForm {width:328px;border:1px solid black;margin:0px auto;font-size:14px;text-align:left}
+.fooRosterForm h1 { font-size: 14px;font-weight: bold;padding-top: 5px;}
+.fooRosterForm tr {height:14px;}
+.fooRosterForm th {border:1px solid black;background-color:#e8e8e8;}
+.fooRosterForm th.rosterHeader {font:bold 9pt verdana, Sans-Serif;padding-left:2px;background-color:#e8e8e8;text-align:center;}
+.fooRosterForm th.positionHeader {background-color:#E1F8EE;font:bold 8pt Sans-Serif;text-align:left;padding-left:2px;white-space:nowrap;height: 10px;}
+.fooRosterForm td {text-align:left;background-color:#F5FAF1;padding:0px;}
+
+.fooRosterForm .rosterLeft {width:100%;border-collapse:collapse;}
+.fooRosterForm .rosterLeft th.genericHeader {text-align:left;background-color:#E6FAD5;font:bold 7pt Sans-Serif;padding-left:2px;border:none;height: 15px;}
+.fooRosterForm .rosterLeft th.smallCol {width:1%;white-space:nowrap;}
+.fooRosterForm .rosterLeft td {border-top:1px solid black;}
+
+.fooRosterForm .rosterRight {width:100%;border-collapse:collapse;}
+.fooRosterForm .rosterRight th.genericHeader {text-align:left;background-color:#E6FAD5;font:bold 7pt Sans-Serif;padding-left:2px;border:none;height: 15px;}
+.fooRosterForm .rosterRight th.smallCol {width:1%;white-space:nowrap;}
+.fooRosterForm .rosterRight td {border-top:1px solid black;border-left:1px solid black;}
+
+
+
+.fooPrint1SheetNoRoster  {font-size:6pt;width:6.9in;height:9.5in;margin-bottom:15px;}
+
+.fooPrint1SheetNoRoster table {border-collapse:collapse;}
+.fooPrint1SheetNoRoster table.topContainer {}
+.fooPrint1SheetNoRoster table.topContainer td {vertical-align:top}
+.fooPrint1SheetNoRoster table.topContainer tr.title th.rosterHeader h1 {padding-top:10px;font-size:10px;text-align:center;font-weight:bold;}
+
+
+.fooPrint1SheetNoRoster table.position {width:1.7in;}
+.fooPrint1SheetNoRoster table.position td {vertical-align:top;padding:1px 2px 1px 1px;}
+.fooPrint1SheetNoRoster table.position th {font-weight:bold;font-size:8pt;background-color:#E1F8EE;height:15px;text-align:center;} 
+.fooPrint1SheetNoRoster table.position img {vertical-align:middle;}
+
+.fooPrint1SheetNoRoster .byeWeek {font-size:5pt;color:#555;}
+.fooPrint1SheetNoRoster .team {font-size:5pt;color:#555;}
+
+.fooPrint1SheetNoRoster table td.numbers {text-align:right;}
+.fooPrint1SheetNoRoster table td input.boxes {width:10px;height:10px;}
+.fooPrint1SheetNoRoster .logo {height:63px;text-align:center;}
+.fooPrint1SheetNoRoster .logo img {border:none;}
+
+
+.fooPrint1SheetNoRoster .legend {border:1px solid black;}
+.fooPrint1SheetNoRoster .legend p {margin:0px;padding:1px 1px 1px 2px;background-color:#fef2f0;}
+.fooPrint1SheetNoRoster .legend img {vertical-align:bottom;}
+.fooPrint1SheetNoRoster .legend img.imagePad {padding-left:5px;vertical-align:bottom;}
+.fooPrint1SheetNoRoster .legend .header {background-color:#ffdad5;border-bottom:1px solid black;padding:2px;color:Black;font:bold 7pt verdana, sans-serif;text-align:center;}
+.fooPrint1SheetNoRoster .legend .player {font-weight:bold;font-size:7pt;margin-right:2px;}
+.fooPrint1SheetNoRoster .legend .tags {font-weight:bold;font-size:7pt;margin-left:14px;}
+
+.fooPrint1SheetNoRoster table.position td.numbers {text-align:right;}
+.fooPrint1SheetNoRoster .centerColumn {}
+.fooPrint1SheetNoRoster .centerTable {width:100%;}
+
+
+
+
+.fooSecondPage {width:6.9in;height:9.5in;background-color:White;border:1px solid black;}
+.fooSecondPage h2 { font-size: 20px;}
+.fooSecondPage h3 { font-size: 16px; }
+.fooSecondPage .contentConatiner { padding: 20px;}
+.fooSecondPage table {border-collapse:collapse;}
+.fooSecondPage p {padding:7px;font-size:12px;}
+.fooSecondPage .bold {font-weight:bold;}
+
+/* Ajax Forms */
+.ajaxOverlay {position:absolute;text-align:center;}
+.ajaxFormFaded {-moz-opacity: 0.3; /*Mozila Firefox*/
+        -webkit-opacity: 0.3; /*Webkit Standards - For I.E*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*Microsoft Standards*/
+        filter: alpha(opacity=30); /*Modern Browsers Use This*/
+        opacity: 0.3; /*One More For Good Measurement*/
+        }
+
+
+
+/* Data Tables */
+
+/*table.dataTable thead .sorting*/
+
+table.overallAccuracyGrid thead th.sorting {font-size:12px;background-color: #286090;color: white;border: 1px solid black;}
+table.overallAccuracyGrid thead th.sorting_asc {font-size:12px;background-color: #286090;color: white;border: 1px solid black;}
+table.overallAccuracyGrid .bold { font-weight: bold;font-size: 14px;}
+table.overallAccuracyGrid a { font-size: 14px;}
+table.overallAccuracyGrid a.inactiveLink { color: #a1d8ef;cursor:default;}
+table.overallAccuracyGrid a.inactiveLink:hover { text-decoration: none;}
+
+
+table.userGradedPositionGrid thead th.sorting {font-size:12px;background-color: #286090;color: white;border: 1px solid black;}
+table.userGradedPositionGrid thead th.sorting_asc {font-size:12px;background-color: #286090;color: white;border: 1px solid black;}
+
+table.userGradedPositionGrid tr.noPlayerRanked { background-color: #e7e5e6;}
+table.userGradedPositionGrid tr.goodRanking { background-color: #d2f9ca;}
+table.userGradedPositionGrid tr.neutralRanking { background-color: #f9f9bb;}
+table.userGradedPositionGrid tr.badRanking { background-color: #fbe0e0;}
+table.userGradedPositionGrid td {font-size:12px;}
+
+
+
+.helpIcon {background-color: orange;height:15px;width:15px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -55px;}
+
+
+/* to make datatables work without breaking the 3 column layout*/
+.dataTables_wrapper {clear: none;}
+table.dataTable { clear: right;}
+
+
+/* Remove this once the major move to Bootstraps is conducted */
+/* http://stackoverflow.com/questions/19109470/twitter-bootstrap-box-sizing-ruined-my-layout */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.container .row *,
+.container .row *:before,
+.container .row *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+.aspNetDisabled { color: #989797;}

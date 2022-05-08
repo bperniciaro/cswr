@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using BP.CheatSheetWarRoom.UI;
+
+namespace temp { 
+public partial class temp_2_26_ExportUsersToASPP : System.Web.UI.Page
+{
+
+  private const int ExportLimit = 1000;
+
+  protected void Page_Load(object sender, EventArgs e)
+  {
+    // this is a long data port, let's give it 4 hours to complete
+    this.Page.Server.ScriptTimeout = 14400;
+  }
+
+  protected void butExportAllUsers_Click(object sender, EventArgs e)
+  {
+
+    MembershipUserCollection allCSWRUsers = Membership.GetAllUsers();
+
+    foreach (MembershipUser cswrUser in allCSWRUsers)
+    {
+        ProfileCommon targetUserProfile = this.User.Profile.GetProfile(cswrUser.UserName);
+        usersToExport.Add(new ASPPUser(cswrUser.UserName, cswrUser.Email, RandomString(7), targetUserProfile.FirstName, " "));
+        if (usersToExport.Count >= ExportLimit)
+        {
+          break;
+        }
+      }
+    }
+
+    CsvExport<ASPPUser> cvsUsers = new CsvExport<ASPPUser>(usersToExport);
+    Response.Write(cvsUsers.Export());
+  }
+
+  private static string RandomString(int Size)
+  {
+    Random rand = new Random();
+
+    string input = "abcdefghijklmnopqrstuvwxyz0123456789";
+    var chars = Enumerable.Range(0, Size)
+                           .Select(x => input[rand.Next(0, input.Length)]);
+    return new string(chars.ToArray());
+  }
+
+
+}

@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using BP.CheatSheetWarRoom.BLL.Sheets;
+using Twitterizer;
+
+namespace BP.CheatSheetWarRoom.UI.UserControls
+{
+  public partial class TweetViewer : System.Web.UI.UserControl
+  {
+
+    public int PlayerID
+    {
+      get;
+      set;
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+      if (this.PlayerID != 0)
+      {
+        LoadPlayerInfo();
+        QueryTwitter();
+      }
+    }
+
+    private void LoadPlayerInfo()
+    {
+      Player targetPlayer = Player.GetPlayer(this.PlayerID);
+      if(targetPlayer != null)  
+      {
+        litPlayerName.Text = targetPlayer.FullName;
+      }
+    }
+ 
+    private void QueryTwitter()
+    {
+      SearchOptions myOptions = new SearchOptions();
+      //myOptions.CacheTimespan = new TimeSpan(0, 15, 0);
+
+
+      //myOptions.ResultType = SearchOptionsResultType.Popular;
+
+      string searchTerm = "\"" + Player.GetPlayer(this.PlayerID).FullName + "\"";
+      TwitterResponse<TwitterSearchResultCollection> recentTweets = TwitterSearch.Search(searchTerm, myOptions);
+      repTweets.DataSource = recentTweets.ResponseObject;
+      repTweets.DataBind();
+    }
+
+    protected void repTweets_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+      if ((e.Item.ItemType == ListItemType.Item) || (e.Item.ItemType == ListItemType.AlternatingItem))
+      {
+        TwitterSearchResult tsrBoundSearchResult = (TwitterSearchResult)e.Item.DataItem;
+        Label labTweet = (Label)e.Item.FindControl("labTweet");
+        Label labTimestamp = (Label)e.Item.FindControl("labTimestamp");
+        Image imaLogo = (Image)e.Item.FindControl("imaLogo");
+        HyperLink hlUserLink = (HyperLink)e.Item.FindControl("hlUserLink");
+        HyperLink hlUserLogo = (HyperLink)e.Item.FindControl("hlUserLogo");
+
+        labTweet.Text = ResolveLinks(tsrBoundSearchResult.Text);
+        labTimestamp.Text = RelativeDate(tsrBoundSearchResult.CreatedDate);
+        imaLogo.ImageUrl = tsrBoundSearchResult.ProfileImageLocation;
+        hlUserLink.Text = tsrBoundSearchResult.FromUserScreenName;
+        hlUserLink.NavigateUrl = "http://twitter.com/" + tsrBoundSearchResult.FromUserScreenName;
+        hlUserLogo.NavigateUrl = "http://twitter.com/" + tsrBoundSearchResult.FromUserScreenName;
+      }
+    }
+
+    private string ResolveLinks(string body)
+    {
+      // replace http link text with real hyperlinks
+      body = Regex.Replace(body, "(http://[^ ]*[a-zA-Z0-9])", "<a href=\"$1\" target=\"_blank\">$1</a>");
+      // replace www link text with real hyperlinks
+      body = Regex.Replace(body, "(www.[^ ]*[a-zA-Z0-9])", "<a href=\"http://$1\" target=\"_blank\">$1</a>");
+      // replace @twitter usernames with links to their home page
+      body = Regex.Replace(body, "(@([^ ]*[a-zA-Z0-9]))", "@<a href=\"http://www.twitter.com/$2\" target=\"_blank\">$2</a>");
+      // replace #twitter usernames with links to a search for their username 
+      body = Regex.Replace(body, "(#([^ ]*[a-zA-Z0-9]))", "#<a href=\"http://www.twitter.com/search?q=$2\" target=\"_blank\">$2</a>");
+      // replace searched text with bold text
+      string fullName = Player.GetPlayer(this.PlayerID).FullName;
+      string fullNameWithTag = "<strong>" + fullName + "</strong>";
+      body = body.Replace(fullName, fullNameWithTag);
+      return body;
+    }
+
+
+    public static string RelativeDate(DateTime theDate)
+    {
+      Dictionary<long, string> thresholds = new Dictionary<long, string>();
+      int minute = 60;
+      int hour = 60 * minute;
+      int day = 24 * hour;
+      thresholds.Add(60, "{0} seconds");
+      thresholds.Add(minute * 2, "a minute");
+      thresholds.Add(45 * minute, "{0} minutes");
+      thresholds.Add(120 * minute, "an hour");
+      thresholds.Add(day, "{0} hours");
+      thresholds.Add(day * 2, "yesterday");
+      thresholds.Add(day * 30, "{0} days");
+      thresholds.Add(day * 365, "{0} months");
+      thresholds.Add(long.MaxValue, "{0} years");
+
+      long since = (DateTime.Now.Ticks - theDate.Ticks) / 10000000;
+      foreach (long threshold in thresholds.Keys)
+      {
+        if (since < threshold)
+        {
+          TimeSpan t = new TimeSpan((DateTime.Now.Ticks - theDate.Ticks));
+          return string.Format(thresholds[threshold], (t.Days > 365 ? t.Days / 365 : (t.Days > 0 ? t.Days : (t.Hours > 0 ? t.Hours : (t.Minutes > 0 ? t.Minutes : (t.Seconds > 0 ? t.Seconds : 0))))).ToString());
+        }
+      }
+      return "";
+    }
+
+  }
+}

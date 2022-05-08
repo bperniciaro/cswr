@@ -1,0 +1,20 @@
+<%SenderName%> has invited you to try out the free fantasy football cheat sheet creation tools at www.cheatsheetwarroom.com.
+
+To try it out for yourself, visit: https://www.cheatsheetwarroom.com (if hyperlink isn't shown, copy and paste into browser)
+
+CheatSheetWarRoom allows you to create interactive, web-based fantasy football cheat sheets using
+drag and drop functionality, for free.  You simply rank your players at each fantasy position and we handle the rest.
+
+Our customizable cheat sheets integrate a wealth of useful information and functionality including:
+-Player name, team, position, number, and experience
+-Sleeper, bust, and injured tags
+-Relevant statistics
+-Supplemental rankings
+-A customizable note for each player
+
+After you have finished ranking your players, you can generate a comprehensive, printable cheat sheet based on your rankings
+to bring to your fantasy football draft.  Our goal is to make the task of creating fantasy football cheat sheets fun, easy, and intuitive.  
+
+See you online,
+CheatSheetWarRoom
+https://www.cheatsheetwarroom.com

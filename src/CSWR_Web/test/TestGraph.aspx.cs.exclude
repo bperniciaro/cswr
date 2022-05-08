@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Web.UI.DataVisualization.Charting;
+using USMC.EPAS.BLL.Personnel;
+
+public partial class test_TestGraph : System.Web.UI.Page
+{
+  private const int _monthsInYear = 12;
+
+  protected void Page_Load(object sender, EventArgs e)
+  {
+    BuildCarsPerUser();
+    BuildUserRegistrationChart();
+  }
+
+
+  private void BuildCarsPerUser()
+  {
+    List<Personnel> allPersonnel = Personnel.GetPersonnel();
+    int[] vehicleCountsPerUser = new int[7];
+
+   
+    foreach (Personnel currentPerson in allPersonnel)
+    {
+      List<POV> vehicles = POV.GetPOVs(currentPerson.PersonnelID);
+      if (vehicles.Count > 7)
+      {
+        vehicleCountsPerUser[7]++;
+      }
+      else
+      {
+        vehicleCountsPerUser[vehicles.Count]++;
+      }
+    }
+
+    Series vehicleSeries = chtCarsPerUser.Series[0];
+    int i = 0;
+    foreach (int carCount in vehicleCountsPerUser)
+    {
+      if (i < 6)
+      {
+        vehicleSeries.Points.AddXY(i.ToString(), carCount);
+      }
+      else
+      {
+        vehicleSeries.Points.AddXY("6+", carCount);
+      }
+      i++;
+    }
+
+  }
+
+  private void BuildUserRegistrationChart()
+  {
+    // Set series chart type
+    chtUserRegistrationChart.Series["2009"].ChartType = SeriesChartType.Column;
+    chtUserRegistrationChart.Series["2010"].ChartType = SeriesChartType.Column;
+
+    // Set series point width
+    chtUserRegistrationChart.Series["2009"]["PointWidth"] = "1";
+    chtUserRegistrationChart.Series["2010"]["PointWidth"] = "1";
+
+    // Show chart with right-angled axes
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.Enable3D = true;
+
+    // Show chart with right-angled axes
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.IsRightAngleAxes = false;
+
+    // Show columns as clustered
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.IsClustered = false;
+
+    // Show X axis end labels
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].AxisX.LabelStyle.IsEndLabelVisible = false;
+
+    // Set rotational angles
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.Inclination = 30;  // x axis
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.Rotation = 30;  // y axis
+    chtUserRegistrationChart.ChartAreas["MainChartArea"].Area3DStyle.Perspective = 5;  
+
+    MembershipUserCollection allUsers = Membership.GetAllUsers();
+    int[] monthlyUsers = new int[12];
+
+    // grab the necessary data
+    foreach (MembershipUser currentUser in allUsers)
+    {
+      DateTime registrationDate = currentUser.CreationDate;
+      int thisYear = DateTime.Now.Year - 1;
+      // see if the user registered this year
+      if (registrationDate.Year == thisYear)
+      {
+        // if the user registered this year, file them by registration month
+        monthlyUsers[registrationDate.Month - 1]++;
+      }
+    }
+
+    Series userSeries = chtUserRegistrationChart.Series[1];
+    userSeries.Points.AddXY("Jan", 15);
+    userSeries.Points.AddXY("Feb", 22);
+    userSeries.Points.AddXY("Mar", 65);
+    userSeries.Points.AddXY("Apr", 32);
+    userSeries.Points.AddXY("May", 45);
+    userSeries.Points.AddXY("Jun", 36);
+    userSeries.Points.AddXY("Jul", 63);
+    userSeries.Points.AddXY("Aug", 56);
+    userSeries.Points.AddXY("Sep", 54);
+    userSeries.Points.AddXY("Oct", 65);
+    userSeries.Points.AddXY("Nov", 46);
+    userSeries.Points.AddXY("Dec", 63);
+
+    Series userSeries2 = chtUserRegistrationChart.Series[0];
+    userSeries2.Points.AddXY("Jan", 25);
+    userSeries2.Points.AddXY("Feb", 42);
+    userSeries2.Points.AddXY("Mar", 73);
+    userSeries2.Points.AddXY("Apr", 43);
+    userSeries2.Points.AddXY("May", 46);
+    userSeries2.Points.AddXY("Jun", 38);
+    userSeries2.Points.AddXY("Jul", 78);
+    userSeries2.Points.AddXY("Aug", 63);
+    userSeries2.Points.AddXY("Sep", 64);
+    userSeries2.Points.AddXY("Oct", 78);
+    userSeries2.Points.AddXY("Nov", 47);
+    userSeries2.Points.AddXY("Dec", 70);
+  }
+}

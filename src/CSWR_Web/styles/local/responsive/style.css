@@ -1,0 +1,966 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+	/*overflow-x: hidden;*/
+
+body{
+	line-height: 1.231;
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6,small,p{
+	margin: 0 0 10px 0;
+}
+
+/*a,a:hover{
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+}*/
+
+.bg-white {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+}
+
+/*===================== header section css start =====================*/
+
+
+
+#main-headre{
+	background-color: #000000;
+	padding-top: 15px;
+	position: relative;
+	z-index: 3;
+}
+
+#main-headre .container .row ,
+#main-headre .container .row  *,
+#main-headre .container .row *:before,
+#main-headre .container .row *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+#main-headre::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #ccc;
+	z-index: 0;
+	opacity: 0.3;
+}
+.separate-line{
+	margin-top: 15px;
+	margin-bottom: 0;
+	opacity: 0.3;
+}
+.j-l li{
+    display: inline;
+    margin-left: 3px;
+    padding: 0 7px;
+}
+.j-l li a{
+	color: #ffff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.j-l li a i{
+	font-size: 15px;
+	margin-right:5px; 
+}
+.icon-block-button .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    /*color: orange;*/
+}
+
+/*==== menu icon ====*/
+.menu-icon {
+	display: none;
+}
+.row .three{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  text-align: center;
+}
+.hamburger .line{
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	display: block;
+	margin: 4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger .is-active .line:nth-child(2){
+  opacity: 0;
+}
+.hamburger .is-active .line:nth-child(1){
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger .is-active .line:nth-child(3){
+  -webkit-transform: translateY(-4px) rotate(-50deg);
+  -ms-transform: translateY(-4px) rotate(-50deg);
+  -o-transform: translateY(-4px) rotate(-50deg);
+    transform: translateY(-4px) rotate(-50deg);
+}
+/*============ menu item ==========*/
+.main-nav{
+	background-color: transparent;
+	border: none;
+	margin-bottom: 0;
+}
+.my-menu-section{
+	padding-left: 0;
+	padding-right: 0;
+	background-color: transparent;
+}
+.menu-block{
+	position: relative;
+	z-index: 10;
+}
+.menu-block::before,.menu-block .row::before,.main-nav::before,.my-menu-section::before,.my-menu-section ul::before{
+	display: none;
+}
+.my-menu-section .navbar-nav li a{
+	display: inline-block;
+    position: relative;
+    padding: 22px 22px 22px 22px;
+    border-bottom: 4px solid transparent;
+    color: #e9e9e9;
+    border-left: 1px solid #1a1a1a;
+}
+.my-menu-section .navbar-nav li a:hover{
+	text-decoration: underline;
+}
+.my-menu-section .navbar-nav li:nth-child(1) a{
+	border-bottom: 3px solid #0448f4;
+}
+.my-menu-section .navbar-nav li:nth-child(2) a{
+	border-bottom: 3px solid #17a341;
+}
+.my-menu-section .navbar-nav li:nth-child(3) a{
+	border-bottom: 3px solid #D72D14;
+}
+.my-menu-section .navbar-nav li:nth-child(4) a{
+	border-bottom: 3px solid #f47b04;
+}
+.my-menu-section .navbar-nav li:nth-child(5) a{
+	border-bottom: 3px solid #04dbf4;
+}
+.my-menu-section .navbar-nav li:nth-child(6) a{
+	border-right: 1px solid #1a1a1a;
+	border-bottom: 3px solid #9418b1;
+}
+.my-menu-section .navbar-nav li a:hover{
+	color: #fff;
+}
+.my-menu-section .navbar-nav .active a,.my-menu-section .navbar-nav .active a:hover{
+	font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+}
+
+#main-headre .main-nav{
+	padding-left: 15px;
+	padding-right: 15px; 
+}
+/*===================== header section css end =====================*/
+
+
+
+/*===================== new section css end =====================*/
+.new-menu{
+	padding-bottom: 20px;
+}
+#new-menu #bs-example-navbar-collapse-1 .navbar-nav li a{
+	color: #000;
+}
+#new-menu .my-menu-section .navbar-nav li a{
+	border-left: none;
+	border-right: none;
+}
+#hamburger-2 .line, #hamburger-3 .line{
+	background-color: #000;
+}
+#new-menu .my-menu-section .navbar-nav li a{
+	/*padding: 15px;*/
+	padding: 15px 14px;
+	color: #000;
+	border: none;
+	text-transform: uppercase;
+}
+#new-menu .my-menu-section .navbar-nav li a:hover{
+	text-decoration: underline;
+	/*background-color: #d2b276;*/
+	color: #fff;
+  color: #223c06;
+}
+
+
+.container-fluid {padding-left:0px;padding-right:0px;}
+
+.new-menu .main-nav{
+	overflow: hidden;
+    border-radius: 4px;	
+}
+.new-menu .secondary {
+	background: #dcefc8;
+}
+.new-menu .tertiary {
+	background: #A6CC95;
+  margin-bottom:30px;
+}
+
+.new-menu .secondary .navbar-nav li a:hover {
+	background-color: #dcefc8;
+}
+.new-menu .tertiary .navbar-nav li a:hover {
+	background-color: #91bb7e;
+}
+
+.thirdLevelNav {}
+.thirdLevelNav .btn-primary {background-color:#A6CC95;padding:10px 15px;margin:5px;color:black;}
+.thirdLevelNav .btn-primary:hover {background-color:#91bb7e;}
+.thirdLevelNav li.active .btn-primary {background-color:#91bb7e;font-weight:bold;}
+
+/*.tertiaryNav .navbar-nav {background-color:none;}*/
+
+/*===================== new section css end =====================*/
+
+
+
+
+/*===================== inner section css start =====================*/
+.two-section-page .inner-section-one,.three-section-page .inner-section-one{
+	padding-top: 20px;
+}
+.inner-section-one {
+  position: relative;
+  background-color: #fff;
+  /*margin-bottom: 350px;*/
+  z-index: 1;
+  padding-bottom: 30px;
+  /*font-size:16px;
+  line-height: 1.2em;*/
+}
+p {
+  margin: 0;
+}
+
+  p + p {
+    margin-top: 10px;
+  }
+
+.termsOfServicePage h2 {
+    margin: 8px 0;
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+#wrapper{
+	padding-top: 20px;
+}
+.sportAgnostic {
+    border-right: 1px solid #39adde;
+    border-top: 1px solid #39adde;
+    border-left: 1px solid #39adde;
+    border-bottom: 1px solid #0799D5;
+    padding: 20px 30px;
+    /*min-height: 700px;*/
+}
+.termsOfServicePage h2 {
+    margin: 8px 0;
+    text-align: center;
+}
+.sportAgnostic h3{
+	margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.termsOfServicePage p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.termsOfServicePage li {
+	font-weight: 300;
+}
+.contentContainer ul,.contentContainer ol{
+	padding-left: 40px;
+}
+.paddin-none{
+	padding: 0;
+}
+/*===================== inner section css end =====================*/
+
+
+/*===================== inner three block page section css start =====================*/
+.three-section-page .tertiaryNav ul {
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+}
+.three-section-page .tertiaryNav ul li {
+    margin: 0;
+    padding: 7px 0;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-bottom: 1px solid #c7ae7d;
+    box-shadow: 0px 2px 0px 0px #e2c792;
+    -webkit-box-shadow: 0px 2px 0px 0px #e2c792;
+    -moz-box-shadow: 0px 2px 0px 0px #e2c792;
+    -ms-box-shadow: 0px 2px 0px 0px #e2c792;
+    -o-box-shadow: 0px 2px 0px 0px #e2c792;
+    text-align: center;
+    display: block;
+    list-style: none;
+}
+.three-section-page .tertiaryNav ul li:last-child{
+	border-bottom: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+}
+.three-section-page .tertiaryNav ul li a {
+   	font-size: 11px;
+    font-weight: bold;
+    line-height: 15px;
+    text-decoration: none;
+    color: #5f4632;
+}
+.three-section-page .footballLanding .tertiaryNav ul li a {
+    color: #5f4632;
+}
+.sie-img{
+	width: 100%;
+}
+.back-gc{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #ddbd7f;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 100%;
+}
+/*.secondary .back-gc {background-color: #ddbd7f;}
+.tertiary .back-gc {background-color: orange;}*/
+
+.three-section-page .iconContainer {
+    margin-bottom: 18px;
+}
+.three-section-page .iconContainer a {
+    display: block;
+    background-image: url(../images/footballsheeticon.gif);
+    background-repeat: no-repeat;
+    height: 80px;
+    background-position: center;
+}
+/*===================== inner three block page section css end =====================*/
+
+
+/*===================== footer section css start =====================*/
+#newFooter {
+    width: 100%;
+    box-shadow: 0 -3px 25px 2px rgba(0,0,0,0.4), 0 1px 1px #fff inset;
+    background: #454545;
+    color: white;
+    /*position: fixed;*/
+    bottom: 0;
+}
+
+/*#newFooter #container .row ,
+#newFooter #container .row  *,
+#newFooter #container .row *:before,
+#newFooter #container .row *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}*/
+
+#newFooter #container {
+	padding-top: 20px;
+}
+#newFooter .column .title {
+    border-bottom: 1px solid white;
+    padding: 5px 5px 5px 12px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+#newFooter .column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+#newFooter .column ul li {
+    margin: 5px 15px 5px 5px;
+    padding: 5px 5px 5px 10px;
+    border-bottom: 1px dotted white;
+}
+.cAlign{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#newFooter #container .column ul li a {
+    color: #fff;
+}
+.cAlign p{
+	font-weight: 400;
+	font-size: 13px;
+}
+#newFooter #container .version {
+    font-size: 12px;
+}
+/*===================== footer section css end =====================*/
+
+
+/*=================== reaponsive start ================*/
+@media (min-width: 1200px){
+	.three-section-page .w-block {
+	    width: 21%;
+	}
+	.three-section-page .two-w-block{
+		width: 79%;
+	}
+	.block-se{
+		display: flex;
+	}	
+	.Change-we-two .advertisement{
+		width: 100%;
+	}
+	.menu-name-section{
+		display: none;
+	}
+}
+@media (min-width: 942px){
+	.Change-we-one{
+	    width: calc(100% - 330px);		
+	}
+	.Change-we-two{
+	    width: 330px;
+	}
+}
+@media (min-width:1200px) and (max-width: 1440px){
+	.cAlign p {
+	    font-size: 13px;
+	}
+	#wrapper{
+		padding-bottom: 0;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.paddin-none {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	ul.paddin-none{
+		padding: 0;
+	}
+	.col-sm-12.paddin-none{
+		padding: 0;
+	}
+	.sportAgnostic h3 {
+	    margin-top: 30px;
+	    font-size: 20px;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	    padding-left: 15px;
+	}
+	.my-menu-section .navbar-nav li a {
+	    padding: 15px 20px 15px 20px;
+	}
+	#new-menu .my-menu-section .navbar-nav li a {
+		color: #000;
+	}
+	.back-gc{
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	#wrapper{
+		padding-bottom: 0;
+	}
+	.block-se{
+		display: flex;
+	}
+	.menu-name-section{
+		display: none;
+	}
+}
+@media (min-width: 769px) and (max-width: 991px){
+	.navbar-nav {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+	}
+  .thirdLevelNav .navbar-nav {
+    /*float:none;*/
+  }
+	#new-menu .my-menu-section .navbar-nav li a {
+	    padding: 15px 10px;
+	}
+	.sie-img {
+	    width: auto;
+	}
+	/*footer*/
+	#newFooter {
+	    margin-top: 50px;
+	}
+	.cAlign {
+	    padding-top: 30px;
+	    padding-bottom: 20px;
+	}
+	.sportAgnostic h3 {
+	    font-size: 20px;
+	}
+	.termsOfServicePage h2 {
+	    font-size: 22px;
+	}
+	.termsOfServicePage p {
+	    font-size: 13px;
+	}
+	.three-section-page .tertiaryNav ul li {
+	    padding: 10px 0px 5px;
+	    margin: 10px 0px 0;
+	    text-align: center;
+	    width: 100%;
+	}
+	.three-section-page .tertiaryNav ul{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.main-nav{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#new-menu .navbar-nav li a{
+		color: #000;
+	}
+	.my-menu-section .navbar-nav li a {
+	    padding: 15px 20px 15px 20px;
+	}
+	#cphContent_panFootballNavigation .paddin-none{
+		padding-top: 0;
+	}
+	.paddin-none {
+	    padding: 15px;
+	}
+	.col-sm-12.paddin-none{
+		padding: 0;
+	}
+	.inner-section-one {
+	   	margin-bottom: 355px;
+       /*background-color:purple;*/
+	}
+	.back-gc{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#bs-example-navbar-collapse-1, #secondaryNavBarCollapse, #secondaryNavBarCollapse {
+		display: block;
+	}
+	#wrapper .sportAgnostic{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.three-section-page .tertiaryNav ul li:last-child{
+	    border-bottom: 1px solid #c7ae7d;
+	    box-shadow: 0px 2px 0px 0px #e2c792;
+	    -webkit-box-shadow: 0px 2px 0px 0px #e2c792;
+	    -moz-box-shadow: 0px 2px 0px 0px #e2c792;
+	    -ms-box-shadow: 0px 2px 0px 0px #e2c792;
+	    -o-box-shadow: 0px 2px 0px 0px #e2c792;
+	}
+	.menu-name-section{
+		display: none;
+	}
+	.block-se {
+	    display: flex;
+	}
+	.back-gc {
+	    height: 100%;
+	}
+}
+
+/*=========== modile menu start ============*/
+@media screen and (min-width: 769px){
+	.my-menu-section .navbar-primary li:nth-child(6){
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	#main-headre .menu-block {
+	    width: 100% !important;
+	}
+	#main-headre .menu-block > .row {
+	    margin:0;
+	}
+	.menu-name-section{
+		display: block;
+	}
+	.mobile-screen-none{
+		display: none;
+	}
+	.my-menu-section .navbar-nav li:nth-child(7){
+		display: block;
+	}
+	#main-headre .navbar-toggle {
+	    display: block;
+	}
+	#main-headre .collapse {
+	    display: none;
+	}
+	#main-headre .navbar-toggle {
+	    float: none; 
+	    padding:0; 
+	    margin-top:0; 
+	    margin-right: 0; 
+	    margin-bottom: 0; 
+	    background-color: transparent;
+	    background-image: none; 
+	    border: none;
+	    border-radius:none; 
+	    position: absolute; 
+	    top: -38px;
+	    right: -70px;
+	    transform: translate(50%, 50%);
+	    -webkit-transform: translate(50%, 50%);
+	    -moz-transform: translate(50%, 50%);
+	    -ms-transform: translate(50%, 50%);
+	    -o-transform: translate(50%, 50%);
+	}
+	#main-headre #bs-example-navbar-collapse-1{
+		position: absolute;
+		top: 13px;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+	}
+  #new-menu #secondaryNavBarCollapse {
+		border-top: none;
+		display: none;
+		top: 100%;
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	}
+  #new-menu #bs-example-navbar-collapse-3{
+		border-top: none;
+		display: none;
+		top: 100%;
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	}
+	#main-headre .navbar-default .navbar-toggle .icon-bar {
+	    background-color: #fff;
+	}
+	.navbar-nav{
+		background-color: #000;
+		margin: 0;
+		width: 100%;
+	}
+  .thirdLevelNav .navbar-nav {background:none;}
+	.navbar-nav li{
+		width: 100%;
+	}
+	.navbar-nav li a{
+		width: 100%;
+	}
+	.navbar-nav li .j-l{
+		padding-left: 0;
+	}
+	.main-nav{
+		min-height: unset;
+	}
+
+	/* new menu */
+	.new-menu{
+		position: relative;
+		z-index: 1;
+	}
+	#new-menu .rwo{
+		width: 100%;
+		display: block;
+	}
+	#new-menu .mobile-menu-icon{
+		float: none;
+	    display: flex;
+    	align-items: center;
+	}
+	#main-headre .headerRow {
+		display: flex;
+    align-items: center;
+	}
+	#main-headre .headerRow > div{
+		padding: 0
+	}
+	#main-headre .menu-icon {
+	    margin-left: auto;
+	}
+	.my-menu-section .navbar-nav li a{
+		padding: 15px;
+	}
+	.j-l li {
+	    display: inline;
+	    margin-left: 0px;
+	    padding: 0 0px;
+	}
+	#main-headre {
+	    padding-bottom: 15px;
+	}
+	.menu-icon{
+		display: block;
+		margin-left: auto;
+	}
+	#new-menu .navbar-nav {
+	    background-color: #000;
+	}
+	.tertiaryNav{
+		margin-bottom: 30px;
+	}
+	.three-section-page .inner-section-one{
+		padding-top: 30px;
+	}
+	#new-menu .my-menu-section .navbar-nav li a {
+	    color: #fff;
+	}
+	.separate-line{
+		display: none;
+	}	
+	.mobile-screen-none {
+		display: none;
+	}
+	.sie-img{
+		width: auto;
+	}
+	.paddin-none{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.paddin-none.col-sm-12,ul.paddin-none{
+		padding: 0;
+	}
+	.three-section-page .tertiaryNav ul li {
+	    padding: 7px 15px;
+	    text-align: left;
+	}
+	.sportAgnostic {
+	    padding: 15px;
+	    margin-bottom: 30px;
+	}
+	.termsOfServicePage h2 {
+	    margin: 5px 0;
+	    font-size: 18px;
+	}
+	.sportAgnostic h3 {
+	    margin-top: 25px;
+	    font-size: 16px;
+	}
+	.termsOfServicePage p {
+	    font-size: 12px;
+	}
+	.sportAgnostic .termsOfServicePage ol, .sportAgnostic .termsOfServicePage ul {
+	    padding-left: 30px;
+	}
+	/*footer*/
+   	#container .col-xs-12:nth-child(2){
+   		margin-top: 30px;
+   		margin-bottom: 30px;
+   	}
+   	.cAlign {
+	    padding-top: 30px;
+	    padding-bottom: 15px;
+	}
+	.cAlign p{
+		font-size: 12px;
+	}
+	.back-gc{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		height: auto;
+	}
+	#wrapper {
+	    padding-bottom: 0px;
+	}
+	#wrapper .sportAgnostic{
+		margin-bottom: 0;
+	}
+	.my-menu-section .navbar-nav li a{
+		border-bottom: none;
+	}
+	.my-menu-section .navbar-nav li:nth-child(1) a {
+	    border-left: 4px solid #0448f4;
+	    border-bottom:0;
+	    border-top: 1px solid #e4e4e4;
+	}
+	.my-menu-section .navbar-nav li:nth-child(2) a {
+	    border-left: 4px solid #17a341;
+	    border-bottom:0;
+	    border-top: 1px solid #e4e4e4;
+	}
+	.my-menu-section .navbar-nav li:nth-child(3) a {
+	    border-left: 4px solid #D72D14;
+	    border-bottom:0;
+	    border-top: 1px solid #e4e4e4;
+	}
+	.my-menu-section .navbar-nav li:nth-child(4) a {
+	    border-left: 4px solid #f47b04;
+	    border-bottom:0;
+	    border-top: 1px solid #e4e4e4;
+	}
+	.my-menu-section .navbar-nav li:nth-child(5) a {
+	    border-left: 4px solid #04dbf4;
+	    border-bottom:0;
+	    border-top: 1px solid #e4e4e4;
+	}
+	.my-menu-section .navbar-nav li:nth-child(6) a {
+	    border-left: 4px solid #9418b1;
+	    border-bottom:0; 
+	    border-top: 1px solid #e4e4e4;
+	}
+	.menu-block{
+		width: 100%;
+	}
+	.new-menu .main-nav {
+	    overflow: visible;
+	    padding: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 769px){
+	#container .col-xs-12:nth-child(2) {
+	    margin-top: 0px;
+	    margin-bottom: 0px;
+	}
+	.three-section-page .tertiaryNav ul li {
+	    padding: 7px 0px;
+	    text-align: center;
+	}
+	.block-se {
+	    display: flex;
+	}
+	.back-gc {
+	    height: 100%;
+	}
+	.three-section-page .advertisement{
+		margin-top: 30px;
+	}
+	.three-section-page .sportAgnostic {
+	     margin-bottom: 0px; 
+	}
+}
+
+
+/*============ new responsive css start ============*/
+@media screen and (max-width: 1215px){
+	.container {
+	    width: 90vw !important;
+	    padding-right: 0;
+	    padding-left: 0;
+	}
+}
+@media (min-width: 768px) and (max-width: 941px){
+	.inner-section-one .container .row > .col-sm-9 {
+	    width: 100%;
+	}
+	.inner-section-one .Change-we-one{
+		margin-bottom: 30px
+	}
+	.inner-section-one .container .row > .col-sm-3,.inner-section-one .container .row > .Change-we-two{
+	    width: 44%;
+	}
+	.inner-section-one .container .row > .col-sm-3 img,.inner-section-one .container .row > .Change-we-two img{
+		width: 100%;
+	}
+	.three-section-page .menu-name-section {
+	     padding-right: 0px; 
+	     padding-left: 0px; 
+	}
+	.three-section-page #new-menu .mobile-menu-icon .menu-icon {
+	    right: 0px;
+	}
+}
+@media (min-width: 942px) and (max-width: 1199px){
+	.sie-img {
+	    width: 100%;
+	}
+	.back-gc {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	.three-section-page .Change-we-two{
+		padding-left: 15px;
+	}
+	.three-section-page .w-block{
+		padding-right: 0;
+	}	
+	.inner-section-one .container .row > .col-sm-3 img,a.inner-section-one .container .row > .Change-we-two img{
+		width: 100%;
+	}	
+	.three-section-page .Change-we-one .two-w-block{
+		width: 100%;
+	}
+	.w-block{
+		display: none;
+	}
+	.three-section-page .inner-section-one .row{
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	#new-menu{
+		background-color: #fff;
+	}
+	.bg-white{
+		background-color: #fff;
+		width: 100%;
+	    position: relative;
+	    z-index: 1;
+	    bottom: -1px;
+	}
+	.index-page .bg-white{
+		padding-bottom: 20px;
+	}
+}
+@media screen and (max-width: 767px){
+#newFooter {
+    position: relative;
+}
+.inner-section-one {
+    margin-bottom: 0;
+}
+}
+/*============ new responsive css end ============*/
+/*=================== reaponsive end ================*/
+

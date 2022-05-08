@@ -1,0 +1,415 @@
+﻿/*.btn-toolbar .btn-default {background-color:#CDE2A9 !important}*/
+
+/* HoverImage */    
+.hoverImageControl .thumb {position:relative;z-index:0;}
+.hoverImageControl .thumb:hover {background-color:transparent;z-index:50;}
+.hoverImageControl .thumb span {position:absolute;background-color:lightyellow;padding:5px;left:-1000px;border:1px dashed gray;visibility:hidden;color:black;text-decoration:none;}
+.hoverImageControl .thumb span img {border-width:0;padding:2px;}
+.hoverImageControl .thumb:hover span {visibility:visible;top:-150px;left:0px;}
+.hoverImageControl span.caption {font-size:10px;font-style:italic}
+
+
+/* Sport Contextual Navigation */
+/*.fooRankingNavControl ul {margin:20px 0px;padding:0;}
+.fooRankingNavControl li {margin-right:10px;display:inline;}
+.fooRankingNavControl li a {font-size:14px;text-decoration:underline;}
+.fooRankingNavControl li a:hover {text-decoration:none;}
+.fooRankingNavControl .activePosition {font-weight:bold;}*/
+
+
+/* FOO User Graded Sheet */
+.fooUserGradedSheet h2 {padding: 15px 0 0 0;margin-bottom: 3px;}
+.fooUserGradedSheet p { padding:0;margin: 0;}
+.fooUserGradedSheet .positionButtonsContainer { padding-top: 10px;}
+.fooUserGradedSheet .rankDescription {padding-bottom: 20px;color: #767676;}
+.fooUserGradedSheet .rankDescription .italic { font-style: italic;}
+
+
+
+
+/* Message Box */
+.messageBox {font-family:Sans-Serif;font-size:14px;}
+.messageBox table {width:100%;margin:5px 0px;}
+.messageBox table tr.messageRow td.tableInside {padding:8px;text-align:center;}
+.messageBox table tr.messageRow td.success {border:2px solid #109902;background-color:#82e977;color:#0f1b0e;}
+.messageBox table tr.messageRow td.error {border:2px solid black;background-color:pink;}
+.messageBox table tr.messageRow td.warning {border:2px solid orange;background-color:Yellow;}
+.messageBox table tr.messageRow td.instructions  {background-color:#ffffa3;border:2px solid #f1d031;}
+.messageBox table tr.messageRow a {color:Black;text-decoration:underline;}
+.messageBox table tr.messageRow a:hover {color:Black;text-decoration:none;}
+
+
+/* Note Editor    */
+.racNoteEditor {width:125px;margin:0px;font-size:10px;font-family:Sans-Serif;height:28px;}
+/* right side container */
+.racNoteEditor .buttonContainer {float:right;cursor:pointer;width:15px;border-top:1px solid #73bc50;border-right:1px solid #73bc50;border-bottom:1px solid #73bc50;}
+.racNoteEditor .buttonContainer .visible img {display:block;}
+.racNoteEditor .buttonContainer .invisible {display:none;}
+.racNoteEditor .buttonContainer .visible {display:block;}
+.racNoteEditor .buttonContainer .visibleBlock {display:block;}
+
+/* left side container */
+.racNoteEditor .scrollContainer  {height:26px;overflow:hidden;}
+/* viewing a note */
+.racNoteEditor .viewNoteContainer {padding:3px;font-size:10px;margin-top:-2px;line-height:13px;}
+.racNoteEditor .viewNoteContainer img {margin-left:3px;} /* controls the summary image*/
+/* editing a note */
+.racNoteEditor .editNoteContainer textarea {background-color:white;width:105px;height:24px;font-size:10px;font-family:sans-serif;overflow:auto;}
+/* styles for controlling visibility */
+.racNoteEditor .invisible {display:none;}
+
+
+/* FOO Note Editor    */
+.fooNoteEditor {width:149px;height:36px;margin:0px;font-size:10px;background-color:white;font-family:Sans-Serif;}
+/* right side container */
+.fooNoteEditor .buttonContainer {float:right;cursor:pointer;width:18px;border-top:1px solid #73bc50;border-right:1px solid #73bc50;border-bottom:1px solid #73bc50;}
+.fooNoteEditor .buttonContainer .visible img {display:block;}
+.fooNoteEditor .buttonContainer .invisible {display:none;}
+.fooNoteEditor .buttonContainer .visible {display:block;}
+.fooNoteEditor .buttonContainer .visibleBlock {display:block;}
+/* left side container */
+.fooNoteEditor .scrollContainer  {height:36px;overflow:hidden;}
+/* viewing a note */
+.fooNoteEditor .viewNoteContainer {padding:3px;font-size:10px;margin-top:-2px;line-height:12px;color:#76402c;}
+.fooNoteEditor .viewNoteContainer img {margin-left:3px;} /* controls the summary image*/
+/* editing a note */
+.fooNoteEditor .editNoteContainer textarea {background-color:white;width:122px;height:33px;margin-top:0px;font-size:10px;font-family:sans-serif;overflow:auto;}
+/* styles for controlling visibility */
+.fooNoteEditor .invisible {display:none;}
+
+
+
+/* note summary control */
+.noteSummaryControl {padding:10px 0px 0px 0px;}
+.noteSummaryControl h2{font-size:14px;margin:10px 0px 10px 0px;padding-left:5px;}
+.noteSummaryControl p {margin:0px;padding:0px 0px 0px 10px;font-size:10px;}
+.noteSummaryControl p .note {color:#666;font-style:italic;}
+
+
+.printPositionalSheetTemplateControl {font-size:6pt;width:6.9in;height:9.3in;border:1px solid black;font-family:Serif;background-color:white;}
+.printPositionalSheetTemplateControl .banner {padding:3px;}
+.printPositionalSheetTemplateControl .banner .logo {float:left;}
+.printPositionalSheetTemplateControl .banner .sheetSummary {font-size:11px;padding:4px;margin-left:280px;font-style:italic;color:#444;}
+
+.printPositionalSheetTemplateControl .rosterArea {border-collapse:collapse;width:500px;text-align:center;margin:5px auto;}
+.printPositionalSheetTemplateControl .rosterArea th {padding:2px;font-size:11px;font-weight:bold;background-color:#dcf9c2;border:1px solid black;}
+.printPositionalSheetTemplateControl .rosterArea td {padding:2px;font-size:10px;border:1px solid black;background-color:#f5faf1;text-align:left;vertical-align:bottom;}
+
+.printPositionalSheetTemplateControl .playerColumnContainer {width:320px;float:left;margin-left:5px;}
+
+.printPositionalSheetTemplateControl .playerContainer p {margin:0px;padding:3px 0px;border-bottom:1px solid #ededed;}
+.printPositionalSheetTemplateControl .playerContainer p.alternatingItem {background-color:#ededed;}
+.printPositionalSheetTemplateControl .playerContainer .rank {float:left;padding:0px 2px;margin-right:5px;width:10px;font-weight:bold;font-size:11px;}
+.printPositionalSheetTemplateControl .playerContainer .suppRanking {float:left;padding:0px 1px;margin-right:10px;width:10px;color:#888;font-size:9px;}
+.printPositionalSheetTemplateControl .playerContainer .checkBoxImage {margin:0px 2px;}
+
+.printPositionalSheetTemplateControl .playerContainer .team {color:#888;padding-left:1px;}
+.printPositionalSheetTemplateControl .playerContainer .bye {color:#888;padding-left:1px;padding-bottom:2px;font-size:8px;}
+.printPositionalSheetTemplateControl .playerContainer .tag {padding-left:1px;vertical-align:middle;padding-bottom:2px;}
+.printPositionalSheetTemplateControl .playerContainer .note {padding-left:2px;}
+
+
+
+
+.cheatSheetMultiplePositionsPage .pageContainer1 {font-size:6pt;width:6.9in;height:9.3in;border:1px solid black;font-family:Serif;background-color:purple;}
+/*.cheatSheetMultiplePositionsPage .pageContainer2 {font-size:6pt;width:6.9in;height:9.3in;border:1px solid black;font-family:Serif;background-color:aqua;}*/
+.cheatSheetMultiplePositionsPage .banner {padding:3px;}
+.cheatSheetMultiplePositionsPage .banner .logo {float:left;}
+.cheatSheetMultiplePositionsPage .banner .sheetSummary {font-size:11px;padding:4px;margin-left:280px;font-style:italic;color:#444;}
+
+.cheatSheetMultiplePositionsPage .rosterArea {border-collapse:collapse;width:500px;text-align:center;margin:5px auto;}
+.cheatSheetMultiplePositionsPage .rosterArea th {padding:2px;font-size:11px;font-weight:bold;background-color:#dcf9c2;border:1px solid black;}
+.cheatSheetMultiplePositionsPage .rosterArea td {padding:2px;font-size:10px;border:1px solid black;background-color:#f5faf1;text-align:left;vertical-align:bottom;}
+
+.cheatSheetMultiplePositionsPage .playerColumnContainer {width:320px;float:left;margin-left:5px;}
+
+
+/* Printable Positional Sheet Template */
+.cswrPrintPositionSheetTemplateControl {font-size:7pt;width:6.9in;height:9.5in;border:1px solid black;font-family:sans-Serif;background-color:White;}
+
+.cswrPrintPositionSheetTemplateControl .banner {padding:3px;}
+
+.cswrPrintPositionSheetTemplateControl .banner h1 {font-size:14px;margin:0px;padding:0px;text-align:center;font-style:normal;}
+
+.cswrPrintPositionSheetTemplateControl .banner .logo {float:left;}
+.cswrPrintPositionSheetTemplateControl .banner .headerAndTitle {float:left;width:400px;padding-left:10px;}
+.cswrPrintPositionSheetTemplateControl .banner .headerAndTitle h1 {font-size:14px;margin:0px;padding:0px;text-align:center;font-style:normal;}
+
+.cswrPrintPositionSheetTemplateControl .banner .headerAndTitle .rosterArea {border-collapse:collapse;width:100%;text-align:center;margin:5px auto;font-style:normal;}
+.cswrPrintPositionSheetTemplateControl .banner .headerAndTitle .rosterArea th {padding:2px;font-size:11px;font-weight:bold;background-color:#dcf9c2;border:1px solid black;}
+.cswrPrintPositionSheetTemplateControl .banner .headerAndTitle .rosterArea td {padding:2px;font-size:10px;border:1px solid black;background-color:#f5faf1;text-align:left;}
+
+.cswrPrintPositionSheetTemplateControl .sheetSummary {font-size:11px;padding:4px;font-style:italic;color:#444;}
+
+.cswrPrintPositionSheetTemplateControl .legend {text-align:center;width:400px;margin:0px auto 10px auto;background-color:#dcf9c2;padding:2px;border:1px solid #bdea94;}
+.cswrPrintPositionSheetTemplateControl .legend .rank {font-weight:bold;}
+.cswrPrintPositionSheetTemplateControl .legend .suppRanking {color:#888;font-size:10px;margin-left:2px;margin-right:2px;}
+.cswrPrintPositionSheetTemplateControl .legend .playerName {font-weight:bold;margin-right:2px;}
+.cswrPrintPositionSheetTemplateControl .legend .team {color:#888;margin-right:3px;}
+.cswrPrintPositionSheetTemplateControl .legend .bye {color:#888;font-size:10px;}
+.cswrPrintPositionSheetTemplateControl .legend .checkBoxImage {margin:0px 2px -1px 2px;}
+
+.cswrPrintPositionSheetTemplateControl .playerColumnContainer {width:320px;float:left;margin-left:5px;}
+
+.cswrPrintPositionSheetTemplateControl .player p {margin:0px;padding:2px 0px;}
+.cswrPrintPositionSheetTemplateControl .player p.alternatingItem {background-color:#ededed;}
+.cswrPrintPositionSheetTemplateControl .player .rank {float:left;padding:0px 2px;margin-right:5px;width:10px;font-weight:bold;}
+.cswrPrintPositionSheetTemplateControl .player .suppRanking {float:left;padding:0px 2px;margin-right:10px;width:10px;color:#888;font-size:10px;}
+.cswrPrintPositionSheetTemplateControl .player .checkBoxImage {margin:0px 2px;}
+
+.cswrPrintPositionSheetTemplateControl .player .team {color:#888;padding-left:2px;}
+.cswrPrintPositionSheetTemplateControl .player .bye {color:#888;padding-left:2px;vertical-align:top;font-size:10px;}
+.cswrPrintPositionSheetTemplateControl .player .tag {vertical-align:top;padding:1px 0px 0px 2px;}
+
+
+
+/* Sheet Manage Control */
+.racSheetManagerControl th {color:White;border:1px solid black;}
+
+
+/* Sheet Item Manager */    
+.sheetItemManagerControl {}
+.sheetItemManagerControl {width:600px;margin:auto;}
+.sheetItemManagerControl h3 {margin:0px;padding:0px;font-size:12px;}
+.sheetItemManagerControl table td {vertical-align:top;}
+.sheetItemManagerControl table td.arrowCell {vertical-align:middle;}
+.sheetItemManagerControl .listBox {width:230px;font-size:14px;}
+.sheetItemManagerControl select.small {font-size:13px;margin:2px 0px;width:100%;}
+.sheetItemManagerControl .totalText {font-size:16px;}
+
+/*Responsive*/
+.sheetItemManagerControl2 {}
+
+
+/* SEO Pager */   
+.pagerControl {font:13px Sans-Serif;padding:5px 0px;height:30px;}
+.pagerControl ul {list-style-type:none;margin:0px;padding:0px;}
+.pagerControl ul li {float:left;margin:0px 2px;text-align:center;}
+.pagerControl ul li a {color:#444;display:block;text-decoration:none;padding-top:2px;width:22px;height:20px;background-image:url(../cssimages/pagingimages/inactivePageBackground.gif);}
+.pagerControl ul li a:hover {color:black;font-weight:bold;background-image:url(../cssimages/pagingimages/activePageBackground.gif);}
+.pagerControl ul li.activePage a {color:black;font-weight:bold;text-decoration:underline;margin:0px;background-image:url(../cssimages/pagingimages/activePageBackground.gif);}
+.pagerControl ul li.arrows a {color:#444;display:block;text-decoration:none;padding-top:2px;width:22px;height:20px;background-image:url(../cssimages/pagingimages/inactiveArrowBackground.gif);}
+.pagerControl ul li.arrows a:hover {color:black;font-weight:bold;background-image:url(../cssimages/pagingimages/activeArrowBackground.gif);}
+
+
+/* Supplemental Item Listing */    
+.suppItemListingControl {margin:auto;width:600px;background-color:#DFF6FF;border:1px solid #0798D6;}
+.suppItemListingControl h2 {background-color:#056A96;color:white;margin:0px;padding:2px;text-align:center;font-family:Sans-Serif;font-size:1em;}
+.suppItemListingControl .container {width: 586px;padding:10px 5px;}
+.suppItemListingControl .container .adContainer {padding:5px 0px;text-align:center;}
+.suppItemListingControl .container .call2Action {margin:15px auto;padding-left:5px;padding-right:5px;text-align:center;}
+
+
+/* CSWR Foo Ranking Item Template */    
+.cswrFOORankingItemControl {margin-bottom:8px;width:568px;border:2px solid black;padding-bottom:2px;border:2px solid black;}
+.cswrFOORankingItemControl table {border-collapse:collapse;}
+
+.cswrFOORankingItemControl .playerTable {border-collapse:collapse;table-layout:fixed;padding-top:1px;}
+.cswrFOORankingItemControl .helmetCell {width:40px;text-align:center;vertical-align:top;padding-left:6px;padding-top:3px;}
+
+.cswrFOORankingItemControl .nCell {text-align:center;width:51px;background-color:Black;background-color:black;}
+.cswrFOORankingItemControl .nCell .number {font:bold 24px sans-serif;color:white;background:150px;}
+  
+.cswrFOORankingItemControl .pCell {padding-left:3px;}
+.cswrFOORankingItemControl .pCell table {border-collapse:collapse;height:20px;}
+.cswrFOORankingItemControl .pCell table.nameNumber .name {font-size:18px;font-weight:bold;}
+.cswrFOORankingItemControl .pCell table.nameNumber .number {font-size:14px;}
+.cswrFOORankingItemControl .pCell table.nameNumber td.twitterCell {padding-left:3px;}
+.cswrFOORankingItemControl .pCell table.teamExpBye {font-size:12px;height:15px;}
+.cswrFOORankingItemControl .pCell .twitterLink {display:block;width:15px;height:13px;}
+.cswrFOORankingItemControl .pCell .twitterLink:hover {background-position: 0 -13px;}
+  
+.cswrFOORankingItemControl .tCell {width:110px;text-align:right;padding-right:3px;}
+.cswrFOORankingItemControl .tCell .tInfo {border-collapse:collapse;}
+.cswrFOORankingItemControl .tagInactive {display:none;}
+    
+.cswrFOORankingItemControl .sCell {font-family:sans-serif;font-size:9px;padding:3px 3px;}
+.cswrFOORankingItemControl .sCell .statCode {font-weight:bolder;font-size:11px;}
+
+
+@media only screen and (max-width: 621px) {
+  /*.cswrFOORankingItemControl td.tCell {display:none;}*/
+  .cswrFOORankingItemControl {width:100%;border:2px solid green;}
+  .cswrFOORankingItemControl .sCell {display:none;}
+}
+
+@media only screen and (min-width:622px) and (max-width: 2440px) {
+  .cswrFOORankingItemControl {width:565px;}
+}
+
+
+
+/* CSWR Foo Bust/Sleeper Item Template */    
+.cswrFOOSBTemplateControl {margin-bottom:8px;width:500px;border:2px solid black;}
+.cswrFOOSBTemplateControl table {border-collapse:collapse;}
+
+.cswrFOOSBTemplateControl .playerTable {border-collapse:collapse;table-layout:fixed;}
+.cswrFOOSBTemplateControl .helmetCell {width:40px;text-align:center;vertical-align:top;padding:5px 5px 0px 5px;}
+
+.cswrFOOSBTemplateControl .nCell {text-align:center;width:44px;background-color:Black;background-color:black;}
+.cswrFOOSBTemplateControl .nCell .number {font:bold 24px sans-serif;color:white;background:150px;}
+  
+.cswrFOOSBTemplateControl .pCell {padding-left:3px;width:290px;}
+.cswrFOOSBTemplateControl .pCell table {border-collapse:collapse;height:20px;}
+.cswrFOOSBTemplateControl .pCell table.nameNumber .name {font-size:18px;font-weight:bold;}
+.cswrFOOSBTemplateControl .pCell table.nameNumber td.twitterCell {padding-left:3px;}
+
+.cswrFOOSBTemplateControl .pCell table.teamExpBye {font-size:12px;height:15px;}
+
+.cswrFOOSBTemplateControl .pCell .twitterLink {display:block;width:15px;height:13px;}
+.cswrFOOSBTemplateControl .pCell .twitterLink:hover {background-position: 0 -13px;}
+  
+.cswrFOOSBTemplateControl .tCell {width:225px;text-align:left;margin-right:5px;}
+
+.cswrFOOSBTemplateControl .tCell div {padding:1px;}
+.cswrFOOSBTemplateControl .tCell div.sleeper {border:1px solid #445e3b;padding:1px;background-color:#c5f9b3;}
+.cswrFOOSBTemplateControl .tCell div.bust {border:1px solid #445e3b;padding:1px;background-color:#FFC0CB;}
+
+.cswrFOOSBTemplateControl .tCell table {width:100%;border-collapse:collapse;}
+.cswrFOOSBTemplateControl .tCell .rankDifference {font-size:28px;}
+.cswrFOOSBTemplateControl .tCell .sourceRank {font-size:10px;}
+
+.cswrFOOSBTemplateControl .tagInactive {display:none;}
+
+
+@media only screen and (max-width: 621px) {
+  .cswrFOOSBTemplateControl td.tCell {display:none;}
+  .cswrFOOSBTemplateControl {width:100%;}
+}
+
+@media only screen and (min-width:622px) and (max-width: 2440px) {
+  .cswrFOOSBTemplateControl {width:565px}
+}
+
+@media only screen and (min-width:940px) and (max-width: 970px) {
+  .cswrFOOSBTemplateControl td.tCell {display:none;}
+  .cswrFOOSBTemplateControl {width:450px;}
+}
+
+
+
+/* CSWR RAC Ranking Item Template */    
+.cswrRACRankingItemControl {margin-bottom:8px;width:568px;}
+.cswrRACRankingItemControl table {border-collapse:collapse;}
+
+.cswrRACRankingItemControl .playerTable {border:2px solid black;border-collapse:collapse;table-layout:fixed;width:570px;}
+
+.cswrRACRankingItemControl .nCell {width:44px;padding:0px 2px;background-color:black;color:white;text-align:center}
+.cswrRACRankingItemControl .nCell .number {font:bold 24px sans-serif;}
+.cswrRACRankingItemControl .nCell .decimal {font:bold 18px sans-serif;}
+  
+.cswrRACRankingItemControl .pCell {padding-left:5px;width:100%;border-right:2px solid black;}
+.cswrRACRankingItemControl .pCell .playerName {margin:0px;padding:0px;font-weight:bold;}
+.cswrRACRankingItemControl .pCell table {border-collapse:collapse;font-size:11px;height:16px;}
+.cswrRACRankingItemControl .pCell table td.twitterCell {padding-left:6px;}
+
+.cswrRACRankingItemControl .pCell table.teamExpBye {font-size:12px;height:15px;}
+
+.cswrRACRankingItemControl .pCell .twitterLink {display:block;width:15px;height:13px;background:url("cssimages/Social/twitter.gif") no-repeat 0 0;float:left;}
+.cswrRACRankingItemControl .pCell .twitterLink:hover {background-position: 0 -13px;}
+  
+.cswrRACRankingItemControl .sCell {font-family:sans-serif;font-size:9px;padding:1px 2px;}
+.cswrRACRankingItemControl .sCell .statCode {font-weight:bolder;font-size:11px;}
+
+.cswrRACRankingItemControl .carNumberCell1Digit {width:28px;height:30px;padding-left:4px;font-weight:bold;}
+.cswrRACRankingItemControl .carNumberCell2Digits {width:47px;padding-left:4px;font-weight:bold;}
+.cswrRACRankingItemControl .carNumberCell3Digits {width:69px;padding-left:4px;font-weight:bold;}
+
+.cswrRACRankingItemControl .driverNumberContainer {width:70px;padding-top:2px;}
+.cswrRACRankingItemControl .numberSymbol {font-size:18px;float:left;padding-top:5px;}
+.cswrRACRankingItemControl .driverNumber {font-size:40px;line-height:40px;}
+
+
+
+/* Tweet Viewer */    
+.tweetViewerControl {width:730px;margin-right:10px;float:left;padding:5px;font-family:Sans-Serif;}
+.tweetViewerControl h1 {font-size:28px;}
+.tweetViewerControl a {text-decoration:none;}
+.tweetViewerControl a:hover {text-decoration:underline;}
+.tweetViewerControl .item {margin:5px 0px;background-color:white;border:1px solid #009ac9;}
+.tweetViewerControl .item table {border-collapse:collapse;width:100%;}
+.tweetViewerControl .item table td.logoCell {width:50px;padding-left:2px;}
+.tweetViewerControl .item table td.tweet {padding:0px;vertical-align:top;}
+.tweetViewerControl .item table td.tweet tr.tweetRow {height:33px;}
+.tweetViewerControl .item table td.tweet tr.tweetRow td.textCell {vertical-align:top;padding-left:5px;}
+.tweetViewerControl .item table td.tweet tr.tweetRow td.textCell a.userName {color:#2276bb;font-size:14px;font-weight:bold;}
+.tweetViewerControl .item table td.tweet tr.tweetRow td.textCell a.text {color:#2c414b;font-size:14px;}
+.tweetViewerControl .item table td.tweet tr.timeRow {font-size:11px;color:#7e898e;text-align:right;}
+.tweetViewerControl .item table td.tweet tr.timeRow td.timeCell {margin:0px;padding:0px 2px 1px 0px;}
+
+/* User Profile */   
+.userProfileControl {padding:5px;background-color:#C4F3AF;width:390px;}
+.userProfileControl h3 {font-size:14px;margin:3px 0px;padding:0px;text-align:left;}
+.userProfileControl h3.nonTop {margin-top:15px;}
+.userProfileControl table {margin-left:20px;text-align:left;border-collapse:collapse;width:100%;}
+.userProfileControl table td {padding:3px;}
+.userProfileControl table td.labelCell {font-size:12px;text-align:right;width:160px;}
+.userProfileControl table td input.textbox {height:22px;width:190px;}
+.userProfileControl table td .dropdown {font-size:16px;}
+
+
+/*   Member Sheet Buttons */
+.sheetCreationManageNavControl {font-size:14px;padding:25px 0px 50px 0px;}
+
+
+.sheetCreationManageNavControl a.btn-default {background-color:#f1e7d5}
+
+
+.sheetCreationManageNavControl table.foo {border-collapse:collapse;width:95%;margin:auto;}
+.sheetCreationManageNavControl table.rac {border-collapse:collapse;width:80%;margin:auto;}
+
+.sheetCreationManageNavControl table.foo td.backToSheetCell {text-align:center;width:20%;}
+.sheetCreationManageNavControl table.foo td.newSheetCell {text-align:left;padding-left:22px;width:17%;}
+.sheetCreationManageNavControl table.foo td.manageSheetsCell {text-align:left;padding-left:20px;width:25%;}
+.sheetCreationManageNavControl table.foo td.printSheetCell {text-align:left;width:25%;}
+.sheetCreationManageNavControl table.foo td.helpCell {text-align:left;padding-left:10px;width:16%;}
+
+.sheetCreationManageNavControl table.rac td {text-align:center;width:20%;} /* one less cell (print) in racing */
+/*.sheetCreationManageNavControl a {text-decoration:none;color:Black;}
+.sheetCreationManageNavControl a:hover {text-decoration:underline;}
+
+.sheetCreationManageNavControl .newSheetIcon {height:13px;width:13px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 0px;}
+.sheetCreationManageNavControl .backToSheetIcon {height:16px;width:16px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -13px;}
+.sheetCreationManageNavControl .manageSheetsIcon {height:13px;width:13px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -70px;}
+.sheetCreationManageNavControl .memberPrintSheetIcon {height:15px;width:15px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -84px;}*/
+
+
+/* Visitor Cheat Sheet Navigation */   
+.sheetVisitorNavControl .alert a {text-decoration:underline;}	
+
+/*.sheetVisitorNavControl {margin:0px;padding:5px 0px 15px 0px;font-size:15px;}	
+.sheetVisitorNavControl a {text-decoration:none;margin-right:16px;color:Black;}	
+.sheetVisitorNavControl a:hover {text-decoration:underline;}	
+
+.sheetVisitorNavControl .registerIcon {height:11px;width:11px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -44px;}
+.sheetVisitorNavControl .visitorPrintSheetIcon {height:12px;width:15px;position:relative;top:0px;display:inline-block;overflow:hidden;
+                                             background:url(../cssimages/icons/managelevelbuttons.gif) no-repeat 0 -29px;}
+
+.sheetVisitorNavControl table {width:100%;border-collapse:collapse;}	
+.sheetVisitorNavControl table td.middle {width:60%;text-align:center;}*/	
+
+
+/*.sheetCreationPageLevelNavigation a {display:block;width:22px;height:23px;margin-right:5px;}*/
+/* member buttons */
+.sheetCreationPageLevelNavigation {padding-top:5px;}
+.container .customSheetOuterContainer select.form-control {background-color:#f1e7d5}
+.sheetCreationPageLevelNavigation a.btn-default {background-color:#f1e7d5}
+
+
+/*.sheetCreationPageLevelNavigation .editSheetButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 0}
+.sheetCreationPageLevelNavigation .validateSheetButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -46px}
+.sheetCreationPageLevelNavigation .exportSheetButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -92px}
+.sheetCreationPageLevelNavigation .printSheetButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -138px}*/
+/* visitor buttons */
+/*.sheetCreationPageLevelNavigation .editSheetVisitorButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -23px}
+.sheetCreationPageLevelNavigation .validateSheetVisitorButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -69px}
+.sheetCreationPageLevelNavigation .exportSheetVisitorButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -115px}
+.sheetCreationPageLevelNavigation .printSheetVisitorButton {background:url(../cssimages/icons/sheetlevelbuttons.gif) no-repeat 0 -161px}*/
+
+
+

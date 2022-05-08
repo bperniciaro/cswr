@@ -1,0 +1,17 @@
+/* TEAM */
+Creator: Brad Perniciaro
+Site: https://www.cheatsheetwarroom.com/contact.aspx
+Twitter: @cswarroom
+Location: Diamondhead, Mississippi - United States
+
+/* THANKS */
+Name: name or url
+
+/* SITE */
+Last update: 2014/02/07
+Standards: XHTML 1.0
+Components: jQuery
+Software: Visual Studio
+
+
+                    

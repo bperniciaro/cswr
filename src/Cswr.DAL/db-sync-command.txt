@@ -1,0 +1,3 @@
+﻿Execure this in the Package Manager console:
+
+Scaffold-DbContext "Data Source=.\SQLEXPRESS01;Integrated Security=True;Max Pool Size=1000;Initial Catalog=CSWR_3-0_Main_11-06-20" Microsoft.EntityFrameworkCore.SqlServer -Project Cswr.DAL -OutputDir Models

@@ -1,0 +1,71 @@
+﻿@model ContactViewModel
+@{
+    ViewData["Title"] = "Contact";
+    ViewData["PageName"] = "contact_index";
+    ViewData["Heading"] = "<i class='fal fa-info-circle'></i> Contact";
+    ViewData["PageDescription"] = "Please reach out and let us know how you're doing";
+}
+
+
+@if (TempData["Success"] != null)
+{
+    <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+}
+@if (TempData["Error"] != null)
+{
+    <p class="alert alert-danger" id="successMessage">@TempData["Error"]</p>
+}
+
+
+@*<div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">*@
+<div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
+
+    <form asp-controller="Contact" asp-action="SendEmail" asp-area="" method="post">
+
+        @*First Name*@
+        <div class="form-group">
+            <label asp-for="FirstName"></label>
+            <input type="text" asp-for="FirstName" class="form-control" autocomplete="off" placeholder="You first name..." />
+        </div>
+
+        @*Email*@
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input type="text" asp-for="Email" class="form-control" autocomplete="off" placeholder="You email address..." />
+        </div>
+
+        @*Type1*@
+        <div class="form-group">
+            <label asp-for="ContactType"></label>
+            <select asp-for="ContactType" asp-items="Html.GetEnumSelectList<ContactViewModel.ContactInquiryType>()" class="form-control" required="required">
+                <option>Please select one</option>
+            </select>
+        </div>
+
+        @*Type2*@
+        @*<div class="form-group">
+            <label asp-for="ContactType2"></label>
+
+            <select asp-for="ContactType2" asp-items="@(Model.ContactInquiryTypes2)" class="form-control" required="required">
+                <option>Please select one</option>
+            </select>
+        </div>*@
+
+        @*Type3*@
+        @*<div class="form-group">
+            <label asp-for="ContactType"></label>
+            <select asp-for="ContactType" asp-items="@(new SelectList(Model.ContactFormTypes,"Type","Type"))" class="form-control" required="required">
+                <option>Please select one</option>
+            </select>
+        </div>*@
+
+        @*Message*@
+        <div class="form-group">
+            <label asp-for="Message"></label>
+            <textarea type="text" asp-for="Message" class="form-control" autocomplete="off" placeholder="Your message..." ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

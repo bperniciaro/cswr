@@ -1,0 +1,426 @@
+.indianapolisColts {background-color:white;color:#2F2929;}
+.newOrleansSaints {background-color:#CBB073;color:#2f1705;}
+.sanDiegoChargers {background-color:#f6ff4f;color:#2F2403;}
+.losAngelesChargers {background-color:#f6ff4f;color:#2F2403;}
+.newEnglandPatriots {background-color:#DFDFDF;color:#1F1B1B;}
+.saintLouisRams {background-color:#d6c396;color:#2F240C;}
+.philadelphiaEagles {background-color:#6CBF6B;color:#2F1200;}
+.detroitLions {background-color:#60bafc;color:#001B2F;}
+.cincinnatiBengals {background-color:#EF7559;color:#2F0A06;}
+.greenBayPackers {background-color:#FFE04F;color:#1F1700;}
+.pittsburghSteelers {background-color:#FFD71F;color:#2F2703;}
+.miamiDolphins {background-color:#53D8DF;color:#061E1F;}
+.carolinaPanthers {background-color:#1DBDEF;color:#02191F;}
+.arizonaCardinals {background-color:#FFF3CF;color:#1F1111;}
+.newYorkJets {background-color:#37DF5A;color:#021F08;}
+.seattleSeahawks {background-color:#8EA9CF;color:#141F2F;}
+.newYorkGiants {background-color:#5F8EFF;color:#06090F;}
+.denverBroncos {background-color:#EF8C4A;color:#2F1200;}
+.chicagoBears {background-color:#839CAF;color:#0F0C0C;}
+.tampaBayBuccaneers {background-color:#BFB7A7;color:#1F1A11;}
+.dallasCowboys {background-color:#D1D8DF;color:#27343F;}
+.jacksonvilleJaguars {background-color:#6BADBF;color:#00181F;}
+.buffaloBills {background-color:#599EEF;color:#000E1F;}
+.baltimoreRavens {background-color:#AB7FFF;color:#1F004F;}
+.clevelandBrowns {background-color:#FF994F;color:#3F1B00;}
+.kansasCityChiefs  {background-color:#FF5F6D;color:#3F0014;}
+.washingtonRedskins {background-color:#FFD21F;color:#1F1800;}
+.minnesotaVikings {background-color:#9E8BDF;color:#140F2F;}
+.sanFrancisco49ers {background-color:#DFC48B;color:#1F1708;}
+.atlantaFalcons {background-color:#FF4F67;color:#1F0407;}
+.tennesseeTitans {background-color:#9BABBF;color:#0C141F;}
+.lasVegasRaiders {background-color:#C5C8CC;color:#0B0D0F;}
+.houstonTexans {background-color:#7896AF;color:#08151F;}
+.nascarDriver {background-color:#fef2f1;}
+
+
+
+/* Bears */    
+
+/* player template handles */
+.bears .handle1 {background-color:#001830;}  
+.bears .handle2 {background-color:#df6208;}  
+.ui-tooltip-bears {border:4px solid #001830;}
+.ui-tooltip-bears .ui-tooltip-titlebar {background-color:#001830;color:white;}
+.ui-tooltip-bears .subTitle {background-color:#df6208;color:white;}
+.ui-tooltip-bears table.statTable th {background-color:#eee8d9;}
+.ui-tooltip-bears table.statTable th.alternateColor {background-color:#f6f2e9;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-bears table tr.alternatingRow td {background-color:#f6f2e9;} 
+
+
+    
+/* Lions */    
+.lions .handle1 {background-color:#1560a0;}  
+.lions .handle2 {background-color:#bcc3ca;}  
+.ui-tooltip-lions {border:4px solid #1560a0;}
+.ui-tooltip-lions .ui-tooltip-titlebar {background-color:#1560a0;color:white;}
+.ui-tooltip-lions .subTitle {background-color:#bcc3ca;color:black;}
+.ui-tooltip-lions table.statTable th {background-color:#f5f1e9;}
+.ui-tooltip-lions table.statTable th.alternateColor {background-color:#ede7d8;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-lions table tr.alternatingRow td {background-color:#ede7d8;} 
+
+
+/* Packers */    
+.packers .handle1 {background-color:#244729;}  
+.packers .handle2 {background-color:#ffc30d;}  
+.ui-tooltip-packers {border:4px solid #244729;}
+.ui-tooltip-packers .ui-tooltip-titlebar {background-color:#244729;color:white;}
+.ui-tooltip-packers .subTitle {background-color:#ffc30d;color:black;}
+.ui-tooltip-packers table.statTable th {background-color:#f3eee2;}
+.ui-tooltip-packers table.statTable th.alternateColor {background-color:#f7f3ec;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-packers table tr.alternatingRow td {background-color:#f7f3ec;} 
+
+
+/* Vikings */    
+.vikings .handle1 {background-color:#370162;}  
+.vikings .handle2 {background-color:#f7b902;}  
+.ui-tooltip-vikings {border:4px solid #370162;}
+.ui-tooltip-vikings .ui-tooltip-titlebar {background-color:#370162;color:white;}
+.ui-tooltip-vikings .subTitle {background-color:#f7b902;}
+.ui-tooltip-vikings table.statTable th {background-color:#faf4e2;}
+.ui-tooltip-vikings table.statTable th.alternateColor {background-color:#f1ead4;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-vikings table tr.alternatingRow td {background-color:#faf4e2;} 
+
+
+/* Eagles */    
+.eagles .handle1 {background-color:#143c31;}  
+.eagles .handle2 {background-color:#bcbfc4;}  
+.ui-tooltip-eagles {border:4px solid #143c31;}
+.ui-tooltip-eagles .ui-tooltip-titlebar {background-color:#143c31;color:white;}
+.ui-tooltip-eagles .subTitle {background-color:#bcbfc4;}
+.ui-tooltip-eagles table.statTable th {background-color:#f1f5f7;}
+.ui-tooltip-eagles table.statTable th.alternateColor {background-color:#e7ecf0;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-eagles table tr.alternatingRow td {background-color:#f1f5f7;} 
+
+
+/* Cowboys */    
+.cowboys .handle1 {background-color:#091933;}  
+.cowboys .handle2 {background-color:#c8ced5;}  
+.ui-tooltip-cowboys {border:4px solid #091933;}
+.ui-tooltip-cowboys .ui-tooltip-titlebar {background-color:#091933;color:white;}
+.ui-tooltip-cowboys .subTitle {background-color:#c8ced5;}
+.ui-tooltip-cowboys table.statTable th {background-color:#f3f5f8;}
+.ui-tooltip-cowboys table.statTable th.alternateColor {background-color:#edeff3;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-cowboys table tr.alternatingRow td {background-color:#f3f5f8;} 
+
+
+/* Giants */    
+.giants .handle1 {background-color:#243a64;}  
+.giants .handle2 {background-color:#ba1a0c;}  
+.ui-tooltip-giants {border:4px solid #243a64;}
+.ui-tooltip-giants .ui-tooltip-titlebar {background-color:#243a64;color:white;}
+.ui-tooltip-giants .subTitle {background-color:#ba1a0c;color:white;}
+.ui-tooltip-giants table.statTable th {background-color:#f2f4f8;}
+.ui-tooltip-giants table.statTable th.alternateColor {background-color:#eaedf4;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-giants table tr.alternatingRow td {background-color:#f2f4f8;} 
+
+
+/* Redskins */    
+.redskins .handle1 {background-color:#540c25;}  
+.redskins .handle2 {background-color:#f8b316;}  
+.ui-tooltip-redskins {border:4px solid #540c25;}
+.ui-tooltip-redskins .ui-tooltip-titlebar {background-color:#540c25;color:white;}
+.ui-tooltip-redskins .subTitle {background-color:#f8b316;color:black;}
+.ui-tooltip-redskins table.statTable th {background-color:#efeddd;}
+.ui-tooltip-redskins table.statTable th.alternateColor {background-color:#f5f4e5;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-redskins table tr.alternatingRow td {background-color:#f5f4e5;} 
+
+
+/* Saints */    
+.saints .handle1 {background-color:#000000;}  
+.saints .handle2 {background-color:#c5ae72;}  
+.ui-tooltip-saints {border:4px solid #000000;}
+.ui-tooltip-saints .ui-tooltip-titlebar {background-color:#000000;color:white;}
+.ui-tooltip-saints .subTitle {background-color:#c5ae72;color:black;}
+.ui-tooltip-saints table.statTable th {background-color:#f6f2e9;}
+.ui-tooltip-saints table.statTable th.alternateColor {background-color:#f1ece1;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-saints table tr.alternatingRow td {background-color:#f6f2e9;} 
+
+/* Panthers */    
+.panthers .handle1 {background-color:#000000;}  
+.panthers .handle2 {background-color:#1dbdef;}  
+.ui-tooltip-panthers {border:4px solid #000000;}
+.ui-tooltip-panthers .ui-tooltip-titlebar {background-color:#000000;color:white;}
+.ui-tooltip-panthers .subTitle {background-color:#1dbdef;color:white;}
+.ui-tooltip-panthers table.statTable th {background-color:#f0ebeb;}
+.ui-tooltip-panthers table.statTable th.alternateColor {background-color:#f6f5f5;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-panthers table tr.alternatingRow td {background-color:#f6f5f5;} 
+
+
+/* Falcons */    
+.falcons .handle1 {background-color:#000000;}  
+.falcons .handle2 {background-color:#ca233d;}  
+.ui-tooltip-falcons {border:4px solid #000000;}
+.ui-tooltip-falcons .ui-tooltip-titlebar {background-color:#000000;color:white;}
+.ui-tooltip-falcons .subTitle {background-color:#ca233d;color:white;}
+.ui-tooltip-falcons table.statTable th {background-color:#efe9ed;}
+.ui-tooltip-falcons table.statTable th.alternateColor {background-color:#f5f0f3;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-falcons table tr.alternatingRow td {background-color:#f5f0f3;} 
+
+    
+/* Buccaneers */    
+.buccaneers .handle1 {background-color:#b3022e;}  
+.buccaneers .handle2 {background-color:#92866d;}  
+.ui-tooltip-buccaneers {border:4px solid #b3022e;}
+.ui-tooltip-buccaneers .ui-tooltip-titlebar {background-color:#b3022e;color:white;}
+.ui-tooltip-buccaneers .subTitle {background-color:#92866d;color:white;}
+.ui-tooltip-buccaneers table.statTable th {background-color:#efeae4;}
+.ui-tooltip-buccaneers table.statTable th.alternateColor {background-color:#f4f0eb;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-buccaneers table tr.alternatingRow td {background-color:#f4f0eb;} 
+
+    
+/* Cardinals */    
+.cardinals .handle1 {background-color:#87061a;}  
+.cardinals .handle2 {background-color:#ffbe0d;}  
+.ui-tooltip-cardinals {border:4px solid #87061a;}
+.ui-tooltip-cardinals .ui-tooltip-titlebar {background-color:#87061a;color:white;}
+.ui-tooltip-cardinals .subTitle {background-color:#ffbe0d;color:black;}
+.ui-tooltip-cardinals table.statTable th {background-color:#f9f7f0;}
+.ui-tooltip-cardinals table.statTable th.alternateColor {background-color:#f4efde;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-cardinals table tr.alternatingRow td {background-color:#f4efde;} 
+
+    
+/* Rams */    
+.rams .handle1 {background-color:#101a3d;}  
+.rams .handle2 {background-color:#baa459;}  
+.ui-tooltip-rams {border:4px solid #101a3d;}
+.ui-tooltip-rams .ui-tooltip-titlebar {background-color:#101a3d;color:white;}
+.ui-tooltip-rams .subTitle {background-color:#baa459;color:black;}
+.ui-tooltip-rams table.statTable th {background-color:#f3eee0;}
+.ui-tooltip-rams table.statTable th.alternateColor {background-color:#ebe4d0;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-rams table tr.alternatingRow td {background-color:#f3eee0;} 
+
+    
+/* 49ers */  
+.fortyNiners .handle1 {background-color:#b70117;}  
+.fortyNiners .handle2 {background-color:#cbb176;}  
+.ui-tooltip-fortyNiners {border:4px solid #b70117;}
+.ui-tooltip-fortyNiners .ui-tooltip-titlebar {background-color:#b70117;color:white;}
+.ui-tooltip-fortyNiners .subTitle {background-color:#cbb176;color:black;}
+.ui-tooltip-fortyNiners table.statTable th {background-color:#f3ebda;}
+.ui-tooltip-fortyNiners table.statTable th.alternateColor {background-color:#ebe2cf;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-fortyNiners table tr.alternatingRow td {background-color:#f3ebda;} 
+
+    
+/* Seahawks */    
+.seahawks .handle1 {background-color:#00133e;}  
+.seahawks .handle2 {background-color:#a0a9b0;}  
+.ui-tooltip-seahawks {border:4px solid #00133e;}
+.ui-tooltip-seahawks .ui-tooltip-titlebar {background-color:#00133e;color:white;}
+.ui-tooltip-seahawks .subTitle {background-color:#a0a9b0;color:black;}
+.ui-tooltip-seahawks table.statTable th {background-color:#f4efe4;}
+.ui-tooltip-seahawks table.statTable th.alternateColor {background-color:#ede5d4;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-seahawks table tr.alternatingRow td {background-color:#f4efe4;} 
+
+
+/* Broncos */    
+.broncos .handle1 {background-color:#002859;}  
+.broncos .handle2 {background-color:#f36a26;}  
+.ui-tooltip-broncos {border:4px solid #002859;}
+.ui-tooltip-broncos .ui-tooltip-titlebar {background-color:#002859;color:white;}
+.ui-tooltip-broncos .subTitle {background-color:#f36a26;color:black;}
+.ui-tooltip-broncos table.statTable th {background-color:#ebf1f8;}
+.ui-tooltip-broncos table.statTable th.alternateColor {background-color:#e0e8f3;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-broncos table tr.alternatingRow td {background-color:#ebf1f8;} 
+
+
+
+/* Chiefs */    
+.chiefs .handle1 {background-color:#bc0501;}  
+.chiefs .handle2 {background-color:#f2c800;}  
+.ui-tooltip-chiefs {border:4px solid #bc0501;}
+.ui-tooltip-chiefs .ui-tooltip-titlebar {background-color:#bc0501;color:white;}
+.ui-tooltip-chiefs .subTitle {background-color:#f2c800;}
+.ui-tooltip-chiefs table.statTable th {background-color:#f9f0f3;}
+.ui-tooltip-chiefs table.statTable th.alternateColor {background-color:#f5e7eb;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-chiefs table tr.alternatingRow td {background-color:#f9f0f3;} 
+
+
+/* Raiders */    
+.raiders .handle1 {background-color:#010101;}  
+.raiders .handle2 {background-color:#c4c7cc;}  
+.ui-tooltip-raiders {border:4px solid #010101;}
+.ui-tooltip-raiders .ui-tooltip-titlebar {background-color:#010101;color:white;}
+.ui-tooltip-raiders .subTitle {background-color:#c4c7cc;color:black;}
+.ui-tooltip-raiders table.statTable th {background-color:#f1f4f7;}
+.ui-tooltip-raiders table.statTable th.alternateColor {background-color:#e8ecf2;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-raiders table tr.alternatingRow td {background-color:#f1f4f7;} 
+
+    
+/* Chargers */    
+.chargers .handle1 {background-color:#19025a;}  
+.chargers .handle2 {background-color:#fdd901;}  
+.ui-tooltip-chargers {border:4px solid #19025a;}
+.ui-tooltip-chargers .ui-tooltip-titlebar {background-color:#19025a;color:white;}
+.ui-tooltip-chargers .subTitle {background-color:#fdd901;color:black;}
+.ui-tooltip-chargers table.statTable th {background-color:#e9eef4;}
+.ui-tooltip-chargers table.statTable th.alternateColor {background-color:#edf2f7;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-chargers table tr.alternatingRow td {background-color:#edf2f7;} 
+
+
+
+/* Bills */   
+.bills .handle1 {background-color:#103f75;}  
+.bills .handle2 {background-color:#de1a21;}  
+.ui-tooltip-bills {border:4px solid #103f75;}
+.ui-tooltip-bills .ui-tooltip-titlebar {background-color:#103f75;color:white;}
+.ui-tooltip-bills .subTitle {background-color:#de1a21;color:white;}
+.ui-tooltip-bills table.statTable th {background-color:#e9f3f4;}
+.ui-tooltip-bills table.statTable th.alternateColor {background-color:#e0edee;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-bills table tr.alternatingRow td {background-color:#e9f3f4;} 
+
+
+/* Dolphins */    
+.dolphins .handle1 {background-color:#007982;}  
+.dolphins .handle2 {background-color:#ea612b;}  
+.ui-tooltip-dolphins {border:4px solid #007982;}
+.ui-tooltip-dolphins .ui-tooltip-titlebar {background-color:#007982;color:white;}
+.ui-tooltip-dolphins .subTitle {background-color:#ea612b;color:white;}
+.ui-tooltip-dolphins table.statTable th {background-color:#e9f4f5;}
+.ui-tooltip-dolphins table.statTable th.alternateColor {background-color:#ddedee;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-dolphins table tr.alternatingRow td {background-color:#e9f4f5;} 
+
+
+/* Patriots */    
+.patriots .handle1 {background-color:#0d244d;}  
+.patriots .handle2 {background-color:#cd000f;}  
+.ui-tooltip-patriots {border:4px solid #0d244d;}
+.ui-tooltip-patriots .ui-tooltip-titlebar {background-color:#0d244d;color:white;}
+.ui-tooltip-patriots .subTitle {background-color:#cd000f;color:white;}
+.ui-tooltip-patriots table.statTable th {background-color:#e8ecf3;}
+.ui-tooltip-patriots table.statTable th.alternateColor {background-color:#dce3ec;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-patriots table tr.alternatingRow td {background-color:#e8ecf3;} 
+
+
+/* Jets */    
+.jets .handle1 {background-color:#083118;}  
+.jets .handle2 {background-color:#3a5a4f;}  
+.ui-tooltip-jets {border:4px solid #083118;}
+.ui-tooltip-jets .ui-tooltip-titlebar {background-color:#083118;color:white;}
+.ui-tooltip-jets .subTitle {background-color:#3a5a4f;color:white;}
+.ui-tooltip-jets table.statTable th {background-color:#eaf5ee;}
+.ui-tooltip-jets table.statTable th.alternateColor {background-color:#dbece1;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-jets table tr.alternatingRow td {background-color:#eaf5ee;} 
+
+
+/* Texans */    
+.texans .handle1 {background-color:#00133e;}  
+.texans .handle2 {background-color:#b6061d;}  
+.ui-tooltip-texans {border:4px solid #00133e;}
+.ui-tooltip-texans .ui-tooltip-titlebar {background-color:#00133e;color:white;}
+.ui-tooltip-texans .subTitle {background-color:#b6061d;color:white;}
+.ui-tooltip-texans table.statTable th {background-color:#e7eaf2;}
+.ui-tooltip-texans table.statTable th.alternateColor {background-color:#dde2ed;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-texans table tr.alternatingRow td {background-color:#e7eaf2;} 
+
+
+/* Colts */    
+.colts .handle1 {background-color:#134083;}  
+.colts .handle2 {background-color:#c6bfb9;}  
+.ui-tooltip-colts {border:4px solid #134083;}
+.ui-tooltip-colts .ui-tooltip-titlebar {background-color:#134083;color:white;}
+.ui-tooltip-colts .subTitle {background-color:#c6bfb9;color:black;}
+.ui-tooltip-colts table.statTable th {background-color:#edecec;}
+.ui-tooltip-colts table.statTable th.alternateColor {background-color:#e4e4e4;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-colts table tr.alternatingRow td {background-color:#edecec;} 
+
+
+/* Jaguars */    
+.jaguars .handle1 {background-color:#006778;}  
+.jaguars .handle2 {background-color:#d7a22a;}  
+.ui-tooltip-jaguars {border:4px solid #006778;}
+.ui-tooltip-jaguars .ui-tooltip-titlebar {background-color:#006778;color:white;}
+.ui-tooltip-jaguars .subTitle {background-color:#d7a22a;color:black;}
+.ui-tooltip-jaguars table.statTable th {background-color:#efebe1;}
+.ui-tooltip-jaguars table.statTable th.alternateColor {background-color:#e9e4d7;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-jaguars table tr.alternatingRow td {background-color:#efebe1;} 
+
+
+/* Titans */    
+.titans .handle1 {background-color:#0059a9;}  
+.titans .handle2 {background-color:#32a3dd;}  
+.ui-tooltip-titans {border:4px solid #0059a9;}
+.ui-tooltip-titans .ui-tooltip-titlebar {background-color:#0059a9;color:white;}
+.ui-tooltip-titans .subTitle {background-color:#32a3dd;color:white;}
+.ui-tooltip-titans table.statTable th {background-color:#e8ecf4;}
+.ui-tooltip-titans table.statTable th.alternateColor {background-color:#dee4ee;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-titans table tr.alternatingRow td {background-color:#e8ecf4;} 
+
+
+/* Ravens */    
+.ravens .handle1 {background-color:#2d2163;}  
+.ravens .handle2 {background-color:#d1b337;}  
+.ui-tooltip-ravens {border:4px solid #2d2163;}
+.ui-tooltip-ravens .ui-tooltip-titlebar {background-color:#2d2163;color:white;}
+.ui-tooltip-ravens .subTitle {background-color:#d1b337;color:black;}
+.ui-tooltip-ravens table.statTable th {background-color:#f0eaf3;}
+.ui-tooltip-ravens table.statTable th.alternateColor {background-color:#e8e0ed;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-ravens table tr.alternatingRow td {background-color:#f0eaf3;} 
+
+
+/* Bengals */    
+.bengals .handle1 {background-color:#000000;}  
+.bengals .handle2 {background-color:#f2491e;}  
+.ui-tooltip-bengals {border:4px solid #000000;}
+.ui-tooltip-bengals .ui-tooltip-titlebar {background-color:#000000;color:white;}
+.ui-tooltip-bengals .subTitle {background-color:#f2491e;color:black;}
+.ui-tooltip-bengals table.statTable th {background-color:#f1e7e4;}
+.ui-tooltip-bengals table.statTable th.alternateColor {background-color:#eadcd9;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-bengals table tr.alternatingRow td {background-color:#f1e7e4;} 
+
+
+/* Browns */    
+.browns .handle1 {background-color:#3e220d;}  
+.browns .handle2 {background-color:#f36a26;}  
+.ui-tooltip-browns {border:4px solid #3e220d;}
+.ui-tooltip-browns .ui-tooltip-titlebar {background-color:#3e220d;color:white;}
+.ui-tooltip-browns .subTitle {background-color:#f36a26;color:black;}
+.ui-tooltip-browns table.statTable th {background-color:#f2ece6;}
+.ui-tooltip-browns table.statTable th.alternateColor {background-color:#e9e0d8;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-browns table tr.alternatingRow td {background-color:#f2ece6;} 
+
+
+
+
+
+/* Steelers */    
+.steelers .handle1 {background-color:#000000;}  
+.steelers .handle2 {background-color:#ffbf13;}  
+.ui-tooltip-steelers {border:4px solid #000000;}
+.ui-tooltip-steelers .ui-tooltip-titlebar {background-color:#000000;color:white;}
+.ui-tooltip-steelers .subTitle {background-color:#ffbf13;color:black;}
+.ui-tooltip-steelers table.statTable th {background-color:#efeade;}
+.ui-tooltip-steelers table.statTable th.alternateColor {background-color:#e7e1d1;}
+/* user/expert ranking-difference tooltip */
+.ui-tooltip-steelers table tr.alternatingRow td {background-color:#efeade;} 

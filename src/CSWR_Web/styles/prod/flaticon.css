@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../local/flat-icon/flaticon.eot");
+	src: url("../local/flat-icon/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../local/flat-icon/flaticon.woff") format("woff"),
+	url("../local/flat-icon/flaticon.ttf") format("truetype"),
+	url("../local/flat-icon/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 15px;
+font-style: normal;
+}.flaticon-ball6:before {
+	content: "\e000";
+}
+.flaticon-flag76:before {
+	content: "\e001";
+}

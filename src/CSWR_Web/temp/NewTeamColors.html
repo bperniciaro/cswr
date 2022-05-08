@@ -1,0 +1,2265 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <style type="text/css">
+    
+    h2 {padding-top:50px;}
+    .teamTable {width:300px;}
+    .handle {float:left;width:15px;height:65px;}
+    .minisidebar {float:left;width:6px;height:65px;}
+    .sidebar {float:left;width:15px;height:65px;}
+    .fauxPlayerTemplate {padding-left:40px;padding-top:20px;width:260px;height:45px;background-color:Black;}
+    .fauxRankingTemplate {padding-left:40px;padding-top:20px;width:260px;height:45px;background-color:White;color:black;border:1px solid black;}
+
+
+    /* Bears */    
+    .bears .darkBackground {background-color:#001830;color:White;}
+    .bears .mediumBackground {background-color:#df6208;color:Black;}
+    .bears .lightBackground {background-color:#e8dfc9;color:Black;}
+    .bears .lightBackground2 {background-color:#f3eee2;color:Black;}
+    .bears .lightText {color:#f3eee2;}  
+    .bears .minisidebar {background-color:#001830;}  
+    .bears .handle {background-color:#df6208;}  
+    .bears .sidebar {background-color:#df6208;}  
+    /* Lions */    
+    .lions .darkBackground {background-color:#1560a0;color:White;}
+    .lions .mediumBackground {background-color:#bcc3ca;color:Black;}
+    .lions .lightBackground {background-color:#f3eee2;color:Black;}
+    .lions .lightBackground2 {background-color:#f9f6f0;color:Black;}
+    .lions .lightText {color:#f9f6f0;}  
+    .lions .minisidebar {background-color:#bcc3ca;}  
+    .lions .handle {background-color:#1560a0;}  
+    .lions .sidebar {background-color:#1560a0;}  
+    /* Packers */    
+    .packers .darkBackground {background-color:#244729;color:White;}
+    .packers .mediumBackground {background-color:#ffc30d;color:Black;}
+    .packers .lightBackground {background-color:#f3eee2;color:Black;}
+    .packers .lightBackground2 {background-color:#f9f6f0;color:Black;}
+    .packers .lightText {color:#f9f6f0;}  
+    .packers .minisidebar {background-color:#244729;}  
+    .packers .handle {background-color:#ffc30d;}  
+    .packers .sidebar {background-color:#ffc30d;}  
+    /* Vikings */    
+    .vikings .darkBackground {background-color:#370162;color:White;}
+    .vikings .mediumBackground {background-color:#f7b902;color:Black;}
+    .vikings .lightBackground {background-color:#faf4e2;color:Black;}
+    .vikings .lightBackground2 {background-color:#fbf9f2;color:Black;}
+    .vikings .lightText {color:#fbf9f2;}  
+    .vikings .minisidebar {background-color:#f7b902;}  
+    .vikings .handle {background-color:#370162;}  
+    .vikings .sidebar {background-color:#370162;}  
+    
+    
+    /* Eagles */    
+    .eagles .darkBackground {background-color:#143c31;color:White;}
+    .eagles .mediumBackground {background-color:#bcbfc4;color:Black;}
+    .eagles .lightBackground {background-color:#eff3f6;color:Black;}
+    .eagles .lightBackground2 {background-color:#fdfeff;color:Black;}
+    .eagles .lightText {color:#fdfeff;}
+    .eagles .minisidebar {background-color:#bcbfc4;}
+    .eagles .handle {background-color:#143c31;}
+    .eagles .sidebar {background-color:#143c31;}
+    /* Cowboys */    
+    .cowboys .darkBackground {background-color:#091933;color:White;}
+    .cowboys .mediumBackground {background-color:#c8ced5;color:Black;}
+    .cowboys .lightBackground {background-color:#f6f7f9;color:Black;}
+    .cowboys .lightBackground2 {background-color:#fafbfc;color:Black;}
+    .cowboys .lightText {color:#fafbfc;}
+    .cowboys .minisidebar {background-color:#091933;}
+    .cowboys .handle {background-color:#c8ced5;}
+    .cowboys .sidebar {background-color:#c8ced5;}
+    /* Giants */    
+    .giants .darkBackground {background-color:#243a64;color:White;}
+    .giants .mediumBackground {background-color:#ba1a0c;color:White;}
+    .giants .lightBackground {background-color:#eff1f7;color:Black;}
+    .giants .lightBackground2 {background-color:#ffffff;color:Black;}
+    .giants .lightText {color:#ffffff;}
+    .giants .minisidebar {background-color:#ba1a0c;}
+    .giants .handle {background-color:#243a64;}
+    .giants .sidebar {background-color:#243a64;}
+    /* Redskins */    
+    .redskins .darkBackground {background-color:#540c25;color:White;}
+    .redskins .mediumBackground {background-color:#f8b316;color:Black;}
+    .redskins .lightBackground {background-color:#fefbd0;color:Black;}
+    .redskins .lightBackground2 {background-color:#fbfaf0;color:Black;}
+    .redskins .lightText {color:#fbfaf0;}
+    .redskins .minisidebar {background-color:#540c25;}
+    .redskins .handle {background-color:#f8b316;}
+    .redskins .sidebar {background-color:#f8b316;}
+
+
+
+    /* Saints */    
+    .saints .darkBackground {background-color:#000000;color:White;}
+    .saints .mediumBackground {background-color:#c5ae72;color:Black;}
+    .saints .lightBackground {background-color:#f6f2e9;color:Black;}
+    .saints .lightBackground2 {background-color:#faf9f5;color:Black;}
+    .saints .lightText {color:#faf9f5;}  
+    .saints .minisidebar {background-color:#000000;}  
+    .saints .handle {background-color:#c5ae72;}  
+    .saints .sidebar {background-color:#c5ae72;}  
+    /* Panthers */    
+    .panthers .darkBackground {background-color:#000000;color:White;}
+    .panthers .mediumBackground {background-color:#1dbdef;color:Black;}
+    .panthers .lightBackground {background-color:#f0ebeb;color:Black;}
+    .panthers .lightBackground2 {background-color:#f6f5f5;color:Black;}
+    .panthers .lightText {color:#f6f5f5;}
+    .panthers .minisidebar {background-color:#000000;}
+    .panthers .handle {background-color:#1dbdef;}
+    .panthers .sidebar {background-color:#1dbdef;}
+    /* Falcons */    
+    .falcons .darkBackground {background-color:#000000;color:White;}
+    .falcons .mediumBackground {background-color:#ca233d;color:White;}
+    .falcons .lightBackground {background-color:#eeeced;color:Black;}
+    .falcons .lightBackground2 {background-color:#f8f6f7;color:Black;}
+    .falcons .lightText {color:#f8f6f7;}
+    .falcons .minisidebar {background-color:#000000;}
+    .falcons .handle {background-color:#ca233d;}
+    .falcons .sidebar {background-color:#ca233d;}
+    /* Buccaneers */    
+    .buccaneers .darkBackground {background-color:#b3022e;color:White;}
+    .buccaneers .mediumBackground {background-color:#92866d;color:Black;}
+    .buccaneers .lightBackground {background-color:#e2d8cf;color:Black;}
+    .buccaneers .lightBackground2 {background-color:#ece5de;color:Black;}
+    .buccaneers .lightText {color:#ece5de;}
+    .buccaneers .minisidebar {background-color:#b3022e;}
+    .buccaneers .handle {background-color:#92866d;}
+    .buccaneers .sidebar {background-color:#92866d;}
+
+
+    /* Cardinals */    
+    .cardinals .darkBackground {background-color:#87061a;color:White;}
+    .cardinals .mediumBackground {background-color:#ffbe0d;color:Black;}
+    .cardinals .lightBackground {background-color:#f7f3e6;color:Black;}
+    .cardinals .lightBackground2 {background-color:#ffffff;color:Black;}
+    .cardinals .lightText {color:#ffffff;}  
+    .cardinals .minisidebar {background-color:#ffbe0d;}  
+    .cardinals .handle {background-color:#87061a;}  
+    .cardinals .sidebar {background-color:#87061a;}  
+    /* Rams */    
+    .rams .darkBackground {background-color:#101a3d;color:White;}
+    .rams .mediumBackground {background-color:#baa459;color:Black;}
+    .rams .lightBackground {background-color:#f7f2e4;color:Black;}
+    .rams .lightBackground2 {background-color:#ffffff;color:Black;}
+    .rams .lightText {color:#ffffff;}  
+    .rams .minisidebar {background-color:#101a3d;}  
+    .rams .handle {background-color:#baa459;}  
+    .rams .sidebar {background-color:#baa459;}  
+    /* 49ers */    
+    .f9ers .darkBackground {background-color:#b70117;color:White;}
+    .f9ers .mediumBackground {background-color:#cbb176;color:Black;}
+    .f9ers .lightBackground {background-color:#f3ebda;color:Black;}
+    .f9ers .lightBackground2 {background-color:#f9f5ec;color:Black;}
+    .f9ers .lightText {color:#f9f5ec;}
+    .f9ers .minisidebar {background-color:#b70117;}
+    .f9ers .handle {background-color:#cbb176;}
+    .f9ers .sidebar {background-color:#cbb176;}
+    /* Seahawks */    
+    .seahawks .darkBackground {background-color:#00133e;color:White;}
+    .seahawks .mediumBackground {background-color:#a1a8b0;color:Black;}
+    .seahawks .lightBackground {background-color:#f3ebda;color:Black;}
+    .seahawks .lightBackground2 {background-color:#f9f5ec;color:Black;}
+    .seahawks .lightText {color:#f9f5ec;}
+    .seahawks .minisidebar {background-color:#00133e;color:Black;}
+    .seahawks .handle {background-color:#a1a8b0;color:Black;}
+    .seahawks .sidebar {background-color:#a1a8b0;color:Black;}
+    
+
+    /* Broncos */    
+    .broncos .darkBackground {background-color:#002859;color:White;}
+    .broncos .mediumBackground {background-color:#f36a26;color:Black;}
+    .broncos .lightBackground {background-color:#e7eef7;color:Black;}
+    .broncos .lightBackground2 {background-color:#ffffff;color:Black;}
+    .broncos .lightText {color:#ffffff;}  
+    .broncos .minisidebar {background-color:#002859;}  
+    .broncos .handle {background-color:#f36a26;}  
+    .broncos .sidebar {background-color:#f36a26;}  
+    /* Chiefs */    
+    .chiefs .darkBackground {background-color:#bc0501;color:White;}
+    .chiefs .mediumBackground {background-color:#f2c800;color:Black;}
+    .chiefs .lightBackground {background-color:#faeef2;color:Black;}
+    .chiefs .lightBackground2 {background-color:#ffffff;color:Black;}
+    .chiefs .lightText {color:#ffffff;}  
+    .chiefs .minisidebar {background-color:#f2c800;}  
+    .chiefs .handle {background-color:#bc0501;}  
+    .chiefs .sidebar {background-color:#bc0501;}  
+    /* Raiders */    
+    .raiders .darkBackground {background-color:#010101;color:White;}
+    .raiders .mediumBackground {background-color:#c4c7cc;color:Black;}
+    .raiders .lightBackground {background-color:#eceef1;color:Black;}
+    .raiders .lightBackground2 {background-color:#ffffff;color:Black;}
+    .raiders .lightText {color:#ffffff;}  
+    .raiders .minisidebar {background-color:#010101;}  
+    .raiders .handle {background-color:#c4c7cc;}  
+    .raiders .sidebar {background-color:#c4c7cc;}  
+    /* Chargers */    
+    .chargers .darkBackground {background-color:#19025a;color:White;}
+    .chargers .mediumBackground {background-color:#fdd901;color:Black;}
+    .chargers .lightBackground {background-color:#dfe9f3;color:Black;}
+    .chargers .lightBackground2 {background-color:#f2f6fa;color:Black;}
+    .chargers .lightText {color:#f2f6fa;}  
+    .chargers .minisidebar {background-color:#19025a;color:Black;}
+    .chargers .handle {background-color:#fdd901;color:Black;}
+    .chargers .sidebar {background-color:#fdd901;color:Black;}
+
+
+    /* Bills */    
+    .bills .darkBackground {background-color:#103f75;color:White;}
+    .bills .mediumBackground {background-color:#de1a21;color:White;}
+    .bills .lightBackground {background-color:#f4fbfc;color:Black;}
+    .bills .lightBackground2 {background-color:#fbfcfd;color:Black;}
+    .bills .lightText {color:#eef8f9;}  
+    .bills .minisidebar {background-color:#de1a21;}  
+    .bills .handle {background-color:#103f75;}  
+    .bills .sidebar {background-color:#103f75;}  
+    /* Dolphins */    
+    .dolphins .darkBackground {background-color:#007982;color:White;}
+    .dolphins .mediumBackground {background-color:#ea612b;color:White;}
+    .dolphins .lightBackground {background-color:#f0f9fa;color:Black;}
+    .dolphins .lightBackground2 {background-color:#f9fcfc;color:Black;}
+    .dolphins .lightText {color:#f9fcfc;}  
+    .dolphins .minisidebar {background-color:#ea612b;}  
+    .dolphins .handle {background-color:#007982;}  
+    .dolphins .sidebar {background-color:#007982;}  
+    /* Patriots */    
+    .patriots .darkBackground {background-color:#0d244d;color:White;}
+    .patriots .mediumBackground {background-color:#cd000f;color:White;}
+    .patriots .lightBackground {background-color:#e4e9f3;color:Black;}
+    .patriots .lightBackground2 {background-color:#ffffff;color:Black;}
+    .patriots .lightText {color:#ffffff;}  
+    .patriots .minisidebar {background-color:#cd000f;}  
+    .patriots .handle {background-color:#0d244d;}  
+    .patriots .sidebar {background-color:#0d244d;}  
+    /* Jets */    
+    .jets .darkBackground {background-color:#0c371d;color:White;}
+    .jets .mediumBackground {background-color:#313f36;color:White;}
+    .jets .lightBackground {background-color:#e5f1e9;color:Black;}
+    .jets .lightBackground2 {background-color:#ffffff;color:Black;}
+    .jets .lightText {color:#ffffff;}  
+    .jets .minisidebar {background-color:#313f36;}  
+    .jets .handle {background-color:#0c371d;}  
+    .jets .sidebar {background-color:#0c371d;}  
+
+
+    /* Texans */    
+    .texans .darkBackground {background-color:#00133e;color:White;}
+    .texans .mediumBackground {background-color:#b6061d;color:White;}
+    .texans .lightBackground {background-color:#ffffff;color:Black;}
+    .texans .lightBackground2 {background-color:#eef1f8;color:Black;}
+    .texans .lightText {color:#ffffff;}  
+    .texans .minisidebar {background-color:#00133e;}  
+    .texans .handle {background-color:#b6061d;}  
+    .texans .sidebar {background-color:#b6061d;}  
+    /* Colts */    
+    .colts .darkBackground {background-color:#134083;color:White;}
+    .colts .mediumBackground {background-color:#c6bfb9;color:Black;}
+    .colts .lightBackground {background-color:#f1f0f0;color:Black;}
+    .colts .lightBackground2 {background-color:#ffffff;color:Black;}
+    .colts .lightText {color:#ffffff;}  
+    .colts .minisidebar {background-color:#c6bfb9;}  
+    .colts .handle {background-color:#134083;}  
+    .colts .sidebar {background-color:#134083;}  
+    /* Jaguars */    
+    .jaguars .darkBackground {background-color:#bea143;color:Black;}
+    .jaguars .mediumBackground {background-color:#01839b;color:White;}
+    .jaguars .lightBackground {background-color:#f5f0e1;color:Black;}
+    .jaguars .lightBackground2 {background-color:#fbf9f3;color:Black;}
+    .jaguars .lightText {color:#fbf9f3;}  
+    .jaguars .minisidebar {background-color:#01839b;}  
+    .jaguars .handle {background-color:#bea143;}  
+    .jaguars .sidebar {background-color:#bea143;}  
+    /* Titans */    
+    .titans .darkBackground {background-color:#0059a9;color:White;}
+    .titans .mediumBackground {background-color:#32a3dd;color:Black;}
+    .titans .lightBackground {background-color:#e1e8f3;color:Black;}
+    .titans .lightBackground2 {background-color:#ffffff;color:Black;}
+    .titans .lightText {color:#ffffff;}  
+    .titans .minisidebar {background-color:#0059a9;}  
+    .titans .handle {background-color:#32a3dd;}  
+    .titans .sidebar {background-color:#32a3dd;}  
+
+
+    /* Ravens */    
+    .ravens .darkBackground {background-color:#000000;color:White;}
+    .ravens .mediumBackground {background-color:#2d2062;color:White;}
+    .ravens .lightBackground {background-color:#f9f5e4;color:Black;}
+    .ravens .lightBackground2 {background-color:#fcfaf2;color:Black;}
+    .ravens .lightText {color:#fcfaf2;}  
+    .ravens .minisidebar {background-color:#000000;}  
+    .ravens .handle {background-color:#2d2062;}  
+    .ravens .sidebar {background-color:#2d2062;}  
+    /* Bengals */    
+    .bengals .darkBackground {background-color:#000000;color:White;}
+    .bengals .mediumBackground {background-color:#f2491e;color:White;}
+    .bengals .lightBackground {background-color:#faebe7;color:Black;}
+    .bengals .lightBackground2 {background-color:#ffffff;color:Black;}
+    .bengals .lightText {color:#ffffff;}  
+    .bengals .minisidebar {background-color:#000000;}  
+    .bengals .handle {background-color:#f2491e;}  
+    .bengals .sidebar {background-color:#f2491e;}  
+    /* Browns */    
+    .browns .darkBackground {background-color:#3e220d;color:White;}
+    .browns .mediumBackground {background-color:#f36a26;color:Black;}
+    .browns .lightBackground {background-color:#f9f0e7;color:Black;}
+    .browns .lightBackground2 {background-color:#fbf7f4;color:Black;}
+    .browns .lightText {color:#fbf7f4;}  
+    .browns .minisidebar {background-color:#f36a26;}  
+    .browns .handle {background-color:#3e220d;}  
+    .browns .sidebar {background-color:#3e220d;}  
+    /* Steelers */    
+    .steelers .darkBackground {background-color:#000000;color:White;}
+    .steelers .mediumBackground {background-color:#ffbf13;color:Black;}
+    .steelers .lightBackground {background-color:#f9f0e7;color:Black;}
+    .steelers .lightBackground2 {background-color:#fbf7f4;color:Black;}
+    .steelers .lightText {color:#fbf7f4;}  
+    .steelers .minisidebar {background-color:#000000;}  
+    .steelers .handle {background-color:#ffbf13;}  
+    .steelers .sidebar {background-color:#ffbf13;}  
+
+  </style>
+</head>
+<body>
+
+
+
+
+<h2>AFC North</h2>
+  
+<!--Baltimore-->
+<div style="float:left;width:300px;">
+  <table class="teamTable ravens">
+    <tr>
+      <th colspan="4" class="darkBackground">Baltimore Ravens</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="ravens">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Baltimore Ravens</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="ravens">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Baltimore Ravens</span>
+    </div>
+  </div>
+
+
+</div> <!-- close Ravens -->
+
+
+<!-- Cincinnati -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable bengals">
+    <tr>
+      <th colspan="4" class="darkBackground">Cincinnati Bengals</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="bengals">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Cincinnati Bengals</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="bengals">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Cincinnati Bengals</span>
+    </div>
+  </div>
+
+
+</div> <!-- close Bengals -->
+
+
+  
+<!-- Browns -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable browns">
+    <tr>
+      <th colspan="4" class="darkBackground">Cleveland Browns</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="browns">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Cleveland Browns</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="browns">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Cleveland Browns</span>
+    </div>
+  </div>
+
+</div> <!-- close jaguars  -->
+
+
+
+<!-- Steelers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable steelers">
+    <tr>
+      <th colspan="4" class="darkBackground">Pittsburgh Steelers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="steelers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Pittsburgh Steelers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="steelers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Pittsburgh Steelers</span>
+    </div>
+  </div>
+
+</div> <!-- close Steelers -->
+
+
+<div style="clear:both;" />
+
+
+
+<h2>AFC South</h2>
+  
+<!--Houston-->
+<div style="float:left;width:300px;">
+  <table class="teamTable texans">
+    <tr>
+      <th colspan="4" class="darkBackground">Houston Texans</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="texans">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Houston Texans</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="texans">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Houston Texans</span>
+    </div>
+  </div>
+
+</div> <!-- close Texans -->
+
+
+<!-- Indianapolis Colts -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable colts">
+    <tr>
+      <th colspan="4" class="darkBackground">Indianapolis Colts</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="colts">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Indianapolis Colts</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="colts">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Indianapolis Colts</span>
+    </div>
+  </div>
+
+</div> <!-- close Colts -->
+
+
+  
+<!-- Jaguars -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable jaguars">
+    <tr>
+      <th colspan="4" class="darkBackground">Jacksonville Jaguars</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="jaguars">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Jacksonville Jaguars</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="jaguars">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Jacksonville Jaguars</span>
+    </div>
+  </div>
+
+</div> <!-- close jaguars  -->
+
+
+
+<!-- Titans -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable titans">
+    <tr>
+      <th colspan="4" class="darkBackground">Titans</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="titans">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Tennessee Titans</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="titans">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Tennessee Titans</span>
+    </div>
+  </div>
+
+</div> <!-- close Titans -->
+
+
+<div style="clear:both;" />
+
+ 
+
+<h2>AFC East</h2>
+  
+<!--Buffalo-->
+<div style="float:left;width:300px;">
+  <table class="teamTable bills">
+    <tr>
+      <th colspan="4" class="darkBackground">Buffalo Bills</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="bills">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Buffalo Bills</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="bills">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Buffalo Bills</span>
+    </div>
+  </div>
+
+</div> <!-- close Bills -->
+
+
+<!-- Miami Dolphins -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable dolphins">
+    <tr>
+      <th colspan="4" class="darkBackground">Miami Dolphins</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="dolphins">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Miami Dolphins</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="dolphins">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Miami Dolphins</span>
+    </div>
+  </div>
+
+</div> <!-- close Dolphins -->
+
+
+  
+<!-- Patriots -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable patriots">
+    <tr>
+      <th colspan="4" class="darkBackground">New England Patriots</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="patriots">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">New England Patriots</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="patriots">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>New England Patriots</span>
+    </div>
+  </div>
+
+</div> <!-- close patriots  -->
+
+
+
+<!-- Jets -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable jets">
+    <tr>
+      <th colspan="4" class="darkBackground">Jets</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="jets">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">New York Jets</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="jets">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>New York Jets</span>
+    </div>
+  </div>
+
+</div> <!-- close Jets -->
+
+
+<div style="clear:both;" />
+
+
+
+
+<h2>AFC West</h2>
+  
+<!--Denver-->
+<div style="float:left;width:300px;">
+  <table class="teamTable broncos">
+    <tr>
+      <th colspan="4" class="darkBackground">Denver Broncos</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="broncos">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Denver Broncos</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="broncos">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Denver Broncos</span>
+    </div>
+  </div>
+
+</div> <!-- close Broncos -->
+
+
+<!-- Kansas City Chiefs -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable chiefs">
+    <tr>
+      <th colspan="4" class="darkBackground">Kansas City Chiefs</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="chiefs">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Kansas City Chiefs</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="chiefs">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Kansas City Chiefs</span>
+    </div>
+  </div>
+
+</div> <!-- close Chiefs -->
+
+
+
+<!-- raiders -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable raiders">
+    <tr>
+      <th colspan="4" class="darkBackground">Oakland Raiders</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="raiders">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Oakland Raiders</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="raiders">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Oakland Raiders</span>
+    </div>
+  </div>
+
+
+</div> <!-- close raiders  -->
+
+
+
+<!-- Chargers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable chargers">
+    <tr>
+      <th colspan="4" class="darkBackground">San Diego Chargers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="chargers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">San Diego Chargers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="chargers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>San Diego Chargers</span>
+    </div>
+  </div>
+
+</div> <!-- close Chargers -->
+
+
+<div style="clear:both;" />
+
+
+
+
+<h2>NFC West</h2>
+  
+<!--Cardinals-->
+<div style="float:left;width:300px;">
+  <table class="teamTable cardinals">
+    <tr>
+      <th colspan="4" class="darkBackground">Arizona Cardinals</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="cardinals">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Arizona Cardinals</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="cardinals">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Arizona Cardinals</span>
+    </div>
+  </div>
+
+</div> <!-- close Saints -->
+
+
+<!-- St. LOuis Rams -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable rams">
+    <tr>
+      <th colspan="4" class="darkBackground">St. Louis Rams</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="rams">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">St. Louis Rams</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="rams">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>St. Louis Rams</span>
+    </div>
+  </div>
+
+</div> <!-- close Panthers -->
+
+
+
+<!-- f9ers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable f9ers">
+    <tr>
+      <th colspan="4" class="darkBackground">San Francisco 49ers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="f9ers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">San Francisco 49ers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="f9ers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>San Francisco 49ers</span>
+    </div>
+  </div>
+
+</div> <!-- close f9ers  -->
+
+
+
+<!-- Seahawks -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable seahawks">
+    <tr>
+      <th colspan="4" class="darkBackground">Seattle Seahawks</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="seahawks">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Seattle Seahawks</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="seahawks">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Seattle Seahawks</span>
+    </div>
+  </div>
+
+</div> <!-- close Falcons -->
+
+
+<div style="clear:both;" />
+
+
+
+<h2>NFC North</h2>
+  
+<!--Bears-->
+<div style="float:left;width:300px;">
+  <table class="teamTable bears">
+    <tr>
+      <th colspan="4" class="darkBackground">Chicago Bears</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="bears">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Chicago Bears</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="bears">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Chicago Bears</span>
+    </div>
+  </div>
+
+</div> <!-- close Bears -->
+
+
+<!-- Lions -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable lions">
+    <tr>
+      <th colspan="4" class="darkBackground">Detroit Lions</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="lions">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Detroit Lions</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="lions">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Detroit Lions</span>
+    </div>
+  </div>
+
+</div> <!-- close Lions -->
+
+
+
+<!-- Packers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable packers">
+    <tr>
+      <th colspan="4" class="darkBackground">Green Bay Packers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="packers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Green Bay Packers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="packers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Green Bay Packers</span>
+    </div>
+  </div>
+
+</div> <!-- close Packers -->
+
+
+
+<!-- Vikings -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable vikings">
+    <tr>
+      <th colspan="4" class="darkBackground">Minnesota Vikings</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="vikings">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Minnesota Vikings</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="vikings">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Minnesota Vikings</span>
+    </div>
+  </div>
+
+</div> <!-- close Vikings -->
+
+
+
+<div style="clear:both" />
+
+
+
+
+<h2>NFC East</h2>
+  
+<!--Eagles-->
+<div style="float:left;width:300px;">
+  <table class="teamTable eagles">
+    <tr>
+      <th colspan="4" class="darkBackground">Philadelphia Eagles</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="eagles">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Philadelphia Eagles</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="eagles">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Philadelphia Eagles</span>
+    </div>
+  </div>
+
+</div> <!-- close Eagles -->
+
+
+<!-- Cowboys -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable cowboys">
+    <tr>
+      <th colspan="4" class="darkBackground">Dallas Cowboys</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="cowboys">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Dallas Cowboys</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="cowboys">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Dallas Cowboys</span>
+    </div>
+  </div>
+
+</div> <!-- close Panthers -->
+
+
+
+<!-- Giants -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable giants">
+    <tr>
+      <th colspan="4" class="darkBackground">New York Giants</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="giants">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">New York Giants</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="giants">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>New York Giants</span>
+    </div>
+  </div>
+
+</div> <!-- close Falcons -->
+
+
+
+<!-- Redskins -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable redskins">
+    <tr>
+      <th colspan="4" class="darkBackground">Washington Redskins</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="redskins">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Washington Redskins</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="redskins">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Washington Redskins</span>
+    </div>
+  </div>
+
+</div> <!-- close Falcons -->
+
+
+<div style="clear:both;" />
+
+
+<h2>NFC South</h2>
+  
+<!--Saints-->
+<div style="float:left;width:300px;">
+  <table class="teamTable saints">
+    <tr>
+      <th colspan="4" class="darkBackground">New Orleans Saints</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="saints">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">New Orleans Saints</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="saints">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>New Orleans Saints</span>
+    </div>
+  </div>
+
+</div> <!-- close Saints -->
+
+
+<!-- Panthers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable panthers">
+    <tr>
+      <th colspan="4" class="darkBackground">Carolina Panthers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="panthers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Carolina Panthers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="panthers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Carolina Panthers</span>
+    </div>
+  </div>
+
+</div> <!-- close Panthers -->
+
+
+
+<!-- Falcons -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable falcons">
+    <tr>
+      <th colspan="4" class="darkBackground">Atlanta Falcons</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="falcons">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Atlanta Falcons</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="falcons">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Atlanta Falcons</span>
+    </div>
+  </div>
+</div> <!-- close Falcons -->
+
+
+
+<!-- Buccaneers -->
+<div style="float:left;width:300px;padding-left:40px;">
+  <table class="teamTable buccaneers">
+    <tr>
+      <th colspan="4" class="darkBackground">Tampa Bay Buccaneers</th>
+    </tr>
+    <tr>
+      <th class="mediumBackground">Rank</th>
+      <th class="mediumBackground">Player</th>
+      <th class="mediumBackground">CSWR</th>
+      <th class="mediumBackground">CBS</th>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground2">99</td>
+      <td class="lightBackground2">Joe Montana</td>
+      <td class="lightBackground2">47</td>
+      <td class="lightBackground2">12</td>
+    </tr>
+    <tr>
+      <td class="lightBackground">99</td>
+      <td class="lightBackground">Joe Montana</td>
+      <td class="lightBackground">47</td>
+      <td class="lightBackground">12</td>
+    </tr>
+
+  </table>
+
+  <div class="buccaneers">
+    <div class="minisidebar" >
+    </div>
+    <div class="handle" >
+    </div>
+    <div class="fauxPlayerTemplate">
+      <span class="lightText">Tampa Bay Buccaneers</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="buccaneers">
+    <div class="minisidebar" >
+    </div>
+    <div class="sidebar" >
+    </div>
+    <div class="fauxRankingTemplate">
+      <span>Tampa Bay Buccaneers</span>
+    </div>
+  </div>
+
+</div> <!-- close Falcons -->
+
+
+<div style="clear:both;" />
+
+
+
+
+
+
+<br />
+<br />
+<br />
+ <br />
+
+
+
+
+
+</body>
+</html>

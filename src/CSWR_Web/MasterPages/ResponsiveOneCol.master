@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Responsive.master" AutoEventWireup="true" 
+  CodeFile="ResponsiveOneCol.master.cs" Inherits="BP.CheatSheetWarRoom.UI.ResponsiveOneCol" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+
+  <%--Single Column--%>
+  <div class="col-xs-12">
+    <asp:ContentPlaceHolder id="cphContent" runat="server">Default Content</asp:ContentPlaceHolder>
+  </div>
+
+</asp:Content>
+

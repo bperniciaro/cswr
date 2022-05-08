@@ -1,0 +1,5 @@
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_Globals\obj\Debug\ResolveAssemblyReference.cache
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_Globals\bin\Debug\CSWR_Globals.dll
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_Globals\bin\Debug\CSWR_Globals.pdb
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_Globals\obj\Debug\CSWR_Globals.dll
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_Globals\obj\Debug\CSWR_Globals.pdb

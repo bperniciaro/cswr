@@ -1,0 +1,15 @@
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_Globals\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_Globals\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_Globals\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_Globals\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_Globals\obj\Release\CSWR_Globals.csprojResolveAssemblyReference.cache
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_Globals\obj\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_Globals\obj\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.csproj.CoreCompileInputs.cache
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_Globals\obj\Release\CSWR_Globals.csprojAssemblyReference.cache

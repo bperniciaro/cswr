@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Advertisements>
+
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6252.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6252/affiliate_id/7</NavigateUrl>
+	 </Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6854.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6854/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6275.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6275/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-8151.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/8151/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6272.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6272/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-7053.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/7053/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6273.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6273/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-8150.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/8150/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6269.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6269/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6270.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6270/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6853.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6853/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-6251.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/6251/affiliate_id/7</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/trophies/trophy-7075.gif</ImageUrl>
+		<NavigateUrl>http://www.trophies2go.com/index-exec/section/category/product/7075/affiliate_id/7</NavigateUrl>
+	</Ad>
+
+</Advertisements>

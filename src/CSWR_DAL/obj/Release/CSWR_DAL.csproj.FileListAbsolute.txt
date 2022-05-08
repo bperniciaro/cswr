@@ -1,0 +1,29 @@
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_DAL.pdb
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.pdb
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.csprojResolveAssemblyReference.cache
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_CustomEvents.dll
+C:\brad\projects\aspProjects\CSWR\CurrentApp\CSWR\CSWR_DAL\bin\Release\CSWR_CustomEvents.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_DAL.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_CustomEvents.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_CustomEvents.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\obj\Release\CSWR_DAL.csprojResolveAssemblyReference.cache
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\obj\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CSWR - 2-31 - 7-7-17\CSWR_DAL\obj\Release\CSWR_DAL.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_DAL.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_CustomEvents.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_Globals.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_CustomEvents.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\bin\Release\CSWR_Globals.pdb
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.csprojAssemblyReference.cache
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.csproj.CoreCompileInputs.cache
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.csproj.CopyComplete
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.dll
+C:\brad\projects\aspProjects\CSWR\CSWR\CSWR_DAL\obj\Release\CSWR_DAL.pdb

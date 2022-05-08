@@ -1,0 +1,209 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Test_TweetPagerTemplate : System.Web.UI.Page
+{
+
+  private const int PAGESIZE = 10;
+
+  private int PageNumber 
+  {
+    get
+    {
+      return (ViewState["PageNumber"] == null) ? 0 : (int)ViewState["PageNumber"];
+    }
+    set
+    {
+      ViewState["PageNumber"] = value;
+    }
+  }
+
+  private List<Tweet> PreLoadedTweets
+  {
+    get
+    {
+      return (ViewState["PreLoadedTweets"] == null) ? null : (List<Tweet>)ViewState["PreLoadedTweets"];
+    }
+    set
+    {
+      ViewState["PreLoadedTweets"] = value;
+    }
+  }
+
+  protected void Page_Load(object sender, EventArgs e)
+  {
+    GetPlayerName();
+    if (!IsPostBack)
+    {
+      this.PreLoadedTweets = new List<Tweet>();
+      PreLoadTweets();
+      this.PageNumber = 1;
+      LoadData();
+      ConfigureArrows();
+    }
+  }
+
+  private string GetPlayerName()
+  {
+    string playerName = String.Empty;
+    if (Request.PathInfo.Length != 0)
+    {
+      playerName = Request.PathInfo.Substring(1);
+    }
+    return playerName;
+  }
+
+  private void ConfigureArrows()
+  {
+    // configure left arrow
+    if (this.PageNumber != 1)
+    {
+      ibLeft.Visible = true;
+    }
+    else
+    {
+      ibLeft.Visible = false;
+    }
+    // configure right arrow
+    if (((this.PreLoadedTweets.Count - 1) / PAGESIZE) >= (this.PageNumber))
+    {
+      ibRight.Visible = true;
+    }
+    else
+    {
+      ibRight.Visible = false;
+    }
+  }
+
+  private void PreLoadTweets()
+  {
+    for (int i = 0; i < 22;i++)
+    {
+      Tweet newTweet = new Tweet(i + 1);
+      this.PreLoadedTweets.Add(newTweet);
+    }
+  }
+
+
+  protected void repTweets_ItemDataBound(object sender, RepeaterItemEventArgs e)
+  {
+    if ((e.Item.ItemType == ListItemType.Item) || (e.Item.ItemType == ListItemType.AlternatingItem))
+    {
+      Tweet boundTweet = (Tweet)e.Item.DataItem;
+
+      Label labTweet = (Label)e.Item.FindControl("labTweet");
+      Panel panTweetContainer = (Panel)e.Item.FindControl("panTweetContainer");
+
+      if (e.Item.ItemIndex <= 3)
+      {
+        panTweetContainer.CssClass += " tweetBorderBottom";
+      }
+      labTweet.Text = boundTweet.TweetText;
+    }
+  }
+
+
+  protected void ibLeft_Click(object sender, ImageClickEventArgs e)
+  {
+    Thread.Sleep(500);
+    this.PageNumber--;
+    LoadData();
+    ConfigureArrows();
+  }
+  
+  
+  protected void ibRight_Click(object sender, ImageClickEventArgs e)
+  {
+    Thread.Sleep(500);
+    this.PageNumber++;
+    LoadData();
+    ConfigureArrows();
+  }
+
+
+  private void LoadData()
+  {
+    labPageNumber.Text = this.PageNumber.ToString();
+    List<Tweet> tweetPage = GetTweetPage(this.PageNumber);
+
+    if (tweetPage != null)
+    {
+      if (tweetPage.Count < PAGESIZE)
+      {
+        if (tweetPage.Count < PAGESIZE / 2)
+        {
+          List<Tweet> tweetsLeftSide = tweetPage.GetRange(0, tweetPage.Count);
+          repTweetsLeftSide.DataSource = tweetsLeftSide;
+          repTweetsLeftSide.DataBind();
+
+          repTweetsRightSide.DataSource = null;
+          repTweetsRightSide.DataBind();
+        }
+        else
+        {
+          List<Tweet> tweetsLeftSide = tweetPage.GetRange(0, PAGESIZE / 2);
+          repTweetsLeftSide.DataSource = tweetsLeftSide;
+          repTweetsLeftSide.DataBind();
+
+          List<Tweet> tweetsRightSide = tweetPage.GetRange(PAGESIZE / 2, (tweetPage.Count - (PAGESIZE / 2)));
+          repTweetsRightSide.DataSource = tweetsRightSide;
+          repTweetsRightSide.DataBind();
+        }
+      }
+      else
+      {
+        List<Tweet> tweetsLeftSide = tweetPage.GetRange(0, PAGESIZE / 2);
+        repTweetsLeftSide.DataSource = tweetsLeftSide;
+        repTweetsLeftSide.DataBind();
+
+        List<Tweet> tweetsRightSide = tweetPage.GetRange(PAGESIZE / 2, PAGESIZE / 2);
+        repTweetsRightSide.DataSource = tweetsRightSide;
+        repTweetsRightSide.DataBind();
+      }
+
+
+    }
+
+  }
+
+
+  private List<Tweet> GetTweetPage(int pageNumber)
+  {
+    List<Tweet> tweetPage = new List<Tweet>();
+    int firstTweetIndex = ((pageNumber - 1) * 10);
+    int lastTweetIndex = (pageNumber * 10) -1;
+
+    for (int i = firstTweetIndex; i <= lastTweetIndex; i++)
+    {
+      if (this.PreLoadedTweets.Count > i)
+      {
+        tweetPage.Add(this.PreLoadedTweets[i]);
+      }
+    }
+    return tweetPage;
+  }
+
+
+  [Serializable]
+  private class Tweet
+  {
+    public Tweet(int index)
+    {
+      this.Index = index;
+      this.TweetText = "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 " + this.Index.ToString();
+    }
+    
+    public int Index { get; set; }
+
+    public string TweetText { get; set; }
+  }
+
+
+
+
+}

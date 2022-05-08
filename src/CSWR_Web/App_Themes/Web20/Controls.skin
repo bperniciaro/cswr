@@ -1,0 +1,41 @@
+<asp:Label runat="server" SkinID="FeedbackOK" ForeColor="green" />
+
+<asp:Label runat="server" SkinID="FeedbackKO" ForeColor="red" />
+
+
+<asp:GridView runat="server" Font-Name="Arial" />
+
+<asp:GridView runat="server" SkinID="Professional" Font-Name="Verdana" Font-Size="9pt" Cellpadding="2" RowStyle-BackColor="White" 
+ HeaderStyle-BackColor="#0798D6" HeaderStyle-ForeColor="White" AlternatingRowStyle-BackColor="#dddddd" />
+
+<asp:DetailsView runat="server" SkinID="Professional" Font-Name="Verdana" Font-Size="10pt" Cellpadding="2" HeaderStyle-Font-Size="14px"
+ HeaderStyle-BackColor="#444444" HeaderStyle-ForeColor="White" AlternatingRowStyle-BackColor="#dddddd">
+ <HeaderStyle HorizontalAlign="center" Font-Bold="true" />
+</asp:DetailsView>
+
+
+<asp:GridView runat="server" SkinID="Football" Font-Name="Verdana" Font-Size="9pt" Cellpadding="3" RowStyle-BackColor="White" 
+ HeaderStyle-BackColor="#ddbd7f" HeaderStyle-ForeColor="#5e4531" AlternatingRowStyle-BackColor="#faf1e1" />
+
+
+<asp:GridView runat="server" SkinID="Racing" Font-Name="Verdana" Font-Size="9pt" Cellpadding="2" BorderColor="Purple" BackColor="White"
+ HeaderStyle-BackColor="#c4938b" HeaderStyle-ForeColor="Black"  AlternatingRowStyle-BackColor="#fbf1f0" />
+
+ 
+
+<asp:GridView runat="server" SkinID="RankedTooHigh" Font-Name="Verdana" Font-Size="8pt" Cellpadding="2" RowStyle-BackColor="#fcecef" 
+ HeaderStyle-BackColor="#fd0000" HeaderStyle-ForeColor="White" />
+
+<asp:GridView runat="server" SkinID="RankedTooLow" Font-Name="Verdana" Font-Size="8pt" Cellpadding="2" RowStyle-BackColor="#dfdefa" 
+ HeaderStyle-BackColor="#5757f9" HeaderStyle-ForeColor="White" AlternatingRowStyle-BackColor="#dfdefa" />
+
+
+<asp:GridView runat="server" SkinID="ConsiderAdding" Font-Name="Verdana" Font-Size="8pt" Cellpadding="2" RowStyle-BackColor="#defae4" 
+ HeaderStyle-BackColor="#04bf2b" HeaderStyle-ForeColor="White" AlternatingRowStyle-BackColor="#defae4" />
+
+
+<asp:GridView runat="server" SkinID="ConsiderRemoving" Font-Name="Verdana" Font-Size="8pt" Cellpadding="2" RowStyle-BackColor="#fcebdc" 
+ HeaderStyle-BackColor="#fc7609" HeaderStyle-ForeColor="White" AlternatingRowStyle-BackColor="#fcebdc" />
+
+ 
+ 

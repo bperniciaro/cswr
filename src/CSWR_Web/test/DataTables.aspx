@@ -1,0 +1,178 @@
+﻿<%@ Page Title="DataTables Test" Language="C#" MasterPageFile="~/MasterPages/Frame.master" AutoEventWireup="true" CodeFile="DataTables.aspx.cs" Inherits="test_DataTables" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+
+<table id="example" class="display">
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>County</th>
+      <th>Farm</th>
+      <th>Tract</th>
+      <th>Field</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mississippi</td>
+      <td>Hancock</td>
+      <td>22352</td>
+      <td>2323</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Mississippi</td>
+      <td>Hancock</td>
+      <td>22352</td>
+      <td>2323</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Mississippi</td>
+      <td>Hancock</td>
+      <td>22352</td>
+      <td>2323</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Mississippi</td>
+      <td>Hancock</td>
+      <td>22352</td>
+      <td>2323</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7456</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Louisiana</td>
+      <td>Slidell</td>
+      <td>23423</td>
+      <td>7454</td>
+      <td>7</td>
+    </tr>
+
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>23</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>22</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>24</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Alabama</td>
+      <td>Mobile</td>
+      <td>345</td>
+      <td>26</td>
+      <td>2</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    $('#example').dataTable();
+  });
+
+</script>
+
+</asp:Content>
+

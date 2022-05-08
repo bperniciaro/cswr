@@ -1,0 +1,288 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Responsive.master.cs" Inherits="BP.CheatSheetWarRoom.UI.ResponsiveMaster" %>
+<%@ Register Src="~/usercontrols/GoogleAnalytics.ascx" TagName="GoogleAnalytics" TagPrefix="cswr" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+  <title>Web 2.0 Master Default Page Title</title>
+  <!-- Google Analytics -->
+  <cswr:GoogleAnalytics runat="server" ID="gaAnalytics"/>
+	<!-- meta tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="two-section-page">
+<form id="form1" runat="server">
+
+<script type='text/javascript'>window.PLAYERCARDS_CONFIG={parseFullText:true,affiliateCode:'WarRoom'};</script>
+<script type='text/javascript' src='https://cdn.fantasypros.com/playercards/auto_parse_nfl.js'></script>
+  
+
+
+<!-- header section start -->
+<asp:Panel runat="server" ID="panHeader">
+
+<header id="main-headre">
+	<!-- ======= top bar ======= -->
+		<div class="container">
+			<div class="row headerRow">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-12 main-logo-section">
+					<div class="web-side-logo">
+            <asp:Hyperlink runat="server" ID="hlLogoLink" CssClass="d-inline-block">
+              <asp:Image runat="server" ImageUrl="~/Images/Layout/cheatsheetwarroom-logo.gif" style="width:auto;height:auto;width:250px;" CssClass="img-fluid" />
+            </asp:Hyperlink>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-12 mobile-screen-none text-right">
+					<div class="join-and-login">
+						<ul class="j-l">
+              
+              <%--Visitor Buttons--%>
+							<%--Register--%>
+              <li runat="server" id="liJoinUs"><asp:Hyperlink runat="server" ID="hlJoinUs" NavigateUrl="~/access/register.aspx"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Join us now!</span></asp:Hyperlink></li>
+							<%--Login--%>
+              <li runat="server" id="liLogin"><asp:Hyperlink runat="server" ID="hlLogin" NavigateUrl="~/access/login.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i><span>Log in</span></asp:Hyperlink></li>
+              
+              <%--Member Buttons--%>
+              <%--Admin--%>
+              <li runat="server" id="liAdminItem"><asp:HyperLink runat="server" ID="hlAdmin" NavigateUrl="~/admin/dashboard.aspx"><i class="fa fa-wrench"></i>Admin</asp:HyperLink></li>
+              <%--Moderator--%>
+              <li runat="server" id="liModItem"><asp:HyperLink runat="server" NavigateUrl="~/admin/mods/managefooplayers.aspx"><i class="fa fa-wrench"></i>Moderator</asp:HyperLink></li>
+              <%--Profile--%>
+              <li runat="server" id="liPublicProfile"><asp:HyperLink runat="server" ID="hlPublicProfile" NavigateUrl="~/editprofile.aspx"><i class="fa fa-user"></i><asp:Literal runat="server" ID="litProfileLink" /></asp:HyperLink></li>
+              <%--Logout--%>
+              <li runat="server" id="liLogoutItem">
+                <asp:LinkButton runat="server" ID="lbBannerLogout" onclick="lbBannerLogout_Click" CausesValidation="false" EnableViewState="false">
+                  <i class="fa fa-sign-out"></i> Log out
+                </asp:LinkButton>
+              </li>
+						</ul>
+					</div>
+				</div>
+				    <div class="three menu-icon" style="padding-right:10px;">
+			            <div class="hamburger" id="hamburger-1">
+			              <span class="line"></span>
+			              <span class="line"></span>
+			              <span class="line"></span>
+			            </div>
+			      	</div>
+			</div>
+		</div>
+		<hr class="separate-line">
+
+
+		<!-- primary navigation -->
+		<div class="container menu-block">
+			<div class="row">
+				<nav class="navbar navbar-default main-nav"> 
+				   
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse my-menu-section" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav navbar-primary">
+				        <li runat="server" id="liMainNav_Home">
+                  <asp:Hyperlink runat="server" NavigateUrl="~/Default.aspx" Text="HOME">HOME</asp:Hyperlink>
+				        </li>
+				        <li runat="server" id="liMainNav_Sheets">
+                  <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/create/custom-sheet.aspx">SHEETS</asp:HyperLink>
+				        </li>
+               <%-- <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/mock-drafts.aspx">MOCKS</asp:HyperLink>
+				        </li>
+				        <li runat="server" id="liMainNav_Coupons">
+                  <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog/coupons">COUPONS</asp:HyperLink>
+                </li>--%>
+                
+				        <li runat="server" id="liMainNav_Blog">
+                  <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog">BLOG</asp:HyperLink>
+				        </li>
+                <li></li>
+                <li></li>
+				        <li>
+				        	<div class="join-and-login">
+							    	<ul class="j-l">
+                      <%--Visitor Buttons--%>
+							        <%--Register--%>
+                      <li runat="server" id="liJoinUs2"><asp:Hyperlink runat="server" ID="hlJoinUs2" NavigateUrl="~/access/register.aspx"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Join us now!</span></asp:Hyperlink></li>
+							        <%--Login--%>
+                      <li runat="server" id="liLogin2"><asp:Hyperlink runat="server" ID="hlLogin2" NavigateUrl="~/access/login.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i><span>Log in</span></asp:Hyperlink></li>
+              
+                      <%--Member Buttons--%>
+                      <%--Admin--%>
+                      <li runat="server" id="liAdminItem2"><asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/admin/dashboard.aspx"><i class="fa fa-wrench"></i>Admin</asp:HyperLink></li>
+                      <%--Moderator--%>
+                      <li runat="server" id="liModItem2"><asp:HyperLink runat="server" NavigateUrl="~/admin/mods/managefooplayers.aspx"><i class="fa fa-wrench"></i>Moderator</asp:HyperLink></li>
+                      <%--Profile--%>
+                      <li runat="server" id="liPublicProfile2"><asp:HyperLink runat="server" ID="hlPublicProfile2" NavigateUrl="~/editprofile.aspx"><i class="fa fa-user"></i><asp:Literal runat="server" ID="litProfileLink2" /></asp:HyperLink></li>
+                      <%--Logout--%>
+                      <li runat="server" id="liLogoutItem2">
+                        <asp:LinkButton runat="server" ID="lbBannerLogout2" onclick="lbBannerLogout_Click" CausesValidation="false" EnableViewState="false">
+                          <i class="fa fa-sign-out"></i> Log out
+                        </asp:LinkButton>
+                      </li>
+
+				    				</ul>
+		    					</div>
+    						</li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>  <!-- close secondary nav -->
+
+</header>
+
+</asp:Panel>
+
+<!-- header section end -->
+
+<!-- inner section start -->
+<section class="inner-section-one">
+	<div class="container">
+		<div class="row">
+      <asp:ContentPlaceHolder id="cphContent" runat="server">Default Content</asp:ContentPlaceHolder>
+ 		</div>
+	</div>
+</section>
+<!-- inner section end -->
+
+<!-- Footer -->
+<footer id="newFooter">
+	<div class="container" id="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="column">
+			        <div class="title">
+			          Miscellaneous
+			        </div>
+			        <ul>
+			          <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
+			          </li>
+			          <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/about.aspx">About Us</asp:HyperLink>
+			          </li>
+			        </ul>
+			    </div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="column">
+			        <div class="title">
+			          Social Sites
+			        </div>
+			        <ul>
+			          <li>
+			            <i class="fa fa-twitter"></i>
+                  <a href="https://twitter.com/CSWarRoom">Twitter</a>
+			          </li>
+			          <li>
+			            <i class="fa fa-facebook"></i>
+                  <a href="https://www.facebook.com/CheatSheetWarRoom">Facebook</a>
+			          </li>
+			          <li>
+			            <i class="fa fa-pinterest"></i>
+                  <a href="https://www.pinterest.com/cheatsheetwarrm">Pinterest</a>
+			          </li>
+			        </ul>
+		      	</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="column">
+			        <div class="title">
+			          Legal
+			        </div>
+			        <ul>
+			          <li>
+			            <i class="fa fa-copyright"></i>
+                  <asp:Literal runat="server" ID="litCurrentYear"/> Cheat Sheet War Room
+			          </li>
+			          <li>
+                  Software Release <asp:Label runat="server" CssClass="version" ID="labSoftwareVersion" />
+			          </li>
+			          <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/termsofservice.aspx" Text="Terms of Service"></asp:HyperLink>
+			          </li>
+			          <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/privacypolicy.aspx" Text="Privacy Policy"></asp:HyperLink>
+			          </li>
+			          <li>
+                  <asp:HyperLink runat="server" NavigateUrl="~/legal/disclaimer.aspx" Text="Disclaimer"></asp:HyperLink>
+			          </li>
+			        </ul>
+      			</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="cAlign text-center">
+			        <p>
+			          We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.
+			        </p>
+			     </div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+<!-- footer section end -->
+
+
+
+
+  <!-- Here we initialize tooltips for the entire application -->
+<%--  <script type="text/javascript">
+    // Create the tooltips only on document load
+    $(document).ready(function () {
+      // delay all tooltips so that they arne't shown when quickly moving the
+      // mouse over a particular part of the page
+      $('[title]').qtip({
+        show: {
+          delay: 550
+        }
+      });
+    });
+  </script>--%>
+
+  <!-- Menu Toogle -->
+  <script>
+	  $("#hamburger-1").click(function(){
+        $(this).toggleClass("is-active");
+        $("#bs-example-navbar-collapse-1").toggleClass("is-active");
+        $('#bs-example-navbar-collapse-1').slideToggle("400");
+      });
+      $("#hamburger-2").click(function(){
+        $(this).toggleClass("is-active");
+        $("#secondaryNavBarCollapse").toggleClass("is-active");
+        $("#secondaryNavBarCollapse").slideToggle("400");
+      });
+  </script>
+
+  <!-- This should make tooltips appear in UpdatePanels, even after a callback, 
+       but it does not address AJAX triggered on QTip hovers, which still don't work -->
+  <%--<script type="text/javascript">
+    function pageLoad(sender, args) {
+      if (args.get_isPartialLoad()) {
+        $('[title]').qtip({
+          overwrite: false,
+          show: {
+            delay: 550
+          }
+        });
+      }
+    }
+  </script>--%>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+  <asp:Panel runat="server" ID="panAddThis" CssClass="addThisContainer">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=bperniciaro"></script> 
+  </asp:Panel>
+ 
+</form>
+
+
+</body>
+
+
+</html>

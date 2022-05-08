@@ -1,0 +1,58 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TweetViewer.ascx.cs" Inherits="BP.CheatSheetWarRoom.UI.UserControls.TweetViewer" %>
+<%@ Register Src="~/usercontrols/ads/AdGenerator.ascx" TagName="AdGenerator" TagPrefix="cswr" %>
+
+<div class="tweetViewerControl">
+
+  <h1>Recent Tweets About <asp:Literal runat="server" ID="litPlayerName" /></h1>
+  <br />
+  
+  <%--Adsense Ad--%>
+  <cswr:AdGenerator runat="server" Ad_Slot="9637891765" Size="S728X90" Source="GOOGLE" />
+  
+  <%--Tweets--%>
+  <asp:Repeater runat="server" ID="repTweets" onitemdatabound="repTweets_ItemDataBound">
+    <ItemTemplate>
+      
+      <div class="item">
+        <table>
+          <tr>
+            <!-- Logo -->
+            <td class="logoCell">
+              <asp:HyperLink runat="server" ID="hlUserLogo">
+                <asp:Image runat="server" id="imaLogo"/>
+              </asp:HyperLink>
+            </td>
+            <!-- Tweet -->
+            <td class="tweet">
+              <table>
+                <tr class="tweetRow">
+                  <td class="textCell">
+                    <asp:HyperLink runat="server" ID="hlUserLink" rel="nofollow" CssClass="userName" Target="_blank" Visible="true"/>
+                    <asp:Label runat="server" ID="labTweet" CssClass="text"/>
+                  </td>
+                </tr>
+                <!-- Timestamp -->                
+                <tr class="timeRow">
+                  <td class="timeCell">
+                    <asp:Label runat="server" ID="labTimestamp"/>
+                  </td>
+                </tr> <!-- Close Timestamp -->
+              </table>
+            </td> <!-- Close Tweet -->
+          </tr>
+        </table>
+      </div>
+    
+    </ItemTemplate>
+  </asp:Repeater>
+</div>
+
+  
+<%--Adsense Ad--%>
+<div style="padding-top:144px;">
+  <cswr:AdGenerator runat="server" Ad_Slot="2602984288" Size="S160X600" Source="GOOGLE" />
+</div>
+  
+
+  
+

@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Responsive.master" AutoEventWireup="true" CodeFile="ResponsiveTwoCol.master.cs" Inherits="BP.CheatSheetWarRoom.UI.ResponsiveTwoCol" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+
+  <%--Left Column--%>
+  <div class="col-xs-12 col-lg-9 col-md-9 col-sm-9 Change-we-one">
+
+    <asp:Panel runat="server" ID="panSecondaryMenu" CssClass="bg-white">
+	    <div class="container-fluid menu-block new-menu" id="new-menu">
+		    <nav class="navbar navbar-default main-nav secondary"> 
+		        <div class="navbar-header mobile-menu-icon">
+		    	    <div class="menu-name-section">
+		    		    <p>MENU</p>
+		    	    </div>
+		       	    <div class="three menu-icon">
+		                <div class="hamburger" id="hamburger-2">
+		                  <span class="line"></span>
+		                  <span class="line"></span>
+		                  <span class="line"></span>
+		                </div>
+		      	    </div>
+		        </div>
+
+		        <div class="collapse navbar-collapse my-menu-section" id="secondaryNavBarCollapse">
+		           <ul class="nav navbar-nav">
+		              <li runat="server" id="liSecondaryNav_Sheets"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/create/custom-sheet.aspx">SHEETS</asp:HyperLink></li>
+		              <li runat="server" id="liSecondaryNav_Rankings"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/rankings/player-rankings.aspx">RANKINGS</asp:HyperLink></li>
+		              <li runat="server" id="liSecondaryNav_Sleepers"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/sleepers.aspx">SLEEPERS</asp:HyperLink></li>
+		              <li runat="server" id="liSecondaryNav_Busts"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/busts.aspx">BUSTS</asp:HyperLink></li>
+		              <li runat="server" id="liSecondaryNav_Adp"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/rankings/adp/quarterbacks.aspx">ADP</asp:HyperLink></li>
+                  <li runat="server" id="liSecondaryNav_Printable"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/printable/cheat-sheets.aspx">PRINT</asp:HyperLink></li>
+		              <li runat="server" id="liSecondaryNav_Links"><asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/links.aspx">LINKS</asp:HyperLink></li>
+		            </ul>
+		        </div>
+		    </nav>
+	    </div>
+    </asp:Panel>
+
+    <!-- This is inside a column, so any new responsiveness will need to go inside a new row -->
+    <asp:ContentPlaceHolder id="cphContent" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+  </div>  <!-- close left column -->
+  <%--Right Column--%>
+  <div class="col-xs-12 col-lg-3 col-md-3 col-sm-3 Change-we-two">
+		<div class="advertisement">
+      <%--<div class="content_hint"></div>--%>
+      <%--<asp:Image runat="server" ImageUrl="~/Images/Layout/responsive/mediavine-ad.gif"  style="width:auto;height:auto;" CssClass="img-fluid"/>--%>
+		</div>
+	</div>
+
+</asp:Content>
+

@@ -1,0 +1,16 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ExportCSWRUsers.aspx.cs" Inherits="temp_2_26_ExportUsersToASPP" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+
+  <p>This page creates a CSV export of ALL CSWR users.  These users will then be imported into ASPP.  This will take a while.</p>
+
+  <asp:Button runat="server" ID="butExportAllUsers" OnClick="butExportAllUsers_Click" Text="Export all CSWR users to CSV" />
+
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Cheat Sheet War Room Being Updated</title>
+</head>
+<style>
+
+body {
+  background-color:#e5ffd8;
+  font-size:14px;
+}
+
+div.container {
+    background-color:white;
+    margin:225px auto 0px auto;
+    padding:3px;
+    border:2px solid #d62307;
+    width:300px;
+}
+
+</style>
+
+  <div class="container">
+    <div style="text-align:center">
+      <img src="https://i.imgur.com/lHydjjr.gif" alt="Cheat Sheet War Room Logo"/>
+    </div>
+    <strong>CheatSheetWarRoom.com</strong> is currently being upgraded.  Please check back soon because downtime
+    should be minimal
+  </div>
+
+  <body>
+
+</html>

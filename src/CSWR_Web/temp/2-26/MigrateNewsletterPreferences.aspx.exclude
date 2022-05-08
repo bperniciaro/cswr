@@ -1,0 +1,42 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MigrateNewsletterPreferences.aspx.cs" Inherits="temp_2_26_MigrateNewsletterPreferences" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+
+  <p>Ensure you first create a new, custom registration field.</p>
+
+  <table>
+    <tr>
+      <td>Total Forum Members</td>
+      <td><asp:Label runat="server" ID="labTotalForumMembers" /></td>
+    </tr>
+    <tr>
+      <td>Members /w Custom Field</td>
+      <td><asp:Label runat="server" ID="labMembersWCustomField" /></td>
+    </tr>
+  </table>
+
+  <asp:Button runat="server" ID="butDetermineMismatches" Text="Determine Mismatches" OnClick="butDetermineMismatches_Click" />
+
+
+  <asp:Button runat="server" ID="butMigratePreferences" Text="Migrate Preferences" OnClick="butMigratePreferences_Click" />
+
+  <div>
+    <strong>Found:</strong> <asp:Label runat="server" ID="labFoundUsers" /> <br />
+    <strong>Not Found:</strong> <asp:Label runat="server" ID="labNotFoundUsers" /> <br /><br />
+
+    <strong>Preferences Migrated:</strong> <asp:Label runat="server" ID="labPreferencesMigrated" /> <br />
+    <strong>Preferences Not Migrated:</strong> <asp:Label runat="server" ID="labPreferencesNotMigrated" /> 
+
+  </div>
+
+  <asp:GridView runat="server" ID="gvUserPreferences">
+  </asp:GridView>
+
+</form>
+</body>
+</html>

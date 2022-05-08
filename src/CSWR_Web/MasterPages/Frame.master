@@ -1,0 +1,526 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frame.master.cs" Inherits="BP.CheatSheetWarRoom.UI.Web20Frame" %>
+<%@ Register Src="~/usercontrols/ads/AdGenerator.ascx" TagName="AdGenerator" TagPrefix="cswr" %>
+<%@ Register Src="~/usercontrols/Banner.ascx" TagName="Banner" TagPrefix="cswr" %>
+<%@ Register Src="~/usercontrols/GoogleAnalytics.ascx" TagName="GoogleAnalytics" TagPrefix="cswr" %>
+<%@ Register Src="~/usercontrols/Banner.ascx" TagName="NewBanner" TagPrefix="cswr" %>
+<%--<%@ Register Src="~/usercontrols/AddThis.ascx" TagName="AddThis" TagPrefix="cswr" %>--%>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+  <title>Web 2.0 Master Default Page Title</title>
+  <!-- standard for HTML 5 document -->
+  <meta charset="utf-8">  
+  <!-- For Bing SEO -->
+  <meta http-equiv="content-language" content="en-us"> 
+  <!-- Google Publisher -->
+  <link rel="publisher" href="https://plus.google.com/+Cheatsheetwarroom" />
+  <!-- Shiv to make older ID browsers style HTML5 elements -->
+  <!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->  
+  <cswr:GoogleAnalytics runat="server" ID="gaAnalytics"/>
+
+  
+  <!-- Schema.org mark-up for Google Plus -->
+  <!-- Image size is 347x194 -->
+  <meta runat="server" id="schemaOrgName" itemprop="name"/>
+  <meta runat="server" id="schemaOrgDescription" itemprop="description" /> 
+  <meta runat="server" id="schemaOrgImage" itemprop="image" /> 
+
+  <!-- Twitter Card data -->
+  <!-- Looks right in preview tool, but card is not loaded into Twitter production -->
+  <meta name="twitter:card" content="summary">  <!-- static -->
+  <meta name="twitter:site" content="@cswarroom">  <!-- static -->
+  <meta name="twitter:creator" content="@bradperniciaro">  <!-- static -->
+  <meta name="twitter:domain" content="https://www.cheatsheetwarroom.com">  <!-- static -->
+  <meta name="twitter:title" runat="server"  id="twitterTitle">  <!-- dynamic -->
+  <meta name="twitter:description" runat="server" id="twitterDescription">  <!-- dynamic -->
+  <meta name="twitter:url" runat="server" id="twitterUrl">  <!-- dynamic -->
+  <!-- preview 60px x 60px, full size 375px x 375px -->
+  <meta runat="server" id="twitterImage" name="twitter:image">  <!-- dynamic -->
+
+
+  <!-- Open Graph data -->
+  <!-- using page title and meta description -->
+  <meta property="og:type" content="article" />  <!-- static -->
+  <meta property="og:site_name" content="Cheat Sheet War Room" />  <!-- static -->
+  <meta property="fb:admins" content="1426393719" />  <!-- static -->
+  <meta runat="server" property="og:url" id="openGraphUrl"/>
+  <meta runat="server" property="og:image" id="openGraphImage"/>
+  <meta runat="server" property="og:title" id="openGraphTitle"/>
+  <meta runat="server" property="og:description" id="openGraphDescription"/>
+
+
+</head>
+<body>
+<!-- for the Facebook share slide-in -->
+<%--<div class="cevherlink"></div>--%>
+<form id="form1" runat="server">
+
+<script type='text/javascript'>window.PLAYERCARDS_CONFIG={parseFullText:true,affiliateCode:'WarRoom'};</script>
+<script type='text/javascript' src='https://cdn.fantasypros.com/playercards/auto_parse_nfl.js'></script>
+
+<div id="maincontainer">
+
+  <%--Banner--%>
+  <cswr:Banner runat="server" ID="banBannerNavigation"/>
+
+    
+  <div class="newPrimaryNav">
+      <ul>
+          <li runat="server" id="liHome" class="home">
+              <asp:HyperLink runat="server" NavigateUrl="../Default.aspx">HOME</asp:HyperLink>
+          </li>
+          <li runat="server" id="liFootball" class="footballSheets">
+              <asp:HyperLink runat="server" NavigateUrl="../fantasy-football/nfl/create/custom-sheet.aspx">SHEETS</asp:HyperLink>
+          </li>
+          <li runat="server" id="liMocks" class="mocks">
+              <asp:HyperLink runat="server" NavigateUrl="../fantasy-football/nfl/mock-drafts.aspx">MOCKS</asp:HyperLink>
+          </li>
+          <%--<li runat="server" id="liRacing" class="racingSheets">
+              <asp:HyperLink runat="server" NavigateUrl="../fantasy-racing/nascar/create/custom-sheet.aspx">RACING SHEETS</asp:HyperLink>
+          </li>--%>
+          <li runat="server" id="liCoupons" class="coupons">
+              <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog/coupons">COUPONS</asp:HyperLink>
+          </li>
+          <li runat="server" id="liReviews" class="reviews">
+              <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog/reviews">REVIEWS</asp:HyperLink>
+          </li>
+          <li runat="server" id="liBlog" class="blog last">
+              <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog">BLOG</asp:HyperLink>
+          </li>
+      </ul>
+  </div>   
+  
+      
+  <!--   Navigation   -->
+  <!--                -->
+  <div class="primaryNav" style="display: none;">
+
+    <%--Primary Navigation--%>
+    <ul class="topNavTabList">
+      <li style="display:none;">
+
+      </li>
+      <%--Home--%>
+      <li id="homeTab" class="navItem home">
+        <i class="fa fa-home"></i> CSWR
+        <span class="ui-icon ui-icon-triangle-1-s"></span>
+      </li>
+      <%--Sheets--%>
+      <li id="sheetsTab" class="navItem sheets">
+        My Sheets
+        <span class="ui-icon ui-icon-triangle-1-s"></span>
+      </li>
+      <%--Blog--%>
+      <li id="blogTab" class="navItem blog">
+        Blog
+        <span class="ui-icon ui-icon-triangle-1-s"></span> 
+      </li>
+      <%--Forum--%>
+      <li id="forumsTab" class="navItem forums">
+        Forums
+        <span class="ui-icon ui-icon-triangle-1-s"></span> 
+      </li>
+    </ul>
+  </div>  <!-- close primaryNavContainer -->
+    
+  
+
+  <!-- Main Content -->
+  <div id="wrapper">
+    <div id="lcolumn" class="lcolumn">
+      <div class="innertube">
+        <asp:Panel runat="server" id="panTopBannerAd" class="topBannerAd" style="text-align: center;">
+          <cswr:AdGenerator runat="server" ID="agTopBannerAd" Ad_Slot="9898444135" Size="S728X90" Visible="true" />
+
+            <!-- FantasyPros Trial -->
+           <%-- <a href="https://www.cheatsheetwarroom.com/blog/go/fantasypros-playbook-app" target="_blank" rel="noindex nofollow">
+                <img  width="728" height="90" src="https://cdn.fantasypros.com/csw/images/affiliates/NFL_728x90_MPB_Rodgers.jpg">
+            </a>--%>
+
+        </asp:Panel>
+      <%--Main Content--%>
+        <asp:ContentPlaceHolder id="cphContent" runat="server">Default Content</asp:ContentPlaceHolder>
+      </div> <!-- close innertube -->
+    </div> <!-- close lcolumn -->
+  </div> <!-- close wrapper -->
+
+  <!-- Right Column -->
+  <asp:Panel runat="server" id="panRColumn" class="rcolumn">
+    <div class="innertube">
+
+     <asp:Panel runat="server" ID="panRightColumnAds">
+        <!-- Skyscraper -->
+        <asp:Panel runat="server" ID="panSkyscraper" CssClass="skyAuth">
+
+          <asp:Panel runat="server" ID="panGoogleAd" CssClass="googleAdContainer">
+            <cswr:AdGenerator runat="server" Source="GOOGLE" Size="S160X600" Ad_Slot="7314700133" Visible="false" />
+            <a style="position:relative;z-index:5;" href="https://www.cheatsheetwarroom.com/blog/go/fantasypros-playbook-app" rel="nofollow noindex" target="_blank">
+                <img src="https://cdn.fantasypros.com/csw/images/affiliates/NFL_160x600_MPB_Get_It_Now.jpg">
+            </a>
+
+          </asp:Panel>
+
+          <%--<asp:Panel runat="server" ID="panTShirtTrophies2Go" CssClass="tShirtTrophies" Visible="false">
+
+            <a rel="nofollow" href="http://www.shareasale.com/r.cfm?u=709826&b=464865&m=46327&afftrack=&urllink=www%2Eundisputedbelts%2Ecom" target="_blank">
+             <asp:Image runat="server" ImageUrl="~/Images/Layout/ads/fantasybelts_145x254.jpg" AlternateText="Advertisement for Undisputed Belts."/>
+            </a>
+
+            <a rel="nofollow" href="http://www.shareasale.com/r.cfm?u=709826&b=323841&m=5108&afftrack=&urllink=www%2Ebustedtees%2Ecom%2Ffantasyfootball">
+              <asp:Image runat="server" ImageUrl="~/Images/Layout/ads/busted-tees-fantasy-football.gif" style="border:1px solid #39adde;" AlternateText="Advertisement for funny fantasy football t-shirt."/>
+            </a>
+
+          </asp:Panel>  --%>
+
+        </asp:Panel>  <!-- close skyscraper -->
+
+      </asp:Panel>
+
+    </div> <!-- innertube -->
+  </asp:Panel> <!-- close rightcolumn -->
+
+  <div class="push"></div>
+
+</div>  <!-- close mainConainer -->
+
+  <div id="newFooter">
+    <div id="container">
+
+      <div class="column">
+        <div class="title">
+          Miscellaneous
+        </div>
+        <ul>
+     
+          <li>
+            <asp:HyperLink runat="server" NavigateUrl="~/contact.aspx" Text="Contact Us"></asp:HyperLink>
+          </li>
+          <%--About Us--%>
+          <li>
+            <asp:HyperLink runat="server" NavigateUrl="~/about.aspx" Text="About Us"></asp:HyperLink>
+          </li>
+
+        </ul>
+      </div>  <!-- close column1 -->
+      <div class="column">
+        <div class="title">
+          Social Sites
+        </div>
+        <ul>
+          <%--Twitter--%>
+          <li>
+            <i class="fa fa-twitter"></i>
+            <a href="https://twitter.com/CSWarRoom">Twitter</a>
+          </li>
+          <%--Facebook--%>
+          <li>
+            <i class="fa fa-facebook"></i>
+            <a href="https://www.facebook.com/CheatSheetWarRoom">Facebook</a>
+          </li>
+          <%--Google+--%>
+         <%-- <li>
+            <i class="fa fa-google-plus"></i>
+            <a href="https://plus.google.com/+Cheatsheetwarroom">Google+</a>
+          </li>--%>
+          <%--Pinterest--%>
+          <li>
+            <i class="fa fa-pinterest"></i>
+            <a href="https://www.pinterest.com/cheatsheetwarrm">Pinterest</a>
+          </li>
+        </ul>
+      </div> <!-- close column 2-->
+      <div class="column">
+        <div class="title">
+          Legal
+        </div>
+        <ul>
+          <%--Copyright --%>
+          <li>
+            <i class="fa fa-copyright"></i>
+            <asp:Literal runat="server" ID="litCurrentYear"/> Cheat Sheet War Room
+          </li>
+          <%--Release Version--%>
+          <li>
+            Software Release <asp:Label runat="server" CssClass="version" ID="labSoftwareVersion" />
+          </li>
+          <%--Terms of Use--%>
+          <li>
+            <asp:HyperLink runat="server" NavigateUrl="~/legal/termsofservice.aspx" Text="Terms of Service"></asp:HyperLink>
+          </li>
+          <%--Privacy Policy--%>
+          <li>
+            <asp:HyperLink runat="server" NavigateUrl="~/legal/privacypolicy.aspx" Text="Privacy Policy"></asp:HyperLink>
+          </li>
+          <%--Disclaimer--%>
+          <li>
+            <asp:HyperLink runat="server" NavigateUrl="~/legal/disclaimer.aspx" Text="Disclaimer"></asp:HyperLink>
+          </li>
+        </ul>
+
+      </div>  <!-- close column 3 -->
+
+      <div style="clear:both;"></div>
+    </div>
+        <div style="background:#454545;color:white;padding:30px;" class="cAlign">
+	        <p>
+	          We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.
+	        </p>
+	      </div>
+    
+
+    </div>  <!-- close container -->
+
+  <%--This is the popup that appears when the 'Home' tab is clicked--%>
+  <%--<div id="panHomePopup" style="display:none;">
+    <p>
+      
+      <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx">
+        <i class="fa fa-home"></i>
+        Site Home
+      </asp:HyperLink>
+    </p>
+    <p>
+      <asp:HyperLink runat="server" NavigateUrl="~/faq.aspx">
+        <i class="fa fa-question"></i>
+        FAQs
+      </asp:HyperLink>
+    </p>
+    <p>
+      <asp:HyperLink runat="server" NavigateUrl="~/contact.aspx" >
+        <i class="fa fa-envelope"></i>
+        Contact Us
+      </asp:HyperLink>
+    </p>
+  </div>--%>
+
+  <%--This is the popup that appears when the 'Sheets' tab is clicked--%>
+  <%--<div id="panSheetsPopup" style="display:none;">
+    <p>
+      <asp:HyperLink runat="server" ID="hlFantasyFootballEntryPage" EnableViewState="false">
+        <i class="flaticon-ball6"></i> Football Sheets</asp:HyperLink>
+    </p>
+    <p class="last">
+      <asp:HyperLink runat="server" ID="hlFantasyRacingEntryPage" EnableViewState="false">
+        <i class="flaticon-flag76"></i> Racing Sheets</asp:HyperLink>
+    </p>
+  </div>--%>
+
+  <%--This is the popup that appears when the 'Blog' tab is clicked--%>
+  <%--<div id="panBlogPopup" style="display:none;">
+    <p class="last">
+      <asp:HyperLink runat="server" ID="hlBlogHome">
+        <i class="fa fa-home"></i>
+        Blog Home</asp:HyperLink>
+    </p>
+  </div>--%>
+
+  <%--This is the popup that appears when the 'Forums' tab is clicked--%>
+  <%--<div id="panForumsPopup" style="display:none;">
+    <asp:Image runat="server" ImageUrl="~/Images/Layout/forum-dropdown-header.gif" AlternateText="Forum Section Header" style="margin-left:-7px;" />
+    <p>
+      <asp:HyperLink runat="server" ID="hlHotTopics">
+       <i class="fa fa-fire"></i>
+        Hot Topics</asp:HyperLink>
+    </p>
+    <p>
+      <asp:HyperLink runat="server" ID="hlFootballWarRoom">
+        <i class="flaticon-ball6"></i>
+        Football War Room</asp:HyperLink>
+    </p>
+    <p>
+      <asp:HyperLink runat="server" ID="hlFeatureRequests">
+        <i class="fa fa-bullhorn"></i>
+        Feature Requests</asp:HyperLink>
+    </p>
+    <p class="last">
+      <asp:HyperLink runat="server" ID="hlReportABug">
+        <i class="fa fa-bug"></i>
+        Report a Bug
+      </asp:HyperLink>
+    </p>
+  </div>--%>
+
+
+
+  <!-- Here we initialize tooltips for the entire application -->
+  <script type="text/javascript">
+
+    // Create the tooltips only on document load
+    $(document).ready(function () {
+
+      // delay all tooltips so that they arne't shown when quickly moving the
+      // mouse over a particular part of the page
+      $('[title]').qtip({
+        show: {
+          delay: 550
+        }
+      });
+
+      /* home tab popup */
+      //$('.topNavTabList #homeTab').qtip({
+      //  content: $('#panHomePopup'),
+      //  position: {
+      //    my: 'left top',
+      //    at: 'bottom left'
+      //  },
+      //  show: {
+      //    event: 'click'
+      //  },
+      //  style: {
+      //    classes: 'ui-tooltip-navdrop-sheets qtip-shadow',
+      //    width: 275,
+      //    height: 140,
+      //    tip: false
+      //  },
+      //  hide: {
+      //    event: 'unfocus'
+      //  }
+      //});
+
+      /* sheets tab popup */
+      //$('.topNavTabList #sheetsTab').qtip({
+      //  content: $('#panSheetsPopup'),
+      //  position: {
+      //    my: 'left top',
+      //    at: 'bottom left'
+      //  },
+      //  show: {
+      //    event: 'click'
+      //  },
+      //  style: {
+      //    classes: 'ui-tooltip-navdrop-sheets shadow',
+      //    width: 235,
+      //    height: 87,
+      //    tip: false
+      //  },
+      //  /* fixes IE flicker problem */
+      //  hide: {
+      //    event: 'unfocus'
+      //  }
+      //});
+
+
+      /* blog tab popup */
+      //$('.topNavTabList #blogTab').qtip({
+      //  content: $('#panBlogPopup'),
+      //  position: {
+      //    my: 'left top',
+      //    at: 'bottom left'
+      //  },
+      //  show: {
+      //    event: 'click'
+      //  },
+      //  style: {
+      //    classes: 'ui-tooltip-navdrop-sheets shadow',
+      //    width: 195,
+      //    height: 52,
+      //    tip: false
+      //  },
+      //  /* fixes IE flicker problem */
+      //  hide: {
+      //    event: 'unfocus'
+      //  }
+      //});
+
+      /* forums tab popup */
+      //$('.topNavTabList #forumsTab').qtip({
+      //  content: $('#panForumsPopup'),
+      //  position: {
+      //    my: 'left top',
+      //    at: 'bottom left'
+      //  },
+      //  show: {
+      //    event: 'click'
+      //  },
+      //  style: {
+      //    classes: 'ui-tooltip-navdrop-sheets shadow',
+      //    width: 355,
+      //    height: 192,
+      //    tip: false
+      //  },
+      //  /* fixes IE flicker problem */
+      //  hide: {
+      //    event: 'unfocus'
+      //  }
+      //});
+
+      /* handles clicking of any navigational item */
+      //$('.topNavTabList li').click(function (e) {
+
+      //  // create variable to hold the 'selected' class to be applied/removed
+      //  var topTabLiSelClass = 'selected';
+
+      //  // create a variable to hold a reference to the element (li) being clicked
+      //  var $thisLi = $(this);
+
+      //  // if the element being clicked has the 'selected' class applied, remove it and hide the tooltip
+      //  if ($thisLi.hasClass(topTabLiSelClass)) { // click again close
+      //    $thisLi.removeClass(topTabLiSelClass);
+      //    $thisLi.qtip('hide');
+      //  }
+
+      //  // remove the 'selected' class from all other siblings, then add to the element which was clicked
+      //  $thisLi.siblings('li').removeClass(topTabLiSelClass).end().addClass(topTabLiSelClass);
+      //});
+
+
+      //$(document).click(function (e)
+      //{
+      //  var $targetElement = $(e.target.parentNode);
+
+      //  // if the user clicks on anything besides the navigation, de-select all tabs.  the tooltip
+      //  // will be hidden by QTip
+      //  if (! (($targetElement.hasClass('topNavTabList')) || ($targetElement.hasClass('navItem'))) )
+      //  {
+      //    $('ul.topNavTabList').find('li').removeClass('selected');
+      //  }
+      //  else
+      //  {
+      //    //alert("nav selected, e.target.id: " + e.target.id);
+      //  }
+      //});
+
+      /* this has to appear last as to not break everything else */
+      //$('ul.topNavTabList').lavalamp({ easing: 'easeOutBack', setOnClick: true });
+
+
+    });
+
+  </script>
+
+
+
+  <!-- This should make tooltips appear in UpdatePanels, even after a callback, 
+       but it does not address AJAX triggered on QTip hovers, which still don't work -->
+  <script type="text/javascript">
+    function pageLoad(sender, args) {
+      if (args.get_isPartialLoad()) {
+        $('[title]').qtip({
+          overwrite: false,
+          show: {
+            delay: 550
+          }
+        });
+      }
+    }
+  </script>
+
+
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+  <asp:Panel runat="server" ID="panAddThis" CssClass="addThisContainer">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=bperniciaro"></script> 
+  </asp:Panel>
+ 
+
+  
+
+  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=bf738cf6-7fdc-4cea-81a5-f90f8d975092"></script>
+</form>
+
+
+</body>
+
+
+</html>

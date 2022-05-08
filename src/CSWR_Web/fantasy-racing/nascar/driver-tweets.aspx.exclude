@@ -1,0 +1,33 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="driver-tweets.aspx.cs" Inherits="BP.CheatSheetWarRoom.UI.DriverTweets" %>
+<%@ Register Src="~/usercontrols/Sports/TweetViewer.ascx" TagName="TweetViewer" TagPrefix="cswr" %>
+<%@ Register Src="~/usercontrols/GoogleAnalytics.ascx" TagName="GoogleAnalytics" TagPrefix="cswr" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <cswr:GoogleAnalytics runat="server" />
+  <link rel="canonical" href="http://www.cheatsheetwarroom.com/fantasy-racing/nascar/driver-tweets.aspx"/>
+</head>
+<body>
+<form id="form1" runat="server">
+
+<div class="tweetPage">
+
+  <div class="twitterPageHeader" style="">
+    <div style="font-size:16px;">
+      <asp:Hyperlink runat="server" ID="hlCSWR" NavigateUrl="http://www.cheatsheetwarroom.com" Text="CheatSheetWarRoom" style="text-decoration:none;" /> Tweet Reader
+    </div>
+    <div>
+      Create 
+      <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/cheat-sheets.aspx" Text="fantasy racing cheat sheets" />
+      online using drag and drop, for free.
+    </div>
+  </div>    
+  
+  <%--<cswr:TweetViewer runat="server" ID="tvTweetViewer" />--%>
+
+</div>
+
+
+</form>
+</body>
+</html>

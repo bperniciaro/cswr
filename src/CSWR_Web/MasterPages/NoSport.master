@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Frame.master" AutoEventWireup="true" 
+  CodeFile="NoSport.master.cs" Inherits="BP.CheatSheetWarRoom.UI.Web20NoSport" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+
+
+<!-- Content Container -->
+<div class="contentContainer">
+
+  <div class="sportAgnostic">
+    <asp:ContentPlaceHolder id="cphContent" runat="server">Default Content</asp:ContentPlaceHolder>
+  </div>
+
+</div> <!-- close contentContainer -->
+
+
+
+</asp:Content>
+

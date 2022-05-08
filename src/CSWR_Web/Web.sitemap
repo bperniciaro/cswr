@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    
+	<siteMapNode url="https://www.cheatsheetwarroom.com" title="Fantasy Football Cheat Sheets" roles="*" description="Create customized fantasy draft cheat sheets for various fantasy sports including fantasy football and fantasy racing.">
+
+    <!--<siteMapNode url="~/access/register.aspx" title="Register"  description="Register to unlock the full power of CheatSheetWarRoom." />-->
+    <!--<siteMapNode url="~/sitemap.aspx" title="Sitemap" description="View all pages of our website provided as hyperlinks for easy navigation." />-->
+    <siteMapNode url="~/faq.aspx" title="FAQ" description="Get answers to frequently asked questions." />
+		<siteMapNode url="~/about.aspx" title="About" description="Read about how Cheat Sheet War Room was born." />
+		<siteMapNode url="~/contact.aspx" title="Contact"  description="Contact us with any queries or suggestions you may have." />
+		<siteMapNode url="~/access/passwordrecovery.aspx" title="Recover your Password"  description="If you've forgot your password, validate yourself and we'll email it to you." />
+    <siteMapNode url="~/access/usernamerecovery.aspx" title="Recover your Username"  description="If you've forgot your username, use this page to have it emailed to you" />
+
+    <!-- **************** -->
+    <!-- Fantasy Football -->
+    <!-- **************** -->
+
+    <siteMapNode url="/FantasyFootball" title="Fantasy Football" description="These pages are relevant to fantasy football." roles="*" link="false">
+      
+      <!--Fantasy Football Landing Page-->
+      <!--<siteMapNode url="~/fantasy-football/nfl/cheat-sheets.aspx" title="Fantasy Football Cheat Sheets" description="Prepare for your NFL fantasy football draft by creating customized fantasy football cheat sheets, for free."></siteMapNode>-->
+      <!--Fantasy Football Help-->
+      <!--<siteMapNode url="~/fantasy-football/nfl/cheat-sheet-help.aspx" title="Football Cheat Sheet Help" description="Explore all features for creating fantasy football cheat sheets."/>-->
+
+      <!--Fantasy Football Cheat Sheet Creation-->
+			<siteMapNode  url="/FantasyFootballCreateSheetCreation" title="Fantasy Football Cheat Sheet Creation" description="The creation of cheat sheets." roles="*" link="false">
+				<siteMapNode url="~/fantasy-football/nfl/create/custom-sheet.aspx" title="Custom Fantasy Football Cheat Sheet" description="Use this free, custom fantasy football cheat sheet to easily create your NFL fantasy player rankings using drag and drop."></siteMapNode>
+      </siteMapNode>  <!-- Close Fantasy Football Cheat Sheet Creation -->
+
+      <!-- Fantasy Football Free -->
+      <siteMapNode url="/FantasyFootballFree" title="Free Fantasy Football Resources" roles="*" link="false">
+
+
+        <!-- Fantasy Football (Offensive) Player Rankings-->
+        <siteMapNode url="~/fantasy-football/nfl/free/rankings/player-rankings.aspx" roles="*" title="NFL Player Rankings">
+          <siteMapNode url="/FantasyFootballFreeRankingsOffense" title="Offensive Positions" link="false"  roles="*">
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/quarterbacks.aspx" title="Quarterback Rankings" description="View our free quarterback rankings in preparation for your fantasy football draft." />
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/running-backs.aspx" title="Running Back Rankings" description="View our free running back rankings in preparation for your fantasy football draft." />
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/wide-receivers.aspx" title="Wide Receiver Rankings" description="View our free wide receiver rankings in preparation for your fantasy football draft." />
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/tight-ends.aspx" title="Tight End Rankings" description="View our free tight end rankings in preparation for your fantasy football draft." />
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/kickers.aspx" title="Kicker Rankings" description="View our free kicker rankings in preparation for your fantasy football draft." />
+            <siteMapNode url="~/fantasy-football/nfl/free/rankings/offense/defenses.aspx" title="Defense Rankings" description="View our free defense rankings in preparation for your fantasy football draft." />
+          </siteMapNode>
+        </siteMapNode>  <!-- Close Fantasy Football Player Rankings -->
+
+        <!-- Player ADP -->
+        <siteMapNode url="/FantasyFootballADP" title="Offensive ADP" roles="*" link="false">
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/quarterbacks.aspx" title="Quarterback ADP" description="View the average draft position for quarterbacks." />
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/running-backs.aspx" title="Running Back ADP" description="View the average draft position for running backs." />
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/wide-receivers.aspx" title="Wide Receiver ADP" description="View the average draft position for wide receivers." />
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/tight-ends.aspx" title="Tight End ADP" description="View the average draft position for tight ends." />
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/kickers.aspx" title="Kicker ADP" description="View the average draft position for kickers." />
+          <siteMapNode url="~/fantasy-football/nfl/free/rankings/adp/defenses.aspx" title="Defense ADP" description="View the average draft position for defenses." />
+        </siteMapNode>  <!-- Close Player AdP -->
+
+          <!-- Printable Fantasy Football Cheat Sheets-->
+        <siteMapNode url="~/fantasy-football/nfl/free/printable/cheat-sheets.aspx" title="Printable Fantasy Football Cheat Sheets" roles="*">
+          <siteMapNode url="/FantasyFootballFreePrintableCheatSheetsOffense" title="Offensive Positions" link="false"  roles="*">
+            <!--All-in-One-->
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/cheat-sheet-with-roster.aspx" title="Printable Fantasy Football Cheat Sheet With Roster" roles="*"/>
+            <!--By Position-->
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/quarterbacks-cheat-sheet.aspx" title="Printable Quarterbacks Cheat Sheet" roles="*"/>
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/running-backs-cheat-sheet.aspx" title="Printable Running Backs Cheat Sheet" roles="*"/>
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/wide-receivers-cheat-sheet.aspx" title="Printable Wide Receivers Cheat Sheet" roles="*"/>
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/tight-ends-cheat-sheet.aspx" title="Printable Tight Ends Cheat Sheet" roles="*"/>
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/kickers-cheat-sheet.aspx" title="Printable Kickers Cheat Sheet" roles="*"/>
+            <siteMapNode url="~/fantasy-football/nfl/free/printable/offense/defenses-cheat-sheet.aspx" title="Printable Defenses Cheat Sheet" roles="*"/>
+          </siteMapNode>
+          <!-- Close Printable Fantasy Football Cheat Sheets OFFENSE -->
+          <siteMapNode url="~/fantasy-football/nfl/free/printable/fake-cheat-sheet.aspx" title="Fake Fantasy Football Cheat Sheet" roles="*" />
+        </siteMapNode>  <!-- Close Printable Fantasy Football Cheat Sheets-->
+
+        <!-- Accuracy -->
+        <siteMapNode url="/Accuracy" title="Cheat Sheet Accuracy" roles="*" link="false">
+          <siteMapNode url="~/fantasy-football/nfl/accuracy/users/overall-leaderboard.aspx" title="User Accuracy Leaderboard" roles="*" />
+        </siteMapNode>
+
+          <!-- Fantasy Football Links -->
+        <siteMapNode url="~/fantasy-football/nfl/free/links.aspx" title="Fantasy Football Links"  description="This page contains links to various fantasy NFL football websites categorized by type." />
+        <siteMapNode url="~/fantasy-football/nfl/free/sleepers.aspx" title="Fantasy Football Sleepers"  description="This page contains players who we believe are undervalued this year." />
+        <siteMapNode url="~/fantasy-football/nfl/free/busts.aspx" title="Fantasy Football Busts"  description="This page contains players who we believe are overvalued this year." />
+
+      </siteMapNode>  <!-- Close Printable Fantasy Football Free -->
+
+	  </siteMapNode>  <!-- Close Fantasy Football -->
+
+    <!-- ************** -->
+    <!-- Fantasy Racing -->
+    <!-- ************** -->
+    <siteMapNode url="/FantasyRacing" title="Fantasy Racing" description="These pages are relevant to fantasy racing." roles="*" link="false">
+
+      <!-- Fantasy Racing Landing Page -->
+      <!--<siteMapNode url="~/fantasy-racing/nascar/cheat-sheet-help.aspx" title="Racing Cheat Sheet Help" description="Explore all features for creating fantasy racing cheat sheets."/>-->
+
+      <!--Fantasy Football Cheat Sheet Creation-->
+      <siteMapNode  url="/FantasyRacingCreateSheetCreation" title="Fantasy Racing Cheat Sheet Creation" description="The creation of cheat sheets." roles="*" link="false">
+        <siteMapNode url="~/fantasy-racing/nascar/create/custom-sheet.aspx" title="Custom Fantasy Racing Cheat Sheet" description="Use this free, custom fantasy racing cheat sheet to easily create your NASCAR driver rankings using drag and drop."></siteMapNode>
+      </siteMapNode>
+      <!-- Close Fantasy Football Cheat Sheet Creation -->
+      
+      <!-- Fantasy Racing Free -->
+      <siteMapNode url="/FantasyRacingFree" title="Free Fantasy Racing Resources" roles="*" link="false">
+        <!-- Links -->
+        <siteMapNode url="~/fantasy-racing/nascar/free/links.aspx" title="Fantasy Racing Links" description="This page contains links to various fantasy NASCAR racing websites categorized by type." />
+        <!--Fantasy NASCAR Driver Rankings-->
+        <siteMapNode url="~/fantasy-racing/nascar/free/rankings/drivers.aspx" title="NASCAR Driver Rankings" description="The latest fantasy NASCAR driver rankings from Cheat Sheet War Room." />
+        <!--Fantasy NASCAR ADP Driver Rankings-->
+        <siteMapNode url="~/fantasy-racing/nascar/free/rankings/driver-adp-rankings.aspx" title="Driver ADP Rankings" description="The latest fantasy racing driver 'Average Draft Position' rankings." />
+        <!--Free Fantasy NASCAR Cheat Sheets-->
+        <siteMapNode url="~/fantasy-racing/nascar/free/printable/drivers-cheat-sheet.aspx" title="Free Printable Fantasy Racing Cheat Sheet" description="This free, printable fantasy racing cheat sheet includes all drivers for your fantasy NASCAR draft." />
+      </siteMapNode> <!-- Close Fantasy Racing Free -->
+
+    </siteMapNode>  <!-- Close Fantasy Racing -->
+
+    <!-- ************** -->
+    <!-- Community -->
+    <!-- ************** -->
+    <siteMapNode title="Community" description="These pages are relevant to our community." roles="*" link="false">
+      <!-- Fantasy Racing Landing Page -->
+      <siteMapNode roles="*" url="https://www.cheatsheetwarroom.com/blog/default.aspx" title="Fantasy Football Blog" description="On our blog we provide content including fantasy football strategy and current player rankings."></siteMapNode>
+      <siteMapNode roles="*" url="~/access/default.aspx" title="Fantasy Football Forum" description="On our forum we discuss fantasy football strategy and current player rankings."></siteMapNode>
+    </siteMapNode>
+
+    </siteMapNode>
+
+
+</siteMap>

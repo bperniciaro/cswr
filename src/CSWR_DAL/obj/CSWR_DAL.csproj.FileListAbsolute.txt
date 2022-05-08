@@ -1,0 +1,7 @@
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\bin\Debug\CSWR_DAL.dll
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\bin\Debug\CSWR_DAL.pdb
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\bin\Debug\CSWR_Globals.dll
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\bin\Debug\CSWR_Globals.pdb
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\obj\Debug\CSWR_DAL.dll
+D:\freelance\aspProjects\CheatSheetWarRoom\CSWR_DAL\obj\Debug\CSWR_DAL.pdb

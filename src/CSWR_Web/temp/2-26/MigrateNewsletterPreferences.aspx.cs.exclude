@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.Configuration;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using BP.CheatSheetWarRoom.BLL.Sheets;
+using BP.CheatSheetWarRoom.UI;
+
+public partial class temp_2_26_MigrateNewsletterPreferences : System.Web.UI.Page
+{
+  protected void Page_Load(object sender, EventArgs e)
+  {
+    this.Page.Server.ScriptTimeout = 14400;
+    if (!IsPostBack)
+    {
+      this.UnprocessedCustomFields = new List<MemberCustomField>();
+    }
+  }
+
+  public List<MemberCustomField> UnprocessedCustomFields
+  {
+    get
+    {
+      return (List<MemberCustomField>)ViewState["MemberCustomField"];
+    }
+    set
+    {
+      ViewState["MemberCustomField"] = value;
+    }
+  }
+
+  protected void butDetermineMismatches_Click(object sender, EventArgs e)
+  {  
+    DetermineMismatches();
+  }
+
+  private void DetermineMismatches()
+  {
+    List<ForumMember> allForumMembers = Forum.GetAllMembers();
+    labTotalForumMembers.Text = allForumMembers.Count.ToString();
+
+    List<CustomField> allCustomFields = Forum.GetAllCustomFields();
+    labMembersWCustomField.Text = allCustomFields.Count.ToString();
+
+    MembershipUserCollection allUsers = Membership.GetAllUsers();
+
+    foreach (ForumMember currentMember in allForumMembers)
+    {
+      if (allCustomFields.SingleOrDefault(x => x.MemberID == currentMember.MemberID) == null)
+      {
+        ProfileCommon userProfile = Profile.GetProfile(currentMember.Login);
+
+        string freeTip = (userProfile.EmailNotifications) ? "1" : "0";
+
+        UnprocessedCustomFields.Add(new MemberCustomField(currentMember.MemberID, freeTip));
+      }
+    }
+  }
+
+
+  protected void butMigratePreferences_Click(object sender, EventArgs e)
+  {
+
+    foreach(MemberCustomField currentCustomField in UnprocessedCustomFields)  
+    {
+
+      if (Forum.GetCustomField(currentCustomField.Login) == null)
+      {
+        Forum.InsertCustomField(currentCustomField.Login, currentCustomField.FreeTips);
+      }
+
+    }
+
+    DetermineMismatches();
+  }
+
+
+
+
+
+  [Serializable]
+  public class MemberCustomField
+  {
+    public MemberCustomField(int login, string freeTips)
+    {
+      this.Login = login;
+      this.FreeTips = freeTips;
+    }
+
+    public int Login { get; set; }
+    public string FreeTips { get; set; }
+  }
+
+}

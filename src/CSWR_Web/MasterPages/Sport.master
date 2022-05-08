@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Frame.master" AutoEventWireup="true" 
+  CodeFile="Sport.master.cs" Inherits="BP.CheatSheetWarRoom.UI.SportMaster" %>
+<%@ MasterType VirtualPath="~/MasterPages/Frame.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+
+<!--  Landing Container -->
+<asp:Panel runat="server" ID="panLandingContainer" CssClass="landingContainer">
+
+  <!-- Tertiary Navigation -->
+  <div class="tertiaryNav">
+            
+    <!-- Sheet Icon -->
+    <div class="iconContainer">
+      <a></a>
+    </div>
+          
+    <%--Football Navigation--%>
+    <asp:Panel runat="server" ID="panFootballNavigation">
+      <!-- Football Links -->
+      <ul>
+        <!-- My Sheets -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/create/custom-sheet.aspx">CUSTOM FOOTBALL SHEET</asp:HyperLink>
+        </li>
+
+        <!-- Player Rankings -->
+        <li>
+          <asp:HyperLink runat="server" ID="hlPlayerRanking" NavigateUrl="~/fantasy-football/nfl/free/rankings/player-rankings.aspx">NFL PLAYER RANKINGS</asp:HyperLink>
+        </li>
+        <!-- Sleepers -->
+        <li>
+          <asp:HyperLink runat="server" ID="hlSleepers" NavigateUrl="~/fantasy-football/nfl/free/sleepers.aspx">SLEEPERS</asp:HyperLink>
+        </li>
+        <!-- Busts -->
+        <li>
+          <asp:HyperLink runat="server" ID="hlBusts" NavigateUrl="~/fantasy-football/nfl/free/busts.aspx">BUSTS</asp:HyperLink>
+        </li>
+        <!-- Bye Weeks -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="https://www.cheatsheetwarroom.com/blog/football/bye-weeks">NFL BYE WEEKS</asp:HyperLink>
+        </li>
+        <!-- Player ADP Rankings -->
+        <li>
+          <asp:HyperLink runat="server" ID="hlQuarterbackADPRankings" NavigateUrl="~/fantasy-football/nfl/free/rankings/adp/quarterbacks.aspx">ADP RANKINGS</asp:HyperLink>
+        </li>
+        <!-- Free Football Sheets -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/printable/cheat-sheets.aspx">FREE PRINTABLE SHEETS</asp:HyperLink>
+        </li>
+        <!-- Leaderboard -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/accuracy/users/overall-leaderboard.aspx">LEADERBOARD</asp:HyperLink>
+        </li>
+
+        <!-- Related Links -->
+        <li class="last">
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-football/nfl/free/links.aspx">FOOTBALL LINKS</asp:HyperLink>
+        </li>
+
+      </ul>
+
+      <%--<asp:Panel runat="server" ID="panLeftColumnAffiliate" CssClass="adContainer" Visible="false">
+        <a rel="nofollow" href="http://www.trophies2go.com/index-exec/section/category/category/611/affiliate_id/7" target="_blank">
+          <asp:Image runat="server" ImageUrl="~/Images/Layout/ads/trophies2go_120x240.gif" AlternateText="Advertisement for fantasy football trophies." />
+        </a>
+      </asp:Panel>--%>
+
+    </asp:Panel>
+        
+    <%--Racing Navigation--%>
+    <asp:Panel runat="server" ID="panRacingNavigation">
+      <!-- Racing Links -->
+      <ul>
+        <!-- My Sheets -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/create/custom-sheet.aspx">CUSTOM RACING SHEET</asp:HyperLink>
+        </li>
+        <!-- Driver Rankings -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/free/rankings/drivers.aspx" ID="hlDriverRankings"></asp:HyperLink>
+        </li>
+        <!-- Driver ADP Rankings -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/free/rankings/driver-adp-rankings.aspx" ID="hlDriverADPRankings"></asp:HyperLink>
+        </li>
+        <!-- Free Racing Sheet -->
+        <li>
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/free/printable/drivers-cheat-sheet.aspx" Target="_blank">FREE PRINTABLE SHEET</asp:HyperLink>
+        </li>
+        <!-- Related Links -->
+        <li class="last">
+          <asp:HyperLink runat="server" NavigateUrl="~/fantasy-racing/nascar/free/links.aspx">RACING LINKS</asp:HyperLink>
+        </li>
+      </ul>
+
+    </asp:Panel>        
+
+  </div> <!-- close tertiaryNavContainer -->
+          
+    <%--Content--%>        
+    <div class="centerContent">
+     <asp:ContentPlaceHolder id="cphContent" runat="server">Default Content</asp:ContentPlaceHolder>
+
+      <br />
+      <br />
+
+    </div> <!-- close centerContent -->
+
+  </asp:Panel>
+
+</asp:Content>
+

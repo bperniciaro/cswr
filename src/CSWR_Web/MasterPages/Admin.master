@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPages_NewLayout_Admin" %>
+<%@ Register src="~/admin/usercontrols/AdminNavigation.ascx" tagname="AdminNavigation" tagprefix="cswr" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+  <meta http-equiv="content-language" content="en=us">
+  <title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+
+<script type='text/javascript'>window.PLAYERCARDS_CONFIG={parseFullText:true,affiliateCode:'WarRoom'};</script>
+<script type='text/javascript' src='https://cdn.fantasypros.com/playercards/auto_parse_nfl.js'></script>
+
+
+  <div class="adminMasterPage">
+  
+    <cswr:AdminNavigation ID="AdminNavigation1" runat="server" />
+
+    <div style="clear:both;"/>
+    
+    <div class="contentContainer">
+      <asp:ContentPlaceHolder id="cphAdminContent" runat="server">
+      </asp:ContentPlaceHolder>
+    </div>
+
+  </div>
+
+  <!-- Here we initialize tooltips for the entire application -->
+  <script type="text/javascript">
+
+    // Create the tooltips only on document load
+    $(document).ready(function () {
+      $('[title]').qtip({
+        show: {
+          delay: 550
+        }
+      });
+    });
+
+  </script>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Thank you for registering at cheatsheetwarroom.com.  Your credentials are as follows:
+
+UserName: <% UserName %>
+Password: <% Password %>
+
+Welcome aboard!
+-CheatSheetWarRoom Team
+

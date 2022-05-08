@@ -1,0 +1,11 @@
+Hi <%SenderName%>,
+
+Your invitation to try out CheatSheetWarRoom was successfully delivered.  
+Below is a copy of your invitation to: <%FriendEmail%>
+
+See you online,
+CheatSheetWarRoom
+https://www.cheatsheetwarroom.com
+
+____________________________________________________________________________________
+

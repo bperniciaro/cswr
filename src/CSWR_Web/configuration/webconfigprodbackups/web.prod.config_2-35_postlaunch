@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+
+  <!-- Note Custom CSWR Section -->
+  <configSections>
+    <section name="cheatSheetWarRoom" type="BP.CheatSheetWarRoom.CheatSheetWarRoomSection" />
+    <section name="aspPlayground" type="BP.CheatSheetWarRoom.ASPPlaygroundSection" />
+    <section name="blogEngine" type="BP.CheatSheetWarRoom.BlogEngineSection" />
+  </configSections>
+  
+  <!--Custom Section-->
+  <cheatSheetWarRoom defaultConnectionStringName="LocalSqlServer" enableAdvertisements="true" enableSocialMedia="true" showTrafficPop="false" 
+                     applicationState="prod" version="2.35" simulateDowntime="false" showTopBannerAd="false">
+    <contactForm mailTo="admin@cheatsheetwarroom.com" mailCC="bperniciaro@gmail.com" />
+    <sheets pageSize="25" providerType="BP.CheatSheetWarRoom.DAL.SqlClient.SqlSheetsProvider" enableCaching="true" cacheDuration="300" defaultSportCode="FOO" defaultQBsPerSheet="40" defaultRBsPerSheet="75" defaultWRsPerSheet="75" defaultTEsPerSheet="35" defaultKsPerSheet="32" defaultDEFsPerSheet="32" />
+  </cheatSheetWarRoom>
+  <aspPlayground defaultConnectionStringName="LocalForumSqlServer" providerType="BP.CheatSheetWarRoom.DAL.SqlClient.SqlForumProvider">
+  </aspPlayground>
+  <blogEngine defaultConnectionStringName="LocalBlogSqlServer" providerType="BP.CheatSheetWarRoom.DAL.SqlClient.SqlBlogProvider">
+  </blogEngine>
+
+  <!-- This setting increases the number of form fields that can appear on a page (default is 1000).  Without this you'll get
+       'operation is not valid due to the current state of the object' errors -->
+  <appSettings>
+    <add key="aspnet:MaxHttpCollectionKeys" value="3001" />
+  </appSettings>
+
+  <!--Point to external connection string-->
+  <connectionStrings configSource="configuration\connstrings\ConnStringsProd.config" />
+
+
+  <!--This ensures this section isn't read by child apps-->
+  <location path="." inheritInChildApplications="false">
+
+    <system.web>
+
+
+	  <trace enabled="false" localOnly="true" /> 
+
+      <healthMonitoring enabled="true">
+        <eventMappings>
+          <clear />
+          <!-- Log ALL error events -->
+          <add name="All Errors" type="System.Web.Management.WebBaseErrorEvent" startEventCode="0" endEventCode="2147483647" />
+          <add name="CSWR Events" type="BP.CheatSheetWarRoom.WebCustomEvent" />
+          <!-- Log application startup/shutdown events -->
+          <!--<add name="Application Events" type="System.Web.Management.WebApplicationLifetimeEvent" startEventCode="0" endEventCode="2147483647"/>-->
+        </eventMappings>
+        <providers>
+          <clear />
+          <!-- Provide any customized SqlWebEventProvider information here (such as a different connection string name value -->
+          <add connectionStringName="LocalSqlServer" maxEventDetailsLength="1073741823" buffer="false" name="SqlWebEventProvider" type="System.Web.Management.SqlWebEventProvider" />
+        </providers>
+        <rules>
+          <clear />
+          <add name="All Errors Default" eventName="All Errors" provider="SqlWebEventProvider" profile="Default" minInstances="1" maxLimit="Infinite" minInterval="00:00:00" custom="" />
+          <add name="CSWR Events" eventName="CSWR Events" provider="SqlWebEventProvider" profile="Critical" />
+          <!--<add name="Application Events Default" eventName="Application Events" provider="SqlWebEventProvider" profile="Default" minInstances="1" maxLimit="Infinite" minInterval="00:00:00" custom=""/>-->
+        </rules>
+      </healthMonitoring>
+
+      <!--Session Timeout-->
+      <sessionState timeout="60" mode="InProc" cookieless="false" />
+
+      <!-- Autentication -->
+      <authentication mode="Forms">
+        <forms name="CSWRFORMAUTH" protection="All" path="/" defaultUrl="~/default.aspx" loginUrl="~/community/login.aspx" timeout="2592000" cookieless="UseCookies" />
+      </authentication>
+
+      <!-- Roles -->
+      <roleManager enabled="true" />
+
+      <!--Membership-->
+      <membership defaultProvider="CSWR_MembershipProvider" userIsOnlineTimeWindow="15">
+        <providers>
+          <add name="CSWR_MembershipProvider" connectionStringName="LocalSqlServer" applicationName="/" enablePasswordRetrieval="true" enablePasswordReset="true" requiresQuestionAndAnswer="true" requiresUniqueEmail="true" passwordFormat="Encrypted" maxInvalidPasswordAttempts="5" passwordAttemptWindow="10" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral,
+             PublicKeyToken=b03f5f7f11d50a3a" />
+        </providers>
+      </membership>
+
+      <!--Anonymous Users-->
+      <anonymousIdentification cookieless="UseCookies" enabled="true" />
+
+      <!--Profile Info-->
+      <profile defaultProvider="CSWR_ProfileProvider">
+        <providers>
+          <add name="CSWR_ProfileProvider" connectionStringName="LocalSqlServer" applicationName="/" type="System.Web.Profile.SqlProfileProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        </providers>
+        <properties>
+          <add name="FirstName" type="String" />
+          <add name="FavoriteTeam" type="String" />
+          <add name="EmailNotifications" type="Bool" defaultValue="true" />
+          <add name="EmailValid" type="Bool" defaultValue="true" />
+          <add name="FiguredOutReordering" type="Boolean" defaultValue="false" />
+          <group name="Football">
+            <add name="LastFootballCheatSheetID" type="Integer" />
+            <add name="HasInterest" type="bool" defaultValue="true" />
+            <add name="FavoriteTeamID" type="Integer" />
+            <add name="ValidateDifference" type="Integer" defaultValue="10" />    
+          </group>
+          <group name="Racing">
+            <add name="LastRacingCheatSheetID" type="Integer" />
+            <add name="HasInterest" type="bool" defaultValue="false" />
+            <add name="FavoriteDriverID" type="Integer" />
+          </group>
+          <group name="Baseball">
+            <add name="LastBaseballCheatSheetID" type="Integer" />
+            <add name="HasInterest" type="bool" defaultValue="false" />
+            <add name="FavoriteTeamID" type="Integer" />
+          </group>
+          <group name="Basketball">
+            <add name="LastBasketballCheatSheetID" type="Integer" />
+            <add name="HasInterest" type="bool" defaultValue="false" />
+            <add name="FavoriteTeamID" type="Integer" />
+          </group>
+          <group name="Hockey">
+            <add name="LastRacingCheatSheetID" type="Integer" />
+            <add name="HasInterest" type="bool" defaultValue="false" />
+            <add name="FavoriteTeamID" type="Integer" />
+          </group>
+        </properties>
+      </profile>
+      <!-- Keys for encrypting and decrypting passwords, generated at the website www.aspnetresources.com/tools/keycreator.aspx -->
+      <machineKey validationKey="B8C7F65D22B69591411086F3E0E68331064D46D3B43F7DB71F6AA6EE854475E10B92C030D7D41D75B3AB50F1B7B0F85126E68FFFE1F0114B825E6DD34D284D10" decryptionKey="3B168CB07DFD5F5FB7EAFDA4CCB564788BD41ABFB37D4537" validation="SHA1" />
+
+      <!-- Custom Error Pages -->
+      <customErrors defaultRedirect="~/Error/Error.aspx" mode="Off">
+        <error statusCode="408" redirect="~/Error/Error.aspx?code=408" />
+        <error statusCode="505" redirect="~/Error/Error.aspx?code=505" />
+        <!-- <error statusCode="404" redirect="~/Error/PageNotFound.aspx"/> -->
+      </customErrors>
+
+
+      <!--Sitemap-->
+      <siteMap defaultProvider="CSWR_SiteMapProvider" enabled="true">
+        <providers>
+          <add name="CSWR_SiteMapProvider" type="System.Web.XmlSiteMapProvider" siteMapFile="web.sitemap" securityTrimmingEnabled="true" />
+        </providers>
+      </siteMap>
+
+      <!-- Pages -->
+      <pages theme="Web20" masterPageFile="~/MasterPages/Frame.master" controlRenderingCompatibilityVersion="4.0">
+        <controls>
+          <add tagPrefix="cswr" src="~/usercontrols/HoverImage.ascx" tagName="HoverImage" />
+          <add tagPrefix="cswr" src="~/usercontrols/UserProfile.ascx" tagName="UserProfile" />
+        </controls>
+      </pages>
+      <compilation targetFramework="4.5" debug="true" batch="false" />
+      <httpRuntime requestValidationMode="2.0" enableVersionHeader="false" />
+    </system.web>
+</location>
+
+  <!-- these help control which is displayed in the sitemap -->
+  <!-- these help control which is displayed in the sitemap -->
+  <location path="EditProfile.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="Member" />
+        <deny users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="access/PasswordRecovery.aspx">
+    <system.web>
+      <authorization>
+        <allow users="?" />
+        <deny users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="access/UsernameRecovery.aspx">
+    <system.web>
+      <authorization>
+        <allow users="?" />
+        <deny users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <system.net>
+    <mailSettings>
+      <smtp from="admin@cheatsheetwarroom.com">
+        <network userName="admin@cheatsheetwarroom.com" password="Vj^dS47jw%jDOZ%" host="mail.cheatsheetwarroom.com" port="25" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+
+
+  <system.webServer>
+
+
+    <modules runAllManagedModulesForAllRequests="true" />
+    <handlers>
+            <remove name="PageHandlerFactory-ISAPI-2.0-64" />
+            <add name="PageHandlerFactory-ISAPI-2.0-64" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v2.0.50727\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv2.0,bitness64" responseBufferLimit="0" />
+        </handlers>
+        <directoryBrowse enabled="false" />
+        <httpProtocol>
+            <customHeaders>
+                <clear />
+            </customHeaders>
+        </httpProtocol>
+        <defaultDocument>
+            <files>
+                <clear />
+                <add value="Default.htm" />
+                <add value="Default.asp" />
+                <add value="index.htm" />
+                <add value="index.html" />
+                <add value="iisstart.htm" />
+                <add value="default.aspx" />
+                <add value="index.php" />
+            </files>
+        </defaultDocument>
+        <security>
+            <authentication>
+              <!--  <windowsAuthentication enabled="false" /> -->
+            </authentication>
+        </security>
+<!--
+<rewrite>
+            <rules>
+                <rule name="HTTP to HTTPS redirect" stopProcessing="true">
+            <match url="(.*)" />
+                <conditions>
+                    <add input="{HTTPS}" pattern="off" ignoreCase="true" />
+                </conditions>
+            <action type="Redirect" redirectType="Found" url="https://{HTTP_HOST}/{R:1}" />
+        </rule>
+             </rules>
+        </rewrite>
+-->
+  </system.webServer>
+</configuration>
