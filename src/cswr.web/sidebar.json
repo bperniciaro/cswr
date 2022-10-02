@@ -1,7 +1,7 @@
 ﻿{
   "sidebarMenu": [
     {
-      "text": "Navigation",
+      "text": "Fantasy Football Sheets",
       "is_header": true
     },
     {
@@ -9,6 +9,94 @@
       "action": "Index",
       "icon": "fa fa-home",
       "text": "Home"
+    },
+    {
+      "controller": "Cheatsheets",
+      "icon": "fa fa-file",
+      "text": "Cheat Sheets",
+      "children": [
+        {
+          "controller": "Cheatsheets",
+          "action": "Custom",
+          "icon": "fa fa-files",
+          "text": "Custom Sheet"
+        },
+        {
+          "controller": "Cheatsheets",
+          "action": "Manage",
+          "icon": "fa fa-files",
+          "text": "Manage Sheets"
+        },
+        {
+          "controller": "Cheatsheets",
+          "action": "OnePagePrintable",
+          "icon": "fa fa-print",
+          "text": "1-Page Printable"
+        }
+      ]
+    },
+    {
+      "controller": "Rankings",
+      "icon": "fa fa-up-down",
+      "text": "Rankings",
+      "children": [
+        {
+          "controller": "Rankings",
+          //"action": "Player",
+          "icon": "fa fa-football",
+          "text": "Player Rankings",
+          "children": [
+            {
+              "controller": "Rankings",
+              "action": "Quarterback",
+              "text": "Quarterback Rankings"
+            },
+            {
+              "controller": "Rankings",
+              "action": "RunningBack",
+              "text": "Running Back Rankings"
+            }
+          ]
+        },
+        {
+          "controller": "Rankings",
+          "action": "Sleepers",
+          "text": "Sleepers"
+        },
+        {
+          "controller": "Rankings",
+          "action": "Busts",
+          "text": "Busts"
+        },
+        {
+          "controller": "Rankings",
+          "action": "ADP",
+          "text": "ADP"
+        }
+      ]
+    },
+    {
+      "controller": "Printable",
+      "icon": "fa fa-home",
+      "text": "Printable",
+      "children": [
+        {
+          "controller": "Printable",
+          "action": "Sheets",
+          "text": "Printable Sheets"
+        },
+        {
+          "controller": "Printable",
+          "action": "Fake",
+          "text": "Fake Sheet Cheat"
+        },
+        {
+          "controller": "Printable",
+          "action": "Positional",
+          "text": "Positional Sheets"
+        }
+      ]
     }
+
   ]
 }

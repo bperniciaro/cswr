@@ -69,18 +69,75 @@
                             <div class="menu-submenu">
                                 @foreach (var submenu in menuChildren)
                                 {
-                                    <div class="menu-item @(menuAction == @submenu["action"] ? "active" : "")">
-                                        <a asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" class="menu-link">
-                                            <span class="menu-text">@submenu["text"]</span>
-                                        </a>
-                                    </div>
+
+                                    var subMenuChildren = submenu.GetSection("children").GetChildren().ToArray();
+
+                                    // If the 2nd-level node doesn't have children, just generate a link to the controller action
+                                    if (subMenuChildren.Length == 0)
+                                    {
+                                        <div class="menu-item @(menuAction == @submenu["action"] ? "active" : "")">
+                                            <a asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" class="menu-link">
+                                                <span class="menu-text">@submenu["text"]</span>
+                                            </a>
+                                        </div>
+                                    }
+                                    // If the 2nd-level node does have children, we need to process them the same as the 1st-level items
+                                    else
+                                    {
+                                        <div class="menu-item @(menuController == @submenu["controller"] ? "active" : "") @(menuChildren.Length > 0 ? "has-sub" : "")">
+                                            @if (submenu["action"] != null && submenu["controller"] != null)
+                                            {
+                                                <a asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" class="menu-link">
+                                                    <span class="menu-icon">
+                                                        @if (submenu["icon"] != null)
+                                                        {
+                                                            <i class="@submenu["icon"]"></i>
+                                                        }
+                                                        @if (submenu["label"] != null)
+                                                        {
+                                                            <span class="menu-icon-label">@submenu["label"]</span>
+                                                        }
+                                                    </span>
+                                                    <span class="menu-text">@submenu["text"]</span>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a href="#" class="menu-link">
+                                                    <span class="menu-icon">
+                                                        @if (submenu["icon"] != null)
+                                                        {
+                                                            <i class="@submenu["icon"]"></i>
+                                                        }
+                                                        @if (submenu["label"] != null)
+                                                        {
+                                                            <span class="menu-icon-label">@submenu["label"]</span>
+                                                        }
+                                                    </span>
+                                                    <span class="menu-text">@submenu["text"]</span>
+                                                    @if (menuChildren.Length > 0)
+                                                    {
+                                                        <span class="menu-caret"><b class="caret"></b></span>
+                                                    }
+                                                </a>
+                                            }
+                                            <div class="menu-submenu">
+                                                @foreach (var thirdMenu in subMenuChildren)
+                                                {
+                                                    <div class="menu-item @(menuAction == @thirdMenu["action"] ? "active" : "")">
+                                                        <a asp-controller="@thirdMenu["controller"]" asp-action="@thirdMenu["action"]" asp-area="@thirdMenu["area"]" class="menu-link">
+                                                            <span class="menu-text">@thirdMenu["text"]</span>
+                                                        </a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
                                 }
                             </div>
                         }
                     </div>
-
                 }
-
             }
             <div class="menu-item">
             	<a href="/Identity/Account/Manage" class="menu-link">
