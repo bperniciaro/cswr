@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cswr.web", "src\cswr.web\cswr.web.csproj", "{6B7615E5-77C0-4A5B-BFFC-508B1C2B7421}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cswr.Web", "src\cswr.web\Cswr.Web.csproj", "{6B7615E5-77C0-4A5B-BFFC-508B1C2B7421}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

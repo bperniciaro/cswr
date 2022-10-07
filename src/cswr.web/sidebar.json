@@ -16,20 +16,30 @@
       "text": "Cheat Sheets",
       "children": [
         {
-          "controller": "Cheatsheets",
-          "action": "Custom",
+          "controller": "CheatSheet",
+          "action": "Rankings",
+          "area": "FantasyFootball",
           "icon": "fa fa-files",
           "text": "Custom Sheet"
         },
         {
           "controller": "Cheatsheets",
           "action": "Manage",
+          "area": "FantasyFootball",
           "icon": "fa fa-files",
           "text": "Manage Sheets"
         },
         {
+          "controller": "Cheatsheet",
+          "action": "New",
+          "area": "FantasyFootball",
+          "icon": "fa fa-files",
+          "text": "Create Sheet"
+        },
+        {
           "controller": "Cheatsheets",
-          "action": "OnePagePrintable",
+          "action": "ConfigurePRint",
+          "area": "FantasyFootball",
           "icon": "fa fa-print",
           "text": "1-Page Printable"
         }
@@ -37,6 +47,7 @@
     },
     {
       "controller": "Rankings",
+      //"action": "Test",
       "icon": "fa fa-up-down",
       "text": "Rankings",
       "children": [
@@ -46,6 +57,11 @@
           "icon": "fa fa-football",
           "text": "Player Rankings",
           "children": [
+            {
+              "controller": "Home",
+              "action": "Test",
+              "text": "All Players"
+            },
             {
               "controller": "Rankings",
               "action": "Quarterback",
@@ -81,13 +97,15 @@
       "text": "Printable",
       "children": [
         {
-          "controller": "Printable",
-          "action": "Sheets",
+          "controller": "PrintableSheets",
+          "action": "Index",
+          "area": "FantasyFootball",
           "text": "Printable Sheets"
         },
         {
-          "controller": "Printable",
-          "action": "Fake",
+          "controller": "FakePrintable",
+          "action": "Index",
+          "area": "FantasyFootball",
           "text": "Fake Sheet Cheat"
         },
         {

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AspStudio.Data;
+using Cswr.Web.Lib.Middleware;
 
 
 // ASP.net Core 6 uses the minimal hosting model
@@ -37,8 +38,25 @@ else
 }
 
 app.UseHttpsRedirection();
+
+//app.Use(async (context, next) =>
+//{
+//    var url = context.Request.Path.Value;
+
+//    // Redirect to an external URL
+//    if (url.Contains("/fantasy-football/nfl/create/managesheets.aspx"))
+//    {
+//        context.Response.Redirect("https://localhost:44341/fantasy-football/create/cheatsheets/manage");
+//        return;   // short circuit
+//    }
+
+//    await next();
+//});
+
+
 app.UseStaticFiles();
 
+app.UseMiddleware<RedirectMiddleware>();
 app.UseRouting();
 
 app.UseAuthentication();
