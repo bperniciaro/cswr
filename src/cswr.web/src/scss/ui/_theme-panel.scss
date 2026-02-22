@@ -21,8 +21,8 @@
     height: rem(40px);
     line-height: rem(40px);
     font-size: $font-size-lg;
-    color: var(--app-component-color);
-    background: var(--app-component-bg);
+    color: var(--#{$prefix}body-color);
+    background: var(--#{$prefix}component-bg);
     text-align: center;
     text-decoration: none;
     box-shadow: 0 0 16px rgba($black, .15);
@@ -30,7 +30,7 @@
 	}
 	& .theme-panel-content {
 		padding: rem(10px);
-		background: var(--app-component-bg);
+		background: var(--#{$prefix}component-bg);
 		position: relative;
 		border-radius: $border-radius 0 0 $border-radius;
 	}

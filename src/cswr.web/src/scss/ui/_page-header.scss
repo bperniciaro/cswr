@@ -1,5 +1,5 @@
 .page-header {
-	color: var(--app-component-color);
+	color: var(--#{$prefix}body-color);
 	padding: 0;
 	border: none;
 	margin: 0 0 $page-header-spacer-y;
@@ -8,7 +8,7 @@
 	
 	& small {
 		font-size: rem(16px);
-		color: rgba(var(--app-component-color-rgb), .5);
+		color: rgba(var(--#{$prefix}body-color-rgb), .5);
 		font-weight: $font-weight-base;
 	}
 }

@@ -23,8 +23,8 @@
 			& .nav-item {
 				& .nav-link {
 					&.active {
-						background: var(--app-component-bg);
-						border-bottom-color: var(--app-component-bg);
+						background: var(--#{$prefix}component-bg);
+						border-bottom-color: var(--#{$prefix}component-bg);
 					}
 				}
 			}
@@ -35,8 +35,8 @@
 			& .nav-item {
 				& .nav-link {
 					&.active {
-						background: var(--app-component-bg);
-						border-bottom-color: var(--app-component-bg);
+						background: var(--#{$prefix}component-bg);
+						border-bottom-color: var(--#{$prefix}component-bg);
 					}
 				}
 			}

@@ -1,6 +1,6 @@
 /*
-Template Name: ASPSTUDIO - Responsive Bootstrap 5 Admin Template
-Version: 3.2.0
+Template Name: STUDIO - Responsive Bootstrap 5 Admin Template
+Version: 4.0.0
 Author: Sean Ngu
 	----------------------------
 		APPS CONTENT TABLE
@@ -83,7 +83,7 @@ var app = {
 			toggleAttr: 'data-theme',
 			activeClass: 'active',
 			cookieName: 'theme',
-			onChangeEvent: 'theme-change'
+			onChangeEvent: 'theme-reload'
 		},
 		darkMode: {
 			class: 'dark-mode',
@@ -123,8 +123,48 @@ var app = {
 	popover: {
 		toggleAttr: 'data-bs-toggle="popover"'
 	},
+	dismissClass: {
+		toggleAttr: 'data-dismiss-class',
+		targetAttr: 'data-dismiss-target'
+	},
+	toggleClass: {
+		toggleAttr: 'data-toggle-class',
+		targetAttr: 'data-toggle-target'
+	},
 	font: { },
 	color: { },
+	variablePrefix: 'bs-',
+	variableFontList: ['body-font-family', 'body-font-size', 'body-font-weight', 'body-line-height'],
+	variableColorList: [
+		'theme', 'theme-rgb', 'theme-color', 'theme-color-rgb',
+		'default', 'default-rgb',
+		'primary', 'primary-rgb', 'primary-bg-subtle', 'primary-text', 'primary-border-subtle',
+		'secondary', 'secondary-rgb', 'secondary-bg-subtle', 'secondary-text', 'secondary-border-subtle',
+		'success', 'success-rgb', 'success-bg-subtle', 'success-text', 'success-border-subtle',
+		'warning', 'warning-rgb', 'warning-bg-subtle', 'warning-text', 'warning-border-subtle',
+		'info', 'info-rgb', 'info-bg-subtle', 'info-text', 'info-border-subtle',
+		'danger', 'danger-rgb', 'danger-bg-subtle', 'danger-text', 'danger-border-subtle',
+		'light', 'light-rgb', 'light-bg-subtle', 'light-text', 'light-border-subtle',
+		'dark', 'dark-rgb', 'dark-bg-subtle', 'dark-text', 'dark-border-subtle',
+		'white', 'white-rgb',
+		'black', 'black-rgb',
+		'teal', 'teal-rgb',
+		'indigo', 'indigo-rgb', 
+		'purple', 'purple-rgb',
+		'yellow', 'yellow-rgb',
+		'pink', 'pink-rgb',
+		'cyan', 'cyan-rgb',
+		'gray-100', 'gray-200', 'gray-300', 'gray-400', 'gray-500',  'gray-600', 'gray-700', 'gray-800', 'gray-900', 
+		'gray-100-rgb', 'gray-200-rgb', 'gray-300-rgb', 'gray-400-rgb', 'gray-500-rgb',  'gray-600-rgb', 'gray-700-rgb', 'gray-800-rgb', 'gray-900-rgb', 
+		'muted', 'muted-rgb', 'emphasis-color', 'emphasis-color-rgb',
+		'component-bg', 'component-bg-rgb', 'component-color', 'component-color-rgb',
+		'body-bg', 'body-bg-rgb', 'body-color', 'body-color-rgb',
+		'heading-color', 
+		'secondary-color', 'secondary-color-rgb', 'secondary-bg', 'secondary-bg-rgb',
+		'tertiary-color', 'tertiary-color-rgb', 'tertiary-bg', 'tertiary-bg-rgb',
+		'link-color', 'link-color-rgb', 'link-hover-color', 'link-hover-color-rgb', 
+		'border-color', 'border-color-translucent'
+	],
 }
 
 var slideUp = function(elm, duration = app.animation.speed) {
@@ -330,7 +370,7 @@ var handleSidebarScrollMemory = function() {
 };
 
 
-/* 04. Handle Sidebar Minify
+/* 05. Handle Sidebar Minify
 ------------------------------------------------ */
 var handleSidebarMinify = function() {
 	var elms = [].slice.call(document.querySelectorAll('['+ app.sidebar.minify.toggleAttr +']'));
@@ -400,7 +440,7 @@ var handleSidebarMobileDismiss = function() {
 };
 
 
-/* 05. Handle Sidebar Minify Float Menu
+/* 06. Handle Sidebar Minify Float Menu
 ------------------------------------------------ */
 var handleGetHiddenMenuHeight = function(elm) {
 	elm.setAttribute('style', 'position: absolute; visibility: hidden; display: block !important');
@@ -666,7 +706,7 @@ var handleScrollToTopButton = function() {
 };
 
 
-/* 11. Handle Scroll to
+/* 10. Handle Scroll to
 ------------------------------------------------ */
 var handleScrollTo = function() {
 	var elmTriggerList = [].slice.call(document.querySelectorAll('['+ app.scrollTo.toggleAttr +']'));
@@ -687,7 +727,7 @@ var handleScrollTo = function() {
 };
 
 
-/* 12. Handle Theme Panel Expand
+/* 11. Handle Theme Panel Expand
 ------------------------------------------------ */
 var handleThemePanelExpand = function() {
 	var elmList = [].slice.call(document.querySelectorAll('['+ app.themePanel.toggleAttr +']'));
@@ -718,7 +758,7 @@ var handleThemePanelExpand = function() {
 };
 
 
-/* 13. Handle Theme Page Control
+/* 12. Handle Theme Page Control
 ------------------------------------------------ */
 var handleThemePageControl = function() {
 	// Theme Click
@@ -744,6 +784,7 @@ var handleThemePageControl = function() {
 					toggler.closest('li').classList.add(app.themePanel.themeList.activeClass);
 				}
 			});
+			handleCssVariable();
 			setCookie(app.themePanel.themeList.cookieName, targetThemeClass);
 			document.dispatchEvent(new CustomEvent(app.themePanel.themeList.onChangeEvent));
 		}
@@ -764,12 +805,12 @@ var handleThemePageControl = function() {
 			var targetCookie = '';
 	
 			if (this.checked) {
-				document.querySelector('html').classList.add(app.themePanel.darkMode.class);
+				document.documentElement.setAttribute('data-bs-theme', 'dark');
 				targetCookie = 'dark-mode';
 			} else {
-				document.querySelector('html').classList.remove(app.themePanel.darkMode.class);
+				document.documentElement.removeAttribute('data-bs-theme');
 			}
-			App.initVariable();
+			handleCssVariable();
 			setCookie(app.themePanel.darkMode.cookieName, targetCookie);
 			document.dispatchEvent(new CustomEvent(app.themePanel.themeList.onChangeEvent));
 		}
@@ -786,6 +827,71 @@ var handleThemePageControl = function() {
 };
 
 
+/* 13. Handle CSS Variable
+------------------------------------------------ */
+var handleCssVariable = function() {
+	var rootStyle = getComputedStyle(document.body);
+	
+	// font
+	if (app.variableFontList && app.variablePrefix) {
+		for (var i = 0; i < (app.variableFontList).length; i++) {
+			app.font[app.variableFontList[i].replace(/-([a-z|0-9])/g, (match, letter) => letter.toUpperCase())] = rootStyle.getPropertyValue('--'+ app.variablePrefix + app.variableFontList[i]).trim();
+		}
+	}
+	
+	// color
+	if (app.variableColorList && app.variablePrefix) {
+		for (var i = 0; i < (app.variableColorList).length; i++) {
+			app.color[app.variableColorList[i].replace(/-([a-z|0-9])/g, (match, letter) => letter.toUpperCase())] = rootStyle.getPropertyValue('--'+ app.variablePrefix + app.variableColorList[i]).trim();
+		}
+	}
+};
+
+
+/* 14. Handle Toggle Class
+------------------------------------------------ */
+var handleToggleClass = function() {
+	var elmList = [].slice.call(document.querySelectorAll('['+ app.toggleClass.toggleAttr +']'));
+	
+	elmList.map(function(elm) {
+		elm.onclick = function(e) {
+			e.preventDefault();
+			
+			var targetToggleClass = this.getAttribute(app.toggleClass.toggleAttr);
+			var targetDismissClass = this.getAttribute(app.dismissClass.toggleAttr);
+			var targetToggleElm = document.querySelector(this.getAttribute(app.toggleClass.targetAttr));
+		
+			if (!targetDismissClass) {
+				if (targetToggleElm.classList.contains(targetToggleClass)) {
+					targetToggleElm.classList.remove(targetToggleClass);
+				} else {
+					targetToggleElm.classList.add(targetToggleClass);
+				}
+			} else {
+				if (!targetToggleElm.classList.contains(targetToggleClass) && !targetToggleElm.classList.contains(targetDismissClass)) {
+					if (targetToggleElm.classList.contains(targetToggleClass)) {
+						targetToggleElm.classList.remove(targetToggleClass);
+					} else {
+						targetToggleElm.classList.add(targetToggleClass);
+					}
+				} else {
+					if (targetToggleElm.classList.contains(targetToggleClass)) {
+						targetToggleElm.classList.remove(targetToggleClass);
+					} else {
+						targetToggleElm.classList.add(targetToggleClass);
+					}
+					if (targetToggleElm.classList.contains(targetDismissClass)) {
+						targetToggleElm.classList.remove(targetDismissClass);
+					} else {
+						targetToggleElm.classList.add(targetDismissClass);
+					}
+				}
+			}
+		}
+	});
+}
+
+
 /* Application Controller
 ------------------------------------------------ */
 var App = function () {
@@ -795,8 +901,6 @@ var App = function () {
 		//main function
 		init: function () {
 			this.initComponent();
-			this.initVariable();
-			this.initHeader();
 			this.initSidebar();
 		},
 		initSidebar: function() {
@@ -807,8 +911,6 @@ var App = function () {
 			handleSidebarMobileToggle();
 			handleSidebarMobileDismiss();
 		},
-		initHeader: function() {
-		},
 		initComponent: function() {
 			handleScrollbar();
 			handleCardAction();
@@ -817,79 +919,11 @@ var App = function () {
 			handleScrollTo();
 			handleThemePanelExpand();
 			handleThemePageControl();
+			handleCssVariable();
+			handleToggleClass();
 		},
 		scrollTop: function() {
 			window.scrollTo({top: 0, behavior: 'smooth'});
-		},
-		getCssVariable: function(variable) {
-			return window.getComputedStyle(document.body).getPropertyValue(variable).trim();
-		},
-		initVariable: function() {
-			app.color.theme          = this.getCssVariable('--app-theme');
-			app.font.family          = this.getCssVariable('--bs-body-font-family');
-			app.font.size            = this.getCssVariable('--bs-body-font-size');
-			app.font.weight          = this.getCssVariable('--bs-body-font-weight');
-			app.color.componentColor = this.getCssVariable('--app-component-color');
-			app.color.componentBg    = this.getCssVariable('--app-component-bg');
-			app.color.dark           = this.getCssVariable('--bs-dark');
-			app.color.light          = this.getCssVariable('--bs-light');
-			app.color.blue           = this.getCssVariable('--bs-blue');
-			app.color.indigo         = this.getCssVariable('--bs-indigo');
-			app.color.purple         = this.getCssVariable('--bs-purple');
-			app.color.pink           = this.getCssVariable('--bs-pink');
-			app.color.red            = this.getCssVariable('--bs-red');
-			app.color.orange         = this.getCssVariable('--bs-orange');
-			app.color.yellow         = this.getCssVariable('--bs-yellow');
-			app.color.green          = this.getCssVariable('--bs-green');
-			app.color.success        = this.getCssVariable('--bs-success');
-			app.color.teal           = this.getCssVariable('--bs-teal');
-			app.color.cyan           = this.getCssVariable('--bs-cyan');
-			app.color.white          = this.getCssVariable('--bs-white');
-			app.color.gray           = this.getCssVariable('--bs-gray');
-			app.color.lime           = this.getCssVariable('--bs-lime');
-			app.color.gray100        = this.getCssVariable('--bs-gray-100');
-			app.color.gray200        = this.getCssVariable('--bs-gray-200');
-			app.color.gray300        = this.getCssVariable('--bs-gray-300');
-			app.color.gray400        = this.getCssVariable('--bs-gray-400');
-			app.color.gray500        = this.getCssVariable('--bs-gray-500');
-			app.color.gray600        = this.getCssVariable('--bs-gray-600');
-			app.color.gray700        = this.getCssVariable('--bs-gray-700');
-			app.color.gray800        = this.getCssVariable('--bs-gray-800');
-			app.color.gray900        = this.getCssVariable('--bs-gray-900');
-			app.color.black          = this.getCssVariable('--bs-black');
-			
-			app.color.themeRgb          = this.getCssVariable('--app-theme-rgb');
-			app.font.familyRgb          = this.getCssVariable('--bs-body-font-family-rgb');
-			app.font.sizeRgb            = this.getCssVariable('--bs-body-font-size-rgb');
-			app.font.weightRgb          = this.getCssVariable('--bs-body-font-weight-rgb');
-			app.color.componentColorRgb = this.getCssVariable('--app-component-color-rgb');
-			app.color.componentBgRgb    = this.getCssVariable('--app-component-bg-rgb');
-			app.color.darkRgb           = this.getCssVariable('--bs-dark-rgb');
-			app.color.lightRgb          = this.getCssVariable('--bs-light-rgb');
-			app.color.blueRgb           = this.getCssVariable('--bs-blue-rgb');
-			app.color.indigoRgb         = this.getCssVariable('--bs-indigo-rgb');
-			app.color.purpleRgb         = this.getCssVariable('--bs-purple-rgb');
-			app.color.pinkRgb           = this.getCssVariable('--bs-pink-rgb');
-			app.color.redRgb            = this.getCssVariable('--bs-red-rgb');
-			app.color.orangeRgb         = this.getCssVariable('--bs-orange-rgb');
-			app.color.yellowRgb         = this.getCssVariable('--bs-yellow-rgb');
-			app.color.greenRgb          = this.getCssVariable('--bs-green-rgb');
-			app.color.successRgb        = this.getCssVariable('--bs-success-rgb');
-			app.color.tealRgb           = this.getCssVariable('--bs-teal-rgb');
-			app.color.cyanRgb           = this.getCssVariable('--bs-cyan-rgb');
-			app.color.whiteRgb          = this.getCssVariable('--bs-white-rgb');
-			app.color.grayRgb           = this.getCssVariable('--bs-gray-rgb');
-			app.color.limeRgb           = this.getCssVariable('--bs-lime-rgb');
-			app.color.gray100Rgb        = this.getCssVariable('--bs-gray-100-rgb');
-			app.color.gray200Rgb        = this.getCssVariable('--bs-gray-200-rgb');
-			app.color.gray300Rgb        = this.getCssVariable('--bs-gray-300-rgb');
-			app.color.gray400Rgb        = this.getCssVariable('--bs-gray-400-rgb');
-			app.color.gray500Rgb        = this.getCssVariable('--bs-gray-500-rgb');
-			app.color.gray600Rgb        = this.getCssVariable('--bs-gray-600-rgb');
-			app.color.gray700Rgb        = this.getCssVariable('--bs-gray-700-rgb');
-			app.color.gray800Rgb        = this.getCssVariable('--bs-gray-800-rgb');
-			app.color.gray900Rgb        = this.getCssVariable('--bs-gray-900-rgb');
-			app.color.blackRgb          = this.getCssVariable('--bs-black-rgb');
 		}
 	};
 }();

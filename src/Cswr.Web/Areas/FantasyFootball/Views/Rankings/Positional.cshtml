@@ -1,0 +1,19 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Positional Rankings";
+}
+
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../rankings">ALL PLAYERS</a></li>
+    <li class="breadcrumb-item active">@Model.ToUpper()</li>
+</ul>
+
+<h1 class="page-header">
+    Rankings by Position
+</h1>
+
+<p>
+    Start build your page here
+</p>
+
+positionCode: @Model

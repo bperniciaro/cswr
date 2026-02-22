@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace cswr.web.Areas.FantasyFootball.Controllers.Custom
-{
+namespace cswr.web.Areas.FantasyFootball.Controllers.Custom;
+
     [Area("fantasyfootball")]
 
     public class CheatSheetsController : Controller
@@ -19,4 +19,3 @@ namespace cswr.web.Areas.FantasyFootball.Controllers.Custom
             return View();
         }
     }
-}

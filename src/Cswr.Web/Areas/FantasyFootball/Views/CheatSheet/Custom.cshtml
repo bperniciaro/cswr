@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Custom Fantasy Football Cheat Sheet Rankings";
+}
+
+@*<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">CHEATSHEETS</a></li>
+    <li class="breadcrumb-item active">CUSTOM SHEETS</li>
+</ul>*@
+
+<h1 class="page-header">
+    Custom Cheat Sheet
+</h1>
+
+<p>
+  <ul>
+    <li><a asp-controller="CheatSheet" asp-action="Edit" asp-area="FantasyFootball">Edit Sheet</a> </li>
+    <li><a asp-controller="CheatSheet" asp-action="Validate" asp-area="FantasyFootball">Validate Sheet</a></li>
+    <li></li>
+  </ul>
+
+    <!-- Example single danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Sport
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Football</a></li>
+            <li><a class="dropdown-item" href="#">Admin</a></li>
+        </ul>
+    </div>
+
+@*    <form action="/Logout" method="POST" name="logout_form"> 
+        <a>Test</a>
+        <input type="hidden" name="your-field-name" /> 
+    </form>
+
+    <script>
+        $(document).on("click", '[data-toggle="logout"]', 
+            function (e) { e.preventDefault(); $('form[name="logout_form"]').submit(); 
+        });
+    </script>*@
+
+</p>

@@ -1,0 +1,3 @@
+﻿-Generate Identity tables
+-Create logs table
+-Create log_insert SP for logging

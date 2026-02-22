@@ -4,7 +4,7 @@
 .gallery-menu {
 	@include media-breakpoint-down(md) {
 		overflow: scroll;
-		border-bottom: 1px solid var(--app-component-border-color);
+		border-bottom: 1px solid var(--#{$prefix}border-color);
 		position: sticky;
 		top: $app-header-height;
 		display: flex;
@@ -12,7 +12,7 @@
 	}
 	& .gallery-menu-header {
 		padding: rem(15px) rem(15px) rem(10px);
-		font-weight: $font-weight-semi-bold;
+		font-weight: $font-weight-semibold;
 		font-size: $font-size-base - rem(1px);
 		
 		@include media-breakpoint-down(md) {
@@ -23,7 +23,7 @@
 		& .gallery-menu-link {
 			padding: rem(5px) rem(15px);
 			display: block;
-			color: var(--app-component-color);
+			color: var(--#{$prefix}body-color);
 			text-decoration: none;
 			
 			@include media-breakpoint-down(md) {
@@ -42,12 +42,12 @@
 				}
 			}
 			&:hover {
-				background: var(--bs-light);
-				color: var(--app-component-color);
+				background: var(--#{$prefix}light);
+				color: var(--#{$prefix}body-color);
 			}
 			&.active {
-				background-color: var(--app-component-active-bg);
-				color: var(--app-component-active-color);
+				background-color: var(--#{$prefix}theme);
+				color: var(--#{$prefix}theme-color);
 			
 				& .fa {
 					color: inherit;
@@ -62,9 +62,9 @@
 	
 	@include media-breakpoint-up(md) {
 		@if $enable-rtl {
-			border-right: 1px solid var(--app-component-border-color);
+			border-right: 1px solid var(--#{$prefix}border-color);
 		} @else {
-			border-left: 1px solid var(--app-component-border-color);
+			border-left: 1px solid var(--#{$prefix}border-color);
 		}
 	}
 }
@@ -72,21 +72,21 @@
 	padding: rem(20px);
 	
 	& + .gallery {
-		border-top: 1px solid var(--app-component-border-color);
+		border-top: 1px solid var(--#{$prefix}border-color);
 	}
 	& .gallery-title {
 		font-size: $font-size-base + rem(2px);
-		color: var(--app-component-color);
-		font-weight: $font-weight-semi-bold;
+		color: var(--#{$prefix}body-color);
+		font-weight: $font-weight-semibold;
 		margin-bottom: rem(15px);
 		
 		& a {
-			color: var(--app-component-color);
+			color: var(--#{$prefix}body-color);
 			text-decoration: none;
 			
 			& i {
 				font-size: $font-size-base;
-				color: rgba(var(--app-component-color-rgb), .5);
+				color: rgba(var(--#{$prefix}body-color-rgb), .5);
 				
 				@if $enable-rtl {
 					margin-right: rem(5px);

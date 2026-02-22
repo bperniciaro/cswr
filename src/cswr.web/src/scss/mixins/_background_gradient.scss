@@ -1,5 +1,0 @@
-@mixin background-gradient($className, $from, $to, $direction: bottom) {
-	.#{$className} {
-		background-image: linear-gradient(to $direction, $from 0%, $to 100%) !important;
-	}
-}

@@ -5,7 +5,7 @@
 		}
 	}
 	& .fixed-table-container {
-		border-color: var(--app-component-border-color) !important;
+		border-color: var(--#{$prefix}border-color) !important;
 		
 		&.fixed-height {
 			& .fixed-table-header {
@@ -29,7 +29,7 @@
 			& .table {
 				& thead {
 					& th {
-						border-bottom: var(--app-component-border-color) !important;
+						border-bottom-color: var(--#{$prefix}border-color) !important;
 					}
 				}
 			}
@@ -70,13 +70,13 @@
 							&.asc {
 								&:after {
 									content: '\f0de';
-									color: var(--app-component-active-bg);
+									color: var(--#{$prefix}theme);
 								}
 							}
 							&.desc {
 								&:after {
 									content: '\f0dd';
-									color: var(--app-component-active-bg);
+									color: var(--#{$prefix}theme);
 								}
 							}
 						}

@@ -1,5 +1,5 @@
 .mailbox {
-	background: var(--app-component-bg);
+	background: var(--#{$prefix}component-bg);
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -13,8 +13,8 @@
 			top: $app-header-height;
 			left: 0;
 			right: 0;
-			background: var(--app-component-bg);
-			border-bottom: 1px solid var(--app-component-border-color);
+			background: var(--#{$prefix}component-bg);
+			border-bottom: 1px solid var(--#{$prefix}border-color);
 			z-index: 10;
 			overflow: scroll;
 			white-space: nowrap;
@@ -31,21 +31,21 @@
 			padding: rem(5px);
 		}
 		& .mailbox-toolbar-link {
-			color: var(--app-component-color);
+			color: var(--#{$prefix}body-color);
 			text-decoration: none;
 			border-radius: $border-radius;
 			
 			&:hover {
-				background: var(--bs-light);
+				background: var(--#{$prefix}light);
 			}
 			&.active {
-				background: var(--app-component-active-bg);
-				color: var(--app-component-active-color);
+				background: var(--#{$prefix}theme);
+				color: var(--#{$prefix}theme-color);
 			}
 		}
 	}
 	& .mailbox-body {
-		border-top: 1px solid var(--app-component-border-color);
+		border-top: 1px solid var(--#{$prefix}border-color);
 		overflow: hidden;
 		flex: 1;
 		display: flex;
@@ -65,9 +65,9 @@
 			
 			& + .mailbox-content {
 				@if $enable-rtl {
-					border-right: 1px solid var(--app-component-border-color);
+					border-right: 1px solid var(--#{$prefix}border-color);
 				} @else {
-					border-left: 1px solid var(--app-component-border-color);
+					border-left: 1px solid var(--#{$prefix}border-color);
 				}
 				
 				@include media-breakpoint-down(lg) {
@@ -123,25 +123,21 @@
 			display: flex;
 			
 			& + .mailbox-list-item {
-				border-top: 1px solid var(--app-component-border-color);
+				border-top: 1px solid var(--#{$prefix}border-color);
 			}
 			&:hover {
-				background-color: var(--app-component-hover-bg);
+				background-color: var(--#{$prefix}light);
 			}
 			&.unread {
 				& .mailbox-message {
 					& .mailbox-title {
 						font-weight: $font-weight-bold;
-						color: var(--app-component-color);
+						color: var(--#{$prefix}body-color);
 					}
 				}
 			}
 			&.active {
-				background: var(--bs-light);
-				
-				.dark-mode & {
-					background: $gray-900;
-				}
+				background: var(--#{$prefix}light);
 			}
 			&.has-attachment {
 				& .mailbox-checkbox:after {
@@ -177,7 +173,7 @@
 		
 			& .mailbox-list-item-link {
 				display: block;
-				color: var(--app-component-color);
+				color: var(--#{$prefix}body-color);
 				text-decoration: none;
 				position: relative;
 			}
@@ -199,8 +195,8 @@
 				}
 				& .mailbox-time {
 					font-size: $font-size-base - rem(2px);
-					color: rgba(var(--app-component-color-rgb), .5);
-					font-weight: $font-weight-semi-bold;
+					color: rgba(var(--#{$prefix}body-color-rgb), .5);
+					font-weight: $font-weight-semibold;
 					
 					@if $enable-rtl {
 						padding-right: rem(5px);
@@ -210,7 +206,7 @@
 				}
 			}
 			& .mailbox-title {
-				color: var(--app-component-color);
+				color: var(--#{$prefix}body-color);
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -219,7 +215,7 @@
 			& .mailbox-desc {
 				position: relative;
 				font-size: $font-size-base - rem(1px);
-				color: rgba(var(--app-component-color-rgb), .5);
+				color: rgba(var(--#{$prefix}body-color-rgb), .5);
 				max-height: rem(42px);
 				overflow: hidden;
 			}
@@ -233,7 +229,7 @@
 		}
 		
 		& .mailbox-detail-header {
-			border-bottom: 1px solid var(--app-component-border-color);
+			border-bottom: 1px solid var(--#{$prefix}border-color);
 			padding: 0 0 rem(20px);
 		}
 		& .mailbox-detail-content {
@@ -246,15 +242,11 @@
 			display: flex;
 			
 			& .mailbox-attachment {
-				background: $gray-200;
+				background: var(--#{$prefix}light);
 				width: rem(120px);
 				overflow: hidden;
 				margin-bottom: rem(10px);
 				border-radius: $border-radius;
-				
-				.dark-mode & {
-					background: $gray-900;
-				}
 				
 				@if $enable-rtl {
 					margin-left: rem(10px);
@@ -270,7 +262,7 @@
 					height: rem(60px);
 					overflow: hidden;
 					text-align: center;
-					background: var(--bs-light);
+					background: var(--#{$prefix}body-bg);
 					
 					& i {
 						display: block;
@@ -283,10 +275,11 @@
 					}
 				}
 				& .document-name {
-					color: rgba(var(--app-component-color-rgb), .75);
+					border-top: 1px solid var(--#{$prefix}border-color);
+					color: rgba(var(--#{$prefix}body-color-rgb), .75);
 					padding: rem(2px) rem(10px);
 					font-size: $font-size-base - rem(1px);
-					font-weight: $font-weight-semi-bold;
+					font-weight: $font-weight-semibold;
 					text-align: center;
 					text-overflow: ellipsis;
 					white-space: nowrap;
@@ -298,11 +291,8 @@
 		}
 	}
 	& .mailbox-form {
-		background: lighten($gray-900, 80%);
+		background: var(--#{$prefix}light);
 		
-		.dark-mode & {
-			background: darken($gray-100, 80%);
-		}
 		& .mailbox-form-header {
 			padding: rem(20px);
 		}
@@ -311,11 +301,11 @@
 			border-radius: 0;
 			
 			& .note-toolbar {
-				border-top: 1px solid var(--app-component-border-color);
-				border-bottom: 1px solid var(--app-component-border-color);
+				border-top: 1px solid var(--#{$prefix}border-color);
+				border-bottom: 1px solid var(--#{$prefix}border-color);
 			}
 			& .note-editing-area {
-				background: var(--app-component-bg);
+				background: var(--#{$prefix}component-bg);
 			}
 		}
 	}

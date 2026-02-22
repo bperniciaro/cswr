@@ -13,8 +13,8 @@
 		text-align: center;
 		font-size: rem(20px);
 		padding: 0 0 rem(2px);
-		color: rgba(var(--app-component-color-rgb), .25);
-		background: var(--bs-light);
+		color: rgba(var(--#{$prefix}body-color-rgb), .25);
+		background: var(--#{$prefix}light);
 		text-decoration: none;
 		border-radius: 30px;
 		display: flex;
@@ -37,7 +37,7 @@
 		list-style-type: none;
 		margin: 0 ($app-content-padding-x * -1);
 		padding: 0 $app-content-padding-x;
-		border-bottom: 1px solid var(--app-component-border-color);
+		border-bottom: 1px solid var(--#{$prefix}border-color);
 		white-space: nowrap;
 		display: flex;
 		
@@ -51,20 +51,21 @@
 			& .search-tab-link {
 				display: block;
 				padding: rem(10px);
-				color: var(--app-component-color);
 				text-decoration: none;
-				border-bottom: 2px solid transparent;
-				font-weight: $font-weight-semi-bold;
+				color: rgba(var(--#{$prefix}body-color-rgb), .5);
+				border-bottom: 3px solid transparent;
+				font-weight: $font-weight-semibold;
 				margin-bottom: -1px;
 				
 				&:hover,
 				&:focus {
-					border-bottom-color: var(--app-component-border-color);
+					color: rgba(var(--#{$prefix}body-color-rgb), 1);
+					border-bottom-color: var(--#{$prefix}body-color);
 				}
 				&.active {
 					font-weight: $font-weight-bold;
-					color: var(--app-component-active-bg);
-					border-bottom-color: var(--app-component-active-bg);
+					color: var(--#{$prefix}body-color);
+					border-bottom-color: var(--#{$prefix}theme);
 				}
 			}
 			& + .search-tab-item {
@@ -88,10 +89,10 @@
 			@include clearfix();
 			
 			&:last-child {
-				border-bottom: 1px solid var(--app-component-border-color);
+				border-bottom: 1px solid var(--#{$prefix}border-color);
 			}
 			& + .search-result-item {
-				border-top: 1px solid var(--app-component-border-color);
+				border-top: 1px solid var(--#{$prefix}border-color);
 			}
 			& .search-result-media {
 				width: rem(160px);
@@ -126,7 +127,7 @@
 					font-size: rem(20px);
 					
 					& a {
-						color: var(--app-component-color);
+						color: var(--#{$prefix}body-color);
 						text-decoration: none;
 			
 						&:hover {

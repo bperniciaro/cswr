@@ -1,6 +1,3 @@
-/* Helper Row Space */
-@include helper-row-space(0, 15);
-
 /* Helper Margin */
 @include helper-spacing('', 'margin', 'm');
 @include helper-spacing('top', 'margin', 'mt');
@@ -9,6 +6,7 @@
 @include helper-spacing('left', 'margin', 'ms');
 @include helper-spacing('mx', 'margin', 'mx');
 @include helper-spacing('my', 'margin', 'my');
+
 
 /* Helper Padding */
 @include helper-spacing('', 'padding', 'p');
@@ -20,7 +18,7 @@
 @include helper-spacing('py', 'padding', 'py');
 
 /* Helper Font */
-@include helper-font-size(1, 80);
+@include helper-font-size(0, 80);
 @include helper-font-weight(1, 8);
 
 /* Helper Flex */
@@ -39,7 +37,7 @@
 /* Helper Text */
 .text-underline { text-decoration: underline !important; }
 .text-gradient { -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
-.line-height-1 { line-height: 1 !important; }
+.lh-1 { line-height: 1 !important; }
 
 /* Helper Size */
 @include helper-size('w', 'width');
@@ -52,29 +50,35 @@
 @each $color, $value in $colors {
 	@include helper-color($color, $value);
 }
-.text-theme {
-	--bs-text-opacity: 1;
-	
-	color: #{rgba(var(--app-theme-rgb), var(--bs-text-opacity))} !important;
-}
-.bg-theme {
-	--bs-bg-opacity: 1;
-	
-	background-color: #{rgba(var(--app-theme-rgb), var(--bs-bg-opacity))} !important;
-}
+
 .bg-none { background: none !important; }
+.bg-position-center { background-position: center !important; }
+.bg-size-cover { background-size: cover !important; }
+.bg-repeat-no-repeat { background-repeat: no-repeat !important; }
+.bg-component { background-color: var(--#{$prefix}component-bg)!important; }
 @include background-gradient('bg-gradient-orange-red', lighten($orange, 10%), lighten($red, 10%));
+@include background-gradient('bg-gradient-red-orange', lighten($red, 10%), lighten($orange, 10%));
 @include background-gradient('bg-gradient-red-pink', lighten($red, 10%), lighten($pink, 10));
 @include background-gradient('bg-gradient-yellow-orange', lighten($yellow, 10%), lighten($orange, 10%));
 @include background-gradient('bg-gradient-yellow-red', lighten($yellow, 10%), lighten($red, 10%));
 @include background-gradient('bg-gradient-yellow-green', lighten($yellow, 10%), lighten($green, 10%));
+@include background-gradient('bg-gradient-blue-indigo', $blue, $indigo);
+@include background-gradient('bg-gradient-blue-cyan', $blue, $cyan);
 @include background-gradient('bg-gradient-cyan-blue', $cyan, $blue);
 @include background-gradient('bg-gradient-cyan-indigo', $cyan, $indigo);
+@include background-gradient('bg-gradient-indigo-blue', $indigo, $blue);
 @include background-gradient('bg-gradient-custom-orange', lighten(mix($pink, $orange, 50%), 6%), lighten(mix($pink, $orange, 50%), 13%), right);
 @include background-gradient('bg-gradient-custom-pink', lighten(mix($black, $pink, 20%), 14%), lighten(mix($black, $pink, 20%), 21%), right);
 @include background-gradient('bg-gradient-custom-teal', mix($black, $teal, 18%), $teal, right);
 @include background-gradient('bg-gradient-custom-indigo', lighten(mix($black, $indigo, 5%), 14%), lighten(mix($black, $indigo, 5%), 25%), right);
 @include background-gradient('bg-gradient-custom-blue', $blue, lighten($blue, 10%), right);
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+  	.invert-dark {
+  		filter: invert(1);
+  	}
+  }
+}
 
 /* Helper Opacity */
 @include helper-opacity(0, 10);

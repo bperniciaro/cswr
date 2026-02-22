@@ -1,0 +1,13 @@
+﻿Execure this in the Package Manager console:
+
+-- Generic command
+Scaffold-DbContext "Data Source=BRADSX17R1\SQLEXPRESS;Integrated Security=True;Max Pool Size=1000;Initial Catalog=cswrmain_3-0-1_09-16-22" Microsoft.EntityFrameworkCore.SqlServer -Project Cswr.Dal -OutputDir Models 
+
+-- Specifying specific tables
+Scaffold-DbContext "Data Source=BRADSX17R1\SQLEXPRESS;Integrated Security=True;Max Pool Size=1000;Initial Catalog=cswrmain_3-0-1_09-16-22" Microsoft.EntityFrameworkCore.SqlServer -Project Cswr.Dal -OutputDir Models -Tables Sheets_CheatSheetItems, Sheets_CheatSheetPositions, Sheets_CheatSheets, Sheets_CheatSheetStats, Sheets_Players, Sheets_PlayerStatusCodes, Sheets_PositionCodes, Sheets_SeasonCodes, Sheets_Settings, Sheets_SportCodes, Sheets_SportPositions, Sheets_SportPositionStats, Sheets_SportSeasonPlayerSeasonStats, Sheets_SportSeasonPlayerStatuses, Sheets_SportSeasonPlayerTeams, Sheets_SportSeasonPlayerWeeklyStats, Sheets_SportSeasons, Sheets_SportSeasonSuppPlayerReviews, Sheets_SportSettings, Sheets_SportStatusCodes, Sheets_SportTeamPlayers, Sheets_SportTeamSeasonByes, Sheets_StatCodes, Sheets_SupplementalSheetItems, Sheets_SupplementalSheets, Sheets_SupplementalSources, Sheets_TeamCodes
+
+-- Pay attention to TrustServerCertificate="true"
+Scaffold-DbContext "Data Source=BRADSX17R1\SQLEXPRESS;Integrated Security=True;Max Pool Size=1000;Initial Catalog=cswrmain_3-0-1_05-30-23;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -Project Cswr.Dal -ContextDir Context -OutputDir Models -Force -Context "CswrDbContext" -Tables Sheets_CheatSheetItems, Sheets_CheatSheetPositions, Sheets_CheatSheets, Sheets_CheatSheetStats, Sheets_Players, Sheets_PlayerStatusCodes, Sheets_PositionCodes, Sheets_SeasonCodes, Sheets_Settings, Sheets_SportCodes, Sheets_SportPositions, Sheets_SportPositionStats, Sheets_SportSeasonPlayerSeasonStats, Sheets_SportSeasonPlayerStatuses, Sheets_SportSeasonPlayerTeams, Sheets_SportSeasonPlayerWeeklyStats, Sheets_SportSeasons, Sheets_SportSeasonSuppPlayerReviews, Sheets_SportSettings, Sheets_SportStatusCodes, Sheets_SportTeamPlayers, Sheets_SportTeamSeasonByes, Sheets_StatCodes, Sheets_SupplementalSheetItems, Sheets_SupplementalSheets, Sheets_SupplementalSources, Sheets_TeamCodes
+
+-- Just the log table
+Scaffold-DbContext "Data Source=BRADSX17R1\SQLEXPRESS;Integrated Security=True;Max Pool Size=1000;Initial Catalog=cswrmain_3-0-1_05-30-23;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -Project Cswr.Dal -ContextDir Context -OutputDir Models -Force -Context "CswrDbContext" -Tables log

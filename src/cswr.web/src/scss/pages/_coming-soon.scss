@@ -1,4 +1,6 @@
 .coming-soon {
+	--#{$prefix}coming-soon-countdown-bg: #{$gray-200};
+	
 	min-height: 100%;
 	padding: rem(30px);
 	display: flex;
@@ -37,14 +39,10 @@
 		}
 		& .countdown-show4 .countdown-section {
 			width: rem(80px);
-			background: $gray-200;
+			background: var(--#{$prefix}coming-soon-countdown-bg);
 			padding: rem(10px);
 			margin: 0 rem(5px);
 			border-radius: $border-radius-lg;
-			
-			.dark-mode & {
-				background: $gray-800;
-			}
 			
 			@include media-breakpoint-down(sm) {
 				width: rem(72px);
@@ -52,17 +50,22 @@
 		}
 		& .countdown-amount {
 			font-size: rem(24px);
-			font-weight: $font-weight-semi-bold;
+			font-weight: $font-weight-semibold;
 			line-height: 1.25;
 		}
 		& .countdown-period {
 			font-size: $font-size-base - rem(1px);
-			color: $gray-800;
+			color: rgba(var(--#{$prefix}body-color-rgb), .5);
 			line-height: 1.5;
-			
-			.dark-mode & {
-				color: $gray-500;
-			}
+		}
+	}
+}
+
+
+@if $enable-dark-mode {
+	@include color-mode(dark, true) {
+		.coming-soon {
+			--#{$prefix}coming-soon-countdown-bg: #{$gray-800};
 		}
 	}
 }

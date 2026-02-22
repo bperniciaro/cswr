@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Cswr.Web.Areas.FantasyFootball.Controllers.Print
-{
+namespace Cswr.Web.Areas.FantasyFootball.Controllers.Print;
+
     [Area("fantasyfootball")]
     public class PrintableSheetsController : Controller
     {
@@ -11,4 +11,3 @@ namespace Cswr.Web.Areas.FantasyFootball.Controllers.Print
             return View();
         }
     }
-}

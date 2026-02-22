@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Html
+@{
+    Layout = null;
+}
+
+@if (TempData.ContainsKey(Enumerations.MessageLevel.Success.ToString()))
+{
+    <div class="alert alert-success">@(new HtmlString(TempData[Enumerations.MessageLevel.Success.ToString()] as string))</div>
+}
+@if (TempData.ContainsKey(Enumerations.MessageLevel.Warning.ToString()))
+{
+    <div class="alert alert-warning">@(new HtmlString(TempData[Enumerations.MessageLevel.Warning.ToString()] as string))</div>
+}
+@if (TempData.ContainsKey(Enumerations.MessageLevel.Error.ToString()))
+{
+    <div class="alert alert-danger">@(new HtmlString(TempData[Enumerations.MessageLevel.Error.ToString()] as string))</div>
+}
+@if (TempData.ContainsKey(Enumerations.MessageLevel.Info.ToString()))
+{
+    <div class="alert alert-info">@(new HtmlString(TempData[Enumerations.MessageLevel.Info.ToString()] as string))</div>
+}

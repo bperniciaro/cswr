@@ -1,30 +1,35 @@
 .note-editor {
-	background: var(--app-component-bg);
+	--#{$prefix}summrnote-dropdown-bg: #{$dropdown-bg};
+	
+	background: var(--#{$prefix}component-bg);
 	font-family: $font-family-base !important;
 	
 	&.note-frame {
+		color: var(--#{$prefix}body-color);
+		border-color: var(--#{$prefix}border-color) !important;
+		
 		& .note-toolbar {
 			padding: ($card-spacer-y - rem(5px)) $card-spacer-x $card-spacer-y;
 			background: none;
 			border-radius: 0;
-			border-color: var(--app-component-border-color);
+			border-color: var(--#{$prefix}border-color);
 			
 			& .note-btn-group {
 				& > .note-btn {
 					line-height: $line-height-base;
 					min-height: rem(35px);
-					background: var(--app-component-bg);
-					color: var(--app-component-color);
-					border: 1px solid var(--app-component-border-color);
+					background: var(--#{$prefix}component-bg);
+					color: var(--#{$prefix}body-color);
+					border: 1px solid var(--#{$prefix}border-color);
 					
 					&:hover,
 					&:focus,
 					&.active {
-						background: var(--bs-light);
+						background: var(--#{$prefix}light);
 					}
 				
 					&.active {
-						background: $gray-200;
+						background: var(--#{$prefix}light);
 						box-shadow: none;
 					}
 				
@@ -66,17 +71,28 @@
 				padding: $dropdown-padding-y $dropdown-padding-x;
 				box-shadow: $dropdown-box-shadow;
 				border-radius: $border-radius;
+				background: var(--#{$prefix}summrnote-dropdown-bg);
+				color: var(--#{$prefix}body-color);
 				
 				& .note-dropdown-item {
 					padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+					color: $dropdown-link-color;
 					
 					&:hover {
 						background: $dropdown-link-hover-bg;
 						color: $dropdown-link-hover-color;
 					}
 				}
+				& .btn {
+					&:hover {
+						background: var(--#{$prefix}btn-hover-bg) !important;
+					}
+				}
 			}
 			& .note-palette {
+				& .note-palette-title {
+					border-bottom: 1px solid $dropdown-border-color !important;
+				}
 				& .note-color-palette {
 					& .note-color-row {
 						display: flex;
@@ -99,6 +115,14 @@
 				padding: $card-spacer-y $card-spacer-x !important;
 			}
 		}
+		& .note-statusbar {
+			border-color: var(--#{$prefix}border-color) !important;
+			background: var(--#{$prefix}body-bg) !important;
+			
+			& .note-resizebar .note-icon-bar {
+				border-color: var(--#{$prefix}border-color) !important;
+			}
+		}
 	}
 	& .note-tooltip {
 		& .note-tooltip-content {
@@ -110,6 +134,7 @@
 			border: 0;
 			border-radius: $modal-content-border-radius;
 			box-shadow: none;
+			background: $modal-content-bg;
 			
 			& .note-modal-header {
 				border: 0;
@@ -117,12 +142,12 @@
 				border-bottom: 1px solid $modal-header-border-color;
 				
 				& .note-modal-title {
-					color: $gray-900;
+					color: var(--#{$prefix}body-color);
 					font-weight: $headings-font-weight;
 					font-size: $h5-font-size;
 				}
 				& .close {
-					color: $gray-800;
+					color: var(--#{$prefix}body-color);
 				}
 			}
 			& .note-modal-body {
@@ -135,9 +160,13 @@
 						margin-bottom: $form-label-margin-bottom;
 						font-size: $font-size-base;
 						font-weight: $font-weight-normal;
-						color: $gray-900;
+						color: var(--#{$prefix}body-color);
 						display: block;
 						padding: 0;
+					}
+					& .note-input {
+						background: $input-bg;
+						color: $input-color;
 					}
 					& .note-form-control {
 						border: $input-border-width solid $input-border-color;
@@ -213,4 +242,12 @@ body .note-modal-backdrop {
 			}
 		}
 	}
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+  	.note-editor {
+			--#{$prefix}summrnote-dropdown-bg: #{$dropdown-bg-dark};
+  	}
+  }
 }

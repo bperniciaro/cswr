@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Cswr.Web.Areas.FantasyFootball.Controllers.Custom
-{
+namespace Cswr.Web.Areas.FantasyFootball.Controllers.Custom;
+
     [Area("fantasyfootball")]
 
     public class SinglePositionSourcePrintController : Controller
@@ -26,4 +26,3 @@ namespace Cswr.Web.Areas.FantasyFootball.Controllers.Custom
 
 
     }
-}

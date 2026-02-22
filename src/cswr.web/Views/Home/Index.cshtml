@@ -14,3 +14,10 @@
 <p>
     Start build your page here
 </p>
+
+
+@await Component.InvokeAsync(nameof(MessageBox))
+<form method="post" asp-route="hometest" asp-area="">
+    <input type="submit" value="submit" />
+</form>
+

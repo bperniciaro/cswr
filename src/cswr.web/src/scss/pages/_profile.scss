@@ -103,8 +103,8 @@
 							}
 						}
 						&.active {
-							color: var(--app-component-color);
-							border-color: var(--app-component-color);
+							color: var(--#{$prefix}body-color);
+							border-color: var(--#{$prefix}body-color);
 							
 							@include media-breakpoint-down(md) {
 								background: none;
@@ -211,7 +211,7 @@
 					right: 0;
 					color: $white;
 					font-size: rem(26px);
-					font-weight: $font-weight-semi-bold;
+					font-weight: $font-weight-semibold;
 					line-height: rem(26px);
 					margin-top: rem(-13px);
 					text-align: center;

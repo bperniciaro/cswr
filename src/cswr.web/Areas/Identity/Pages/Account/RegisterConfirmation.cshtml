@@ -16,20 +16,20 @@
 			<img src="/img/page/email.svg" class="d-block mw-100" />
 			<h2 class="text-center mt-3">Register confirmation</h2>
 			@{
-			if (@Model.DisplayConfirmAccountLink)
-			{
-				<div class="text-muted text-center mb-4">
+		if (@Model.DisplayConfirmAccountLink)
+		{
+			<div class="text-muted text-center mb-4">
 						This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
 						Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
 				</div>
-					}
-					else
-					{
-				<div class="text-muted text-center mb-4">
+				}
+				else
+				{
+			<div class="text-muted text-center mb-4">
 						Please check your email to confirm your account.
 				</div>
-					}
-			}
+				}
+		}
 
 		</form>
 	</div>

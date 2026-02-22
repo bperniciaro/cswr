@@ -14,8 +14,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace AspStudio.Areas.Identity.Pages.Account
-{
+namespace AspStudio.Areas.Identity.Pages.Account;
+
     public class ForgotPasswordModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -81,4 +81,3 @@ namespace AspStudio.Areas.Identity.Pages.Account
             return Page();
         }
     }
-}

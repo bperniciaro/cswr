@@ -30,8 +30,8 @@
 	}
 	
 	&:hover {
-		background: var(--app-component-active-bg);
-		color: $component-active-color;
+		background: var(--#{$prefix}theme);
+		color: var(--#{$prefix}theme-color);
 		text-decoration: none;
 	}
 }

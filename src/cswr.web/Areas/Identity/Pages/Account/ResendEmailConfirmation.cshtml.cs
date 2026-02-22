@@ -14,8 +14,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace AspStudio.Areas.Identity.Pages.Account
-{
+namespace AspStudio.Areas.Identity.Pages.Account;
+
     [AllowAnonymous]
     public class ResendEmailConfirmationModel : PageModel
     {
@@ -85,4 +85,3 @@ namespace AspStudio.Areas.Identity.Pages.Account
             return Page();
         }
     }
-}

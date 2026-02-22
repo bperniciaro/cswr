@@ -10,7 +10,7 @@
 		}
 	}
 	&.modal-cover {
-		background: rgba($modal-cover-bg, $modal-cover-bg-opacity);
+		background: var(--#{$prefix}body-bg);
 		
 		& .modal-dialog {
 			min-height: 100%;

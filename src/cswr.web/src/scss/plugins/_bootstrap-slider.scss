@@ -28,38 +28,26 @@
     &.slider-disabled {
       & .slider-track {
         opacity: 0.5;
-        background: $white;
-        
-				.dark-mode & {
-					background: $gray-600;
-				}
+        background: var(--#{$prefix}light);
       }
       & .slider-handle {
         background: $white;
         cursor: not-allowed;
-        
-				.dark-mode & {
-					background: $gray-600;
-				}
       }
     }
     & .slider-track {
       box-shadow: none;
-      background: var(--bs-light);
+      background: var(--#{$prefix}light);
       border-radius: $border-radius;
       
       & .slider-selection {
-        background: var(--app-component-active-bg);
+        background: var(--#{$prefix}theme);
         box-shadow: none;
       }
     }
     & .slider-handle {
       background: $white;
       box-shadow: 0 rem(1px) rem(6px) rgba($gray-900, .25);
-      
-      .dark-mode & {
-      	background: $gray-600;
-      }
     }
     & .tooltip {
   		position: absolute;

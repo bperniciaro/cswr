@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspStudio.Areas.Identity.Pages.Account.Manage
-{
+namespace AspStudio.Areas.Identity.Pages.Account.Manage;
+
     public class SetPasswordModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -111,4 +111,3 @@ namespace AspStudio.Areas.Identity.Pages.Account.Manage
             return RedirectToPage();
         }
     }
-}

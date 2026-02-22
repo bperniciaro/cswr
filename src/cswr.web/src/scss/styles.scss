@@ -1,11 +1,12 @@
 /*!
- * AspStudio v3.2.0 (https://seantheme.com/asp-studio/)
- * Copyright 2022 SeanTheme
+ * Studio v4.0.0 (https://www.seantheme.com/studio/)
+ * Copyright 2023 SeanTheme
  */
 
 @import 'font.scss';
 @import '_functions.scss';
 @import '_variables.scss';
+@import '_variables-dark.scss';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
 @import '_mixins.scss';
@@ -18,4 +19,5 @@
 @import '_plugins.scss';
 @import '_pages.scss';
 @import '_widgets.scss';
+@import '_layout.scss';
 @import '_rtl.scss';

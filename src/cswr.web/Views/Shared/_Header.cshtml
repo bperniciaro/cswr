@@ -26,6 +26,7 @@
     <!-- BEGIN menu -->
     <div class="menu">
         <form class="menu-search" method="POST" name="header_search_form">
+
             <div class="menu-search-icon"><i class="fa fa-search"></i></div>
             <div class="menu-search-input">
                 <input type="text" class="form-control" placeholder="Search menu..." />
@@ -53,7 +54,12 @@
 												<i class="fa fa-user fa-2x mb-n3"></i>
 										</div>
 								</div>
-								<div class="menu-text">username@account.com</div>
+								<div class="menu-text">
+                    @{
+                        int i = 0;
+                    }
+                                    username@account.com
+                                </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end me-lg-3">
                 <a class="dropdown-item d-flex align-items-center" href="#">Edit Profile <i class="fa fa-user-circle fa-fw ms-auto text-gray-400 f-s-16"></i></a>
@@ -61,7 +67,10 @@
                 <a class="dropdown-item d-flex align-items-center" href="#">Calendar <i class="fa fa-calendar-alt fa-fw ms-auto text-gray-400 f-s-16"></i></a>
                 <a class="dropdown-item d-flex align-items-center" href="#">Setting <i class="fa fa-wrench fa-fw ms-auto text-gray-400 f-s-16"></i></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item d-flex align-items-center" href="#">Log Out <i class="fa fa-toggle-off fa-fw ms-auto text-gray-400 f-s-16"></i></a>
+@*                <a class="dropdown-item d-flex align-items-center" href="#">Log Out <i class="fa fa-toggle-off fa-fw ms-auto text-gray-400 f-s-16"></i></a>*@                
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                </form>
             </div>
         </div>
     </div>

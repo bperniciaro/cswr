@@ -6,7 +6,7 @@
 	& .apexcharts-menu {
 		border: none;
 		padding: $dropdown-padding-y 0;
-		background: var(--app-component-dropdown-bg);
+		background: $dropdown-bg;
 		border-radius: $border-radius;
 		box-shadow: $box-shadow;
 		
@@ -20,12 +20,12 @@
 	& .apexcharts-toolbar {
 		& > div {
 			& > svg {
-				fill: rgba(var(--app-component-color-rgb), .5);
+				fill: rgba(var(--#{$prefix}body-color-rgb), .5);
 			}
 			&:hover,
 			&:focus {
 				& > svg {
-					fill: rgba(var(--app-component-color-rgb), .75);
+					fill: rgba(var(--#{$prefix}body-color-rgb), .75);
 				}
 			}
 		}
@@ -33,8 +33,8 @@
 	& .apexcharts-tooltip {
 		border: none !important;
 		font-size: inherit;
-		background: var(--app-component-modal-bg) !important;
-		color: var(--app-component-color) !important;
+		background: var(--#{$prefix}component-bg) !important;
+		color: var(--#{$prefix}body-color) !important;
 		box-shadow: $dropdown-box-shadow;
 		
 		& .apexcharts-tooltip-title {
@@ -43,7 +43,7 @@
 			margin: 0;
 			font-weight: $font-weight-bold;
 			background: none !important;
-			border-color: var(--app-component-border-color) !important;
+			border-color: var(--#{$prefix}border-color) !important;
 		}
 		& .apexcharts-tooltip-marker {
 			width: rem(8px);
@@ -73,52 +73,52 @@
 		}
 	}
 	& .apexcharts-xaxistooltip {
-		background: var(--app-component-modal-bg);
-		border-color: var(--app-component-border-color);
-		color: var(--app-component-color);
+		background: var(--#{$prefix}component-bg);
+		border-color: var(--#{$prefix}border-color);
+		color: var(--#{$prefix}body-color);
 		
 		&.apexcharts-xaxistooltip-top {
 			&:after {
-				border-top-color: var(--app-component-modal-bg);
+				border-top-color: var(--#{$prefix}component-bg);
 			}
 			&:before {
-				border-top-color: var(--app-component-border-color);
+				border-top-color: var(--#{$prefix}border-color);
 			}
 		}
 		&.apexcharts-xaxistooltip-bottom {
 			&:after {
-				border-bottom-color: var(--app-component-modal-bg);
+				border-bottom-color: var(--#{$prefix}component-bg);
 			}
 			&:before {
-				border-bottom-color: var(--app-component-border-color);
+				border-bottom-color: var(--#{$prefix}border-color);
 			}
 		}
 	}
 	& .apexcharts-yaxis,
 	& .apexcharts-xaxis {
 		& text {
-			fill: var(--app-component-color);
+			fill: var(--#{$prefix}body-color);
 		}
 	}
 	& .apexcharts-yaxistooltip {
-		background: var(--app-component-modal-bg);
-		border-color: var(--app-component-border-color);
-		color: var(--app-component-color);
+		background: var(--#{$prefix}component-bg);
+		border-color: var(--#{$prefix}border-color);
+		color: var(--#{$prefix}body-color);
 		
 		&.apexcharts-yaxistooltip-left {
 			&:after {
-				border-left-color: var(--app-component-modal-bg);
+				border-left-color: var(--#{$prefix}component-bg);
 			}
 			&:before {
-				border-left-color: var(--app-component-border-color);
+				border-left-color: var(--#{$prefix}border-color);
 			}
 		}
 		&.apexcharts-yaxistooltip-right {
 			&:after {
-				border-right-color: var(--app-component-modal-bg);
+				border-right-color: var(--#{$prefix}component-bg);
 			}
 			&:before {
-				border-right-color: var(--app-component-border-color);
+				border-right-color: var(--#{$prefix}border-color);
 			}
 		}
 	}

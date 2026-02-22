@@ -28,13 +28,13 @@
 		}
 	}
 	& .ps__thumb-y {
-		background-color: var(--app-component-color) !important;
+		background-color: var(--#{$prefix}body-color) !important;
 		opacity: 0.4;
 		
 		&:focus,
 		&:hover,
 		&.ps--clicking {
-			background-color: var(--app-component-color) !important;
+			background-color: var(--#{$prefix}body-color) !important;
 			opacity: 0.6;
 		}
 	}

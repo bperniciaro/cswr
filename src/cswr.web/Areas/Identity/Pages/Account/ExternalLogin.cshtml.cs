@@ -18,8 +18,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace AspStudio.Areas.Identity.Pages.Account
-{
+namespace AspStudio.Areas.Identity.Pages.Account;
+
     [AllowAnonymous]
     public class ExternalLoginModel : PageModel
     {
@@ -220,4 +220,3 @@ namespace AspStudio.Areas.Identity.Pages.Account
             return (IUserEmailStore<IdentityUser>)_userStore;
         }
     }
-}

@@ -2,20 +2,20 @@
 	& .fc-event-item {
 		& .fc-event-link {
 			padding: rem(6px) rem(12px);
-			background: var(--app-component-bg);
-			color: rgba(var(--app-component-color-rgb), .75);
+			background: var(--#{$prefix}component-bg);
+			color: rgba(var(--#{$prefix}body-color-rgb), .75);
 			position: relative;
-			border: 1px solid var(--app-component-border-color);
+			border: 1px solid var(--#{$prefix}border-color);
 			display: flex;
 			align-items: center;
 			border-radius: $border-radius;
 			
 			&:hover {
-				background: var(--bs-light);
+				background: var(--#{$prefix}light);
 			}
 			&:after {
 				content: '\f0b2';
-				color: rgba(var(--app-component-color-rgb), .5);
+				color: rgba(var(--#{$prefix}color-rgb), .5);
 				line-height: 1;
 				
 				@include fontawesome();
@@ -36,8 +36,8 @@
 	&.fc-dragging,
 	&.fc-event-dragging {
 		padding: rem(6px) rem(12px);
-		background: var(--app-component-bg);
-		color: var(--app-component-color);
+		background: var(--#{$prefix}component-bg);
+		color: var(--#{$prefix}body-color);
 		display: block;
 		display: flex;
 		align-items: center;
@@ -54,7 +54,7 @@
 		
 		& .fc-left,
 		& .fc-toolbar-chunk:nth-child(1) {
-			border-bottom: 1px solid var(--app-component-border-color);
+			border-bottom: 1px solid var(--#{$prefix}border-color);
 			padding: rem(12px) rem(16px);
 			width: 100%;
 			display: flex;
@@ -65,21 +65,21 @@
 				padding: $btn-padding-y-sm $btn-padding-x-sm;
 				line-height: $line-height-sm;
 				font-size: $btn-font-size;
-				background: var(--app-component-bg);
-				color: rgba(var(--app-component-color-rgb), .5);
-				border-color: var(--app-component-border-color);
+				background: var(--#{$prefix}component-bg);
+				color: rgba(var(--#{$prefix}body-color-rgb), .5);
+				border-color: var(--#{$prefix}border-color);
 				min-width: rem(100px);
 				
 				&:hover {
-					background: var(--bs-light);
+					background: var(--#{$prefix}light);
 				}
 				&:focus {
 					box-shadow: 0 0 0 0.2rem rgba($gray-300,.5);
 				}
 				&.active {
-					background: var(--bs-light);
-					color: var(--app-component-color);
-					font-weight: $font-weight-semi-bold;
+					background: var(--#{$prefix}light);
+					color: var(--#{$prefix}body-color);
+					font-weight: $font-weight-semibold;
 				}
 			}
 		}
@@ -118,26 +118,25 @@
 				padding: rem(6px) $btn-padding-x;
 				line-height: $line-height-sm;
 				font-size: $btn-font-size;
-				background: var(--app-component-bg);
-				color: var(--app-component-color);
-				border-color: var(--app-component-border-color);
+				background: var(--#{$prefix}component-bg);
+				color: var(--#{$prefix}body-color);
+				border-color: var(--#{$prefix}border-color);
 				
 				&:hover {
-					background: var(--bs-light);
+					background: var(--#{$prefix}light);
 				}
 				&:focus {
 					box-shadow: 0 0 0 0.2rem rgba($gray-400,.5);
 				}
 				&.active {
-					background: var(--bs-light);
-					color: var(--app-component-color);
-					font-weight: $font-weight-semi-bold;
+					background: var(--#{$prefix}light);
+					color: var(--#{$prefix}body-color);
+					font-weight: $font-weight-semibold;
 				}
 				&.disabled,
 				&[disabled] {
-					color: var(--app-component-disabled-color);
-					border-color: var(--app-component-border-color);
-					background: var(--app-component-disabled-bg);
+					color: rgba(var(--#{$prefix}body-color-rgb), .5);
+					background: var(--#{$prefix}border-color);
 				}
 			}
 		}
@@ -163,10 +162,11 @@
 		& .fc-event-dot {
 			background-color: $gray-500;
 			border-color: $gray-500;
+			box-shadow: none;
 			
 			&.fc-daygrid-dot-event {
-				background-color: var(--bs-light);
-				border-color: var(--app-component-border-color);
+				background-color: var(--#{$prefix}light);
+				border-color: var(--#{$prefix}border-color);
 			}
 		}
 		& .fc-popover {

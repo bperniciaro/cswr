@@ -1,26 +1,26 @@
 ﻿{
   "sidebarMenu": [
+    //{
+    //  "controller": "Home",
+    //  "action": "Index",
+    //  "icon": "fa fa-football",
+    //  "text": "Football"
+    //},
     {
       "text": "Fantasy Football Sheets",
       "is_header": true
     },
     {
-      "controller": "Home",
-      "action": "Index",
-      "icon": "fa fa-home",
-      "text": "Home"
-    },
-    {
-      "controller": "Cheatsheets",
+      "controllers": "CheatSheet,CheatSheets",
       "icon": "fa fa-file",
       "text": "Cheat Sheets",
       "children": [
         {
           "controller": "CheatSheet",
-          "action": "Rankings",
+          "action": "Custom",
           "area": "FantasyFootball",
           "icon": "fa fa-files",
-          "text": "Custom Sheet"
+          "text": "My Custom Sheet"
         },
         {
           "controller": "Cheatsheets",
@@ -34,87 +34,129 @@
           "action": "New",
           "area": "FantasyFootball",
           "icon": "fa fa-files",
-          "text": "Create Sheet"
+          "text": "New Sheet"
         },
         {
           "controller": "Cheatsheets",
           "action": "ConfigurePRint",
           "area": "FantasyFootball",
           "icon": "fa fa-print",
-          "text": "1-Page Printable"
+          "text": "1-Page Custom Printable"
         }
       ]
     },
     {
-      "controller": "Rankings",
-      //"action": "Test",
+      "controllers": "Rankings",
       "icon": "fa fa-up-down",
       "text": "Rankings",
       "children": [
         {
           "controller": "Rankings",
-          //"action": "Player",
-          "icon": "fa fa-football",
-          "text": "Player Rankings",
-          "children": [
-            {
-              "controller": "Home",
-              "action": "Test",
-              "text": "All Players"
-            },
-            {
-              "controller": "Rankings",
-              "action": "Quarterback",
-              "text": "Quarterback Rankings"
-            },
-            {
-              "controller": "Rankings",
-              "action": "RunningBack",
-              "text": "Running Back Rankings"
-            }
-          ]
+          "action": "AllPlayers",
+          "area": "FantasyFootball",
+          "text": "All Players"
         },
         {
+          "area": "FantasyFootball",
           "controller": "Rankings",
-          "action": "Sleepers",
-          "text": "Sleepers"
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "qb",
+          "text": "Quarterback Rankings"
         },
         {
+          "area": "FantasyFootball",
           "controller": "Rankings",
-          "action": "Busts",
-          "text": "Busts"
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "rb",
+          "text": "Running Back Rankings"
         },
         {
+          "area": "FantasyFootball",
           "controller": "Rankings",
-          "action": "ADP",
-          "text": "ADP"
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "wr",
+          "text": "Wide Receiver Rankings"
+        },
+        {
+          "area": "FantasyFootball",
+          "controller": "Rankings",
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "te",
+          "text": "Tight End Rankings"
+        },
+        {
+          "area": "FantasyFootball",
+          "controller": "Rankings",
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "k",
+          "text": "Kicker Rankings"
+        },
+        {
+          "area": "FantasyFootball",
+          "controller": "Rankings",
+          "action": "Positional",
+          "routevarname": "positionCode",
+          "routevarvalue": "df",
+          "text": "Defense/ST Rankings"
         }
       ]
     },
     {
-      "controller": "Printable",
-      "icon": "fa fa-home",
+      "controllers": "Players",
+      "icon": "fa fa-magnifying-glass-chart",
+      "text": "Analysis",
+      "children": [
+        {
+          "area": "FantasyFootball",
+          "controller": "Players",
+          "action": "Sleepers",
+          "text": "Sleepers"
+        },
+        {
+          "area": "FantasyFootball",
+          "controller": "Players",
+          "action": "Busts",
+          "text": "Busts"
+        }
+      ]
+    },
+    {
+      "controllers": "PrintableSheets,FakePrintable,PrintAllPositions,PrintPosition",
+      "icon": "fa fa-print",
       "text": "Printable",
       "children": [
         {
+          "area": "FantasyFootball",
           "controller": "PrintableSheets",
           "action": "Index",
-          "area": "FantasyFootball",
           "text": "Printable Sheets"
         },
         {
+          "area": "FantasyFootball",
           "controller": "FakePrintable",
           "action": "Index",
-          "area": "FantasyFootball",
           "text": "Fake Sheet Cheat"
         },
         {
-          "controller": "Printable",
-          "action": "Positional",
-          "text": "Positional Sheets"
+          "area": "FantasyFootball",
+          "controller": "PrintAllPositions",
+          "action": "WithRoster",
+          "text": "All Positions /w Roster",
+          "target": "_blank"
+        },
+        {
+          "area": "FantasyFootball",
+          "controller": "PrintAllPositions",
+          "action": "WithoutRoster",
+          "text": "All Positions w/o Roster",
+          "target": "_blank"
         }
       ]
     }
-
   ]
 }

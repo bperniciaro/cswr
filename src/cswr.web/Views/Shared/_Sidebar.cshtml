@@ -8,14 +8,21 @@
 
 <!-- BEGIN #sidebar -->
 <div id="sidebar" class="app-sidebar">
+
     <!-- BEGIN scrollbar -->
     <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+
         <!-- BEGIN menu -->
         <div class="menu">
             @foreach (var menu in sidebarMenu)
             {
                 var menuChildren = menu.GetSection("children").GetChildren().ToArray();
 
+                // First-level menu header should be valid for any contained controllers
+                var menuControllers = menu["controllers"] ?? String.Empty;
+                var validMenuControllers = menuControllers.Split(',');
+
+                // Handle headers and dividers
                 @if (menu["is_header"] != null)
                 {
                     <div class="menu-header">
@@ -27,7 +34,9 @@
                 }
                 else
                 {
-                    <div class="menu-item @(menuController == @menu["controller"] ? "active" : "") @(menuChildren.Length > 0 ? "has-sub" : "")">
+                    <div class="menu-item @(validMenuControllers.Contains(menuController) ? "active" : "") @(menuChildren.Length > 0 ? "has-sub" : "")">
+
+                        @* If this is an actual menu link*@
                         @if (menu["action"] != null && menu["controller"] != null)
                         {
                             <a asp-controller="@menu["controller"]" asp-action="@menu["action"]" asp-area="@menu["area"]" class="menu-link">
@@ -44,6 +53,7 @@
                                 <span class="menu-text">@menu["text"]</span>
                             </a>
                         }
+                        @* If it's not a real link, it must be a menu trigger*@
                         else
                         {
                             <a href="#" class="menu-link">
@@ -64,19 +74,42 @@
                                 }
                             </a>
                         }
+                        @*If the menu item has 2nd-level children*@
                         @if (menuChildren.Length > 0)
                         {
                             <div class="menu-submenu">
+
+                                @*Iterate over 2nd-level children*@
                                 @foreach (var submenu in menuChildren)
                                 {
 
                                     var subMenuChildren = submenu.GetSection("children").GetChildren().ToArray();
+                                    var secondLevelMenuItemActive = ((menuAction == @submenu["action"]) && (menuController == @submenu["controller"]));
 
                                     // If the 2nd-level node doesn't have children, just generate a link to the controller action
                                     if (subMenuChildren.Length == 0)
                                     {
-                                        <div class="menu-item @(menuAction == @submenu["action"] ? "active" : "")">
-                                            <a asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" class="menu-link">
+                                        // Determine the querystring name and values
+                                        var routeExists = (submenu["routevarname"] != null & submenu["routevarvalue"] != null);
+                                        var routeValues = new Dictionary<string, string>();
+                                        var target = submenu["target"] ?? "_self";
+
+                                        if (routeExists)
+                                        {
+                                            routeValues.Add(submenu["routevarname"], submenu["routevarvalue"]);
+                                            var routeValuesMatch = false;
+                                            if (ViewContext.RouteData.Values.ContainsKey(submenu["routevarname"]))
+                                            {
+                                                if (ViewContext.RouteData.Values[submenu["routevarname"]].ToString() == submenu["routevarvalue"])
+                                                {
+                                                    routeValuesMatch = true;
+                                                }
+                                            }
+                                            secondLevelMenuItemActive &= routeValuesMatch;
+                                        }
+
+                                        <div class="menu-item @(secondLevelMenuItemActive ? "active" : "")">
+                                            <a asp-all-route-data="routeValues" asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" target="@target" class="menu-link">
                                                 <span class="menu-text">@submenu["text"]</span>
                                             </a>
                                         </div>
@@ -87,6 +120,7 @@
                                         <div class="menu-item @(menuController == @submenu["controller"] ? "active" : "") @(menuChildren.Length > 0 ? "has-sub" : "")">
                                             @if (submenu["action"] != null && submenu["controller"] != null)
                                             {
+
                                                 <a asp-controller="@submenu["controller"]" asp-action="@submenu["action"]" asp-area="@submenu["area"]" class="menu-link">
                                                     <span class="menu-icon">
                                                         @if (submenu["icon"] != null)
@@ -122,10 +156,32 @@
                                                 </a>
                                             }
                                             <div class="menu-submenu">
+
+                                                @*Iterate over 3rd-level children*@
                                                 @foreach (var thirdMenu in subMenuChildren)
                                                 {
-                                                    <div class="menu-item @(menuAction == @thirdMenu["action"] ? "active" : "")">
-                                                        <a asp-controller="@thirdMenu["controller"]" asp-action="@thirdMenu["action"]" asp-area="@thirdMenu["area"]" class="menu-link">
+                                                    // Determine the route name and values
+                                                    var routeExists = (thirdMenu["routevarname"] != null & thirdMenu["routevarvalue"] != null);
+                                                    var routeValues = new Dictionary<string, string>();
+                                                    var menuIsActive = (menuAction == @thirdMenu["action"]);
+                                                    var target = thirdMenu["target"] ?? "_self";
+
+                                                    if (routeExists)
+                                                    {
+                                                        routeValues.Add(thirdMenu["routevarname"], thirdMenu["routevarvalue"]);
+                                                        var routeValuesMatch = false;
+                                                        if (ViewContext.RouteData.Values.ContainsKey(thirdMenu["routevarname"]))
+                                                        {
+                                                            if (ViewContext.RouteData.Values[thirdMenu["routevarname"]].ToString() == thirdMenu["routevarvalue"])
+                                                            {
+                                                                routeValuesMatch = true;
+                                                            }
+                                                        }
+                                                        menuIsActive &= routeValuesMatch;
+                                                    }
+
+                                                    <div class="menu-item @(menuIsActive ? "active" : "")">
+                                                        <a asp-all-route-data="routeValues" asp-controller="@thirdMenu["controller"]" asp-action="@thirdMenu["action"]" asp-area="@thirdMenu["area"]" target="@target" class="menu-link">
                                                             <span class="menu-text">@thirdMenu["text"]</span>
                                                         </a>
                                                     </div>

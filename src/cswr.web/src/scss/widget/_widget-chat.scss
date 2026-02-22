@@ -20,7 +20,7 @@
 	& .widget-chat-date {
 		font-size: $font-size-base - rem(2px);
 		font-weight: $font-weight-bold;
-		color: var(--app-component-color);
+		color: var(--#{$prefix}body-color);
 		padding: rem(10px) rem(10px);
 		text-align: center;
 	}
@@ -30,9 +30,11 @@
 	& .widget-chat-name,
 	& .widget-chat-status {
 		font-size: $font-size-base - rem(3px);
-		font-weight: $font-weight-semi-bold;
-		color: rgba(var(--app-component-color-rgb), .5);
+		font-weight: $font-weight-semibold;
+		color: rgba(var(--#{$prefix}body-color-rgb), .5);
 		line-height: 1.25rem;
+		margin: $spacer * .15 0;
+		padding: 0 $spacer * .7;
 	}
 	& .widget-chat-media {
 		width: rem(28px);
@@ -45,7 +47,7 @@
 		}
 	}
 	& .widget-chat-message {
-		background: var(--app-component-bg);
+		background: var(--#{$prefix}component-bg);
 		padding: rem(8px) rem(15px);
 		display: inline-block;
 		position: relative;
@@ -58,16 +60,16 @@
 			&:before {
 				content: '';
 				border: rem(5px) solid transparent;
-				border-bottom-color: var(--app-component-bg);
+				border-bottom-color: var(--#{$prefix}component-bg);
 				position: absolute;
 				bottom: rem(6px);
 				
 				@if $enable-rtl {
 					right: rem(-4px);
-					border-left-color: var(--app-component-bg);
+					border-left-color: var(--#{$prefix}component-bg);
 				} @else {
 					left: rem(-4px);
-					border-right-color: var(--app-component-bg);
+					border-right-color: var(--#{$prefix}component-bg);
 				}
 			}
 		}
@@ -81,19 +83,19 @@
 			}
 		}
 		& .widget-chat-message {
-			background: var(--app-component-active-bg);
-			color: var(--app-component-active-color);
+			background: var(--#{$prefix}theme);
+			color: var(--#{$prefix}theme-color);
 			
 			&.last:before {
 				border-color: transparent;
-				border-bottom-color: var(--app-component-active-bg);
+				border-bottom-color: var(--#{$prefix}theme);
 				
 				@if $enable-rtl {
-					border-right-color: var(--app-component-active-bg);
+					border-right-color: var(--#{$prefix}theme);
 					right: auto;
 					left: rem(-4px);
 				} @else {
-					border-left-color: var(--app-component-active-bg);
+					border-left-color: var(--#{$prefix}theme);
 					left: auto;
 					right: rem(-4px);
 				}

@@ -6,7 +6,7 @@
 	& .widget-reminder-header + .widget-reminder-item,
 	& .widget-reminder-item + .widget-reminder-header,
 	& .widget-reminder-item + .widget-reminder-item {
-		border-top: 1px solid var(--app-component-border-color);
+		border-top: 1px solid var(--#{$prefix}border-color);
 	}
 	& .widget-reminder-time,
 	& .widget-reminder-content {
@@ -27,11 +27,11 @@
 	}
 	& .widget-reminder-divider {
 		width: rem(3px);
-		background: var(--bs-light);
+		background: var(--#{$prefix}light);
 	}
 	& + .card-header,
 	& + .card-footer,
 	& + .card-body {
-		border-top: 1px solid var(--app-component-border-color);
+		border-top: 1px solid var(--#{$prefix}border-color);
 	}
 }

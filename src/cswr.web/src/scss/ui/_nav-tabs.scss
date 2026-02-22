@@ -8,17 +8,17 @@
 					padding: $nav-link-padding-x 0;
 					
 					&:hover {
-						border-bottom-color: var(--app-component-border-color);
+						border-bottom-color: var(--#{$prefix}border-color);
 					}
 					&.active {
-						border-bottom-color: var(--app-theme);
+						border-bottom-color: var(--#{$prefix}theme);
 						background: none;
 					}
 				}
 				&.show {
 					& > .nav-link {
 						background: none;
-						border-bottom-color: var(--app-component-border-color);
+						border-bottom-color: var(--#{$prefix}border-color);
 					}
 				}
 			}

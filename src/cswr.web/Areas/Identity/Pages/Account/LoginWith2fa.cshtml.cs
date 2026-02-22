@@ -14,8 +14,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace AspStudio.Areas.Identity.Pages.Account
-{
+namespace AspStudio.Areas.Identity.Pages.Account;
+
     public class LoginWith2faModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -130,4 +130,3 @@ namespace AspStudio.Areas.Identity.Pages.Account
             }
         }
     }
-}

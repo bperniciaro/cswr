@@ -4,7 +4,7 @@
 	
 	& .widget-user-list-item {
 		& .widget-user-list-link {
-			border: 2px solid var(--app-component-bg);
+			border: 2px solid var(--#{$prefix}component-bg);
 			overflow: hidden;
 			width: rem(40px);
 			height: rem(40px);

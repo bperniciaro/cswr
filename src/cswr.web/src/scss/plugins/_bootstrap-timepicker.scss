@@ -23,9 +23,9 @@
               }
               & input {
                 border-radius: $border-radius;
-                border: 1px solid var(--app-component-dropdown-border-color);
-                background: none;
-                color: var(--app-component-color);
+                border: 1px solid $input-border-color;
+                background: $input-bg;
+                color: var(--#{$prefix}body-color);
                 height: $input-height;
                 padding: rem(5px);
                 line-height: $input-line-height;
@@ -55,15 +55,11 @@
                 transition: all .15s linear;
                 
                 &:hover {
-                  background: var(--app-component-dropdown-hover-bg);
-                  color: var(--app-component-color);
+                  background: $dropdown-link-hover-bg;
+                  color: $dropdown-link-hover-color;
                 }
                 & .glyphicon {
-                  font-family: Font Awesome\ 5 Free,Font Awesome\ 5 Pro,FontAwesome!important;
-                  font-weight: 900;
-                  font-style: normal;
-                  font-variant: normal;
-                  text-rendering: auto;
+                	@include fontawesome();
                   
                   &.glyphicon-chevron-up {
                     &:before {

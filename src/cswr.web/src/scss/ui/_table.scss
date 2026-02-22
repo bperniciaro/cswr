@@ -23,4 +23,18 @@
 			}
 		}
 	}
+	&.table-xs {
+		font-size: $font-size-sm;
+		
+		& thead,
+		& tbody,
+		& tfoot {
+			& th {
+				padding: $table-cell-padding-y * .75 $table-cell-padding-x;
+			}
+			& td {
+				padding: $table-cell-padding-y * .75 $table-cell-padding-x;
+			}
+		}
+	}
 }

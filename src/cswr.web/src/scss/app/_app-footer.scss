@@ -4,9 +4,9 @@
 	bottom: 0;
 	line-height: rem(20px);
 	padding: rem(20px) $app-content-padding-x;
-	border-top: 1px solid var(--app-component-border-color);
-	background: var(--bs-body-bg);
-	font-weight: $font-weight-semi-bold;
+	border-top: 1px solid var(--#{$prefix}border-color);
+	background: var(--#{$prefix}body-bg);
+	font-weight: $font-weight-semibold;
 	
 	@if $enable-rtl {
 		margin-right: $app-sidebar-width;

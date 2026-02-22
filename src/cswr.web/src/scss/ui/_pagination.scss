@@ -1,13 +1,13 @@
 .pagination {
 	& .page-item {
 		& .page-link {
-			border-radius: rem($border-radius);
+			border-radius: $pagination-border-radius;
 		}
 		& + .page-item {
 			@if $enable-rtl {
-				margin-right: $spacer * .15;
+				margin-right: $spacer * .5;
 			} @else {
-				margin-left: $spacer * .15;
+				margin-left: $spacer * .5;
 			}
 		}
 	}

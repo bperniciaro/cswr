@@ -1,16 +1,102 @@
-﻿@{
-    ViewData["Title"] = "Edit Cheat Sheet";
+﻿@model EditSheetViewModel
+
+@{
+    ViewData["Title"] = "EditView";
 }
 
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">LAYOUT</a></li>
-    <li class="breadcrumb-item active">STARTER PAGE</li>
+    <li class="breadcrumb-item"><a href="#">SHEET</a></li>
+    <li class="breadcrumb-item active">EDIT</li>
 </ul>
 
+@await Component.InvokeAsync(nameof(MessageBox))
+
 <h1 class="page-header">
-    Edit Sheet
+    Edit Sheet Properties
 </h1>
 
 <p>
-    Start build your page here
+    Use this form to edit your sheet.
 </p>
+<form id="sheet" method="post" asp-route="fantasyfootball.create.cheatsheet.savesheet">
+
+<div class="row">
+    <div class="col-md-4">
+
+            <input type="hidden" asp-for="SeasonCode"/>
+            <input type="hidden" asp-for="CheatSheetId" />
+            <input type="hidden" asp-for="UserName" />
+            <input type="hidden" asp-for="SportCode" />
+            <input type="hidden" asp-for="StatsSeasonCode" />
+            <input type="hidden" asp-for="PprLeague" />
+            <input type="hidden" asp-for="AuctionDraft" />
+
+            @*Sheet Name*@
+            <div class="form-group">
+                <label asp-for="SheetName" class="form-label"></label>
+                <input asp-for="SheetName" class="form-control" />
+                <span asp-validation-for="SheetName" class="text-danger"></span>
+            </div>
+
+            @*Draft Style*@
+            <div class="form-group">
+                <label class="form-label">Draft Style</label>
+                @foreach (var draftStyle in Model.DraftStyles)
+                {
+
+                    <br />
+                    @draftStyle
+                    <input type="radio" asp-for="DraftStyle" name="DraftStyle" value="@draftStyle" />
+                }
+            </div>
+
+            @*Scoring Style*@
+            <div class="form-group">
+                <label class="form-label">Scoring Style</label>
+                @foreach (var scoringStyle in Model.ScoringStyles)
+                {
+
+                        <br />
+                        @scoringStyle
+                        <input type="radio" asp-for="ScoringStyle" name="ScoringStyle" value="@scoringStyle" />
+                }
+            </div>
+
+            @*Submit Button*@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+    </div>
+</div>
+
+
+<h1 class="page-header">
+    Manage Sheet Players
+</h1>
+
+@*<form id="sheetitems" method="post">
+*@    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <select class="form-select" id="sheetPlayers" multiple asp-for="PlayersToRemove" asp-items="@(new SelectList(Model.CurrentSheetItems, nameof(Player.PlayerId), nameof(Player.FullName)))"></select>
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Add Players" asp-route="fantasyfootball.create.cheatsheet.addplayers" />
+                <input type="submit" value="Remove Players" asp-route="fantasyfootball.create.cheatsheet.removeplayers" />
+            </div>
+            <div class="col-md-5">
+                <select class="form-select" id="availablePlayers" multiple asp-for="PlayersToAdd" asp-items="@(new SelectList(Model.AvailablePlayers, nameof(Player.PlayerId), nameof(Player.FullName)))"></select>
+            </div>
+        </div>
+    </div>
+@*</form>*@
+
+</form>
+
+<div>
+    <a asp-action="Index">Back to sheet</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
