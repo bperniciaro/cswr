@@ -26,5 +26,13 @@ namespace Cswr.Bal.Services.Interfaces.Writers
         /// <param name="playersToAdd">A collection of unique playerIds representing players to add to the sheet.</param>
         /// <returns>True if all items were saved successfully, false otherwise.</returns>
         Task<Result<bool>> AddItems(CheatSheet cheatSheet, List<int> playersToAdd);
+
+        /// <summary>
+        /// Removes a collection of items from a sheet.
+        /// </summary>
+        /// <param name="cheatSheetId">The unique id of the target cheat sheet.</param>
+        /// <param name="playersToRemove">A collection of unique playerIds representing players to remove from the sheet.</param>
+        /// <returns>True if all items were removed successfully, false otherwise.</returns>
+        Task<Result<bool>> RemoveItems(int cheatSheetId, List<int> playersToRemove);
     }
 }

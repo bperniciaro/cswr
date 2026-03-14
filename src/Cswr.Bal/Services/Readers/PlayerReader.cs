@@ -94,7 +94,5 @@ public class PlayerReader : IPlayerReader
         }
 
         return Result.Ok(this.mapper.Map<IEnumerable<Player>>(playersNotOnSheet));
-
-        throw new NotImplementedException();
     }
 }

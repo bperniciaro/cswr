@@ -28,7 +28,7 @@ public class HomeController : Controller
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        var result = await this.cheatSheetReader.GetCheatSheets("Brad Perniciaro");
+        var result = await this.cheatSheetReader.GetCheatSheets(this.User.Identity!.Name!);
         if (result.Failure)
         {
             this.TempData["warning"] = "There was a problem retrieving your sheet";

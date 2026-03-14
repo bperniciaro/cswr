@@ -36,9 +36,75 @@ public class CheatSheetWriter : ICheatSheetWriter
         this.mapper = mapper;
     }
 
-    public Task<Result<bool>> AddItems(CheatSheet cheatSheet, List<int> playersToAdd)
+    /// <inheritdoc/>
+    public async Task<Result<bool>> AddItems(CheatSheet cheatSheet, List<int> playersToAdd)
     {
-        throw new NotImplementedException();
+        if (!playersToAdd.Any())
+        {
+            return Result.Ok<bool>(true);
+        }
+
+        try
+        {
+            var maxSeqno = this.cswrDbContext.SheetsCheatSheetItems
+                .Where(x => x.CheatSheetId == cheatSheet.CheatSheetId)
+                .Select(x => (short?)x.Seqno)
+                .Max() ?? 0;
+
+            short nextSeqno = (short)(maxSeqno + 1);
+
+            foreach (var playerId in playersToAdd)
+            {
+                this.cswrDbContext.SheetsCheatSheetItems.Add(new SheetsCheatSheetItem
+                {
+                    CheatSheetId = cheatSheet.CheatSheetId,
+                    PlayerId = playerId,
+                    Seqno = nextSeqno++,
+                    Note = string.Empty,
+                });
+            }
+
+            await this.cswrDbContext.SaveChangesAsync();
+        }
+        catch (DbException ex)
+        {
+            return Result.Fail<bool>("Database Exception when calling AddItems: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return Result.Fail<bool>("General Exception when calling AddItems: " + ex.Message);
+        }
+
+        return Result.Ok<bool>(true);
+    }
+
+    /// <inheritdoc/>
+    public async Task<Result<bool>> RemoveItems(int cheatSheetId, List<int> playersToRemove)
+    {
+        if (!playersToRemove.Any())
+        {
+            return Result.Ok<bool>(true);
+        }
+
+        try
+        {
+            var itemsToDelete = await this.cswrDbContext.SheetsCheatSheetItems
+                .Where(x => x.CheatSheetId == cheatSheetId && playersToRemove.Contains(x.PlayerId))
+                .ToListAsync();
+
+            this.cswrDbContext.SheetsCheatSheetItems.RemoveRange(itemsToDelete);
+            await this.cswrDbContext.SaveChangesAsync();
+        }
+        catch (DbException ex)
+        {
+            return Result.Fail<bool>("Database Exception when calling RemoveItems: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return Result.Fail<bool>("General Exception when calling RemoveItems: " + ex.Message);
+        }
+
+        return Result.Ok<bool>(true);
     }
 
     /// <inheritdoc/>
@@ -67,13 +133,14 @@ public class CheatSheetWriter : ICheatSheetWriter
             //var result = await this.cswrDbContext.SaveChangesAsync();
 
             // Best when only updating a small sample of properties
-            var dbSheet = this.cswrDbContext.SheetsCheatSheets.Find(targetSheet.CheatSheetId);
+            var dbSheet = await this.cswrDbContext.SheetsCheatSheets.FindAsync(targetSheet.CheatSheetId);
             if (dbSheet == null)
             {
-                return Result.Fail<bool>("The target user was not found.");
+                return Result.Fail<bool>("The target sheet was not found.");
             }
+
             dbSheet.SheetName = targetSheet.SheetName;
-            var result = this.cswrDbContext.SaveChangesAsync();
+            recordUpdateCount = await this.cswrDbContext.SaveChangesAsync();
         }
         catch (DbException ex)
         {
@@ -81,13 +148,12 @@ public class CheatSheetWriter : ICheatSheetWriter
         }
         catch (Exception ex)
         {
-            return Result.Fail<bool>("General Exception when calling GetCheatSheets: " + ex.Message);
+            return Result.Fail<bool>("General Exception when calling UpdateCheatSheet: " + ex.Message);
         }
 
-        // Ensure only record was updated, or there was a problem.
-        if (recordUpdateCount != 1)
+        if (recordUpdateCount < 1)
         {
-            return Result.Fail<bool>("Problem updating target sheet");
+            return Result.Fail<bool>("Problem updating target sheet.");
         }
 
         return Result.Ok<bool>(true);
