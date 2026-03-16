@@ -98,4 +98,33 @@ public class CheatSheetWriterTests
         Assert.IsTrue(result.Success);
         Assert.AreEqual("Updated Name", _context.SheetsCheatSheets.Find(1)!.SheetName);
     }
+
+    /// <summary>
+    /// Updating PprLeague and AuctionDraft should persist both fields.
+    /// </summary>
+    [TestMethod]
+    public async Task UpdateCheatSheet_PprAndAuctionFields_PersistedCorrectly()
+    {
+        _context.SheetsCheatSheets.Add(new SheetsCheatSheet
+        {
+            CheatSheetId = 2,
+            SheetName = "My Sheet",
+            Username = "test@example.com",
+            SeasonCode = "2025",
+            StatsSeasonCode = "2025",
+            SportCode = "FOO",
+            Pprleague = false,
+            AuctionDraft = false,
+        });
+        await _context.SaveChangesAsync();
+
+        var sheet = new CheatSheet { CheatSheetId = 2, SheetName = "My Sheet", PprLeague = true, AuctionDraft = true };
+
+        var result = await _writer.UpdateCheatSheet(sheet);
+
+        Assert.IsTrue(result.Success);
+        var saved = _context.SheetsCheatSheets.Find(2)!;
+        Assert.IsTrue(saved.Pprleague);
+        Assert.IsTrue(saved.AuctionDraft);
+    }
 }

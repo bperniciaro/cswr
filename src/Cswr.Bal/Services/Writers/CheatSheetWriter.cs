@@ -140,6 +140,8 @@ public class CheatSheetWriter : ICheatSheetWriter
             }
 
             dbSheet.SheetName = targetSheet.SheetName;
+            dbSheet.Pprleague = targetSheet.PprLeague;
+            dbSheet.AuctionDraft = targetSheet.AuctionDraft;
             recordUpdateCount = await this.cswrDbContext.SaveChangesAsync();
         }
         catch (DbException ex)
