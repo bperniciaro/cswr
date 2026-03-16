@@ -75,7 +75,11 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 // Configure AutoMapper for the various mapping profiles
-builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(BalMappingProfile)), Assembly.GetAssembly(typeof(WebMappingProfile)));
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<BalMappingProfile>();
+    cfg.AddProfile<WebMappingProfile>();
+});
 builder.Services.AddControllersWithViews();
 
 // Add controllers with views

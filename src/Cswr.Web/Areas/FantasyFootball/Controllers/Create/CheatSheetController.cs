@@ -95,7 +95,7 @@ public class CheatSheetController : Controller
         }
 
         // Get the available players
-        var availablePlayersResult = await this.plyerReader.GetPlayersNotInSheet(1649857);
+        var availablePlayersResult = await this.plyerReader.GetPlayersNotInSheet(id);
         if (availablePlayersResult.Failure)
         {
             this.TempData[Enumerations.MessageLevel.Error.ToString()] = $"There was a problem retrieving the available players.";
@@ -144,40 +144,66 @@ public class CheatSheetController : Controller
         var mappedCheatSheet = this.mapper.Map<CheatSheet>(model);
         var updateResult = this.cheatSheetWriter.UpdateCheatSheet(mappedCheatSheet).Result;
 
-        if (updateResult.Success)
+        if (updateResult.Failure)
         {
-            this.TempData["success"] = "Sheet saved successfully";
+            this.logger.LogError($"Unable to save cheat sheet, cheatSheetId: {model.CheatSheetId}");
+            this.TempData["error"] = "Sheet not saved, unexpected error.";
+            return this.View("Edit", model);
         }
 
-        this.logger.LogError($"Unable to save cheat sheet, cheatSheetId: {model.CheatSheetId}");
-        this.TempData["error"] = "Sheeet not saved, unexpected error.";
-        return this.View("Edit", model);
+        this.TempData["success"] = "Sheet saved successfully.";
+        return this.RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { id = model.CheatSheetId });
     }
 
     [HttpPost]
     [Route("/fantasy-football/create/cheatsheet/addplayers", Name = "fantasyfootball.create.cheatsheet.addplayers")]
-    public ActionResult AddPlayers([FromForm] EditSheetViewModel model)
+    public async Task<ActionResult> AddPlayers([FromForm] EditSheetViewModel model)
     {
-        if (!this.ModelState.IsValid)
-        {
-            this.TempData["error"] = "Updates not saved, unexpected error.";
-        }
-
         if (!model.PlayersToAdd.Any())
         {
             this.TempData["warning"] = "No players were selected for addition.";
+            return this.RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { id = model.CheatSheetId });
         }
 
+        var sheet = new CheatSheet { CheatSheetId = model.CheatSheetId };
+        var result = await this.cheatSheetWriter.AddItems(sheet, model.PlayersToAdd);
 
+        if (result.Failure)
+        {
+            this.logger.LogError($"Unable to add players to cheat sheet, cheatSheetId: {model.CheatSheetId}");
+            this.TempData["error"] = "Players could not be added, unexpected error.";
+        }
+        else
+        {
+            this.TempData["success"] = "Players added successfully.";
+        }
 
-        return RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { Id = model.CheatSheetId });
+        return this.RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { id = model.CheatSheetId });
     }
 
     [HttpPost]
     [Route("/fantasy-football/create/cheatsheet/removeplayers", Name = "fantasyfootball.create.cheatsheet.removeplayers")]
-    public ActionResult RemovePlayers([FromForm] EditSheetViewModel model)
+    public async Task<ActionResult> RemovePlayers([FromForm] EditSheetViewModel model)
     {
-        return RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { Id = model.CheatSheetId });
+        if (!model.PlayersToRemove.Any())
+        {
+            this.TempData["warning"] = "No players were selected for removal.";
+            return this.RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { id = model.CheatSheetId });
+        }
+
+        var result = await this.cheatSheetWriter.RemoveItems(model.CheatSheetId, model.PlayersToRemove);
+
+        if (result.Failure)
+        {
+            this.logger.LogError($"Unable to remove players from cheat sheet, cheatSheetId: {model.CheatSheetId}");
+            this.TempData["error"] = "Players could not be removed, unexpected error.";
+        }
+        else
+        {
+            this.TempData["success"] = "Players removed successfully.";
+        }
+
+        return this.RedirectToRoute("fantasyfootball.create.cheatsheet.edit", new { id = model.CheatSheetId });
     }
 
     [Route("/fantasy-football/create/cheatsheet/validate/{id?}", Name = "fantasyfootball.create.cheatsheet.validate")]
